@@ -222,9 +222,11 @@ internal sealed class ThoriumModSystem : CrossModHandler
 			return;
 		}
 
+		static bool CoinBagCondition(NPC npc) => npc.ModNPC is ThoriumMod.NPCs.CoinBagCopper; // All three coin bags inherit from copper.
+
 		// The normal mimics and biome mimics are already handled via Rescue Fairies' default settings.
 		// Pot mimics are not added.
-		caller.AddTrackingCondition((NPC npc) => npc.ModNPC is ThoriumMod.NPCs.CoinBagCopper); // All three coin bags inherit from copper.
+		caller.AddTrackingCondition(CoinBagCondition); 
 		caller.AddTrackingCondition<ThoriumMod.NPCs.LifeCrystalMimic>();
 		caller.AddTrackingCondition<ThoriumMod.NPCs.Buried.BuriedSpawn>();
 		caller.AddTrackingCondition<ThoriumMod.NPCs.Granite.GraniteSpawn>();
@@ -267,9 +269,11 @@ internal sealed class ThoriumModSystem : CrossModHandler
 			return;
 		}
 
+		static bool GuidesFinalGiftCondition() => NPC.downedMoonlord && ModContent.GetInstance<ThoriumConfigServer>().donatorOther.toggleGuidesFinalGift;
+
 		caller.AddStation<ThoriumMod.Tiles.ArcaneArmorFabricator>(() => NPC.downedBoss1);
 		caller.AddStation<ThoriumMod.Tiles.GrimPedestal>(() => NPC.downedBoss1);
-		caller.AddStation<ThoriumMod.Tiles.GuidesFinalGiftTile>(() => NPC.downedMoonlord && ModContent.GetInstance<ThoriumConfigServer>().donatorOther.toggleGuidesFinalGift);
+		caller.AddStation<ThoriumMod.Tiles.GuidesFinalGiftTile>(GuidesFinalGiftCondition);
 		caller.AddStation<ThoriumMod.Tiles.SoulForgeNew>(() => NPC.downedMechBoss1 && NPC.downedMechBoss2 && NPC.downedMechBoss3);
 		caller.AddStation<ThoriumMod.Tiles.ThoriumAnvil>();
 	}
