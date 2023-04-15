@@ -3,7 +3,7 @@ using System;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace RandomModCompat.Common;
+namespace RandomModCompat.Common.Callers;
 
 internal sealed class RescueFairiesCaller : ModWithCalls
 {

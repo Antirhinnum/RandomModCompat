@@ -2,7 +2,7 @@
 using System.Linq;
 using Terraria.ModLoader;
 
-namespace RandomModCompat.Common;
+namespace RandomModCompat.Common.Callers;
 
 internal sealed class ROR2HealthBarsCaller : ModWithCalls
 {

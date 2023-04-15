@@ -1,5 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
-using RandomModCompat.Common;
+using RandomModCompat.Common.Callers;
 using RandomModCompat.Core;
 using System.Reflection;
 using Terraria;

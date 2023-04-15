@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace RandomModCompat.Common;
+namespace RandomModCompat.Common.Callers;
 
 internal sealed class AsymmetricEquipsCaller : ModWithCalls
 {
@@ -48,6 +48,12 @@ internal sealed class AsymmetricEquipsCaller : ModWithCalls
 		AddEquip(type, EquipHelper.GetItemEquip<T>(type));
 	}
 
+	internal void AddFlippedEquip<T>(EquipType type) where T : ModItem
+	{
+		ModItem item = ModContent.GetInstance<T>();
+		AddEquip(type, EquipHelper.GetItemEquip<T>(type), EquipLoader.GetEquipSlot(Mod, FlippedEquipName(item.Name, type), type));
+	}
+
 	internal void AddSmallHead<T>(PlayerSide side = PlayerSide.Right) where T : ModItem
 	{
 		AddEquip(EquipType.Head, EquipHelper.GetItemEquip<T>(EquipType.Head), ArmorIDs.Head.FamiliarWig, side);
@@ -56,5 +62,20 @@ internal sealed class AsymmetricEquipsCaller : ModWithCalls
 	internal void AddBalloon<T>() where T : ModItem
 	{
 		AddEquip(EquipType.Balloon, EquipHelper.GetItemEquip<T>(EquipType.Balloon), side: PlayerSide.Left);
+	}
+
+	internal int AddFlippedEquipTexture(string modName, string name, EquipType type)
+	{
+		return EquipLoader.AddEquipTexture(Mod, FlippedEquipTexturePath(modName, name, type), type, name: FlippedEquipName(name, type));
+	}
+
+	private string FlippedEquipTexturePath(string modName, string name, EquipType type)
+	{
+		return $"{Mod.Name}/Assets/{modName}/AsymmetricEquips/{name}_{type}_Flipped";
+	}
+
+	private static string FlippedEquipName(string name, EquipType type)
+	{
+		return $"{name}_{type}_Flipped";
 	}
 }

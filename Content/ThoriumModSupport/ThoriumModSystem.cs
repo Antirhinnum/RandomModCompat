@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using RandomModCompat.Common;
+using RandomModCompat.Common.Callers;
+using RandomModCompat.Common.ExplicitSupport;
 using RandomModCompat.Core;
 using System;
 using System.Collections.Generic;
@@ -226,7 +227,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 
 		// The normal mimics and biome mimics are already handled via Rescue Fairies' default settings.
 		// Pot mimics are not added.
-		caller.AddTrackingCondition(CoinBagCondition); 
+		caller.AddTrackingCondition(CoinBagCondition);
 		caller.AddTrackingCondition<ThoriumMod.NPCs.LifeCrystalMimic>();
 		caller.AddTrackingCondition<ThoriumMod.NPCs.Buried.BuriedSpawn>();
 		caller.AddTrackingCondition<ThoriumMod.NPCs.Granite.GraniteSpawn>();

@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using Terraria;
 
-namespace RandomModCompat.Common;
+namespace RandomModCompat.Common.Callers;
 
 internal sealed class DialogueTweakCaller : ModWithCalls
 {

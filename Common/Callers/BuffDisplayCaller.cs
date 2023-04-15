@@ -1,6 +1,6 @@
 ﻿using RandomModCompat.Core;
 
-namespace RandomModCompat.Common;
+namespace RandomModCompat.Common.Callers;
 
 internal sealed class BuffDisplayCaller : ModWithCalls
 {

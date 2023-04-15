@@ -1,27 +1,9 @@
-﻿Enhanced Buff Display:
-[X] Forgotten One spawning debuffs.
-
-Rescue Fairies:
-[X] Mimics, Big Mimics
-[X] Coin Bag Mimics
-[X] Life Crystal Mimics
-[X] Granite Boss Spawn
-[X] Marble Boss Spawn
-[ ] Pot Mimics
-	Not added b/c they're unlikely to stick around for long.
-
-Rod of Discord Hotkey:
-	
-
-Shoe Slot:
-	 I think all of Thorium's shoes have a shoe equip already?
-
-Staggo's Good Visuals:
-	I'd need to see which projectiles this mod makes vibrate to think about compat.
-
-Universal Crafter:
-[X] Thorium Anvil
-[X] Arcane Armor Fabricator
-[X] Grim Pedestal
-[X] Soul Forge
-[X] Guide's Final Gift
+﻿To consider:
+	Achievement Mod
+	Inline Wiki Lib
+	Mod Achievements Library
+	Ore Excavator [?]
+	Planter Box Library
+	Staggo's Good Visuals
+	The Amulet of Many Minions: Combat Pets!
+	Wikithis [zh]

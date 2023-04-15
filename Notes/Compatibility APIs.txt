@@ -108,6 +108,9 @@ Gold Dust Turns Everything Into Gold:
 	+ https://github.com/Cyrillya/OverpoweredGoldDust
 	Exactly what it says on the tin.
 
+	API Ideas:
+	+ Registering items, NPCs, and tiles.
+
 	Compat. Ideas:
 	+ Support for modded gold critters.
 
@@ -153,6 +156,15 @@ Item Check Blacklist Lib [Test]:
 	Compat. Ideas:
 	+ Auto-register any item with a research value of 0? Probably not.
 	+ Register any explicitly unobtainable item.
+
+Magic Storage:
+	+ Mod.Call Support
+	+ https://github.com/blushiemagic/MagicStorage
+	A storage system.
+	Call support allows adding Shadow Diamon drop rules to modded NPCs.
+
+	Compat. Ideas:
+	+ Adding diamond drops.
 
 Mod Achievements Library:
 	+ Mod.Call Support
@@ -208,6 +220,13 @@ Planter Box Library:
 
 	Compat. Ideas:
 	+ Modded planter boxes.
+
+Rainbow Weapon Forgery:
+	+ https://github.com/Antirhinnum/RainbowWeaponForgery
+	Allows using custom names wihtout renaming the character.
+
+	Compat. Ideas:
+	+ Yharim's Crystal has name-specific colors, doesn't it?
 
 Rescue Fairies:
 	+ Mod.Call Support
@@ -285,6 +304,17 @@ The Amulet of Many Minions: Combat Pets!:
 
 	Compat. Ideas:
 	+ Adding combat pets for every pet a mod adds.
+
+Thorium Mod:
+	+ Mod.Call Support
+	+ https://thoriummod.wiki.gg/wiki/Mod_Calls
+	A content mod.
+	Call support allows checking for downed bools, healer/bard status, and registering the following: DoT debuffs, status effect debuffs, Martian items, flails.
+
+	Compat. Ideas:
+	+ Adding support for flails and Martian items.
+	+ Adding support for debuffs.
+	+ Weak-referenced Bard/Healer items.
 
 Unified Freeze Library:
 	+ Mod.Call Support

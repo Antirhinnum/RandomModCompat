@@ -2,7 +2,7 @@
 using System;
 using Terraria.ModLoader;
 
-namespace RandomModCompat.Common;
+namespace RandomModCompat.Common.Callers;
 
 internal sealed class UniversalCraftCaller : ModWithCalls
 {

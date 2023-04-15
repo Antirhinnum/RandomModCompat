@@ -1,7 +1,7 @@
 ﻿using RandomModCompat.Core;
 using Terraria.GameContent.ItemDropRules;
 
-namespace RandomModCompat.Common;
+namespace RandomModCompat.Common.Callers;
 
 internal sealed class MagicStorageCaller : ModWithCalls
 {
