@@ -71,8 +71,10 @@
 	[ ] Pirate's Purse
 	[ ] Medical Bag
 	[ ] Nurse's Purse
-	[ ] Support Sash
+	[X] Support Sash
 	[ ] Band Kit
+	[ ] Terrarium Wings
+	[ ] Champion's Rebuttal (?)
 	
 	Sheaths:
 	[X] Leather Sheath

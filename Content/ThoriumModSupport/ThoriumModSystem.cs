@@ -33,27 +33,48 @@ internal sealed class ThoriumModSystem : CrossModHandler
 	 * - Recipe Browser
 	 * - Summoner's Association
 	 * - Yet Another Boss Health Bar
+	 * - Wikithis
 	 *
 	 * Additionally, the following mods either have intrinsic Thorium support or an existing compatibility mod:
 	 * - Better Taxes
+	 * - Bosses as NPCs
 	 * - W1K's Weapon Scaling
 	 *
 	 * This file adds support for:
 	 * - Asymmetric Equips (partial)
 	 * - Enhanced Buff Display
 	 * - Dialogue Panel Rework
+	 * - Gold Dust Turns Everything Into Gold (partial)
+	 * - Item Check Blacklist Lib
 	 * - Magic Storage
 	 * - Rescue Fairies (TODO: check for exceptions)
 	 * - RoR 2 Health Bars
 	 * - Universal Crafter
 	 */
 
+	internal override void OnModLoad()
+	{
+		AsymmetricEquipsLoadTextures();
+	}
+
+	private void AsymmetricEquipsLoadTextures()
+	{
+		if (!ModWithCalls.TryGetCaller(out AsymmetricEquipsCaller caller))
+		{
+			return;
+		}
+
+		caller.AddFlippedEquipTexture(_modName, nameof(ThoriumMod.Items.HealerItems.SupportSash), EquipType.Waist);
+	}
+
 	internal override void PostSetupContent()
 	{
 		AsymmetricEquipsSupport();
 		BuffDisplaySupport();
 		DialogueTweakSupport();
+		ItemCheckBlacklistSupport();
 		MagicStorageSupport();
+		OverpoweredGoldDustSupport();
 		RescueFairiesSupport();
 		ROR2HealthBarsSupport();
 		UniversalCraftSupport();
@@ -124,6 +145,9 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		caller.AddSpecialItem(ModContent.ItemType<ThoriumMod.Items.MeleeItems.TitanSlayerSheath>(), AsymmetricEquipsCaller.PlayerSide.Left);
 		caller.AddSpecialItem(ModContent.ItemType<ThoriumMod.Items.MeleeItems.WrithingSheath>(), AsymmetricEquipsCaller.PlayerSide.Left);
 
+		// Custom textures
+		caller.AddFlippedEquip<ThoriumMod.Items.HealerItems.SupportSash>(EquipType.Waist);
+
 		// Sprites will be needed for:
 		// - Some HandsOn equips
 		// - Some pouch/bag equips
@@ -161,6 +185,54 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.Diverman>() }, "Terraria/Images/Bubble");
 		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.Spiritualist>() }, ModContent.GetInstance<ThoriumMod.Items.HealerItems.PurityShards>().Texture);
 		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.WeaponMaster>() }, ModContent.GetInstance<ThoriumMod.Items.NPCItems.ExileHelmet>().Texture);
+	}
+
+	private static void ItemCheckBlacklistSupport()
+	{
+		if (!ModWithCalls.TryGetCaller(out ItemCheckBlacklistCaller caller))
+		{
+			return;
+		}
+		// List from wiki: https://thoriummod.wiki.gg/wiki/List_of_items#Unobtainable_items
+
+		caller.Add(
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.AngryStatue>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.WeirdMud>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.ArcaneSpike>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.ArtificersExtractor>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.BasicPickaxe>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.DyingRealityWhisper>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.DreamPotion>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.TesterEmpowerment>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.GodMode>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.TesterGore>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.HealingDummyStatue>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.LodestoneBuckshot>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.PenguinWand>(),
+			ModContent.ItemType<ThoriumMod.Items.Misc.PixelDye>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.TesterProjectile>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.TesterPurity>(),
+			ModContent.ItemType<ThoriumMod.Items.Tracker.ShameMedal>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.TesterStats>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.SuppressionBullet>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.TesterText>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.TheBareGauntlet>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.TheGauntlet>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.PenguinWandTrue>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.TesterTile>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.StoneBlue>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.StoneGreen>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.StoneOrange>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.StonePurple>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.StoneRed>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.StoneYellow>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.ViscountRequirement>(),
+
+			// ... Plus some others.
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.LichRequirement>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.LichRequirement2>(),
+			ModContent.ItemType<ThoriumMod.Items.ZRemoved.LichRequirement3>()
+			);
 	}
 
 	private static void MagicStorageSupport()
@@ -214,6 +286,66 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		caller.SetShadowDiamondDropRule(ModContent.NPCType<ThoriumMod.NPCs.Primordials.SlagFury>(), lastPrimordialRule);
 
 		RegisterShadowDiamondDrop<ThoriumMod.NPCs.Primordials.RealityBreaker>(3);
+	}
+
+	private static void OverpoweredGoldDustSupport()
+	{
+		// Ducks
+		OverpoweredGoldDustSupportSystem.RegisterItem(ItemID.Duck, ModContent.ItemType<ThoriumMod.Items.Misc.GoldDuck>());
+		OverpoweredGoldDustSupportSystem.RegisterItem(ItemID.MallardDuck, ModContent.ItemType<ThoriumMod.Items.Misc.GoldDuck>());
+		OverpoweredGoldDustSupportSystem.RegisterItem(ItemID.DuckCage, ModContent.ItemType<ThoriumMod.Items.Placeable.GoldDuckCage>());
+		OverpoweredGoldDustSupportSystem.RegisterItem(ItemID.MallardDuckCage, ModContent.ItemType<ThoriumMod.Items.Placeable.GoldDuckCage>());
+
+		OverpoweredGoldDustSupportSystem.RegisterNPC(NPCID.Duck, ModContent.NPCType<ThoriumMod.NPCs.GoldDuck>());
+		OverpoweredGoldDustSupportSystem.RegisterNPC(NPCID.DuckWhite, ModContent.NPCType<ThoriumMod.NPCs.GoldDuck>());
+		OverpoweredGoldDustSupportSystem.RegisterNPC(NPCID.Duck2, ModContent.NPCType<ThoriumMod.NPCs.GoldDuckFlying>());
+		OverpoweredGoldDustSupportSystem.RegisterNPC(NPCID.DuckWhite2, ModContent.NPCType<ThoriumMod.NPCs.GoldDuckFlying>());
+
+		// Dumbo Octopi
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.Depths.DumboOctopus, ThoriumMod.Items.Depths.GoldDumboOctopus>();
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.Depths.PurpleDumboOctopus, ThoriumMod.Items.Depths.GoldDumboOctopus>();
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.Placeable.DumboOctopusCage, ThoriumMod.Items.Placeable.GoldDumboOctopusCage>();
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.Placeable.PurpleDumboOctopusCage, ThoriumMod.Items.Placeable.GoldDumboOctopusCage>();
+
+		OverpoweredGoldDustSupportSystem.RegisterNPC<ThoriumMod.NPCs.Depths.DumboOctopus, ThoriumMod.NPCs.Depths.GoldDumboOctopus>();
+		OverpoweredGoldDustSupportSystem.RegisterNPC<ThoriumMod.NPCs.Depths.PurpleDumboOctopus, ThoriumMod.NPCs.Depths.GoldDumboOctopus>();
+
+		// Lobsters
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.Depths.Lobster, ThoriumMod.Items.Depths.GoldLobster>();
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.Depths.BlueLobster, ThoriumMod.Items.Depths.GoldLobster>();
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.Placeable.LobsterCage, ThoriumMod.Items.Placeable.GoldLobsterCage>();
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.Placeable.BlueLobsterCage, ThoriumMod.Items.Placeable.GoldLobsterCage>();
+
+		OverpoweredGoldDustSupportSystem.RegisterNPC<ThoriumMod.NPCs.Depths.Lobster, ThoriumMod.NPCs.Depths.GoldLobster>();
+		OverpoweredGoldDustSupportSystem.RegisterNPC<ThoriumMod.NPCs.Depths.BlueLobster, ThoriumMod.NPCs.Depths.GoldLobster>();
+
+		// Slimes
+		OverpoweredGoldDustSupportSystem.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.Clot>(), NPCID.GoldenSlime);
+		OverpoweredGoldDustSupportSystem.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.GildedSlime>(), NPCID.GoldenSlime);
+		OverpoweredGoldDustSupportSystem.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.GildedSlimeMini>(), NPCID.GoldenSlime);
+		OverpoweredGoldDustSupportSystem.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.GraniteFusedSlime>(), NPCID.GoldenSlime);
+		OverpoweredGoldDustSupportSystem.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.LivingHemorrhage>(), NPCID.GoldenSlime);
+		OverpoweredGoldDustSupportSystem.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.SpaceSlime>(), NPCID.GoldenSlime);
+		OverpoweredGoldDustSupportSystem.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.BloodMoon.BloodDrop>(), NPCID.GoldenSlime);
+
+		// Misc. NPCs
+		OverpoweredGoldDustSupportSystem.RegisterNPC<ThoriumMod.NPCs.CoinBagCopper, ThoriumMod.NPCs.CoinBagGold>();
+		OverpoweredGoldDustSupportSystem.RegisterNPC<ThoriumMod.NPCs.CoinBagSilver, ThoriumMod.NPCs.CoinBagGold>();
+		OverpoweredGoldDustSupportSystem.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.Myna>(), NPCID.GoldBird);
+		OverpoweredGoldDustSupportSystem.RegisterNPC(NPCID.GiantFlyingFox, ModContent.NPCType<ThoriumMod.NPCs.GildedBat>());
+		OverpoweredGoldDustSupportSystem.RegisterNPC(NPCID.Werewolf, ModContent.NPCType<ThoriumMod.NPCs.GildedLycan>());
+
+		// Misc. Items
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.BasicAccessories.CopperBuckler, ThoriumMod.Items.BasicAccessories.GoldAegis, ThoriumMod.Items.BasicAccessories.PlatinumAegis>();
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.BasicAccessories.TinBuckler, ThoriumMod.Items.BasicAccessories.GoldAegis, ThoriumMod.Items.BasicAccessories.PlatinumAegis>();
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.BasicAccessories.IronShield, ThoriumMod.Items.BasicAccessories.GoldAegis, ThoriumMod.Items.BasicAccessories.PlatinumAegis>();
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.BasicAccessories.LeadShield, ThoriumMod.Items.BasicAccessories.GoldAegis, ThoriumMod.Items.BasicAccessories.PlatinumAegis>();
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.BasicAccessories.SilverBulwark, ThoriumMod.Items.BasicAccessories.GoldAegis, ThoriumMod.Items.BasicAccessories.PlatinumAegis>();
+		OverpoweredGoldDustSupportSystem.RegisterItem<ThoriumMod.Items.BasicAccessories.TungstenBulwark, ThoriumMod.Items.BasicAccessories.GoldAegis, ThoriumMod.Items.BasicAccessories.PlatinumAegis>();
+
+		OverpoweredGoldDustSupportSystem.RegisterItem(ItemID.PlumbersHat, ModContent.ItemType<ThoriumMod.Items.Donate.GreedyHat>());
+		OverpoweredGoldDustSupportSystem.RegisterItem(ItemID.PlumbersShirt, ModContent.ItemType<ThoriumMod.Items.Donate.GreedyShirt>());
+		OverpoweredGoldDustSupportSystem.RegisterItem(ItemID.PlumbersPants, ModContent.ItemType<ThoriumMod.Items.Donate.GreedyPants>());
 	}
 
 	private static void RescueFairiesSupport()
