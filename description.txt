@@ -1,1 +1,11 @@
-Assorted Mod Compatibility is a pretty cool mod, it does...this. Modify this file with a description of your mod.
+Assorted Mod Compatibility adds a lot of compatibility between several mods.
+
+Current Compatibility:
+ - Thorium Mod:
+ + Asymmetric Equips
+ + Dialogue Panel Rework
+ + Enhanced Buff Display
+ + Magic Storage
+ + Rescue Fairies
+ + RoR 2 Health Bars
+ + Universal Crafter

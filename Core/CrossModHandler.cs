@@ -5,13 +5,8 @@ namespace RandomModCompat.Core;
 /// <summary>
 /// Handles basic cross-mod call support.
 /// </summary>
-internal abstract class CrossModHandler : ILoadable
+internal abstract class CrossModHandler : ModType
 {
-	/// <summary>
-	/// The mod that adds this handler.
-	/// </summary>
-	protected Mod Mod { get; private set; }
-
 	/// <summary>
 	/// The mod this handler adds support for.
 	/// </summary>
@@ -28,12 +23,13 @@ internal abstract class CrossModHandler : ILoadable
 	/// </summary>
 	protected abstract string ModName { get; }
 
+	public override sealed bool IsLoadingEnabled(Mod mod)
+	{
+		return ModLoader.HasMod(ModName);
+	}
+
 	/// <inheritdoc cref="ModSystem.OnModLoad"/>
 	internal virtual void OnModLoad()
-	{ }
-
-	/// <inheritdoc cref="ModSystem.SetupContent"/>
-	internal virtual void SetupContent()
 	{ }
 
 	/// <inheritdoc cref="ModSystem.PostSetupContent"/>
@@ -48,13 +44,9 @@ internal abstract class CrossModHandler : ILoadable
 	internal virtual void PostSetupEverything()
 	{ }
 
-	void ILoadable.Load(Mod mod)
+	protected override void Register()
 	{
-		Mod = mod;
+		ModTypeLookup<CrossModHandler>.Register(this);
 		CrossModSystem._handlers.Add(this);
-	}
-
-	void ILoadable.Unload()
-	{
 	}
 }

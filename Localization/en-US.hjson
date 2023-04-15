@@ -1,0 +1,78 @@
+﻿Mods.RandomModCompat:
+{
+	Thorium:
+	{
+		ROR2:
+		{
+			GrandThunderBird:
+			{
+				Description: "Forgotten Protector"
+			}
+			
+			QueenJelly:
+			{
+				Description: "Aquatic Matriarch"
+			}
+			
+			Viscount:
+			{
+				Description: "Lord of the Caverns"
+			}
+			
+			GraniteEnergyStorm:
+			{
+				Description: "Eye of the Storm"
+			}
+			
+			BuriedChampion:
+			{
+				Description: "A Hero No More"
+			}
+			
+			StarScouter:
+			{
+				Description: "Interplanetary Harbinger"
+			}
+			
+			BoreanStrider:
+			{
+				Description: "Eight-Legged Menace"
+			}
+			
+			FallenBeholder:
+			{
+				Description: "Glimpse of the Void"
+			}
+			
+			Lich:
+			{
+				Description: "Death's Disciple"
+			}
+			
+			ForgottenOne:
+			{
+				Description: "Ancient Prisoner"
+			}
+			
+			Aquais:
+			{
+				Description: "Endless Tide"
+			}
+			
+			Omnicide:
+			{
+				Description: "Life Defiler"
+			}
+			
+			SlagFury:
+			{
+				Description: "First Flame"
+			}
+			
+			DreamEater:
+			{
+				Description: "Dying Reality"
+			}
+		}
+	}
+}
