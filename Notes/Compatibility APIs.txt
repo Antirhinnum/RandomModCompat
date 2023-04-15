@@ -1,0 +1,325 @@
+﻿Key:
+	Mod.Call Support:	This mod has a Mod.Call() API.
+	Library:			This mod is only intended for use with other mods and does nothing on its own.
+
+absoluteAquarian's Graphics Library:
+	+ Mod.Call Support
+	+ Library
+	+ https://github.com/absoluteAquarian/GraphicsLib
+	A low-level graphics API.
+	Call support allows weak usage.
+	Intended to be used as a strongReference.
+
+	Compat. Ideas:
+	- TBD
+
+Achievement Mod
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2927542027
+	Allows unlocking vanilla achievements and allows mods to add their own.
+	Call support allows adding custom achievements.
+
+	Compat. Ideas:
+	+ Achievements! Bosses, events, items, etc.
+
+Asymmetric Equips:
+	+ Mod.Call Support
+	+ https://github.com/Antirhinnum/AsymmetricEquips/tree/1.4.3
+	Makes equipment show asymmetrically.
+	Call support allows making modded equipment asymmetric and getting into about added content.
+
+	Compat. Ideas:
+	+ Asymmetric equips!
+
+Bangarang:
+	+ Mod.Call Support
+	+ https://github.com/stormytuna/Bangarang
+	A boomerang expansion mod.
+	Call support allows modders to register their mod's boomerangs to be affected by Bangarang's effects.
+
+	Compat. Ideas:
+	+ Registering modded boomerangs.
+
+Bosses as NPCs:
+	+ Mod.Call Support
+	+ https://github.com/Rijam/BossesAsNPCs/tree/1.4.3
+	Adds every vanilla boss as a town NPC.
+	Call support allows modders to check a variety of flags, as well as add items to NPCs' shops.
+	This mod intrinsically adds support for several mods.
+
+	Compat. Ideas:
+	+ Adding a mod's bosses as town NPCs.
+	+ Adding extra boss drops to their respective NPC's shop.
+
+Calamity's Vanities:
+	+ Mod.Call Support
+	+ https://github.com/PotatoPersonThing/CalValEX/blob/master/CalValEX.cs#L192
+	A content mod.
+	Call support allows checking if bosses are defeated and if the player is in the Astral biome.
+
+	Compat. Ideas:
+	- TBD
+
+Colored Damage Types:
+	+ Mod.Call Support
+	+ https://github.com/PvtFudgepants/Tmodloader-ColoredDamageTypes
+	Colors all damage dealt depending on the class that dealt it.
+	Call support allows registering colors for a DamageClass.
+
+	API Ideas:
+	+ Getting the color of a DamageClass.
+
+	Compat. Ideas:
+	+ Registering damage colors.
+
+Dialogue Panel Rework:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2563815443
+	Reworks the NPC dialogue and sign UIs to resemble mobile's versions.
+	Call support allows changing icons and portaits per NPC, as well as adding custom drawing logic and adding extra buttons.
+
+	Compat. Ideas:
+	+ Custom icons for a town NPC's special functions.
+
+Enhanced Buff Display:
+	+ Mod.Call support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2863092349
+	Allows hiding specific buffs from appearing below the hotbar.
+	Call support lets modders set buffs as being linked.
+		If buffs A and B are linked: If A is hidden, B will also be hidden.
+	Call support also allows checking which buff a buff is linked to.
+
+	API Ideas:
+	+ Query if a player has hidden a buff.
+
+	Compat. Ideas:
+	+ A mod that changes how buffs display would benefit from the suggested API.
+
+Galaxia:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2835073302
+	A general content mod.
+	Call support allows setting the player's temperature in ModPlayer.PreUpdate().
+
+	Compat. Ideas:
+	+ Heat.
+
+Gold Dust Turns Everything Into Gold:
+	+ https://github.com/Cyrillya/OverpoweredGoldDust
+	Exactly what it says on the tin.
+
+	Compat. Ideas:
+	+ Support for modded gold critters.
+
+HairLoader:
+	+ Mod.Call Support
+	+ Library
+	+ https://github.com/Rhoenicx/HairLoader
+	An API for adding custom hairs.
+	Call support allows registration.
+
+	Compat. Ideas:
+	+ Adding custom hair styles.
+
+Inline Wiki Lib:
+	+ Mod.Call Support
+	+ https://github.com/Kabaril/InlineWikiLib
+	Adds inline wiki entries to items.
+	Call support allows adding entries for modded items.
+
+	Compat. Ideas:
+	+ Generic support.
+
+Item Checklist:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/workshop/filedetails/?id=2866111868
+	Provides a checklist of every item in the game, and marks which ones the player has collected before.
+	Call support allows modders to check which items a player has collected, as well as register a callback to be called every time a new item is picked up.
+
+	API Ideas:
+	+ Blacklist. See below.
+
+	Compat. Ideas:
+	+ Some sort of Bestiary-like showcase of all collected items.
+	+ Some sort of UI pop-up for collecting items.
+
+Item Check Blacklist Lib [Test]:
+	+ Mod.Call Support
+	+ Library
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2921706690
+	Provides an API to blacklist items for Item Checklist.
+	May become obsolete if this PR is ever accepted: https://github.com/JavidPack/ItemChecklist/pull/13
+
+	Compat. Ideas:
+	+ Auto-register any item with a research value of 0? Probably not.
+	+ Register any explicitly unobtainable item.
+
+Mod Achievements Library:
+	+ Mod.Call Support
+	+ Library
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2837995885
+	An API for modded achivements.
+	Call support allows custom achievements.
+
+	Compat. Ideas:
+	+ Achievements!
+
+More Clentaminating Things:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2912982684
+	Adds parity to a lot of Corruption/Crimson/Hallow content (mushrooms, conversion water, etc.).
+	Call support allows registering torches, grasses, and grass seeds.
+
+	Compat. Ideas:
+	+ Support for custom grassed and the Seed Shovel.
+
+NPC Kill Counter:
+	 + Mod.Call Support
+	 + https://github.com/zzp198-old/NPCKillCounter
+	 Replaces the original Tally Counter counts with one that distinguished between netIDs.
+	 Call support allows checking the number of kills for a world or the local player, indexed by NPCDefinition.ToString().
+
+	 Compat. Ideas:
+	 - TBD
+
+Ore Excavator:
+	+ Mod.Call Support
+	+ https://github.com/CrazyContraption/OreExcavator
+	Adds a system for excavating large amounts of blocks using a hotkey.
+	Call support allows checking if a tile/wall/item is white/blacklisted, as well as adding to those white/blacklists.
+	You can also save the lists and get the excavation keybind.
+	There is WIP support for using Call to excavate, but it's unimplemented.
+
+	Compat. Idea:
+	+ Manually adding support for a mod's ores or valuable tiles.
+	+ Blocking some tiles from being excavated.
+
+pbone Lib:
+	+ Library
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2590607355
+	A general dev. library.
+
+Planter Box Library:
+	+ Mod.Call Support
+	+ Library
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2732933877
+	Allows the creation of modded planter boxes.
+	Call support allows checking if a tile type is a planter box.
+
+	Compat. Ideas:
+	+ Modded planter boxes.
+
+Rescue Fairies:
+	+ Mod.Call Support
+	+ https://github.com/Antirhinnum/RescueFairies
+	Adds fairies that lead players to stationary NPCs, like bound town NPCs or Mimics.
+	Call support lets modders add conditions for NPCs to be tracked or to prevent an NPC from being tracked.
+
+	Compat. Ideas:
+	+ Any mod that adds bound town NPCs or mimic-like NPCs could call this mod.
+	+ A mod that uses the default conditions for a non-hidden NPC should blacklist its NPCs.
+
+Rod of Discord Hotkey:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2858296368
+	Adds a hotkey to use the Rod of Discord.
+	Call support allows modders to mark an item to be used by the hotkey.
+	By default, this only supports the Rod of Discord.
+
+	Compat. Ideas:
+	+ Any mod that adds in a variant of the Rod of Discord should add support.
+
+RoR 2 Health Bars:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2788731718
+	Replaces the default health bar with one resembling the bars from Risk of Rain 2.
+	Call support allows modders to add custom names & subtitles, as well as mark NPCs as sharing health.
+
+	Compat. Ideas:
+	+ Custom names/descriptions for bosses.
+
+Shoe Slot:
+	+ Mod.Call Support
+	+ https://github.com/stormytuna/ShoeSlot
+	Adds an accessory slot for shoes. Any accessory with a Shoes equip is automatically registered.
+	Call support allows modders to add shoes that don't have a Shoes equip.
+
+	Compat. Ideas:
+	+ Registering shoes without equip slots.
+
+Shop Expander:
+	+ Mod.Call Support
+	+ https://github.com/ExterminatorX99/ShopExpander/
+	Adds pagination to shops.
+	Call support allows changing the settings of the mod and modifying expanded shops.
+
+	Compat. Ideas:
+	- TBD
+
+Staggo's Good Visuals:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2572195618
+	Modifies player visuals, like adding head rotation and smooth movement. It also makes many projectiles -- such as explosives, falling blocks, and lasers -- vibrate the screen.
+	Call support allows modders to mark a projectile as "vibrating", which creates screenshake on death.
+
+	Compat. Ideas:
+	+ Add explosives. Simple.
+
+Summoner's Association:
+	+ Mod.Call Support
+	+ https://github.com/JavidPack/SummonersAssociation
+	Adds some summoner content.
+	Call support allows registering minions. Useful for multi-projectile minions.
+	Also allows adding a condition for a minion to teleport using the Minion Control Rod.
+
+	Compat. Ideas:
+	+ Registering minions.
+	+ Preventing teleportation.
+
+The Amulet of Many Minions: Combat Pets!:
+	+ Mod.Call Support
+	+ https://github.com/westphallm1/tModLoader_Minions
+	Converts every vanilla pet into a minion, and adds a new Squire system for directly controlling minions.
+	Call support allows registering new minions.
+	TODO: Look more into this.
+
+	Compat. Ideas:
+	+ Adding combat pets for every pet a mod adds.
+
+Unified Freeze Library:
+	+ Mod.Call Support
+	+ Library
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2794398959
+	Adds a common freezing/slowdown debuff for players and NPCs.
+	Call support allows applying slowdown.
+	Intended for use as a strongReference.
+
+	Compat. Ideas:
+	- TBD
+
+Universal Crafter:
+	+ Mod.Call support
+	+ https://github.com/Antirhinnum/UniversalCraft
+	Adds a station that combines many crafting stations.
+	Call support lets modders add tiles to be auto-added to the station under a condition.
+
+	Compat. Ideas:
+	+ Any mod that adds crafting stations would benefit from calling this mod.
+
+Wikithis:
+	+ Mod.Call Support
+	+ https://github.com/BasicallyIAmFox/Wikithis
+	Allows opening a mod's wiki from in-game.
+	Call support allows registering wikis in multiple languages, replacing the wiki icon.
+	Additionally: Specifying the wiki page for an item(s), for an NPC(s), 
+
+	Compat. Ideas:
+	+ Adding a mod's wiki.
+
+Wing Slot:
+	- No Mod.Call Support
+	+ https://github.com/abluescarab/tModLoader-WingSlot
+	Adds an accessory slot for wings.
+
+	Compat. Ideas:
+	- TBD
