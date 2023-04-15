@@ -1,4 +1,5 @@
-﻿using Terraria.ModLoader;
+﻿using System.Diagnostics.CodeAnalysis;
+using Terraria.ModLoader;
 
 namespace RandomModCompat.Core;
 
@@ -28,7 +29,7 @@ internal abstract class ModWithCalls : ModType
 		ModTypeLookup<ModWithCalls>.Register(this);
 	}
 
-	internal static bool TryGetCaller<T>(out T caller) where T : ModWithCalls
+	internal static bool TryGetCaller<T>([NotNullWhen(true)] out T caller) where T : ModWithCalls
 	{
 		caller = ModContent.GetInstance<T>();
 		return caller.Active;

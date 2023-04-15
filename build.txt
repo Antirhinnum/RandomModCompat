@@ -1,9 +1,10 @@
 displayName = Assorted Mod Compatibility
 author = Snek
 version = 0.1.0
-weakReferences = ThoriumMod
 hideCode = true
 hideResources = true
 includeSource = false
 buildIgnore = LICENSE, README.md, *.pdn
 includePDB = true
+weakReferences = CalamityMod, ThoriumMod
+sortAfter = ColoredDamageTypes

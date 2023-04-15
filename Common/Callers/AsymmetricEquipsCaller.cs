@@ -28,6 +28,11 @@ internal sealed class AsymmetricEquipsCaller : ModWithCalls
 		CalledMod.Call(nameof(AddGlove), itemId);
 	}
 
+	internal void AddGlove<T>() where T : ModItem
+	{
+		AddGlove(ModContent.ItemType<T>());
+	}
+
 	internal void AddSpecialItem(int itemId, PlayerSide side = PlayerSide.Right)
 	{
 		CalledMod.Call(nameof(AddSpecialItem), itemId, side);
