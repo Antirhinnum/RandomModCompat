@@ -5,6 +5,7 @@
 absoluteAquarian's Graphics Library:
 	+ Mod.Call Support
 	+ Library
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2792956631
 	+ https://github.com/absoluteAquarian/GraphicsLib
 	A low-level graphics API.
 	Call support allows weak usage.
@@ -24,6 +25,7 @@ Achievement Mod
 
 Asymmetric Equips:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240
 	+ https://github.com/Antirhinnum/AsymmetricEquips/tree/1.4.3
 	Makes equipment show asymmetrically.
 	Call support allows making modded equipment asymmetric and getting into about added content.
@@ -31,8 +33,9 @@ Asymmetric Equips:
 	Compat. Ideas:
 	+ Asymmetric equips!
 
-Bangarang:
+Bangarang - A Boomerang Overhaul:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955
 	+ https://github.com/stormytuna/Bangarang
 	A boomerang expansion mod.
 	Call support allows modders to register their mod's boomerangs to be affected by Bangarang's effects.
@@ -42,6 +45,7 @@ Bangarang:
 
 Bosses as NPCs:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2689434541
 	+ https://github.com/Rijam/BossesAsNPCs/tree/1.4.3
 	Adds every vanilla boss as a town NPC.
 	Call support allows modders to check a variety of flags, as well as add items to NPCs' shops.
@@ -53,6 +57,7 @@ Bosses as NPCs:
 
 Calamity's Vanities:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2824688804
 	+ https://github.com/PotatoPersonThing/CalValEX/blob/master/CalValEX.cs#L192
 	A content mod.
 	Call support allows checking if bosses are defeated and if the player is in the Astral biome.
@@ -62,6 +67,7 @@ Calamity's Vanities:
 
 Colored Damage Types:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2793782057
 	+ https://github.com/PvtFudgepants/Tmodloader-ColoredDamageTypes
 	Colors all damage dealt depending on the class that dealt it.
 	Call support allows registering colors for a DamageClass.
@@ -105,6 +111,7 @@ Galaxia:
 	+ Heat.
 
 Gold Dust Turns Everything Into Gold:
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2791571202
 	+ https://github.com/Cyrillya/OverpoweredGoldDust
 	Exactly what it says on the tin.
 
@@ -117,6 +124,7 @@ Gold Dust Turns Everything Into Gold:
 HairLoader:
 	+ Mod.Call Support
 	+ Library
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2819428494
 	+ https://github.com/Rhoenicx/HairLoader
 	An API for adding custom hairs.
 	Call support allows registration.
@@ -126,6 +134,7 @@ HairLoader:
 
 Inline Wiki Lib:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2880145840
 	+ https://github.com/Kabaril/InlineWikiLib
 	Adds inline wiki entries to items.
 	Call support allows adding entries for modded items.
@@ -135,6 +144,7 @@ Inline Wiki Lib:
 
 Item Checklist:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2866111868
 	+ https://steamcommunity.com/workshop/filedetails/?id=2866111868
 	Provides a checklist of every item in the game, and marks which ones the player has collected before.
 	Call support allows modders to check which items a player has collected, as well as register a callback to be called every time a new item is picked up.
@@ -159,6 +169,7 @@ Item Check Blacklist Lib [Test]:
 
 Magic Storage:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347
 	+ https://github.com/blushiemagic/MagicStorage
 	A storage system.
 	Call support allows adding Shadow Diamon drop rules to modded NPCs.
@@ -187,6 +198,7 @@ More Clentaminating Things:
 
 NPC Kill Counter:
 	 + Mod.Call Support
+	 + https://steamcommunity.com/sharedfiles/filedetails/?id=2869445765
 	 + https://github.com/zzp198-old/NPCKillCounter
 	 Replaces the original Tally Counter counts with one that distinguished between netIDs.
 	 Call support allows checking the number of kills for a world or the local player, indexed by NPCDefinition.ToString().
@@ -196,6 +208,7 @@ NPC Kill Counter:
 
 Ore Excavator:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2565639705
 	+ https://github.com/CrazyContraption/OreExcavator
 	Adds a system for excavating large amounts of blocks using a hotkey.
 	Call support allows checking if a tile/wall/item is white/blacklisted, as well as adding to those white/blacklists.
@@ -222,6 +235,7 @@ Planter Box Library:
 	+ Modded planter boxes.
 
 Rainbow Weapon Forgery:
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2882074287
 	+ https://github.com/Antirhinnum/RainbowWeaponForgery
 	Allows using custom names wihtout renaming the character.
 
@@ -230,6 +244,7 @@ Rainbow Weapon Forgery:
 
 Rescue Fairies:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2943805073
 	+ https://github.com/Antirhinnum/RescueFairies
 	Adds fairies that lead players to stationary NPCs, like bound town NPCs or Mimics.
 	Call support lets modders add conditions for NPCs to be tracked or to prevent an NPC from being tracked.
@@ -259,6 +274,7 @@ RoR 2 Health Bars:
 
 Shoe Slot:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2917091521
 	+ https://github.com/stormytuna/ShoeSlot
 	Adds an accessory slot for shoes. Any accessory with a Shoes equip is automatically registered.
 	Call support allows modders to add shoes that don't have a Shoes equip.
@@ -268,6 +284,7 @@ Shoe Slot:
 
 Shop Expander:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2828370879
 	+ https://github.com/ExterminatorX99/ShopExpander/
 	Adds pagination to shops.
 	Call support allows changing the settings of the mod and modifying expanded shops.
@@ -286,6 +303,7 @@ Staggo's Good Visuals:
 
 Summoner's Association:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2561619075
 	+ https://github.com/JavidPack/SummonersAssociation
 	Adds some summoner content.
 	Call support allows registering minions. Useful for multi-projectile minions.
@@ -297,6 +315,7 @@ Summoner's Association:
 
 The Amulet of Many Minions: Combat Pets!:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2565770836
 	+ https://github.com/westphallm1/tModLoader_Minions
 	Converts every vanilla pet into a minion, and adds a new Squire system for directly controlling minions.
 	Call support allows registering new minions.
@@ -307,6 +326,7 @@ The Amulet of Many Minions: Combat Pets!:
 
 Thorium Mod:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416
 	+ https://thoriummod.wiki.gg/wiki/Mod_Calls
 	A content mod.
 	Call support allows checking for downed bools, healer/bard status, and registering the following: DoT debuffs, status effect debuffs, Martian items, flails.
@@ -329,6 +349,7 @@ Unified Freeze Library:
 
 Universal Crafter:
 	+ Mod.Call support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2917548365
 	+ https://github.com/Antirhinnum/UniversalCraft
 	Adds a station that combines many crafting stations.
 	Call support lets modders add tiles to be auto-added to the station under a condition.
@@ -338,6 +359,7 @@ Universal Crafter:
 
 Wikithis:
 	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2832487441
 	+ https://github.com/BasicallyIAmFox/Wikithis
 	Allows opening a mod's wiki from in-game.
 	Call support allows registering wikis in multiple languages, replacing the wiki icon.
@@ -348,6 +370,7 @@ Wikithis:
 
 Wing Slot:
 	- No Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2942702352
 	+ https://github.com/abluescarab/tModLoader-WingSlot
 	Adds an accessory slot for wings.
 

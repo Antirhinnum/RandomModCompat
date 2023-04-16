@@ -1,5 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using RandomModCompat.Common.Callers;
+﻿using RandomModCompat.Common.Callers;
 using RandomModCompat.Core;
 using Terraria;
 using Terraria.ModLoader;
@@ -207,7 +206,7 @@ internal sealed class CalamityModSystem : CrossModHandler
 		caller.AddMartianItemID<CalamityMod.Items.Weapons.Ranged.NullificationRifle>();
 		caller.AddMartianItemID<CalamityMod.Items.Weapons.Magic.Wingman>();
 		caller.AddMartianItemID<CalamityMod.Items.Weapons.Rogue.ShockGrenade>();
-		
+
 		// TODO: DoT debuffs?
 		// TODO: Status debuffs?
 	}

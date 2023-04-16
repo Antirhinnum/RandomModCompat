@@ -1,10 +1,21 @@
 Assorted Mod Compatibility adds a lot of compatibility between several mods.
 
+See the Workshop page for a detailed breakdown of compatibility.
+
 Current Compatibility:
+ - Calamity Mod
+ + Asymmetric Equips
+ + Bangarang
+ + Enhanced Buff Display
+ + Item Check Blacklist Lib
+ + Thorium Mod
+ + Universal Crafter
  - Thorium Mod:
  + Asymmetric Equips
  + Dialogue Panel Rework
  + Enhanced Buff Display
+ + Gold Dust Turns Everything Into Gold
+ + Item Check Blacklist Lib
  + Magic Storage
  + Rescue Fairies
  + RoR 2 Health Bars

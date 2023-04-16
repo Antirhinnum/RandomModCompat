@@ -176,14 +176,12 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		static Func<Rectangle> BestiaryIconFrame(int index) => () => ModContent.Request<Texture2D>(BestiaryIconsPath).Frame(16, 5, index % 16, index / 16);
 
 		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.Cobbler>() }, "Terraria/Images/Item_" + ItemID.ArmorPolish);
-
-		// May not work until Dialogue Panel Rework updates -- https://github.com/Cyrillya/DialogueTweak/pull/5
-		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.DesertAcolyte>() }, BestiaryIconsPath, null, BestiaryIconFrame(43));
-		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.Cook>() }, "Terraria/Images/Item_" + ItemID.ChefHat);
 		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.ConfusedZombie>() }, ModContent.GetInstance<ThoriumMod.Items.Consumable.ZombieRepellent>().Texture);
-		caller.ReplaceShopButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.Tracker>() }, ModContent.GetInstance<ThoriumMod.Items.Tracker.VanquisherMedal>().Texture);
+		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.Cook>() }, "Terraria/Images/Item_" + ItemID.ChefHat);
+		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.DesertAcolyte>() }, BestiaryIconsPath, null, BestiaryIconFrame(43));
 		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.Diverman>() }, "Terraria/Images/Bubble");
 		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.Spiritualist>() }, ModContent.GetInstance<ThoriumMod.Items.HealerItems.PurityShards>().Texture);
+		caller.ReplaceShopButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.Tracker>() }, ModContent.GetInstance<ThoriumMod.Items.Tracker.VanquisherMedal>().Texture);
 		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.WeaponMaster>() }, ModContent.GetInstance<ThoriumMod.Items.NPCItems.ExileHelmet>().Texture);
 	}
 
@@ -405,7 +403,8 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		static bool GuidesFinalGiftCondition() => NPC.downedMoonlord && ModContent.GetInstance<ThoriumConfigServer>().donatorOther.toggleGuidesFinalGift;
 
 		caller.AddStation<ThoriumMod.Tiles.ArcaneArmorFabricator>(() => NPC.downedBoss1);
-		caller.AddStation<ThoriumMod.Tiles.GrimPedestal>(() => NPC.downedBoss1);
+		// Removed since it's just a movable Demon/Crimson Altar.
+		//caller.AddStation<ThoriumMod.Tiles.GrimPedestal>(() => NPC.downedBoss1);
 		caller.AddStation<ThoriumMod.Tiles.GuidesFinalGiftTile>(GuidesFinalGiftCondition);
 		caller.AddStation<ThoriumMod.Tiles.SoulForgeNew>(() => NPC.downedMechBoss1 && NPC.downedMechBoss2 && NPC.downedMechBoss3);
 		caller.AddStation<ThoriumMod.Tiles.ThoriumAnvil>();
