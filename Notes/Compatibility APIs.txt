@@ -23,6 +23,17 @@ Achievement Mod
 	Compat. Ideas:
 	+ Achievements! Bosses, events, items, etc.
 
+Advanced World Generation:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2562968836
+	+ https://github.com/Ishigh1/AdvancedWorldGen
+	Allows heavy customization of generated worlds.
+	Call supports allows adding options.
+
+	Compat. Ideas:
+	+ Making a mod's world gen. have options that this mod can change.
+		This might need a lot of IL editing, though...
+
 Asymmetric Equips:
 	+ Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240
@@ -42,6 +53,17 @@ Bangarang - A Boomerang Overhaul:
 
 	Compat. Ideas:
 	+ Registering modded boomerangs.
+
+Boss Checklist:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2669644269
+	+ https://github.com/JavidPack/BossChecklist
+	Adds a checklist and guidebook for bosses, minibosses, and events.
+	Call support allows adding any of these, as well as adding to existing entries and getting a dictionary of all info.
+
+	Compat. Ideas:
+	+ Modded (mini)bosses.
+	+ Adding a mod's event content to the checklist.
 
 Bosses as NPCs:
 	+ Mod.Call Support
@@ -64,6 +86,26 @@ Calamity's Vanities:
 
 	Compat. Ideas:
 	- TBD
+
+Census - Town NPC Checklist:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2687866031
+	+ https://github.com/JavidPack/Census
+	Shows conditions to unlock town NPCs.
+	Call support allows adding modded town NPCs.
+
+	Compat. Ideas:
+	+ Adding conditions.
+	~ That slug town pet mod needs support.
+
+Cheat Sheet:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2563784437
+	A cheat mod.
+	Call support allows hiding the button.
+
+	Compat. Ideas:
+	~ DragonLens could maybe hide the button?
 
 Colored Damage Types:
 	+ Mod.Call Support
@@ -132,6 +174,16 @@ HairLoader:
 	Compat. Ideas:
 	+ Adding custom hair styles.
 
+Infinite Munitions:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2713674858
+	+ https://github.com/Chicken-Bones/InfiniteMunitions
+	Adds infinte ammo items for all vanilla ammos.
+	Call support allows adding infinite versions of mod ammos.
+
+	Compat. Ideas:
+	+ What do you think?
+
 Inline Wiki Lib:
 	+ Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2880145840
@@ -176,6 +228,15 @@ Magic Storage:
 
 	Compat. Ideas:
 	+ Adding diamond drops.
+
+Mech Bosses Rework:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2737642173
+	Reworks the mech bosses.
+	Call support allows adding and removing items to the Soul of Plight blacklist.
+
+	Compat. Ideas:
+	+ Soul of Might-only items.
 
 Mod Achievements Library:
 	+ Mod.Call Support
@@ -224,6 +285,16 @@ pbone Lib:
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2590607355
 	A general dev. library.
 
+pbone's Utilities:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2590607250
+	+ https://github.com/Pbone3/PboneUtils
+	A LuiAFK-like mod.
+	Call support allows adding items to the Mysterious Trader's shop.
+
+	Copmat. Ideas:
+	+ Add some rare items to the shop.
+
 Planter Box Library:
 	+ Mod.Call Support
 	+ Library
@@ -240,7 +311,17 @@ Rainbow Weapon Forgery:
 	Allows using custom names wihtout renaming the character.
 
 	Compat. Ideas:
-	+ Yharim's Crystal has name-specific colors, doesn't it?
+	~ Yharim's Crystal has name-specific colors, doesn't it?
+
+Recipe Browser:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2619954303
+	+ https://github.com/JavidPack/RecipeBrowser
+	The one and only.
+	Call support allows adding item categories and filters.
+
+	Compat. Ideas:
+	+ Custom item groups.
 
 Rescue Fairies:
 	+ Mod.Call Support
@@ -324,17 +405,30 @@ The Amulet of Many Minions: Combat Pets!:
 	Compat. Ideas:
 	+ Adding combat pets for every pet a mod adds.
 
+The Clicker Class:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2563277843
+	+ https://github.com/SamsonAllen13/ClickerClass
+	+ https://github.com/SamsonAllen13/ClickerClass/blob/master/ClickerModCalls.cs
+	+ https://github.com/SamsonAllen13/ClickerClassExampleMod/wiki/Available-Calls
+	Adds in the Clicker class.
+	Call support allows checking almost everything the mod adds.
+
+	Compat. Ideas:
+	+ Clicker items.
+
+
 Thorium Mod:
 	+ Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416
 	+ https://thoriummod.wiki.gg/wiki/Mod_Calls
-	A content mod.
+	A content mod. Contains the Bard and Healer classes.
 	Call support allows checking for downed bools, healer/bard status, and registering the following: DoT debuffs, status effect debuffs, Martian items, flails.
 
 	Compat. Ideas:
 	+ Adding support for flails and Martian items.
 	+ Adding support for debuffs.
-	+ Weak-referenced Bard/Healer items.
+	+ Bard/Healer items.
 
 Unified Freeze Library:
 	+ Mod.Call Support
@@ -371,6 +465,7 @@ Wikithis:
 Wing Slot:
 	- No Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2942702352
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2597324266
 	+ https://github.com/abluescarab/tModLoader-WingSlot
 	Adds an accessory slot for wings.
 
