@@ -11,8 +11,14 @@
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="BalloonsExtended">
+      <HintPath>lib\BalloonsExtended.dll</HintPath>
+    </Reference>
     <Reference Include="CalamityMod">
       <HintPath>lib\CalamityMod.dll</HintPath>
+    </Reference>
+    <Reference Include="Mask">
+      <HintPath>lib\Mask.dll</HintPath>
     </Reference>
     <Reference Include="ThoriumMod">
       <HintPath>lib\ThoriumMod.dll</HintPath>

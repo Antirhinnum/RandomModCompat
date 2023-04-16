@@ -181,6 +181,9 @@ Infinite Munitions:
 	Adds infinte ammo items for all vanilla ammos.
 	Call support allows adding infinite versions of mod ammos.
 
+	Notes:
+	- Adding compat. for this mod is much harder than expected.
+
 	Compat. Ideas:
 	+ What do you think?
 

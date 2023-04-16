@@ -1,14 +1,9 @@
 ﻿Mod Name				Source?		Steam Link															Notes
 
 AlchemistNPC Lite		Open		https://steamcommunity.com/sharedfiles/filedetails/?id=2599842771	
-Balloons Extended		Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2829653209	A. Equips!
 Cerebral Mod			Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2897788140	
-Combinations			Open		https://steamcommunity.com/sharedfiles/filedetails/?id=2801796077	A. Equips!
 Consolaria				Open		https://steamcommunity.com/sharedfiles/filedetails/?id=2864843929	
 DormantDawnMOD			Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2815777479	
-Early Hardmode			Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2856159499	Add Adv. World Gen. support? Need to test the mod first.
-Helpful NPCs			Open		https://steamcommunity.com/sharedfiles/filedetails/?id=2817545194	Census, RescueFairies, DialogueTweak?
-Mask					Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2728994926	Town NPCs.
 Mech Boss Rework		Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2737642173	Check for items.
 MoreZenithItems			Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2621278406	
 REMNANTS				Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2861542679	

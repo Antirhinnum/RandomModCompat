@@ -1,13 +1,21 @@
 Assorted Mod Compatibility adds a lot of compatibility between several mods.
 
 [b]Current Compatibility[/b]
+Balloons Extended:[list]
+[*]Asymmetric Equips
+[/list]
 Calamity Mod:[list]
 [*]Asymmetric Equips
 [*]Bangarang
 [*]Enhanced Buff Display
 [*]Item Check Blacklist Lib
 [*]Thorium Mod
-[*]Universal Crafter[/list]
+[*]Universal Crafter
+[/list]
+Mask:[list]
+[*]Asymmetric Equips
+[*]Census
+[/list]
 Thorium Mod:[list]
 [*]Asymmetric Equips
 [*]Dialogue Panel Rework
@@ -17,8 +25,13 @@ Thorium Mod:[list]
 [*]Magic Storage
 [*]Rescue Fairies
 [*]RoR 2 Health Bars
-[*]Universal Crafter[/list]
+[*]Universal Crafter
+[/list]
 
+
+Balloons Extended Support:
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
+All balloons added by this mod can now be worn asymmetrically.
 
 Calamity Mod Support:
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
@@ -172,6 +185,15 @@ The following stations are automatically added to the Universal Crafter after a 
 		[td]Always available[/td]
 	[/tr]
 [/table]
+
+Mask Support:
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
+The following items can now be worn asymmetrically:[list]
+[*]TV Mask
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2687866031]Census:[/url][/h1]
+Census now shows the move-in condition for the Mask Merchant.
 
 Thorium Mod Support:
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]

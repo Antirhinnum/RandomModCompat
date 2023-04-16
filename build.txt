@@ -6,4 +6,4 @@ hideResources = true
 includeSource = false
 buildIgnore = LICENSE, README.md, *.pdn, gear.png
 includePDB = true
-weakReferences = CalamityMod, ThoriumMod
+weakReferences = BalloonsExtended, CalamityMod, Mask, ThoriumMod

@@ -3,6 +3,8 @@ Assorted Mod Compatibility adds a lot of compatibility between several mods.
 See the Workshop page for a detailed breakdown of compatibility.
 
 Current Compatibility:
+ - Balloons Extended
+ + Asymmetric Equips
  - Calamity Mod
  + Asymmetric Equips
  + Bangarang
@@ -10,7 +12,10 @@ Current Compatibility:
  + Item Check Blacklist Lib
  + Thorium Mod
  + Universal Crafter
- - Thorium Mod:
+ - Mask
+ + Asymmetric Equips
+ + Census
+ - Thorium Mod
  + Asymmetric Equips
  + Dialogue Panel Rework
  + Enhanced Buff Display

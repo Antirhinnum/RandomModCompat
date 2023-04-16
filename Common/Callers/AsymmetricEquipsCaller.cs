@@ -53,10 +53,10 @@ internal sealed class AsymmetricEquipsCaller : ModWithCalls
 		AddEquip(type, EquipHelper.GetItemEquip<T>(type));
 	}
 
-	internal void AddFlippedEquip<T>(EquipType type) where T : ModItem
+	internal void AddFlippedEquip<T>(EquipType type, PlayerSide side = PlayerSide.Right) where T : ModItem
 	{
 		ModItem item = ModContent.GetInstance<T>();
-		AddEquip(type, EquipHelper.GetItemEquip<T>(type), EquipLoader.GetEquipSlot(Mod, FlippedEquipName(item.Name, type), type));
+		AddEquip(type, EquipHelper.GetItemEquip<T>(type), EquipLoader.GetEquipSlot(Mod, FlippedEquipName(item.Name, type), type), side);
 	}
 
 	internal void AddSmallHead<T>(PlayerSide side = PlayerSide.Right) where T : ModItem
@@ -64,9 +64,14 @@ internal sealed class AsymmetricEquipsCaller : ModWithCalls
 		AddEquip(EquipType.Head, EquipHelper.GetItemEquip<T>(EquipType.Head), ArmorIDs.Head.FamiliarWig, side);
 	}
 
+	internal void AddBalloon(int itemId)
+	{
+		AddEquip(EquipType.Balloon, EquipHelper.GetItemEquip(ContentSamples.ItemsByType[itemId], EquipType.Balloon), side: PlayerSide.Left);
+	}
+
 	internal void AddBalloon<T>() where T : ModItem
 	{
-		AddEquip(EquipType.Balloon, EquipHelper.GetItemEquip<T>(EquipType.Balloon), side: PlayerSide.Left);
+		AddBalloon(ModContent.ItemType<T>());
 	}
 
 	internal int AddFlippedEquipTexture(string modName, string name, EquipType type)
