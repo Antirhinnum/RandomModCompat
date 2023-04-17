@@ -15,6 +15,14 @@ Current Compatibility:
  - Mask
  + Asymmetric Equips
  + Census
+ - Mech Boss Rework
+ + Bangarang
+ + Bosses as NPCs
+ + Item Check Blacklist Lib
+ + Magic Storage
+ + RoR 2 Health Bars
+ + TerraTyping
+ + Thorium Mod
  - Thorium Mod
  + Asymmetric Equips
  + Dialogue Panel Rework

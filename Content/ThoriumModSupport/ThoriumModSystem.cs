@@ -240,37 +240,26 @@ internal sealed class ThoriumModSystem : CrossModHandler
 			return;
 		}
 
-		// All drops below may not work properly until Magic Storage updates -- https://github.com/blushiemagic/MagicStorage/pull/230
-
-		void RegisterShadowDiamondDrop<T>(int normal, int expert = -1) where T : ModNPC => caller.SetShadowDiamondDropRule(ModContent.NPCType<T>(), caller.GetShadowDiamondDropRule(normal, expert));
-		void RegisterShadowDiamondDropNormalOnly<T>(int amount) where T : ModNPC
-		{
-			IItemDropRule diamondDropRule = caller.GetShadowDiamondDropRule(amount);
-			IItemDropRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
-			notExpertRule.OnSuccess(diamondDropRule);
-			caller.SetShadowDiamondDropRule(ModContent.NPCType<T>(), notExpertRule);
-		}
-
-		RegisterShadowDiamondDrop<ThoriumMod.NPCs.Thunder.TheGrandThunderBirdv2>(1);
-		RegisterShadowDiamondDrop<ThoriumMod.NPCs.QueenJelly.QueenJelly>(1);
-		RegisterShadowDiamondDrop<ThoriumMod.NPCs.Bat.Viscount>(1);
-		RegisterShadowDiamondDrop<ThoriumMod.NPCs.Granite.GraniteEnergyStorm>(1);
-		RegisterShadowDiamondDrop<ThoriumMod.NPCs.Buried.TheBuriedWarrior>(1);
-		RegisterShadowDiamondDrop<ThoriumMod.NPCs.Scouter.ThePrimeScouter>(1);
+		caller.RegisterShadowDiamondDrop<ThoriumMod.NPCs.Thunder.TheGrandThunderBirdv2>(1);
+		caller.RegisterShadowDiamondDrop<ThoriumMod.NPCs.QueenJelly.QueenJelly>(1);
+		caller.RegisterShadowDiamondDrop<ThoriumMod.NPCs.Bat.Viscount>(1);
+		caller.RegisterShadowDiamondDrop<ThoriumMod.NPCs.Granite.GraniteEnergyStorm>(1);
+		caller.RegisterShadowDiamondDrop<ThoriumMod.NPCs.Buried.TheBuriedWarrior>(1);
+		caller.RegisterShadowDiamondDrop<ThoriumMod.NPCs.Scouter.ThePrimeScouter>(1);
 
 		// Drop for both phases. A player could theoretically get more Diamonds because of this, but that would require them to kill the Borean Strider or Fallen Beholder before either had a chance to change phases, which is unlikely.
-		RegisterShadowDiamondDrop<ThoriumMod.NPCs.Blizzard.BoreanStrider>(1);
-		RegisterShadowDiamondDrop<ThoriumMod.NPCs.Blizzard.BoreanStriderPopped>(1);
+		caller.RegisterShadowDiamondDrop<ThoriumMod.NPCs.Blizzard.BoreanStrider>(1);
+		caller.RegisterShadowDiamondDrop<ThoriumMod.NPCs.Blizzard.BoreanStriderPopped>(1);
 
-		RegisterShadowDiamondDropNormalOnly<ThoriumMod.NPCs.Beholder.FallenDeathBeholder>(1);
-		RegisterShadowDiamondDrop<ThoriumMod.NPCs.Beholder.FallenDeathBeholder2>(1);
+		caller.RegisterShadowDiamondDropNormalOnly<ThoriumMod.NPCs.Beholder.FallenDeathBeholder>(1);
+		caller.RegisterShadowDiamondDrop<ThoriumMod.NPCs.Beholder.FallenDeathBeholder2>(1);
 
-		RegisterShadowDiamondDropNormalOnly<ThoriumMod.NPCs.Lich.Lich>(1);
-		RegisterShadowDiamondDrop<ThoriumMod.NPCs.Lich.LichHeadless>(1);
+		caller.RegisterShadowDiamondDropNormalOnly<ThoriumMod.NPCs.Lich.Lich>(1);
+		caller.RegisterShadowDiamondDrop<ThoriumMod.NPCs.Lich.LichHeadless>(1);
 
-		RegisterShadowDiamondDropNormalOnly<ThoriumMod.NPCs.Depths.Abyssion>(1);
-		RegisterShadowDiamondDropNormalOnly<ThoriumMod.NPCs.Depths.AbyssionCracked>(1);
-		RegisterShadowDiamondDrop<ThoriumMod.NPCs.Depths.AbyssionReleased>(1);
+		caller.RegisterShadowDiamondDropNormalOnly<ThoriumMod.NPCs.Depths.Abyssion>(1);
+		caller.RegisterShadowDiamondDropNormalOnly<ThoriumMod.NPCs.Depths.AbyssionCracked>(1);
+		caller.RegisterShadowDiamondDrop<ThoriumMod.NPCs.Depths.AbyssionReleased>(1);
 
 		// The Primordials need an Expert Mode check to drop Diamonds, as well as a "last Primordial alive" check like the Twins.
 		// Thankfully, Thorium handles the "last Primordial alive" check.
@@ -283,7 +272,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		caller.SetShadowDiamondDropRule(ModContent.NPCType<ThoriumMod.NPCs.Primordials.Omnicide>(), lastPrimordialRule);
 		caller.SetShadowDiamondDropRule(ModContent.NPCType<ThoriumMod.NPCs.Primordials.SlagFury>(), lastPrimordialRule);
 
-		RegisterShadowDiamondDrop<ThoriumMod.NPCs.Primordials.RealityBreaker>(3);
+		caller.RegisterShadowDiamondDrop<ThoriumMod.NPCs.Primordials.RealityBreaker>(3);
 	}
 
 	private static void OverpoweredGoldDustSupport()
@@ -370,27 +359,25 @@ internal sealed class ThoriumModSystem : CrossModHandler
 			return;
 		}
 
-		void AddDesc<T>(string bossKey) where T : ModNPC => caller.BossDesc<T>(_thoriumLocalization + "ROR2." + bossKey + ".Description");
-
-		AddDesc<ThoriumMod.NPCs.Thunder.TheGrandThunderBirdv2>("GrandThunderBird");
-		AddDesc<ThoriumMod.NPCs.QueenJelly.QueenJelly>("QueenJelly");
-		AddDesc<ThoriumMod.NPCs.Bat.Viscount>("Viscount");
-		AddDesc<ThoriumMod.NPCs.Granite.GraniteEnergyStorm>("GraniteEnergyStorm");
-		AddDesc<ThoriumMod.NPCs.Buried.TheBuriedWarrior>("BuriedChampion");
-		AddDesc<ThoriumMod.NPCs.Scouter.ThePrimeScouter>("StarScouter");
-		AddDesc<ThoriumMod.NPCs.Blizzard.BoreanStrider>("BoreanStrider");
-		AddDesc<ThoriumMod.NPCs.Blizzard.BoreanStriderPopped>("BoreanStrider");
-		AddDesc<ThoriumMod.NPCs.Beholder.FallenDeathBeholder>("FallenBeholder");
-		AddDesc<ThoriumMod.NPCs.Beholder.FallenDeathBeholder2>("FallenBeholder");
-		AddDesc<ThoriumMod.NPCs.Lich.Lich>("Lich");
-		AddDesc<ThoriumMod.NPCs.Lich.LichHeadless>("Lich");
-		AddDesc<ThoriumMod.NPCs.Depths.Abyssion>("ForgottenOne");
-		AddDesc<ThoriumMod.NPCs.Depths.AbyssionCracked>("ForgottenOne");
-		AddDesc<ThoriumMod.NPCs.Depths.AbyssionReleased>("ForgottenOne");
-		AddDesc<ThoriumMod.NPCs.Primordials.Aquaius>("Aquais");
-		AddDesc<ThoriumMod.NPCs.Primordials.Omnicide>("Omnicide");
-		AddDesc<ThoriumMod.NPCs.Primordials.SlagFury>("SlagFury");
-		AddDesc<ThoriumMod.NPCs.Primordials.RealityBreaker>("DreamEater");
+		caller.AddDesc<ThoriumMod.NPCs.Thunder.TheGrandThunderBirdv2>(_thoriumLocalization, "GrandThunderBird");
+		caller.AddDesc<ThoriumMod.NPCs.QueenJelly.QueenJelly>(_thoriumLocalization, "QueenJelly");
+		caller.AddDesc<ThoriumMod.NPCs.Bat.Viscount>(_thoriumLocalization, "Viscount");
+		caller.AddDesc<ThoriumMod.NPCs.Granite.GraniteEnergyStorm>(_thoriumLocalization, "GraniteEnergyStorm");
+		caller.AddDesc<ThoriumMod.NPCs.Buried.TheBuriedWarrior>(_thoriumLocalization, "BuriedChampion");
+		caller.AddDesc<ThoriumMod.NPCs.Scouter.ThePrimeScouter>(_thoriumLocalization, "StarScouter");
+		caller.AddDesc<ThoriumMod.NPCs.Blizzard.BoreanStrider>(_thoriumLocalization, "BoreanStrider");
+		caller.AddDesc<ThoriumMod.NPCs.Blizzard.BoreanStriderPopped>(_thoriumLocalization, "BoreanStrider");
+		caller.AddDesc<ThoriumMod.NPCs.Beholder.FallenDeathBeholder>(_thoriumLocalization, "FallenBeholder");
+		caller.AddDesc<ThoriumMod.NPCs.Beholder.FallenDeathBeholder2>(_thoriumLocalization, "FallenBeholder");
+		caller.AddDesc<ThoriumMod.NPCs.Lich.Lich>(_thoriumLocalization, "Lich");
+		caller.AddDesc<ThoriumMod.NPCs.Lich.LichHeadless>(_thoriumLocalization, "Lich");
+		caller.AddDesc<ThoriumMod.NPCs.Depths.Abyssion>(_thoriumLocalization, "ForgottenOne");
+		caller.AddDesc<ThoriumMod.NPCs.Depths.AbyssionCracked>(_thoriumLocalization, "ForgottenOne");
+		caller.AddDesc<ThoriumMod.NPCs.Depths.AbyssionReleased>(_thoriumLocalization, "ForgottenOne");
+		caller.AddDesc<ThoriumMod.NPCs.Primordials.Aquaius>(_thoriumLocalization, "Aquais");
+		caller.AddDesc<ThoriumMod.NPCs.Primordials.Omnicide>(_thoriumLocalization, "Omnicide");
+		caller.AddDesc<ThoriumMod.NPCs.Primordials.SlagFury>(_thoriumLocalization, "SlagFury");
+		caller.AddDesc<ThoriumMod.NPCs.Primordials.RealityBreaker>(_thoriumLocalization, "DreamEater");
 	}
 
 	private static void UniversalCraftSupport()

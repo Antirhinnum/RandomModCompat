@@ -1,0 +1,41 @@
+﻿Items:
+	Ammo:
+		id,type,type
+
+	Armor:
+		id,type,type,type,type,ability
+
+	Special:
+		id,type,type,tooltipOverride
+
+	Weapons:
+		id,type,type,tooltipOverride
+
+NPCs:
+	id,defType,defType,defType,offType,offType,abilityBasic,abilityBasic,abilityHidden,modifyType
+
+Projectiles:
+	id,type,type,modifyType,specialEffectiveness
+
+ ===
+
+Special Tooltips don't seem to work for modded items:
+	DoubleTrouble: {"Tooltips": [{"Tooltip": "Eyes are steel"}, {"Tooltip": "Cursed flames are dark, fire"}, {"Id": 389, "TypeFrom": "Projectile", "Tooltip": "Lasers are {0}"}]}
+	Exitium: {"Tooltips": [{"Tooltip": "Staff is steel"}, {"Tooltip": "Rockets are normal"}, {"Tooltip": "Lightning is electric"}]}
+	HandPrime: {"Tooltips": [{"Tooltip": "Lasers are electric"}, {"Id": 930, "TypeFrom": "Projectile", "Tooltip": "Rockets are {0}"}, {"Tooltip": "Saw is steel"}, {"Tooltip": "Hook is steel"}]}
+	RepurposedBrainRemote: {"Tooltips": [{"Tooltip": "Gun is steel"}, {"Tooltip": "Lasers are electric"}]}
+	RepurposedEyeRemote: {"Tooltips": [{"Tooltip": "Eyes are steel, flying"}, {"Tooltip": "Lasers are electric"}]}
+	RepurposedWormRemote: {"Tooltips": [{"Tooltip": "Whip is steel, ground"}, {"Id": 389, "TypeFrom": "Projectile", "Tooltip": "Probe lasers are {0}"}]}
+
+	RepurposedSkullRemote: {"Tooltips": [{"Tooltip": "Arms are steel"}, {"Tooltip": "Lasers are electric"}, {"Id": 930, "TypeFrom": "Projectile", "Tooltip": "Missiles are {0}"}]}
+
+
+ID:
+	An int for vanilla or an internal name for mods.
+
+Type:
+	A value from this enum: https://github.com/CrimsonTek/TerraTyping/blob/master/Content/Element.cs
+	Not case-sensitive.
+
+Tooltip Override:
+	TODO

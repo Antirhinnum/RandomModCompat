@@ -227,7 +227,7 @@ Magic Storage:
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347
 	+ https://github.com/blushiemagic/MagicStorage
 	A storage system.
-	Call support allows adding Shadow Diamon drop rules to modded NPCs.
+	Call support allows adding Shadow Diamond drop rules to modded NPCs.
 
 	Compat. Ideas:
 	+ Adding diamond drops.
@@ -397,6 +397,16 @@ Summoner's Association:
 	+ Registering minions.
 	+ Preventing teleportation.
 
+TerraTyping:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2940607585
+	+ https://github.com/CrimsonTek/TerraTyping
+	Adds Pokemon types to the game.
+	Call support allows doing this for mods.
+
+	Compat. Ideas:
+	+ What do you think?
+
 The Amulet of Many Minions: Combat Pets!:
 	+ Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2565770836
@@ -432,6 +442,7 @@ Thorium Mod:
 	+ Adding support for flails and Martian items.
 	+ Adding support for debuffs.
 	+ Bard/Healer items.
+	+ Mech bosses drop plating and cells -- new mechs should too.
 
 Unified Freeze Library:
 	+ Mod.Call Support

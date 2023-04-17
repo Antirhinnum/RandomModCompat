@@ -20,6 +20,9 @@
     <Reference Include="Mask">
       <HintPath>lib\Mask.dll</HintPath>
     </Reference>
+    <Reference Include="PrimeRework">
+      <HintPath>lib\PrimeRework.dll</HintPath>
+    </Reference>
     <Reference Include="ThoriumMod">
       <HintPath>lib\ThoriumMod.dll</HintPath>
     </Reference>

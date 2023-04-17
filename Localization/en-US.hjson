@@ -1,77 +1,87 @@
 ﻿Mods.RandomModCompat:
 {
+	PrimeRework:
+	{
+		ROR2:
+		{
+			Terminator:
+			{
+				Description: "Mechanical simulacrum"
+			}
+		}
+	}
 	Thorium:
 	{
 		ROR2:
 		{
 			GrandThunderBird:
 			{
-				Description: "Forgotten Protector"
+				Description: "Forgotten protector"
 			}
 			
 			QueenJelly:
 			{
-				Description: "Aquatic Matriarch"
+				Description: "Aquatic matriarch"
 			}
 			
 			Viscount:
 			{
-				Description: "Lord of the Caverns"
+				Description: "Lord of the caverns"
 			}
 			
 			GraniteEnergyStorm:
 			{
-				Description: "Eye of the Storm"
+				Description: "Eye of the storm"
 			}
 			
 			BuriedChampion:
 			{
-				Description: "A Hero No More"
+				Description: "A hero no more"
 			}
 			
 			StarScouter:
 			{
-				Description: "Interplanetary Harbinger"
+				Description: "Interplanetary harbinger"
 			}
 			
 			BoreanStrider:
 			{
-				Description: "Eight-Legged Menace"
+				Description: "Eight-legged menace"
 			}
 			
 			FallenBeholder:
 			{
-				Description: "Glimpse of the Void"
+				Description: "Glimpse of the void"
 			}
 			
 			Lich:
 			{
-				Description: "Death's Disciple"
+				Description: "Death's disciple"
 			}
 			
 			ForgottenOne:
 			{
-				Description: "Ancient Prisoner"
+				Description: "Ancient prisoner"
 			}
 			
 			Aquais:
 			{
-				Description: "Endless Tide"
+				Description: "Endless tide"
 			}
 			
 			Omnicide:
 			{
-				Description: "Life Defiler"
+				Description: "Life defiler"
 			}
 			
 			SlagFury:
 			{
-				Description: "First Flame"
+				Description: "First flame"
 			}
 			
 			DreamEater:
 			{
-				Description: "Dying Reality"
+				Description: "Dying reality"
 			}
 		}
 	}

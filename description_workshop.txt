@@ -16,6 +16,15 @@ Mask:[list]
 [*]Asymmetric Equips
 [*]Census
 [/list]
+Mech Boss Rework:[list]
+[*]Bangarang
+[*]Bosses as NPCs
+[*]Item Check Blacklist Lib
+[*]Magic Storage
+[*]RoR 2 Health Bars
+[*]TerraTyping
+[*]Thorium Mod
+[/list]
 Thorium Mod:[list]
 [*]Asymmetric Equips
 [*]Dialogue Panel Rework
@@ -194,6 +203,44 @@ The following items can now be worn asymmetrically:[list]
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2687866031]Census:[/url][/h1]
 Census now shows the move-in condition for the Mask Merchant.
+
+Mech Boss Rework Support:
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955]Bangarang:[/url][/h1]
+The following boomerangs now function properly with Bangarang's accessories:[list]
+[*]Laser Star
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2689434541]Bosses as NPCs:[/url][/h1]
+The following items are now sold by the Destroyer town NPC:[list]
+[*]Exitium
+[*]Brain Remote
+[*]Soul of Plight
+[*]Terminator Mask
+[*]Terminator Trophy
+[*]Mechanical Cockpit Piece
+[*]Killswitch
+[*]Terminator Relic
+[*]Finis
+[/list]
+
+Additionally, "Double Trouble" is sold by both Retinazer and Spazmatism, and "Hand Prime" is sold by Skeletron Prime.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2921706690]Item Check Blacklist Lib:[/url][/h1]
+The following items are blacklisted on the Item Checklist:[list]
+[*]Rabbit Rune
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347]Magic Storage:[/url][/h1]
+The Terminator now drops a Shadow Diamond on first defeat.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2788731718]RoR 2 Health Bars:[/url][/h1]
+The Terminator now has a custom title.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2940607585]TerraTyping:[/url][/h1]
+All weapons and NPCs from this mod now have appropriate types.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium Mod:[/url][/h1]
+The Terminator now drops Strange Plating and Life-Powered Energy Cells.
 
 Thorium Mod Support:
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]

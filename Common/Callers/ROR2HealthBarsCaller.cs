@@ -1,6 +1,7 @@
 ﻿using RandomModCompat.Core;
 using System.Linq;
 using Terraria.ModLoader;
+using ThoriumMod;
 
 namespace RandomModCompat.Common.Callers;
 
@@ -31,5 +32,10 @@ internal sealed class ROR2HealthBarsCaller : ModWithCalls
 	internal void BossDesc<T>(string localizationKey) where T : ModNPC
 	{
 		BossDesc(ModContent.NPCType<T>(), localizationKey);
+	}
+
+	internal void AddDesc<T>(string header, string bossKey) where T : ModNPC
+	{
+		BossDesc<T>(header + "ROR2." + bossKey + ".Description");
 	}
 }

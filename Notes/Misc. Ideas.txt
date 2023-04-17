@@ -1,0 +1,5 @@
+ - Add a dynamic config, which allows toggling compatibility.
+     - Ex: You can stop this mod from adding Shadow Diamond drops to Thorium Mod bosses.
+     - This would be generated from each CrossModHandler and ModWithCalls.
+         - Need some way of declaring which mods a mod supports.
+     - The current active check (ModWithCall.Try...) would probably be turned into a method on CrossModHandler, which checks for both the other mod being active *and* compatibility being enabled.

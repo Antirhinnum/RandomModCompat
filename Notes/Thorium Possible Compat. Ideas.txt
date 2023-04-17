@@ -5,5 +5,6 @@
 	Ore Excavator [?]
 	Planter Box Library
 	Staggo's Good Visuals
+	TerraTyping
 	The Amulet of Many Minions: Combat Pets!
 	Wikithis [zh]

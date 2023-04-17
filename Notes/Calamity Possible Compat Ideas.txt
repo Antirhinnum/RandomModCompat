@@ -11,4 +11,5 @@
 	RoR 2 Health Bars
 	Shoe Slot (?)
 	Staggo's Good Visuals
+	TerraTyping
 	The Amulet of Many Minions: Combat Pets!
