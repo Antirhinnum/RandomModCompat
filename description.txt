@@ -12,6 +12,12 @@ Current Compatibility:
  + Item Check Blacklist Lib
  + Thorium Mod
  + Universal Crafter
+ - Dreadnautilus is a Boss
+ + Bosses as NPCs
+ + Item Check Blacklist Lib
+ + RoR 2 Health Bars
+ + TerraTyping
+ + W1K's Weapon Scaling
  - Mask
  + Asymmetric Equips
  + Census
@@ -23,6 +29,10 @@ Current Compatibility:
  + RoR 2 Health Bars
  + TerraTyping
  + Thorium Mod
+ + W1K's Weapon Scaling
+ - Slug Town NPCs
+ + Census
+ + Dialogue Panel Rework
  - Thorium Mod
  + Asymmetric Equips
  + Dialogue Panel Rework

@@ -22,7 +22,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 	protected override string ModName => _modName;
 
 	/*
-	 * Thorium adds support for the following mods:
+	 * Thorium Mod adds support for the following mods:
 	 * - Bangarang
 	 * - Boss Checklist
 	 * - Calamity (minibosses)

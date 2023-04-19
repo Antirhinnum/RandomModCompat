@@ -12,6 +12,13 @@ Calamity Mod:[list]
 [*]Thorium Mod
 [*]Universal Crafter
 [/list]
+Dreadnautilus is a Boss:[list]
+[*]Bosses as NPCs
+[*]Item Check Blacklist Lib
+[*]RoR 2 Health Bars
+[*]TerraTyping
+[*]W1K's Weapon Scaling
+[/list]
 Mask:[list]
 [*]Asymmetric Equips
 [*]Census
@@ -24,6 +31,11 @@ Mech Boss Rework:[list]
 [*]RoR 2 Health Bars
 [*]TerraTyping
 [*]Thorium Mod
+[*]W1K's Weapon Scaling
+[/list]
+Slug Town NPCs:[list]
+[*]Census
+[*]Dialogue Panel Rework
 [/list]
 Thorium Mod:[list]
 [*]Asymmetric Equips
@@ -195,6 +207,31 @@ The following stations are automatically added to the Universal Crafter after a 
 	[/tr]
 [/table]
 
+Dreadnautilus is a Boss Support:
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2689434541]Bosses as NPCs:[/url][/h1]
+The following items are now sold by the Dreadnautilus town NPC:[list]
+[*]Blood Bait (if enabled in the mod's config)
+[*]Dread Pistol
+[*]Dreadnautilus Mask
+[*]Dreadnautilus Trophy
+[*]Dreadnautilus Relic
+[*]Bloody Car Key
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2921706690]Item Check Blacklist Lib:[/url][/h1]
+The following items are blacklisted on the Item Checklist:[list]
+[*]Blood Bait (if disabled in the mod's config)
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2788731718]RoR 2 Health Bars:[/url][/h1]
+The Dreadnautilus now has a custom title.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2940607585]TerraTyping:[/url][/h1]
+The Dread Pistol now has the "Blood" type.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2571636086]W1K's Weapon Scaling[/url][/h1]
+The Dread Pistol is now in the "Adamantite" tier.
+
 Mask Support:
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
 The following items can now be worn asymmetrically:[list]
@@ -241,6 +278,19 @@ All weapons and NPCs from this mod now have appropriate types.
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium Mod:[/url][/h1]
 The Terminator now drops Strange Plating and Life-Powered Energy Cells.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2571636086]W1K's Weapon Scaling[/url][/h1]
+Most weapons from this mod are now in the "Hallowed" tier. Exceptions:[list]
+[*]The Bloodshed sword is in the "Hellstone" tier.
+[*]The Laser Stars are not tiered due to stacking items not being able to receive tiers.
+[/list]
+
+Slug Town NPCs Support:
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2687866031]Census:[/url][/h1]
+Census now shows the move-in conditions for all slug types.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563815443]Dialogue Panel Rework:[/url][/h1]
+All slug types now use their head as their dialogue icon instead of the generic shop icon.
 
 Thorium Mod Support:
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]

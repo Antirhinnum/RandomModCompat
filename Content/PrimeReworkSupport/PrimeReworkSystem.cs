@@ -36,6 +36,7 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 		MagicStorageSupport();
 		ROR2HealthBarsSupport();
 		TerraTypingSupport();
+		WWeaponScalingSupport();
 	}
 
 	private static void BangarangSupport()
@@ -113,5 +114,30 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 		caller.AddTypes(TerraTypingCaller.TypeToAdd.Projectile, CrossMod);
 		caller.AddTypes(TerraTypingCaller.TypeToAdd.SpecialItem, CrossMod);
 		caller.AddTypes(TerraTypingCaller.TypeToAdd.Weapon, CrossMod);
+	}
+
+	private static void WWeaponScalingSupport()
+	{
+		if (!ModWithCalls.TryGetCaller(out WWeaponScalingCaller caller))
+		{
+			return;
+		}
+
+		caller.AddScaling<Bloodshed>(WWeaponScalingCaller.Tier.Molten);
+		caller.AddScaling<BloodStainedPocketWatch>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<ClockworkWrench>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<DoubleTrouble>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<Exitium>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<Finis>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<HandPrime>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<Jumboshark>(WWeaponScalingCaller.Tier.Hallowed);
+		//caller.AddScaling<LaserStar>(WWeaponScalingCaller.Tier.Hallowed); // Doesn't work since the Laser Star stacks.
+		caller.AddScaling<RepurposedBrainRemote>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<RepurposedEyeRemote>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<RepurposedWormRemote>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<SublimeStellarSling>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<TheSnake>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<TheSpur>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<TrueBloodshed>(WWeaponScalingCaller.Tier.Hallowed);
 	}
 }

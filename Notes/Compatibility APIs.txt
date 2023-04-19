@@ -174,6 +174,16 @@ HairLoader:
 	Compat. Ideas:
 	+ Adding custom hair styles.
 
+Helpful Hotkeys:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2645058109
+	+ https://github.com/JavidPack/HelpfulHotkeys
+	Adds a variety of helpful hotkeys.
+	Call support allows registering an item as a recall item.
+
+	Compat. Ideas:
+	+ Recall item support.
+
 Infinite Munitions:
 	+ Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2713674858
@@ -311,7 +321,7 @@ Planter Box Library:
 Rainbow Weapon Forgery:
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2882074287
 	+ https://github.com/Antirhinnum/RainbowWeaponForgery
-	Allows using custom names wihtout renaming the character.
+	Allows using custom names without renaming the character.
 
 	Compat. Ideas:
 	~ Yharim's Crystal has name-specific colors, doesn't it?
@@ -464,6 +474,17 @@ Universal Crafter:
 
 	Compat. Ideas:
 	+ Any mod that adds crafting stations would benefit from calling this mod.
+
+W1K's Weapon Scaling:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2571636086
+	+ https://forums.terraria.org/index.php?threads/w1ks-weapon-scaling.98535/
+	Allows scaling weapons with game progression.
+	Call support allows registering mod weapons.
+	- Note that stackable weapons don't work.
+
+	Compat. Ideas:
+	+ Registering mod weapons.
 
 Wikithis:
 	+ Mod.Call Support

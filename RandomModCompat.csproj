@@ -17,6 +17,9 @@
     <Reference Include="CalamityMod">
       <HintPath>lib\CalamityMod.dll</HintPath>
     </Reference>
+    <Reference Include="ItReallyMustBe">
+      <HintPath>lib\ItReallyMustBe.dll</HintPath>
+    </Reference>
     <Reference Include="Mask">
       <HintPath>lib\Mask.dll</HintPath>
     </Reference>
