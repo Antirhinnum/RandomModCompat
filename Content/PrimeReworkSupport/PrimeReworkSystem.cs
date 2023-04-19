@@ -1,8 +1,6 @@
 ﻿using PrimeRework.Items;
 using RandomModCompat.Common.Callers;
 using RandomModCompat.Core;
-using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace RandomModCompat.Content.PrimeReworkSupport;
@@ -20,7 +18,7 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 	 * - Boss Checklist
 	 * - Calamity Mod
 	 * - Fargo's Souls Mod
-	 * 
+	 *
 	 * This file adds support for:
 	 * - Bangarang
 	 * - Bosses as NPCs

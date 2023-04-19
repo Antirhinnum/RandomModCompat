@@ -1,7 +1,6 @@
 ﻿using RandomModCompat.Core;
 using System.Linq;
 using Terraria.ModLoader;
-using ThoriumMod;
 
 namespace RandomModCompat.Common.Callers;
 

@@ -87,7 +87,7 @@ internal sealed class BossesAsNPCsCaller : ModWithCalls
 		WithDiv,
 		WithDivAndMulti
 	}
-	
+
 	private static readonly Func<bool> _alwaysTrueCondition = () => true;
 
 	protected override string ModName => "BossesAsNPCs";
@@ -197,7 +197,7 @@ internal sealed class BossesAsNPCsCaller : ModWithCalls
 		return (bool)CalledMod.Call(nameof(AddToShop), PriceType.WithDivAndMulti.ToString(), npc.ToString(), itemId, condition ?? _alwaysTrueCondition, divisor, mult);
 	}
 
-	internal bool AddToShop<T>(SellingTownNPC npc, float divisor, float mult,  Func<bool> condition = null) where T : ModItem
+	internal bool AddToShop<T>(SellingTownNPC npc, float divisor, float mult, Func<bool> condition = null) where T : ModItem
 	{
 		// divisor * 5f since this overload doesn't apply that by default, so prices get super inflated.
 		return AddToShop(npc, ModContent.ItemType<T>(), divisor * 5f, mult, condition);

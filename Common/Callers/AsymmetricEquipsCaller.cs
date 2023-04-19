@@ -7,6 +7,7 @@ using Terraria.ModLoader;
 
 namespace RandomModCompat.Common.Callers;
 
+// Call info from: https://github.com/Antirhinnum/AsymmetricEquips#mod-calls
 internal sealed class AsymmetricEquipsCaller : ModWithCalls
 {
 	internal enum PlayerSide
@@ -18,6 +19,8 @@ internal sealed class AsymmetricEquipsCaller : ModWithCalls
 
 	protected override string ModName => "AsymmetricEquips";
 
+	#region Default
+
 	internal void AddEquip(EquipType type, int id, int newId = -1, PlayerSide side = PlayerSide.Right)
 	{
 		CalledMod.Call(nameof(AddEquip), type, id, newId, side);
@@ -26,11 +29,6 @@ internal sealed class AsymmetricEquipsCaller : ModWithCalls
 	internal void AddGlove(int itemId)
 	{
 		CalledMod.Call(nameof(AddGlove), itemId);
-	}
-
-	internal void AddGlove<T>() where T : ModItem
-	{
-		AddGlove(ModContent.ItemType<T>());
 	}
 
 	internal void AddSpecialItem(int itemId, PlayerSide side = PlayerSide.Right)
@@ -47,6 +45,10 @@ internal sealed class AsymmetricEquipsCaller : ModWithCalls
 	{
 		return ((int, int, int, int, Vector2))CalledMod.Call(nameof(GetFrontBalloon), player);
 	}
+
+	#endregion Default
+
+	#region Utility
 
 	internal void AddHiddenEquip<T>(EquipType type) where T : ModItem
 	{
@@ -88,4 +90,11 @@ internal sealed class AsymmetricEquipsCaller : ModWithCalls
 	{
 		return $"{name}_{type}_Flipped";
 	}
+
+	internal void AddGlove<T>() where T : ModItem
+	{
+		AddGlove(ModContent.ItemType<T>());
+	}
+
+	#endregion Utility
 }
