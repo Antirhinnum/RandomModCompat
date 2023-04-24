@@ -14,7 +14,7 @@ absoluteAquarian's Graphics Library:
 	Compat. Ideas:
 	- TBD
 
-Achievement Mod
+Achievement Mod:
 	+ Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2927542027
 	Allows unlocking vanilla achievements and allows mods to add their own.

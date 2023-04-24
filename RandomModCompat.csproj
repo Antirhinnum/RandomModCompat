@@ -26,6 +26,9 @@
     <Reference Include="PrimeRework">
       <HintPath>lib\PrimeRework.dll</HintPath>
     </Reference>
+    <Reference Include="SlugNPCs">
+      <HintPath>lib\SlugNPCs.dll</HintPath>
+    </Reference>
     <Reference Include="ThoriumMod">
       <HintPath>lib\ThoriumMod.dll</HintPath>
     </Reference>

@@ -1,0 +1,11 @@
+Currently, there are two Achievement mods in Comaptibility APIs.txt.
+Both of these provide the same function, so there should probably be some shared API between them.
+
+Achievement Mod calls need:
+    [Mod]                   Mod instance
+    [string]                Achievement internal name
+    [AchievementCategory]   Category
+    [string]                Texture path (128x64)
+    [string?]               Custom border path ()
+
+Mod Achievements Library:

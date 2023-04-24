@@ -1,4 +1,12 @@
-﻿Mod Name				Source?		Steam Link															Notes
+﻿Key:
+    Mod Name:   	The display name of the mod.
+    Source?:    	"Open" if the mod's source is available for PRs on GitHub, "Closed" otherwise.
+    Steam Link:		A link to the mod's Steam Workshop page.
+	Notes:			Any additional notes.
+
+
+
+Mod Name				Source?		Steam Link															Notes
 
 AlchemistNPC Lite		Open		https://steamcommunity.com/sharedfiles/filedetails/?id=2599842771	Unstable, wait.
 Cerebral Mod			Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2897788140	

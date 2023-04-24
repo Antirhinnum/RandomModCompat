@@ -43,7 +43,8 @@ internal sealed class ItReallyMustBeSystem : CrossModHandler
 			return;
 		}
 
-		caller.AddToShop<ItReallyMustBe.Items.FunnyBait>(BossesAsNPCsCaller.SellingTownNPC.Dreadnautilus, 1f, 5f, () => !ModContent.GetInstance<MustConfig>().ByeBait);
+		static bool BaitCondition() => !ModContent.GetInstance<MustConfig>().ByeBait;
+		caller.AddToShop<ItReallyMustBe.Items.FunnyBait>(BossesAsNPCsCaller.SellingTownNPC.Dreadnautilus, 1f, 5f, BaitCondition);
 
 		caller.AddToShop<ItReallyMustBe.Items.DreadPistol>(BossesAsNPCsCaller.SellingTownNPC.Dreadnautilus, 0.5f);
 		caller.AddToShop<ItReallyMustBe.Items.DreadnautilusMask>(BossesAsNPCsCaller.SellingTownNPC.Dreadnautilus, 0.14f);
