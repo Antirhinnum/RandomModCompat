@@ -4,6 +4,10 @@ Assorted Mod Compatibility adds a lot of compatibility between several mods.
 Balloons Extended:[list]
 [*]Asymmetric Equips
 [/list]
+Bangarang:[list]
+[*]TerraTyping
+[*]W1K's Weapon Scaling
+[/list]
 Calamity Mod:[list]
 [*]Asymmetric Equips
 [*]Bangarang
@@ -53,6 +57,13 @@ Thorium Mod:[list]
 Balloons Extended Support:
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
 All balloons added by this mod can now be worn asymmetrically.
+
+Bangarang Support:
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2940607585]TerraTyping:[/url][/h1]
+All boomerangs added by this mod, plus the Spectral Amulet and Glvoe Lord's Gift, now have appropriate types.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2571636086]W1K's Weapon Scaling[/url][/h1]
+All boomerangs added by this mod now have appropriate tiers.
 
 Calamity Mod Support:
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
