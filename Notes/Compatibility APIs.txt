@@ -192,7 +192,10 @@ Infinite Munitions:
 	Call support allows adding infinite versions of mod ammos.
 
 	Notes:
-	- Adding compat. for this mod is much harder than expected.
+	- Adding compat. for this mod is not worth it.
+		Infinite ammo items **must** have their sprites as "(root)/assets/endless_(ID)", which obviously doesn't work very well for dyanmically-typed ModItems. 
+		Plus, the call method provided is severely lacking: It only provides the base item and doesn't allow customizing the recipe, name, texture path, etc...
+		I can't get around this with inheritance, either: The constructor is required, but internal and thus impossible to implement.
 
 	Compat. Ideas:
 	+ What do you think?
