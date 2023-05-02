@@ -71,6 +71,18 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 		caller.AddToShop<Killswitch>(BossesAsNPCsCaller.SellingTownNPC.TheDestroyer, 0.25f, caller.SellMasterMode);
 		caller.AddToShop<TerminatorRelic>(BossesAsNPCsCaller.SellingTownNPC.TheDestroyer, 1f, 5f, caller.SellMasterMode);
 		caller.AddToShop<Finis>(BossesAsNPCsCaller.SellingTownNPC.TheDestroyer, 1f, 5f, caller.SellMasterMode);
+
+		// Caretaker drops
+		static bool CaretakerDowned() => PrimeReworkCaretakerDownedSystem.caretakerDowned;
+
+		caller.AddToShop<BeeRemote>(BossesAsNPCsCaller.SellingTownNPC.QueenBee, 250000, CaretakerDowned);
+		caller.AddToShop<SoulofDight>(BossesAsNPCsCaller.SellingTownNPC.QueenBee, 10f, 5f, CaretakerDowned);
+		caller.AddToShop<CaretakerMask>(BossesAsNPCsCaller.SellingTownNPC.QueenBee, 0.14f, CaretakerDowned);
+		caller.AddToShop<CaretakerTrophy>(BossesAsNPCsCaller.SellingTownNPC.QueenBee, 0.1f, 5f, CaretakerDowned);
+		caller.AddToShop<MechanicalWings>(BossesAsNPCsCaller.SellingTownNPC.QueenBee, 1f, 5f, () => CaretakerDowned() && caller.SellExpertMode());
+		caller.AddToShop<BeeController>(BossesAsNPCsCaller.SellingTownNPC.QueenBee, 0.25f, () => CaretakerDowned() && caller.SellMasterMode());
+		caller.AddToShop<CaretakerRelic>(BossesAsNPCsCaller.SellingTownNPC.QueenBee, 1f, 5f, () => CaretakerDowned() && caller.SellMasterMode());
+		caller.AddToShop<ArtificialStinger>(BossesAsNPCsCaller.SellingTownNPC.QueenBee, 1f, 5f, () => CaretakerDowned() && caller.SellMasterMode());
 	}
 
 	private static void ItemCheckBlacklistSupport()
@@ -91,6 +103,7 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 		}
 
 		caller.RegisterShadowDiamondDrop<PrimeRework.NPCs.TheTerminator>(1);
+		caller.RegisterShadowDiamondDrop<PrimeRework.NPCs.Caretaker>(1);
 	}
 
 	private static void ROR2HealthBarsSupport()
@@ -101,6 +114,7 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 		}
 
 		caller.AddDesc<PrimeRework.NPCs.TheTerminator>(_primeReworkLocalization, "Terminator");
+		caller.AddDesc<PrimeRework.NPCs.Caretaker>(_primeReworkLocalization, "Caretaker");
 	}
 
 	private void TerraTypingSupport()
@@ -139,5 +153,11 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 		caller.AddScaling<TheSnake>(WWeaponScalingCaller.Tier.Hallowed);
 		caller.AddScaling<TheSpur>(WWeaponScalingCaller.Tier.Hallowed);
 		caller.AddScaling<TrueBloodshed>(WWeaponScalingCaller.Tier.Hallowed);
+
+		// Caretaker
+		caller.AddScaling<ArtificialStinger>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<BreachCutter>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<RepurposedBeeRemote>(WWeaponScalingCaller.Tier.Hallowed);
+		caller.AddScaling<SwarmGrenade>(WWeaponScalingCaller.Tier.Hallowed);
 	}
 }

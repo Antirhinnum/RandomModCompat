@@ -111,7 +111,6 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		caller.AddHiddenEquip<ThoriumMod.Items.HealerItems.LifeQuartzGem>(EquipType.Waist);
 		caller.AddHiddenEquip<ThoriumMod.Items.Lich.TheLostCross>(EquipType.Waist);
 		caller.AddHiddenEquip<ThoriumMod.Items.Misc.RingofUnity>(EquipType.HandsOn);
-		caller.AddHiddenEquip<ThoriumMod.Items.NPCItems.MinotaurSkull>(EquipType.Waist);
 		caller.AddHiddenEquip<ThoriumMod.Items.NPCItems.NightShadePetal>(EquipType.Face);
 		caller.AddHiddenEquip<ThoriumMod.Items.NPCItems.PotionChaser>(EquipType.Waist);
 		caller.AddHiddenEquip<ThoriumMod.Items.SummonItems.NecroticSkull>(EquipType.Waist);

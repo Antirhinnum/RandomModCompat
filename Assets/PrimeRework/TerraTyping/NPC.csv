@@ -1,3 +1,6 @@
 id,defType,defType,defType,offType,offType,abilityBasic,abilityBasic,abilityHidden,modifyType
 SeekerDroid,Steel,,,Steel,,,,,
 TheTerminator,Steel,Psychic,,Steel,Psychic,,,,
+Caretaker,Steel,Bug,,Steel,Bug,,,,
+MechaBee,Steel,Bug,,Steel,Bug,,,,
+MutantBee,Bug,,,Bug,,,,,
