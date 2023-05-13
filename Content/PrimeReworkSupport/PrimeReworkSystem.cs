@@ -11,7 +11,7 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 	private const string _primeReworkLocalization = "Mods.RandomModCompat.PrimeRework.";
 
 	private const string _modName = "PrimeRework";
-	protected override string ModName => _modName;
+	public override string ModName => _modName;
 
 	/*
 	 * Mech Boss Rework adds support for the following mods:
@@ -39,9 +39,9 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 		WWeaponScalingSupport();
 	}
 
-	private static void BangarangSupport()
+	private void BangarangSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out BangarangCaller caller))
+		if (!TryGetCaller(out BangarangCaller caller))
 		{
 			return;
 		}
@@ -49,9 +49,9 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 		caller.RegisterSimpleBoomerang<LaserStar>(3, BangarangCaller.MakeSimpleHeldItemStackCheck());
 	}
 
-	private static void BossesAsNPCsSupport()
+	private void BossesAsNPCsSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out BossesAsNPCsCaller caller))
+		if (!TryGetCaller(out BossesAsNPCsCaller caller))
 		{
 			return;
 		}
@@ -85,9 +85,9 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 		caller.AddToShop<ArtificialStinger>(BossesAsNPCsCaller.SellingTownNPC.QueenBee, 1f, 5f, () => CaretakerDowned() && caller.SellMasterMode());
 	}
 
-	private static void ItemCheckBlacklistSupport()
+	private void ItemCheckBlacklistSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out ItemCheckBlacklistCaller caller))
+		if (!TryGetCaller(out ItemCheckBlacklistCaller caller))
 		{
 			return;
 		}
@@ -95,9 +95,9 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 		caller.Add<RabbitRune>();
 	}
 
-	private static void MagicStorageSupport()
+	private void MagicStorageSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out MagicStorageCaller caller))
+		if (!TryGetCaller(out MagicStorageCaller caller))
 		{
 			return;
 		}
@@ -106,9 +106,9 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 		caller.RegisterShadowDiamondDrop<PrimeRework.NPCs.Caretaker>(1);
 	}
 
-	private static void ROR2HealthBarsSupport()
+	private void ROR2HealthBarsSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out ROR2HealthBarsCaller caller))
+		if (!TryGetCaller(out ROR2HealthBarsCaller caller))
 		{
 			return;
 		}
@@ -119,7 +119,7 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 
 	private void TerraTypingSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out TerraTypingCaller caller))
+		if (!TryGetCaller(out TerraTypingCaller caller))
 		{
 			return;
 		}
@@ -130,9 +130,9 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 		caller.AddTypes(TerraTypingCaller.TypeToAdd.Weapon, CrossMod);
 	}
 
-	private static void WWeaponScalingSupport()
+	private void WWeaponScalingSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out WWeaponScalingCaller caller))
+		if (!TryGetCaller(out WWeaponScalingCaller caller))
 		{
 			return;
 		}

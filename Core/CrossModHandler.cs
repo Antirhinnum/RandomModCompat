@@ -1,4 +1,6 @@
-﻿using Terraria.ModLoader;
+﻿using RandomModCompat.Common;
+using System.Diagnostics.CodeAnalysis;
+using Terraria.ModLoader;
 
 namespace RandomModCompat.Core;
 
@@ -21,7 +23,7 @@ internal abstract class CrossModHandler : ModType
 	/// <summary>
 	/// The internal name of the mod this handler adds support for.
 	/// </summary>
-	protected abstract string ModName { get; }
+	public abstract string ModName { get; }
 
 	public override sealed bool IsLoadingEnabled(Mod mod)
 	{
@@ -48,5 +50,31 @@ internal abstract class CrossModHandler : ModType
 	{
 		ModTypeLookup<CrossModHandler>.Register(this);
 		CrossModSystem._handlers.Add(this);
+	}
+
+	/// <summary>
+	/// Tries to get the <see cref="ModWithCalls"/> for a specific mod.
+	/// <br/> <paramref name="caller"/> will always be set, but <b>should not be used if this method returns <see langword="false"/>.</b>
+	/// </summary>
+	/// <typeparam name="T">The <see cref="ModWithCalls"/> type to get.</typeparam>
+	/// <param name="caller">The instance of <typeparamref name="T"/>.</param>
+	/// <returns><see langword="true"/> if <paramref name="caller"/> is active and if support is enabled between <see cref="CrossMod"/> and <paramref name="caller"/>'s mod, <see langword="false"/> otherwise.</returns>
+	protected bool TryGetCaller<T>([NotNullWhen(true)] out T caller) where T : ModWithCalls
+	{
+		caller = ModContent.GetInstance<T>();
+		return caller.Active && ModContent.GetInstance<ModSupportConfig>().SupportEnabled(ModName, caller.ModName);
+	}
+
+	/// <summary>
+	/// Tries to get the <see cref="ModWithCalls"/> for a specific mod.
+	/// <br/> <paramref name="caller"/> will always be set, but <b>should not be used if this method returns <see langword="false"/>.</b>
+	/// </summary>
+	/// <typeparam name="T">The <see cref="ModWithCalls"/> type to get.</typeparam>
+	/// <param name="caller">The instance of <typeparamref name="T"/>.</param>
+	/// <returns><see langword="true"/> if <paramref name="caller"/> is active and if support is enabled between <see cref="CrossMod"/> and <paramref name="caller"/>'s mod, <see langword="false"/> otherwise.</returns>
+	internal static bool TryGetCaller<T>(string baseMod, [NotNullWhen(true)] out T caller) where T : ModWithCalls
+	{
+		caller = ModContent.GetInstance<T>();
+		return caller.Active && ModContent.GetInstance<ModSupportConfig>().SupportEnabled(baseMod, caller.ModName);
 	}
 }

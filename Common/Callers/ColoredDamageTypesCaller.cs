@@ -6,7 +6,7 @@ namespace RandomModCompat.Common.Callers
 {
 	internal sealed class ColoredDamageTypesCaller : ModWithCalls
 	{
-		protected override string ModName => "ColoredDamageTypes";
+		protected internal override string ModName => "ColoredDamageTypes";
 
 		internal void AddDamageType(DamageClass damage, Color tooltipColor, Color damageColor, Color critDamageColor)
 		{

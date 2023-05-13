@@ -36,7 +36,7 @@ internal sealed class ThoriumModCaller : ModWithCalls
 		Electronic
 	}
 
-	protected override string ModName => "ThoriumMod";
+	protected internal override string ModName => "ThoriumMod";
 
 	#region Default
 

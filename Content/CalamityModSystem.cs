@@ -3,13 +3,13 @@ using RandomModCompat.Core;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace RandomModCompat.Content.CalamityModSupport;
+namespace RandomModCompat.Content;
 
 [JITWhenModsEnabled(_modName)]
 internal sealed class CalamityModSystem : CrossModHandler
 {
 	private const string _modName = "CalamityMod";
-	protected override string ModName => _modName;
+	public override string ModName => _modName;
 
 	/*
 	 * Calamity adds support for the following mods:
@@ -26,7 +26,7 @@ internal sealed class CalamityModSystem : CrossModHandler
 	 * This file adds support for:
 	 * - Asymmetric Equips (partial)
 	 * - Bangarang (partial)
-	 * - Colored Damage Types (TODO: Debug)
+	 * - [X] Colored Damage Types (TODO: Debug)
 	 * - Enhanced Buff Display
 	 * - Item Check Blacklist
 	 * - Thorium Mod
@@ -44,9 +44,9 @@ internal sealed class CalamityModSystem : CrossModHandler
 		UniversalCraftSupport();
 	}
 
-	private static void AsymmetricEquipsSupport()
+	private void AsymmetricEquipsSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out AsymmetricEquipsCaller caller))
+		if (!TryGetCaller(out AsymmetricEquipsCaller caller))
 		{
 			return;
 		}
@@ -63,13 +63,14 @@ internal sealed class CalamityModSystem : CrossModHandler
 		caller.AddGlove<CalamityMod.Items.Accessories.GloveOfRecklessness>();
 	}
 
-	private static void BangarangSupport()
+	private void BangarangSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out BangarangCaller caller))
+		if (!TryGetCaller(out BangarangCaller caller))
 		{
 			return;
 		}
 
+		// TODO
 		// Need to figure out some way to "or" this condition.
 		// Calamity boomerangs can be thrown if:
 		// a) There's less than the cap out.
@@ -126,9 +127,9 @@ internal sealed class CalamityModSystem : CrossModHandler
 		}, 5/*, StealthStrikeAvailable*/);
 	}
 
-	private static void BuffDisplaySupport()
+	private void BuffDisplaySupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out BuffDisplayCaller caller))
+		if (!TryGetCaller(out BuffDisplayCaller caller))
 		{
 			return;
 		}
@@ -146,9 +147,9 @@ internal sealed class CalamityModSystem : CrossModHandler
 		caller.SetCountAs(ModContent.BuffType<CalamityMod.Buffs.StatBuffs.SpiritPower>(), ModContent.BuffType<CalamityMod.Buffs.StatBuffs.SpiritRegen>());
 	}
 
-	private static void ColoredDamageTypesSupport()
+	private void ColoredDamageTypesSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out ColoredDamageTypesCaller caller))
+		if (!TryGetCaller(out ColoredDamageTypesCaller caller))
 		{
 			return;
 		}
@@ -169,9 +170,9 @@ internal sealed class CalamityModSystem : CrossModHandler
 		//caller.AddDamageType<CalamityMod.TrueMeleeNoSpeedDamageClass>(trueMeleeTooltipColor, trueMeleeDamageColor, trueMeleeCritDamageColor);
 	}
 
-	private static void ItemCheckBlacklistSupport()
+	private void ItemCheckBlacklistSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out ItemCheckBlacklistCaller caller))
+		if (!TryGetCaller(out ItemCheckBlacklistCaller caller))
 		{
 			return;
 		}
@@ -179,9 +180,9 @@ internal sealed class CalamityModSystem : CrossModHandler
 		caller.Add<CalamityMod.Items.SulphurousSeaWorldSideChanger>();
 	}
 
-	private static void ThoriumModSupport()
+	private void ThoriumModSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out ThoriumModCaller caller))
+		if (!TryGetCaller(out ThoriumModCaller caller))
 		{
 			return;
 		}
@@ -211,9 +212,9 @@ internal sealed class CalamityModSystem : CrossModHandler
 		// TODO: Status debuffs?
 	}
 
-	private static void UniversalCraftSupport()
+	private void UniversalCraftSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out UniversalCraftCaller caller))
+		if (!TryGetCaller(out UniversalCraftCaller caller))
 		{
 			return;
 		}

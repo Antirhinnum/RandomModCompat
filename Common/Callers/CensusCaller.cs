@@ -5,7 +5,7 @@ namespace RandomModCompat.Common.Callers;
 
 internal sealed class CensusCaller : ModWithCalls
 {
-	protected override string ModName => "Census";
+	protected internal override string ModName => "Census";
 
 	internal void TownNPCCondition(int npcId, string condition)
 	{

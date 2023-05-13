@@ -1,4 +1,5 @@
-﻿using RandomModCompat.Common.Callers;
+﻿using RandomModCompat.Common;
+using RandomModCompat.Common.Callers;
 using RandomModCompat.Core;
 using System.Collections.Generic;
 using Terraria;
@@ -9,14 +10,20 @@ using ThoriumMod.PlayerLayers;
 
 namespace RandomModCompat.Content.ThoriumModSupport;
 
-[JITWhenModsEnabled("ThoriumMod")]
+[JITWhenModsEnabled(BaseMod)]
 internal sealed class ThoriumAsymmetricSheathPlayer : ModPlayer
 {
+	private const string BaseMod = "ThoriumMod";
+	private const string SupportMod = "AsymmetricEquips";
+
+	/// <summary>
+	/// The current <see cref="AccessoryType.SwordSheath"/> that this player has equipped.
+	/// </summary>
 	internal Item currentSheath;
 
 	public override bool IsLoadingEnabled(Mod mod)
 	{
-		return ModLoader.HasMod("ThoriumMod") && ModLoader.HasMod("AsymmetricEquips");
+		return ModContent.GetInstance<ModSupportConfig>().SupportEnabled(BaseMod, SupportMod);
 	}
 
 	public override void Load()
@@ -33,7 +40,7 @@ internal sealed class ThoriumAsymmetricSheathPlayer : ModPlayer
 	{
 		orig(self, itemSlot, item, modded);
 
-		if (item.ModItem is ThoriumItem tItem && tItem.accessoryType == AccessoryType.SwordSheath && self.TryGetModPlayer<ThoriumAsymmetricSheathPlayer>(out var aPlayer))
+		if (item.ModItem is ThoriumItem tItem && tItem.accessoryType == AccessoryType.SwordSheath && self.TryGetModPlayer(out ThoriumAsymmetricSheathPlayer aPlayer))
 		{
 			aPlayer.currentSheath = item;
 		}
@@ -56,7 +63,7 @@ internal sealed class ThoriumAsymmetricSheathPlayer : ModPlayer
 
 	private static bool ShouldDrawSheathBack(Player player)
 	{
-		ModWithCalls.TryGetCaller<AsymmetricEquipsCaller>(out var caller);
+		CrossModHandler.TryGetCaller<AsymmetricEquipsCaller>(BaseMod, out var caller);
 		Item playerSheath = player.GetModPlayer<ThoriumAsymmetricSheathPlayer>().currentSheath;
 		return (playerSheath == null) || caller.ItemOnDefaultSide(playerSheath, player);
 	}

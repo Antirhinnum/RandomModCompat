@@ -6,7 +6,7 @@ namespace RandomModCompat.Common.Callers;
 
 internal sealed class MagicStorageCaller : ModWithCalls
 {
-	protected override string ModName => "MagicStorage";
+	protected internal override string ModName => "MagicStorage";
 
 	internal void SetShadowDiamondDropRule(int npcId, IItemDropRule rule)
 	{

@@ -10,7 +10,7 @@ namespace RandomModCompat.Content;
 internal sealed class SlugNPCsSystem : CrossModHandler
 {
 	private const string _modName = "SlugNPCs";
-	protected override string ModName => _modName;
+	public override string ModName => _modName;
 
 	/*
 	 * This file adds support for:
@@ -24,9 +24,9 @@ internal sealed class SlugNPCsSystem : CrossModHandler
 		DialogueTweakSupport();
 	}
 
-	private static void CensusSupport()
+	private void CensusSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out CensusCaller caller))
+		if (!TryGetCaller(out CensusCaller caller))
 		{
 			return;
 		}
@@ -38,9 +38,9 @@ internal sealed class SlugNPCsSystem : CrossModHandler
 		caller.TownNPCCondition<UniverseSlug>("When the any player is carrying the Zenith");
 	}
 
-	private static void DialogueTweakSupport()
+	private void DialogueTweakSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out DialogueTweakCaller caller))
+		if (!TryGetCaller(out DialogueTweakCaller caller))
 		{
 			return;
 		}

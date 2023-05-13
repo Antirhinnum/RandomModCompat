@@ -9,7 +9,7 @@ namespace RandomModCompat.Content;
 internal sealed class BangarangSystem : CrossModHandler
 {
 	private const string _modName = "Bangarang";
-	protected override string ModName => _modName;
+	public override string ModName => _modName;
 
 	/*
 	 * This file adds support for:
@@ -25,7 +25,7 @@ internal sealed class BangarangSystem : CrossModHandler
 
 	private void TerraTypingSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out TerraTypingCaller caller))
+		if (!TryGetCaller(out TerraTypingCaller caller))
 		{
 			return;
 		}
@@ -35,9 +35,9 @@ internal sealed class BangarangSystem : CrossModHandler
 		caller.AddTypes(TerraTypingCaller.TypeToAdd.Weapon, CrossMod);
 	}
 
-	private static void WWeaponSupport()
+	private void WWeaponSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out WWeaponScalingCaller caller))
+		if (!TryGetCaller(out WWeaponScalingCaller caller))
 		{
 			return;
 		}

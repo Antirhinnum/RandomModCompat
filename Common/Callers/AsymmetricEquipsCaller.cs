@@ -17,7 +17,7 @@ internal sealed class AsymmetricEquipsCaller : ModWithCalls
 		Right
 	}
 
-	protected override string ModName => "AsymmetricEquips";
+	protected internal override string ModName => "AsymmetricEquips";
 
 	#region Default
 

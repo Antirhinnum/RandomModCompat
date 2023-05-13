@@ -1,8 +1,10 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Terraria.ModLoader;
+﻿using Terraria.ModLoader;
 
 namespace RandomModCompat.Core;
 
+/// <summary>
+/// Wraps around another mod's <see cref="Mod.Call(object[])"/> API.
+/// </summary>
 internal abstract class ModWithCalls : ModType
 {
 	/// <summary>
@@ -15,8 +17,11 @@ internal abstract class ModWithCalls : ModType
 	/// <summary>
 	/// The internal name of the mod.
 	/// </summary>
-	protected abstract string ModName { get; }
+	protected internal abstract string ModName { get; }
 
+	/// <summary>
+	/// <see langword="true"/> if this caller can be used, <see langword="false"/> otherwise.
+	/// </summary>
 	internal bool Active => ModLoader.HasMod(ModName);
 
 	public override sealed void Load()
@@ -27,11 +32,5 @@ internal abstract class ModWithCalls : ModType
 	protected override sealed void Register()
 	{
 		ModTypeLookup<ModWithCalls>.Register(this);
-	}
-
-	internal static bool TryGetCaller<T>([NotNullWhen(true)] out T caller) where T : ModWithCalls
-	{
-		caller = ModContent.GetInstance<T>();
-		return caller.Active;
 	}
 }

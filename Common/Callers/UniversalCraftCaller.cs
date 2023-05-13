@@ -7,7 +7,7 @@ namespace RandomModCompat.Common.Callers;
 // Call info from: https://github.com/Antirhinnum/UniversalCraft/blob/master/Common/Systems/CallSystem.cs
 internal sealed class UniversalCraftCaller : ModWithCalls
 {
-	protected override string ModName => "UniversalCraft";
+	protected internal override string ModName => "UniversalCraft";
 
 	#region Default
 

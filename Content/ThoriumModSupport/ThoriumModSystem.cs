@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using RandomModCompat.Common;
 using RandomModCompat.Common.Callers;
 using RandomModCompat.Common.ExplicitSupport;
 using RandomModCompat.Core;
@@ -19,7 +20,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 	private const string _thoriumLocalization = "Mods.RandomModCompat.Thorium.";
 
 	private const string _modName = "ThoriumMod";
-	protected override string ModName => _modName;
+	public override string ModName => _modName;
 
 	/*
 	 * Thorium Mod adds support for the following mods:
@@ -59,7 +60,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 
 	private void AsymmetricEquipsLoadTextures()
 	{
-		if (!ModWithCalls.TryGetCaller(out AsymmetricEquipsCaller caller))
+		if (!TryGetCaller(out AsymmetricEquipsCaller caller))
 		{
 			return;
 		}
@@ -80,9 +81,9 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		UniversalCraftSupport();
 	}
 
-	private static void AsymmetricEquipsSupport()
+	private void AsymmetricEquipsSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out AsymmetricEquipsCaller caller))
+		if (!TryGetCaller(out AsymmetricEquipsCaller caller))
 		{
 			return;
 		}
@@ -152,9 +153,9 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		// - Some pouch/bag equips
 	}
 
-	private static void BuffDisplaySupport()
+	private void BuffDisplaySupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out BuffDisplayCaller caller))
+		if (!TryGetCaller(out BuffDisplayCaller caller))
 		{
 			return;
 		}
@@ -164,9 +165,9 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		caller.SetCountAs(ModContent.BuffType<ThoriumMod.Buffs.Grimshadow3>(), grimShadowBuff);
 	}
 
-	private static void DialogueTweakSupport()
+	private void DialogueTweakSupport()
 	{
-		if (!ModWithCalls.TryGetCaller<DialogueTweakCaller>(out var caller))
+		if (!TryGetCaller<DialogueTweakCaller>(out var caller))
 		{
 			return;
 		}
@@ -184,9 +185,9 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		caller.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<ThoriumMod.NPCs.WeaponMaster>() }, ModContent.GetInstance<ThoriumMod.Items.NPCItems.ExileHelmet>().Texture);
 	}
 
-	private static void ItemCheckBlacklistSupport()
+	private void ItemCheckBlacklistSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out ItemCheckBlacklistCaller caller))
+		if (!TryGetCaller(out ItemCheckBlacklistCaller caller))
 		{
 			return;
 		}
@@ -232,9 +233,9 @@ internal sealed class ThoriumModSystem : CrossModHandler
 			);
 	}
 
-	private static void MagicStorageSupport()
+	private void MagicStorageSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out MagicStorageCaller caller))
+		if (!TryGetCaller(out MagicStorageCaller caller))
 		{
 			return;
 		}
@@ -276,6 +277,11 @@ internal sealed class ThoriumModSystem : CrossModHandler
 
 	private static void OverpoweredGoldDustSupport()
 	{
+		if (!ModContent.GetInstance<ModSupportConfig>().SupportEnabled(_modName, OverpoweredGoldDustSupportSystem.ModName))
+		{
+			return;
+		}
+
 		// Ducks
 		OverpoweredGoldDustSupportSystem.RegisterItem(ItemID.Duck, ModContent.ItemType<ThoriumMod.Items.Misc.GoldDuck>());
 		OverpoweredGoldDustSupportSystem.RegisterItem(ItemID.MallardDuck, ModContent.ItemType<ThoriumMod.Items.Misc.GoldDuck>());
@@ -334,9 +340,9 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		OverpoweredGoldDustSupportSystem.RegisterItem(ItemID.PlumbersPants, ModContent.ItemType<ThoriumMod.Items.Donate.GreedyPants>());
 	}
 
-	private static void RescueFairiesSupport()
+	private void RescueFairiesSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out RescueFairiesCaller caller))
+		if (!TryGetCaller(out RescueFairiesCaller caller))
 		{
 			return;
 		}
@@ -351,9 +357,9 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		caller.AddTrackingCondition<ThoriumMod.NPCs.Granite.GraniteSpawn>();
 	}
 
-	private static void ROR2HealthBarsSupport()
+	private void ROR2HealthBarsSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out ROR2HealthBarsCaller caller))
+		if (!TryGetCaller(out ROR2HealthBarsCaller caller))
 		{
 			return;
 		}
@@ -379,9 +385,9 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		caller.AddDesc<ThoriumMod.NPCs.Primordials.RealityBreaker>(_thoriumLocalization, "DreamEater");
 	}
 
-	private static void UniversalCraftSupport()
+	private void UniversalCraftSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out UniversalCraftCaller caller))
+		if (!TryGetCaller(out UniversalCraftCaller caller))
 		{
 			return;
 		}

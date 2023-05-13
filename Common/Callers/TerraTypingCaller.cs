@@ -23,7 +23,7 @@ internal sealed class TerraTypingCaller : ModWithCalls
 		Weapon
 	}
 
-	protected override string ModName => "TerraTyping";
+	protected internal override string ModName => "TerraTyping";
 
 	#region Default
 

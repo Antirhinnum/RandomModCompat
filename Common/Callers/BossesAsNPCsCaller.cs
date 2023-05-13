@@ -90,7 +90,7 @@ internal sealed class BossesAsNPCsCaller : ModWithCalls
 
 	private static readonly Func<bool> _alwaysTrueCondition = () => true;
 
-	protected override string ModName => "BossesAsNPCs";
+	protected internal override string ModName => "BossesAsNPCs";
 
 	internal bool CheckDownedBoss(DownedBoss boss)
 	{

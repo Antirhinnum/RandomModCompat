@@ -9,7 +9,7 @@ namespace RandomModCompat.Content;
 internal sealed class MaskSystem : CrossModHandler
 {
 	private const string _modName = "Mask";
-	protected override string ModName => _modName;
+	public override string ModName => _modName;
 
 	/*
 	 * This file adds support for:
@@ -24,7 +24,7 @@ internal sealed class MaskSystem : CrossModHandler
 
 	private void AsymmetricEquipsLoadTextures()
 	{
-		if (!ModWithCalls.TryGetCaller(out AsymmetricEquipsCaller caller))
+		if (!TryGetCaller(out AsymmetricEquipsCaller caller))
 		{
 			return;
 		}
@@ -38,9 +38,9 @@ internal sealed class MaskSystem : CrossModHandler
 		CensusSupport();
 	}
 
-	private static void AsymmetricEquipsSupport()
+	private void AsymmetricEquipsSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out AsymmetricEquipsCaller caller))
+		if (!TryGetCaller(out AsymmetricEquipsCaller caller))
 		{
 			return;
 		}
@@ -48,9 +48,9 @@ internal sealed class MaskSystem : CrossModHandler
 		caller.AddFlippedEquip<Mask.MaskItem.电视面具>(EquipType.Head);
 	}
 
-	private static void CensusSupport()
+	private void CensusSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out CensusCaller caller))
+		if (!TryGetCaller(out CensusCaller caller))
 		{
 			return;
 		}

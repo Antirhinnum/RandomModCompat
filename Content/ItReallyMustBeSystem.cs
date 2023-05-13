@@ -10,7 +10,7 @@ namespace RandomModCompat.Content;
 internal sealed class ItReallyMustBeSystem : CrossModHandler
 {
 	private const string _modName = "ItReallyMustBe";
-	protected override string ModName => _modName;
+	public override string ModName => _modName;
 
 	/*
 	 * Dreadnautilus is a Boss adds support for the following mods:
@@ -36,9 +36,9 @@ internal sealed class ItReallyMustBeSystem : CrossModHandler
 		WWeaponScalingSupport();
 	}
 
-	private static void BossesAsNPCsSupport()
+	private void BossesAsNPCsSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out BossesAsNPCsCaller caller))
+		if (!TryGetCaller(out BossesAsNPCsCaller caller))
 		{
 			return;
 		}
@@ -54,9 +54,9 @@ internal sealed class ItReallyMustBeSystem : CrossModHandler
 		caller.AddToShop<ItReallyMustBe.Items.BloodyCarKey>(BossesAsNPCsCaller.SellingTownNPC.Dreadnautilus, 1f, 5f, caller.ShouldSellMasterMode);
 	}
 
-	private static void ItemCheckBlacklistSupport()
+	private void ItemCheckBlacklistSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out ItemCheckBlacklistCaller caller))
+		if (!TryGetCaller(out ItemCheckBlacklistCaller caller))
 		{
 			return;
 		}
@@ -67,9 +67,9 @@ internal sealed class ItReallyMustBeSystem : CrossModHandler
 		}
 	}
 
-	private static void ROR2HealthBarsSupport()
+	private void ROR2HealthBarsSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out ROR2HealthBarsCaller caller))
+		if (!TryGetCaller(out ROR2HealthBarsCaller caller))
 		{
 			return;
 		}
@@ -79,7 +79,7 @@ internal sealed class ItReallyMustBeSystem : CrossModHandler
 
 	private void TerraTypingSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out TerraTypingCaller caller))
+		if (!TryGetCaller(out TerraTypingCaller caller))
 		{
 			return;
 		}
@@ -87,9 +87,9 @@ internal sealed class ItReallyMustBeSystem : CrossModHandler
 		caller.AddTypes(TerraTypingCaller.TypeToAdd.Weapon, CrossMod);
 	}
 
-	private static void WWeaponScalingSupport()
+	private void WWeaponScalingSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out WWeaponScalingCaller caller))
+		if (!TryGetCaller(out WWeaponScalingCaller caller))
 		{
 			return;
 		}

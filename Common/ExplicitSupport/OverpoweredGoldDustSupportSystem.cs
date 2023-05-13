@@ -12,7 +12,7 @@ namespace RandomModCompat.Common.ExplicitSupport;
 internal sealed class OverpoweredGoldDustSupportSystem : GlobalProjectile
 {
 	// TODO: Tile support.
-	private const string _modName = "OverpoweredGoldDust";
+	internal const string ModName = "OverpoweredGoldDust";
 
 	private static readonly Dictionary<int, (int goldId, int platinumId)> _npcToGoldNPC = new();
 	private static readonly Dictionary<int, (int goldId, int platinumId)> _itemToGoldItem = new();
@@ -21,12 +21,12 @@ internal sealed class OverpoweredGoldDustSupportSystem : GlobalProjectile
 
 	public override bool IsLoadingEnabled(Mod mod)
 	{
-		return ModLoader.HasMod(_modName);
+		return ModLoader.HasMod(ModName);
 	}
 
 	public override bool AppliesToEntity(Projectile entity, bool lateInstantiation)
 	{
-		return entity.type == ModContent.Find<ModProjectile>(_modName, "GoldDust").Type;
+		return entity.type == ModContent.Find<ModProjectile>(ModName, "GoldDust").Type;
 	}
 
 	public override void ModifyDamageHitbox(Projectile projectile, ref Rectangle hitbox)

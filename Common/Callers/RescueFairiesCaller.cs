@@ -7,7 +7,7 @@ namespace RandomModCompat.Common.Callers;
 
 internal sealed class RescueFairiesCaller : ModWithCalls
 {
-	protected override string ModName => "RescueFairies";
+	protected internal override string ModName => "RescueFairies";
 
 	internal void AddTrackingCondition(int npcId)
 	{

@@ -24,7 +24,7 @@ internal sealed class WWeaponScalingCaller : ModWithCalls
 		MoonLord = 14
 	}
 
-	protected override string ModName => "WWeaponScaling";
+	protected internal override string ModName => "WWeaponScaling";
 
 	#region Default
 

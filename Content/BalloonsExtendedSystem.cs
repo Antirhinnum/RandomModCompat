@@ -8,7 +8,7 @@ namespace RandomModCompat.Content;
 internal sealed class BalloonsExtendedSystem : CrossModHandler
 {
 	private const string _modName = "BalloonsExtended";
-	protected override string ModName => _modName;
+	public override string ModName => _modName;
 
 	/*
 	 * This file adds support for:
@@ -22,7 +22,7 @@ internal sealed class BalloonsExtendedSystem : CrossModHandler
 
 	private void AsymmetricEquipsSupport()
 	{
-		if (!ModWithCalls.TryGetCaller(out AsymmetricEquipsCaller caller))
+		if (!TryGetCaller(out AsymmetricEquipsCaller caller))
 		{
 			return;
 		}

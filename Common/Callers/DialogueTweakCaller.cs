@@ -9,7 +9,7 @@ namespace RandomModCompat.Common.Callers;
 
 internal sealed class DialogueTweakCaller : ModWithCalls
 {
-	protected override string ModName => "DialogueTweak";
+	protected internal override string ModName => "DialogueTweak";
 
 	internal void ReplaceExtraButtonIcon(List<int> npcIds, string texturePath)
 	{
