@@ -1,16 +1,20 @@
-﻿using Terraria.ID;
+﻿using RandomModCompat.Common;
+using Terraria.ID;
 using Terraria.ModLoader;
 using ThoriumMod.Core.Handlers.SharedBossLootHandler;
 
 namespace RandomModCompat.Content.PrimeReworkSupport;
 
 // Adds Strange Plating and Life-Powered Energy Cells to The Terminator and Caretaker's drops.
-[JITWhenModsEnabled("PrimeRework", "ThoriumMod")]
+[JITWhenModsEnabled(BaseMod, SupportMod)]
 internal sealed class PrimeReworkThoriumPlatingDrop : ModSystem
 {
+	private const string BaseMod = "PrimeRework";
+	private const string SupportMod = "ThoriumMod";
+
 	public override bool IsLoadingEnabled(Mod mod)
 	{
-		return ModLoader.HasMod("PrimeRework") && ModLoader.HasMod("ThoriumMod");
+		return ModContent.GetInstance<ModSupportConfig>().SupportEnabled(BaseMod, SupportMod);
 	}
 
 	public override void SetStaticDefaults()

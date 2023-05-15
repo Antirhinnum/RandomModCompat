@@ -1,5 +1,35 @@
 ﻿Mods.RandomModCompat:
 {
+	_Config:
+	{
+		Info: "Please refer to this mod's Steam Workshop page for what each compatibility option does."
+		
+		ModNames:
+		{
+			AsymmetricEquips: "Asymmetric Equipment"
+			BalloonsExtended: "Balloons Extended"
+			Bangarang: "Bangarang - A Boomerang Overhaul"
+			BossesAsNPCs: "Bosses as NPCs"
+			BuffDisplay: "Enhanced Buff Display"
+			CalamityMod: "Calamity Mod"
+			Census: "Census - Town NPC Checklist"
+			DialogueTweak: "Dialogue Panel Rework"
+			ItemCheckBlacklist: "Item Check Blacklist Lib"
+			ItReallyMustBe: "Dreadnautilus is a Boss"
+			MagicStorage: "Magic Storage"
+			Mask: "Mask"
+			OverpoweredGoldDust: "Gold Dust Turns Everything Into Gold"
+			PrimeRework: "Mech Bosses Rework"
+			RescueFairies: "Rescue Fairies"
+			ROR2HealthBars: "RoR 2 Health Bars"
+			SlugNPCs: "Slug Town Pets"
+			TerraTyping: "TerraTyping"
+			ThoriumMod: "Thorium Mod"
+			UniversalCraft: "Universal Crafter"
+			WWeaponScaling: "W1K's Weapon Scaling"
+		}
+	}
+	
 	ItReallyMustBe:
 	{
 		ROR2:
