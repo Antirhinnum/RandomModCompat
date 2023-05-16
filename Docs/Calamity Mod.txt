@@ -1,0 +1,150 @@
+[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2824688072
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
+The following accessories can now be worn asymmetrically:[list]
+[*]Bloodstained Glove
+[*]Depths Charm
+[*]Electrician's Glove
+[*]Elemental Gauntlet
+[*]Filthy Glove
+[*]Glove of Precision
+[*]Glove of Recklessness
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955]Bangarang:[/url][/h1]
+The following boomerangs now function properly with Bangarang's accessories:[list]
+[*]Blazing Star
+[*]Brimblade
+[*]Celestus
+[*]Defective Sphere
+[*]Dynamic Pursuer
+[*]Elemental Disk
+[*]Enchanted Axe
+[*]Epidemic Shredder
+[*]Eradicator
+[*]Fallen Paladin's Hammer
+[*]Fishbone Boomerang
+[*]Frostcrush Valari
+[*]Galaxy Smasher
+[*]Ghoulish Gouger
+[*]Glaive
+[*]Icebreaker
+[*]Infested Clawmerang
+[*]Kelvin Catalyst
+[*]Kylie
+[*]Mangrove Chakram
+[*]Molten Amputator
+[*]Nanoblack Reaper
+[*]Sand Dollar
+[*]Seeking Scorcher
+[*]Stellar Contempt
+[*]Subduction Slicer
+[*]Terra Disk
+[*]Toxicant Twister
+[*]Tracking Disk
+[*]Triactis' True Paladinian Mage-Hammer of Might
+[*]Valediction
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2863092349]Enhanced Buff Display:[/url][/h1]
+The following buffs are now hidden together if Enhanced Buff Display's "Tiered Buff Hiding" config is enabled:[list]
+[*]The normal and Noseless versions of the Magic Scarf and Hat transformation's buff.
+[*]The large and small versions of the Flamsteed Ring transformation's buff.
+[*]The three buffs inflicted by the Hallowed Rune.
+[*]The three buffs inflicted by the Phantomic Artifact.
+[*]The three buffs inflicted by the Spirit Glyph.
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2921706690]Item Check Blacklist Lib:[/url][/h1]
+The following items are blacklisted on the Item Checklist:[list]
+[*]Sulphurous Sea World Side Changer
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium Mod:[/url][/h1]
+The following items now function properly with Thorium's flail accessories:[list]
+[*]Ball O' Fugu
+[*]Clam Crusher
+[*]Cosmic Discharge
+[*]Crescent Moon
+[*]Dragon Pow
+[*]Mourningstar
+[*]Nebulash
+[*]Pulse Dragon
+[*]Rem's Revenge
+[*]Spine of Thanatos
+[*]Tumbleweed
+[*]Urchin Flail
+[*]Urchin Mace
+[*]Yateveo Bloom
+[/list]
+
+The following items now gain a damage buff when wearing Thorium's Conduit armor set:[list]
+[*]Nullification Pistol
+[*]Shock Grenade
+[*]Wingman
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2917548365]Universal Crafter:[/url][/h1]
+The following stations are automatically added to the Universal Crafter after a condition:
+[table]
+	[tr]
+		[th]Station[/th]
+		[th]Condition[/th]
+	[/tr]
+	[tr]
+		[td]Altar of the Accursed[/td]
+		[td]Post-Yharon[/td]
+	[/tr]
+	[tr]
+		[td]Ancient Altar[/td]
+		[td]Hardmode[/td]
+	[/tr]
+	[tr]
+		[td]Ashen Altar[/td]
+		[td]Hardmode[/td]
+	[/tr]
+	[tr]
+		[td]Botanic Planter[/td]
+		[td]Post-Providence[/td]
+	[/tr]
+	[tr]
+		[td]Cosmic Anvil[/td]
+		[td]Post-Devourer of Gods[/td]
+	[/tr]
+	[tr]
+		[td]Draedon's Forge[/td]
+		[td]After the Devourer of Gods, Yharon, [i]and[/i] the Exo Mechs have been defeated.[/td]
+	[/tr]
+	[tr]
+		[td]Effulgent Manipulator[/td]
+		[td]Post-Dragonfolly[/td]
+	[/tr]
+	[tr]
+		[td]Eutrophic Shelf[/td]
+		[td]Post-Desert Scourge[/td]
+	[/tr]
+	[tr]
+		[td]Monolith Amalgam[/td]
+		[td]Hardmode[/td]
+	[/tr]
+	[tr]
+		[td]Plague Infuser[/td]
+		[td]Post-Golem[/td]
+	[/tr]
+	[tr]
+		[td]Profaned Crucible[/td]
+		[td]Post-Moon Lord[/td]
+	[/tr]
+	[tr]
+		[td]Static Refiner[/td]
+		[td]Post-Slime God[/td]
+	[/tr]
+	[tr]
+		[td]Void Condenser[/td]
+		[td]Hardmode[/td]
+	[/tr]
+	[tr]
+		[td]Wulfrum Labstation[/td]
+		[td]Always available[/td]
+	[/tr]
+[/table]

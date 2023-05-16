@@ -1,0 +1,7 @@
+[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2957129830
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2687866031]Census:[/url][/h1]
+Census now shows the move-in conditions for all slug types.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563815443]Dialogue Panel Rework:[/url][/h1]
+All slug types now use their head as their dialogue icon instead of the generic shop icon.

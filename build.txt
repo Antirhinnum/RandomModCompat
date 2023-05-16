@@ -1,9 +1,10 @@
 displayName = Assorted Mod Compatibility
 author = Snek
-version = 0.1.0
+version = 1.0.0
+homepage = https://github.com/Antirhinnum/RandomModCompat
 hideCode = true
 hideResources = true
 includeSource = false
-buildIgnore = LICENSE, README.md, *.pdn, gear.png
+buildIgnore = LICENSE, README.md, *.pdn, gear.png, Docs/, Notes/, *.pdb
 includePDB = true
 weakReferences = BalloonsExtended, Bangarang, CalamityMod, ItReallyMustBe, Mask, PrimeRework, SlugNPCs, ThoriumMod

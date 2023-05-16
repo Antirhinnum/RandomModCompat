@@ -1,5 +1,7 @@
-﻿using RandomModCompat.Common.Callers;
+﻿using CalamityMod;
+using RandomModCompat.Common.Callers;
 using RandomModCompat.Core;
+using System.Linq;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -70,13 +72,6 @@ internal sealed class CalamityModSystem : CrossModHandler
 			return;
 		}
 
-		// TODO
-		// Need to figure out some way to "or" this condition.
-		// Calamity boomerangs can be thrown if:
-		// a) There's less than the cap out.
-		// b) A stealth strike is possible.
-		//static bool StealthStrikeAvailable(Player player, Item item, int boomerangs) => player.Calamity().StealthStrikeAvailable();
-
 		// Melee
 		caller.RegisterSimpleBoomerang<CalamityMod.Items.Weapons.Melee.FallenPaladinsHammer>(-1);
 		caller.RegisterSimpleBoomerang<CalamityMod.Items.Weapons.Melee.GalaxySmasher>(-1);
@@ -105,7 +100,6 @@ internal sealed class CalamityModSystem : CrossModHandler
 		caller.RegisterSimpleBoomerang<CalamityMod.Items.Weapons.Rogue.MangroveChakram>(-1);
 		caller.RegisterSimpleBoomerang<CalamityMod.Items.Weapons.Rogue.MoltenAmputator>(-1);
 		caller.RegisterSimpleBoomerang<CalamityMod.Items.Weapons.Rogue.NanoblackReaper>(-1);
-		caller.RegisterSimpleBoomerang<CalamityMod.Items.Weapons.Rogue.SandDollar>(2/*, StealthStrikeAvailable*/);
 		caller.RegisterSimpleBoomerang<CalamityMod.Items.Weapons.Rogue.SubductionSlicer>(-1);
 		caller.RegisterSimpleBoomerang<CalamityMod.Items.Weapons.Rogue.TerraDisk>(-1);
 		caller.RegisterSimpleBoomerang<CalamityMod.Items.Weapons.Rogue.ToxicantTwister>(-1);
@@ -115,16 +109,21 @@ internal sealed class CalamityModSystem : CrossModHandler
 		caller.RegisterSimpleBoomerang<CalamityMod.Items.Weapons.DraedonsArsenal.TrackingDisk>(-1);
 
 		// Complex
-
-		// Bangarang handles this really weirdly, where it compares the number of allowed boomerangs to the highest amnount of any active projectiles, instead of the sum.
-		// In short, this may be broken with Bangarang support.
-		caller.RegisterBoomerang<CalamityMod.Items.Weapons.Rogue.DefectiveSphere>(new int[]
+		static bool SandDollarCheck(Player p, Item i, int n) => p.Calamity().StealthStrikeAvailable() || p.ownedProjectileCounts[i.shoot] < 2 + n;
+		static bool DefectiveSphereCheck(Player p, Item i, int n)
 		{
-			ModContent.ProjectileType<CalamityMod.Projectiles.Rogue.SphereSpiked>(),
-			ModContent.ProjectileType<CalamityMod.Projectiles.Rogue.SphereBladed>(),
-			ModContent.ProjectileType<CalamityMod.Projectiles.Rogue.SphereYellow>(),
-			ModContent.ProjectileType<CalamityMod.Projectiles.Rogue.SphereBlue>()
-		}, 5/*, StealthStrikeAvailable*/);
+			int[] projectileTypes = new int[]
+			{
+				ModContent.ProjectileType<CalamityMod.Projectiles.Rogue.SphereSpiked>(),
+				ModContent.ProjectileType<CalamityMod.Projectiles.Rogue.SphereBladed>(),
+				ModContent.ProjectileType<CalamityMod.Projectiles.Rogue.SphereYellow>(),
+				ModContent.ProjectileType<CalamityMod.Projectiles.Rogue.SphereBlue>()
+			};
+			return p.Calamity().StealthStrikeAvailable() || projectileTypes.Select(type => p.ownedProjectileCounts[type]).Sum() < 5 + n;
+		}
+
+		caller.RegisterSimpleBoomerang<CalamityMod.Items.Weapons.Rogue.SandDollar>(2, SandDollarCheck);
+		caller.RegisterSimpleBoomerang<CalamityMod.Items.Weapons.Rogue.DefectiveSphere>(5, DefectiveSphereCheck);
 	}
 
 	private void BuffDisplaySupport()

@@ -36,4 +36,7 @@
       <HintPath>lib\ThoriumMod.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Docs\" />
+  </ItemGroup>
 </Project>

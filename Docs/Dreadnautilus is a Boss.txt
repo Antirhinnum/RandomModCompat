@@ -1,0 +1,25 @@
+[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2762501456
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2689434541]Bosses as NPCs:[/url][/h1]
+The following items are now sold by the Dreadnautilus town NPC:[list]
+[*]Blood Bait (if enabled in the mod's config)
+[*]Dread Pistol
+[*]Dreadnautilus Mask
+[*]Dreadnautilus Trophy
+[*]Dreadnautilus Relic
+[*]Bloody Car Key
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2921706690]Item Check Blacklist Lib:[/url][/h1]
+The following items are blacklisted on the Item Checklist:[list]
+[*]Blood Bait (if disabled in the mod's config)
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2788731718]RoR 2 Health Bars:[/url][/h1]
+The Dreadnautilus now has a custom title.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2940607585]TerraTyping:[/url][/h1]
+The Dread Pistol now has the "Blood" type.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2571636086]W1K's Weapon Scaling[/url][/h1]
+The Dread Pistol is now in the "Adamantite" tier.

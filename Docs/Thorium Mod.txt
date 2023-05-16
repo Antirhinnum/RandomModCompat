@@ -1,0 +1,231 @@
+[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
+The following items can now be worn asymmetrically:[list]
+[*]Amber Ring
+[*]Amethyst Ring
+[*]Apothecary's Cyan Vial
+[*]Apothecary's Scarlet Vial
+[*]Aquamarine Ring
+[*]Auto Tuner
+[*]Canteen
+[*]Crystal Arcanite
+[*]Crystal Honey
+[*]Dark Glaze
+[*]Dark Heart
+[*]Deadman's Patch
+[*]Devil's Subwoofer
+[*]Diamond Ring
+[*]Emerald Ring
+[*]Eye of the Storm
+[*]Gardener's Sheath
+[*]Heart of the Jungle
+[*]Hungering Blossom
+[*]Incandescent Spark
+[*]Inner Flame
+[*]Leather Sheath
+[*]Leeching Sheath
+[*]Life Gem
+[*]Mana Bauble
+[*]Mermaid's Canteen
+[*]Metabolic Pills
+[*]Mirror of the Beholder
+[*]Necrotic Skull
+[*]Nightshade Flower
+[*]Note Hairpin
+[*]Olympic Torch
+[*]Opal Ring
+[*]Phylactery
+[*]Plague Lord's Flask
+[*]Potion Chaser
+[*]Ring of Unity
+[*]Ruby Ring
+[*]Sapphire Ring
+[*]Soul Stone
+[*]Subwoofer
+[*]Support Sash
+[*]Terrarium Surround Sound
+[*]The Lost Cross
+[*]The Ring
+[*]Titan Slayer Sheath
+[*]Topaz Ring
+[*]Up-Down Balloon
+[*]Vampire Gland
+[*]Writhing Sheath
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563815443]Dialogue Panel Rework:[/url][/h1]
+The following NPCs mave modified button icons:[list]
+[*]Cobbler
+[*]Confused Zombie
+[*]Cook
+[*]Desert Acolyte
+[*]Diverman
+[*]Spiritualist
+[*]Tracker
+[*]Weapon Master
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2863092349]Enhanced Buff Display:[/url][/h1]
+The following buffs are now hidden together if Enhanced Buff Display's "Tiered Buff Hiding" config is enabled:[list]
+[*]The three levels of the "False Presence" debuff.
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2791571202]Gold Dust Turns Everything Into Gold:[/url][/h1]
+The following items will now turn into gold (or platinum) when Magical Gold Dust is thrown onto them:
+[table]
+	[tr]
+		[th]Items[/th]
+		[th]Gold Equivalent[/th]
+	[/tr]
+	[tr]
+		[td]Duck, Mallard Duck[/td]
+		[td]Gold Duck[/td]
+	[/tr]
+	[tr]
+		[td]Duck Cage, Mallard Duck Cage[/td]
+		[td]Gold Duck Cage[/td]
+	[/tr]
+	[tr]
+		[td]Dumbo Octopus, Purple Dumbo Octopus[/td]
+		[td]Gold Dumbo Octopus[/td]
+	[/tr]
+	[tr]
+		[td]Dumbo Octopus Cage, Purple Dumbo Octopus Cage[/td]
+		[td]Gold Dumbo Octopus Cage[/td]
+	[/tr]
+	[tr]
+		[td]Lobster, Blue Lobster[/td]
+		[td]Gold Lobster[/td]
+	[/tr]
+	[tr]
+		[td]Lobster Cage, Blue Lobster Cage[/td]
+		[td]Gold Lobster Cage[/td]
+	[/tr]
+	[tr]
+		[td]Copper Buckler, Tin Buckler, Iron Shield, Lead Shield, Silver Bulwark, Tungsten Bulwark[/td]
+		[td]Gold Aegis / Platinum Aegis[/td]
+	[/tr]
+	[tr]
+		[td]Plumber's Hat, Shirt, and Pants[/td]
+		[td]Greedy Hat, Shirt, and Pants[/td]
+	[/tr]
+[/table]
+
+The following NPCs will now turn into gold (or platinum) when Magical Gold Dust is thrown onto them:
+[table]
+	[tr]
+		[th]NPCs[/th]
+		[th]Gold Equivalent[/th]
+	[/tr]
+	[tr]
+		[td]Duck, Mallard Duck[/td]
+		[td]Gold Duck[/td]
+	[/tr]
+	[tr]
+		[td]Dumbo Octopus, Purple Dumbo Octopus[/td]
+		[td]Gold Dumbo Octopus[/td]
+	[/tr]
+	[tr]
+		[td]Lobster, Blue Lobster[/td]
+		[td]Gold Lobster[/td]
+	[/tr]
+	[tr]
+		[td]Blood Drop, Clot, Gilded Slime, Gilded Slimeling, Granite-Fused Slime, Living Hemorrhage, Space Slime[/td]
+		[td]Gold Slime[/td]
+	[/tr]
+	[tr]
+		[td]Copper Coin Bag, Silver Coin Bag[/td]
+		[td]Gold Coin Bag[/td]
+	[/tr]
+	[tr]
+		[td]Myna[/td]
+		[td]Gold Bird[/td]
+	[/tr]
+	[tr]
+		[td]Giant Flying Fox[/td]
+		[td]Gilded Bat[/td]
+	[/tr]
+	[tr]
+		[td]Werewolf[/td]
+		[td]Gilded Lycan[/td]
+	[/tr]
+[/table]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2921706690]Item Check Blacklist Lib:[/url][/h1]
+The following items are blacklisted on the Item Checklist:[list]
+[*]Angry Statue
+[*]Annoying Mud
+[*]Arcane Spike
+[*]Artificer's Extractor
+[*]Basic Pickaxe
+[*]Destiny Weaver
+[*]Dream Potion
+[*]Empowerment Tester
+[*]Fragment of Heaven
+[*]Gore Tester
+[*]Healing Dummy Statue
+[*]Lich Requirement
+[*]Lodestone Buckshot
+[*]Penguin Wand
+[*]Pixel Dye
+[*]Projectile Tester
+[*]Purity Tester
+[*]Shame on you
+[*]Stat Tester
+[*]Suppression Bullet
+[*]Text Tester
+[*]The Gauntlet (Bare, Filled)
+[*]True Penguin Wand
+[*]Tile Tester
+[*]Unassuming Blue Stone
+[*]Unassuming Green Stone
+[*]Unassuming Orange Stone
+[*]Unassuming Purple Stone
+[*]Unassuming Red Stone
+[*]Unassuming Yellow Stone
+[*]Viscount Requirement
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347]Magic Storage:[/url][/h1]
+All Thorium Mod bosses now drop Shadow Diamonds.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2943805073]Rescue Fairies:[/url][/h1]
+The following NPCs can now be tracked by Rescue Fairies:[list]
+[*]Copper Coin Bag
+[*]Silver Coin Bag
+[*]Gold Coin Bag
+[*]Life Crystal Mimic
+[*]Bizzare Rock Formation
+[*]Unstable Energy Anomaly
+[/list]
+
+Additionally, all normal Mimics and Biome Mimics can also be tracked.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2788731718]RoR 2 Health Bars:[/url][/h1]
+All Thorium Mod bosses now have custom titles.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2917548365]Universal Crafter:[/url][/h1]
+The following stations are automatically added to the Universal Crafter after a condition:
+[table]
+	[tr]
+		[th]Station[/th]
+		[th]Condition[/th]
+	[/tr]
+	[tr]
+		[td]Arcane Armor Fabricator[/td]
+		[td]Post-Eye of Cthulhu[/td]
+	[/tr]
+	[tr]
+		[td]Guide's Final Gift[/td]
+		[td]Post-Moon Lord [i]and[/i] the item is enabled in Thorium Mod's config.[/td]
+	[/tr]
+	[tr]
+		[td]Soul Forge[/td]
+		[td]Post-Mech Bosses[/td]
+	[/tr]
+	[tr]
+		[td]Thorium Anvil[/td]
+		[td]Always available[/td]
+	[/tr]
+[/table]

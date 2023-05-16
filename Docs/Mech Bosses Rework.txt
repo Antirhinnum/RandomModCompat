@@ -1,0 +1,55 @@
+[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2737642173
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955]Bangarang:[/url][/h1]
+The following boomerangs now function properly with Bangarang's accessories:[list]
+[*]Laser Star
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2689434541]Bosses as NPCs:[/url][/h1]
+The following items are now sold by the Destroyer town NPC:[list]
+[*]Exitium
+[*]Brain Remote
+[*]Soul of Plight
+[*]Terminator Mask
+[*]Terminator Trophy
+[*]Mechanical Cockpit Piece
+[*]Killswitch
+[*]Terminator Relic
+[*]Finis
+[/list]
+
+The following items are now sold by Queen Bee after defeating the Caretaker:[list]
+[*]Bee Remote
+[*]Soul of Dight
+[*]Caretaker Mask
+[*]Caretaker Trophy
+[*]Mechanical Wings
+[*]B-33 Controller
+[*]Caretaker Relic
+[*]Artificial Stinger
+[/list]
+
+Additionally, "Double Trouble" is sold by both Retinazer and Spazmatism, and "Hand Prime" is sold by Skeletron Prime.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2921706690]Item Check Blacklist Lib:[/url][/h1]
+The following items are blacklisted on the Item Checklist:[list]
+[*]Rabbit Rune
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347]Magic Storage:[/url][/h1]
+The Terminator and Caretaker now drop Shadow Diamonds on first defeat.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2788731718]RoR 2 Health Bars:[/url][/h1]
+The Terminator and Caretaker now have custom titles.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2940607585]TerraTyping:[/url][/h1]
+All weapons and NPCs from this mod now have appropriate types.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium Mod:[/url][/h1]
+The Terminator and Caretaker now drop Strange Plating and Life-Powered Energy Cells.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2571636086]W1K's Weapon Scaling[/url][/h1]
+Most weapons from this mod are now in the "Hallowed" tier. Exceptions:[list]
+[*]The Bloodshed sword is in the "Hellstone" tier.
+[*]The Laser Stars are not tiered due to stacking items not being able to receive tiers.
+[/list]
