@@ -1,6 +1,9 @@
 ﻿using CalamityMod;
+using RandomModCompat.Common;
 using RandomModCompat.Common.Callers;
+using RandomModCompat.Common.ExplicitSupport;
 using RandomModCompat.Core;
+using System;
 using System.Linq;
 using Terraria;
 using Terraria.ModLoader;
@@ -30,6 +33,7 @@ internal sealed class CalamityModSystem : CrossModHandler
 	 * - Bangarang (partial)
 	 * - [X] Colored Damage Types (TODO: Debug)
 	 * - Enhanced Buff Display
+	 * - Atmospheric Torches
 	 * - Item Check Blacklist
 	 * - Thorium Mod
 	 * - Universal Crafter
@@ -41,9 +45,26 @@ internal sealed class CalamityModSystem : CrossModHandler
 		BangarangSupport();
 		BuffDisplaySupport();
 		//ColoredDamageTypesSupport();
+		ImprovedTorchesSupport();
 		ItemCheckBlacklistSupport();
 		ThoriumModSupport();
 		UniversalCraftSupport();
+	}
+
+	private static void ImprovedTorchesSupport()
+	{
+		if (!ModContent.GetInstance<ModSupportConfig>().SupportEnabled(_modName, ImprovedTorchesSupportSystem.ModName))
+		{
+			return;
+		}
+
+		ImprovedTorchesSupportSystem.RegisterTorch<CalamityMod.Tiles.Abyss.SulphurousTorch>();
+		ImprovedTorchesSupportSystem.RegisterTorch<CalamityMod.Tiles.Astral.AstralTorch>();
+		ImprovedTorchesSupportSystem.RegisterTorch<CalamityMod.Tiles.Crags.GloomTorch>();
+		ImprovedTorchesSupportSystem.RegisterTorch<CalamityMod.Tiles.FurnitureAbyss.AbyssTorch>();
+		ImprovedTorchesSupportSystem.RegisterTorch<CalamityMod.Tiles.SunkenSea.AlgalPrismTorch>();
+		ImprovedTorchesSupportSystem.RegisterTorch<CalamityMod.Tiles.SunkenSea.NavyPrismTorch>();
+		ImprovedTorchesSupportSystem.RegisterTorch<CalamityMod.Tiles.SunkenSea.RefractivePrismTorch>();
 	}
 
 	private void AsymmetricEquipsSupport()

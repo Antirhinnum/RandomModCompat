@@ -1,0 +1,7 @@
+﻿Checklist:
+
+[ ] Implement the support.
+[ ] Add to the config.
+[ ] Add new mod names to the localization file.
+[ ] Add new support mod to description.txt.
+[ ] Add details about the support to the appropriate doc.

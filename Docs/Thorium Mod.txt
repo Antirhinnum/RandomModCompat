@@ -54,6 +54,13 @@ The following items can now be worn asymmetrically:[list]
 [*]Writhing Sheath
 [/list]
 
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2817496179]Atmospheric Torches:[/url][/h1]
+The following torches now flicker when placed:[list]
+[*]Black Torch
+[*]Deeplight Torch
+[*]Magenta Torch
+[/list]
+
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563815443]Dialogue Panel Rework:[/url][/h1]
 The following NPCs mave modified button icons:[list]
 [*]Cobbler

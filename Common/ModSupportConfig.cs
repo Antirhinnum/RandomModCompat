@@ -68,6 +68,9 @@ public sealed class ModSupportConfig : ModConfig
 		[Label(_modNames + "BuffDisplay")]
 		public bool BuffDisplay;
 
+		[Label(_modNames + "ImprovedTorches")]
+		public bool ImprovedTorches;
+
 		[Label(_modNames + "ItemCheckBlacklist")]
 		public bool ItemCheckBlacklist;
 
@@ -83,6 +86,7 @@ public sealed class ModSupportConfig : ModConfig
 				&& AsymmetricEquips.Equals(other.AsymmetricEquips)
 				&& Bangarang.Equals(other.Bangarang)
 				&& BuffDisplay.Equals(other.BuffDisplay)
+				&& ImprovedTorches.Equals(other.ImprovedTorches)
 				&& ItemCheckBlacklist.Equals(other.ItemCheckBlacklist)
 				&& ThoriumMod.Equals(other.ThoriumMod)
 				&& UniversalCraft.Equals(other.UniversalCraft);
@@ -90,7 +94,7 @@ public sealed class ModSupportConfig : ModConfig
 
 		public override int GetHashCode()
 		{
-			return new { AsymmetricEquips, Bangarang, BuffDisplay, ItemCheckBlacklist, ThoriumMod, UniversalCraft }.GetHashCode();
+			return new { AsymmetricEquips, Bangarang, BuffDisplay, ImprovedTorches, ItemCheckBlacklist, ThoriumMod, UniversalCraft }.GetHashCode();
 		}
 	}
 
@@ -230,6 +234,9 @@ public sealed class ModSupportConfig : ModConfig
 		[Label(_modNames + "DialogueTweak")]
 		public bool DialogueTweak;
 
+		[Label(_modNames + "ImprovedTorches")]
+		public bool ImprovedTorches;
+
 		[Label(_modNames + "ItemCheckBlacklist")]
 		public bool ItemCheckBlacklist;
 
@@ -254,6 +261,7 @@ public sealed class ModSupportConfig : ModConfig
 				&& AsymmetricEquips.Equals(other.AsymmetricEquips)
 				&& BuffDisplay.Equals(other.BuffDisplay)
 				&& DialogueTweak.Equals(other.DialogueTweak)
+				&& ImprovedTorches.Equals(other.ImprovedTorches)
 				&& ItemCheckBlacklist.Equals(other.ItemCheckBlacklist)
 				&& MagicStorage.Equals(other.MagicStorage)
 				&& OverpoweredGoldDust.Equals(other.OverpoweredGoldDust)
@@ -264,7 +272,7 @@ public sealed class ModSupportConfig : ModConfig
 
 		public override int GetHashCode()
 		{
-			return new { AsymmetricEquips, BuffDisplay, DialogueTweak, ItemCheckBlacklist, MagicStorage, OverpoweredGoldDust, RescueFairies, ROR2HealthBars, UniversalCraft }.GetHashCode();
+			return new { AsymmetricEquips, BuffDisplay, DialogueTweak, ImprovedTorches, ItemCheckBlacklist, MagicStorage, OverpoweredGoldDust, RescueFairies, ROR2HealthBars, UniversalCraft }.GetHashCode();
 		}
 	}
 

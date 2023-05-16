@@ -13,6 +13,7 @@ Current Compatibility:
  + W1K's Weapon Scaling
  - Calamity Mod
  + Asymmetric Equips
+ + Atmospheric Torches
  + Bangarang
  + Enhanced Buff Display
  + Item Check Blacklist Lib
@@ -41,6 +42,7 @@ Current Compatibility:
  + Dialogue Panel Rework
  - Thorium Mod
  + Asymmetric Equips
+ + Atmospheric Torches
  + Dialogue Panel Rework
  + Enhanced Buff Display
  + Gold Dust Turns Everything Into Gold

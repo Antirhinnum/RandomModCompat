@@ -20,6 +20,9 @@
     <Reference Include="CalamityMod">
       <HintPath>lib\CalamityMod.dll</HintPath>
     </Reference>
+    <Reference Include="ImprovedTorches">
+      <HintPath>lib\ImprovedTorches.dll</HintPath>
+    </Reference>
     <Reference Include="ItReallyMustBe">
       <HintPath>lib\ItReallyMustBe.dll</HintPath>
     </Reference>

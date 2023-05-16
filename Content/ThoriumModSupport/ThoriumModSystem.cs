@@ -46,6 +46,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 	 * - Enhanced Buff Display
 	 * - Dialogue Panel Rework
 	 * - Gold Dust Turns Everything Into Gold (partial)
+	 * - Atmospheric Torches
 	 * - Item Check Blacklist Lib
 	 * - Magic Storage
 	 * - Rescue Fairies (TODO: check for exceptions)
@@ -71,6 +72,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 	internal override void PostSetupContent()
 	{
 		AsymmetricEquipsSupport();
+		AtmosphericTorchesSupport();
 		BuffDisplaySupport();
 		DialogueTweakSupport();
 		ItemCheckBlacklistSupport();
@@ -151,6 +153,18 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		// Sprites will be needed for:
 		// - Some HandsOn equips
 		// - Some pouch/bag equips
+	}
+
+	private static void AtmosphericTorchesSupport()
+	{
+		if (!ModContent.GetInstance<ModSupportConfig>().SupportEnabled(_modName, ImprovedTorchesSupportSystem.ModName))
+		{
+			return;
+		}
+
+		ImprovedTorchesSupportSystem.RegisterTorch<ThoriumMod.Tiles.BlackTorch>();
+		ImprovedTorchesSupportSystem.RegisterTorch<ThoriumMod.Tiles.DeeplightTorch>();
+		ImprovedTorchesSupportSystem.RegisterTorch<ThoriumMod.Tiles.MagentaTorch>();
 	}
 
 	private void BuffDisplaySupport()

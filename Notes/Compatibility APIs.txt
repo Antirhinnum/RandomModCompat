@@ -44,6 +44,13 @@ Asymmetric Equips:
 	Compat. Ideas:
 	+ Asymmetric equips!
 
+Atmospheric Torches:
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2817496179
+	Makes torches flicker.
+
+	Compat. Ideas:
+	+ What do you think?
+
 Bangarang - A Boomerang Overhaul:
 	+ Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955

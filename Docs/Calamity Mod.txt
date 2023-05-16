@@ -11,6 +11,17 @@ The following accessories can now be worn asymmetrically:[list]
 [*]Glove of Recklessness
 [/list]
 
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2817496179]Atmospheric Torches:[/url][/h1]
+The following torches now flicker when placed:[list]
+[*]Abyss Torch
+[*]Algal Prism Torch
+[*]Astral Torch
+[*]Gloom Torch
+[*]Navy Prism Torch
+[*]Refractive Prism Torch
+[*]Sulphurous Torch
+[/list]
+
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955]Bangarang:[/url][/h1]
 The following boomerangs now function properly with Bangarang's accessories:[list]
 [*]Blazing Star
