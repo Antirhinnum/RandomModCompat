@@ -12,6 +12,11 @@ internal sealed class ImprovedTorchesSupportSystem : GlobalTile
 
 	private static readonly HashSet<int> _registeredTorches = new();
 
+	public override bool IsLoadingEnabled(Mod mod)
+	{
+		return ModLoader.HasMod(ModName);
+	}
+
 	// Always runs after ModTile.ModifyLight, so multiplying should always work.
 	public override void ModifyLight(int i, int j, int type, ref float r, ref float g, ref float b)
 	{

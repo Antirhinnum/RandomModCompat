@@ -32,6 +32,7 @@ internal sealed class BangarangCaller : ModWithCalls
 	}
 
 	internal static BangarangUseCheck MakeSimpleHeldItemStackCheck() => (p, i, n) => p.ownedProjectileCounts[i.shoot] < i.stack + n;
-	internal static BangarangUseCheck MakeTotalSumOfProjectilesCheck(int max, params int[] projectileIds) => 
+
+	internal static BangarangUseCheck MakeTotalSumOfProjectilesCheck(int max, params int[] projectileIds) =>
 		(p, i, n) => projectileIds.Select(type => p.ownedProjectileCounts[type]).Sum() < max + n;
 }

@@ -3,7 +3,6 @@ using RandomModCompat.Common;
 using RandomModCompat.Common.Callers;
 using RandomModCompat.Common.ExplicitSupport;
 using RandomModCompat.Core;
-using System;
 using System.Linq;
 using Terraria;
 using Terraria.ModLoader;

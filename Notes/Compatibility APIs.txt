@@ -463,6 +463,8 @@ Thorium Mod:
 	+ Adding support for debuffs.
 	+ Bard/Healer items.
 	+ Mech bosses drop plating and cells -- new mechs should too.
+	+ Biome Key chests can be crafted with 10 chests and a biome key. (No API)
+	+ Paladin items can be crafted with Holy Knight's Alloy.
 
 Unified Freeze Library:
 	+ Mod.Call Support
