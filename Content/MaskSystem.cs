@@ -8,7 +8,7 @@ namespace RandomModCompat.Content;
 [JITWhenModsEnabled(_modName)]
 internal sealed class MaskSystem : CrossModHandler
 {
-	private const string _modName = "Mask";
+	private const string _modName = ModNames.Mask;
 	public override string ModName => _modName;
 
 	/*

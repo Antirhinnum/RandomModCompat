@@ -9,7 +9,7 @@ namespace RandomModCompat.Content;
 [JITWhenModsEnabled(_modName)]
 internal sealed class ItReallyMustBeSystem : CrossModHandler
 {
-	private const string _modName = "ItReallyMustBe";
+	private const string _modName = ModNames.ItReallyMustBe;
 	public override string ModName => _modName;
 
 	/*

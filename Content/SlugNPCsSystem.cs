@@ -9,7 +9,7 @@ namespace RandomModCompat.Content;
 [JITWhenModsEnabled(_modName)]
 internal sealed class SlugNPCsSystem : CrossModHandler
 {
-	private const string _modName = "SlugNPCs";
+	private const string _modName = ModNames.SlugNPCs;
 	public override string ModName => _modName;
 
 	/*

@@ -5,7 +5,7 @@ namespace RandomModCompat.Common.Callers;
 
 internal sealed class ItemCheckBlacklistCaller : ModWithCalls
 {
-	protected internal override string ModName => "ItemCheckBlacklist";
+	protected internal override string ModName => ModNames.ItemCheckBlacklist;
 
 	internal void Add(params int[] items)
 	{

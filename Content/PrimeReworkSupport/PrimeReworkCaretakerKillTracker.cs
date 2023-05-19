@@ -8,12 +8,14 @@ namespace RandomModCompat.Content.PrimeReworkSupport;
 /// Tracks if the "Caretaker" boss from "Mech Boss Rework" has been downed.
 /// <br/> The mod doesn't have a downed bool for the boss.
 /// </summary>
-[JITWhenModsEnabled("PrimeRework")]
+[JITWhenModsEnabled(_modName)]
 internal sealed class PrimeReworkCaretakerKillTracker : GlobalNPC
 {
+	private const string _modName = ModNames.PrimeRework;
+
 	public override bool IsLoadingEnabled(Mod mod)
 	{
-		return ModLoader.HasMod("PrimeRework");
+		return ModLoader.HasMod(_modName);
 	}
 
 	public override bool AppliesToEntity(NPC entity, bool lateInstantiation)

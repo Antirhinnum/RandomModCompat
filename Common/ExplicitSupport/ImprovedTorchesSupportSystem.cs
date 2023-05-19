@@ -8,7 +8,7 @@ namespace RandomModCompat.Common.ExplicitSupport;
 [JITWhenModsEnabled(ModName)]
 internal sealed class ImprovedTorchesSupportSystem : GlobalTile
 {
-	internal const string ModName = "ImprovedTorches";
+	internal const string ModName = ModNames.ImprovedTorches;
 
 	private static readonly HashSet<int> _registeredTorches = new();
 

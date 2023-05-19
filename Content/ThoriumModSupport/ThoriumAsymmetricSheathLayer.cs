@@ -13,8 +13,8 @@ namespace RandomModCompat.Content.ThoriumModSupport;
 [JITWhenModsEnabled(BaseMod)]
 internal sealed class ThoriumAsymmetricSheathPlayer : ModPlayer
 {
-	private const string BaseMod = "ThoriumMod";
-	private const string SupportMod = "AsymmetricEquips";
+	private const string BaseMod = ModNames.ThoriumMod;
+	private const string SupportMod = ModNames.AsymmetricEquips;
 
 	/// <summary>
 	/// The current <see cref="AccessoryType.SwordSheath"/> that this player has equipped.

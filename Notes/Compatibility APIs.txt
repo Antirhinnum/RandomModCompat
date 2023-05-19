@@ -34,6 +34,17 @@ Advanced World Generation:
 	+ Making a mod's world gen. have options that this mod can change.
 		This might need a lot of IL editing, though...
 
+Amulet of Many Minions:
+	+ Mod.Call Support
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2565770836
+	+ https://github.com/westphallm1/tModLoader_Minions/tree/1.4
+	Turns all vanilla pets into minions, as well as adding a ton of its own.
+
+	Compat. Ideas:
+	+ Turn other mods' pets into minions.
+	+ Add squires (Note: No Call API for this).
+	+ Make AoMM-compatible minions (?)
+
 Asymmetric Equips:
 	+ Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240

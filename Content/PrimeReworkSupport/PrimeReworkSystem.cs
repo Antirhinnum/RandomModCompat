@@ -10,7 +10,7 @@ internal sealed class PrimeReworkSystem : CrossModHandler
 {
 	private const string _primeReworkLocalization = "Mods.RandomModCompat.PrimeRework.";
 
-	private const string _modName = "PrimeRework";
+	private const string _modName = ModNames.PrimeRework;
 	public override string ModName => _modName;
 
 	/*

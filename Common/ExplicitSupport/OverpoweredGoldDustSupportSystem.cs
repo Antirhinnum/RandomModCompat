@@ -12,7 +12,7 @@ namespace RandomModCompat.Common.ExplicitSupport;
 internal sealed class OverpoweredGoldDustSupportSystem : GlobalProjectile
 {
 	// TODO: Tile support.
-	internal const string ModName = "OverpoweredGoldDust";
+	internal const string ModName = ModNames.OverpoweredGoldDust;
 
 	private static readonly Dictionary<int, (int goldId, int platinumId)> _npcToGoldNPC = new();
 	private static readonly Dictionary<int, (int goldId, int platinumId)> _itemToGoldItem = new();

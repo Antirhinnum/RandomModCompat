@@ -9,8 +9,8 @@ namespace RandomModCompat.Content.PrimeReworkSupport;
 [JITWhenModsEnabled(BaseMod, SupportMod)]
 internal sealed class PrimeReworkThoriumPlatingDrop : ModSystem
 {
-	private const string BaseMod = "PrimeRework";
-	private const string SupportMod = "ThoriumMod";
+	private const string BaseMod = ModNames.PrimeRework;
+	private const string SupportMod = ModNames.ThoriumMod;
 
 	public override bool IsLoadingEnabled(Mod mod)
 	{

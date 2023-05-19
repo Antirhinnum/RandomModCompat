@@ -11,14 +11,14 @@ namespace RandomModCompat.Common;
 
 public sealed class ModSupportConfig : ModConfig
 {
-	private const string _localizationHeader = $"$Mods.{nameof(RandomModCompat)}._Config.";
-	private const string _modNames = _localizationHeader + "ModNames.";
+	private const string _localizationPrefix = $"$Mods.{nameof(RandomModCompat)}._Config.";
+	private const string _modNamesPrefix = _localizationPrefix + "ModNames.";
 
 	// All fields should be named like the corresponding mod's internal name.
-	[Label(_modNames + "BalloonsExtended")]
+	[Label(_modNamesPrefix + ModNames.BalloonsExtended)]
 	public sealed class BalloonsExtendedSupportConfig
 	{
-		[Label(_modNames + "AsymmetricEquips")]
+		[Label(_modNamesPrefix + ModNames.AsymmetricEquips)]
 		public bool AsymmetricEquips;
 
 		public override bool Equals(object obj)
@@ -33,13 +33,13 @@ public sealed class ModSupportConfig : ModConfig
 		}
 	}
 
-	[Label(_modNames + "Bangarang")]
+	[Label(_modNamesPrefix + ModNames.Bangarang)]
 	public sealed class BangarangSupportConfig
 	{
-		[Label(_modNames + "TerraTyping")]
+		[Label(_modNamesPrefix + ModNames.TerraTyping)]
 		public bool TerraTyping;
 
-		[Label(_modNames + "WWeaponScaling")]
+		[Label(_modNamesPrefix + ModNames.WWeaponScaling)]
 		public bool WWeaponScaling;
 
 		public override bool Equals(object obj)
@@ -55,28 +55,28 @@ public sealed class ModSupportConfig : ModConfig
 		}
 	}
 
-	[Label(_modNames + "CalamityMod")]
+	[Label(_modNamesPrefix + ModNames.CalamityMod)]
 	public sealed class CalamityModSupportConfig
 	{
-		[Label(_modNames + "AsymmetricEquips")]
+		[Label(_modNamesPrefix + ModNames.AsymmetricEquips)]
 		public bool AsymmetricEquips;
 
-		[Label(_modNames + "Bangarang")]
+		[Label(_modNamesPrefix + ModNames.Bangarang)]
 		public bool Bangarang;
 
-		[Label(_modNames + "BuffDisplay")]
+		[Label(_modNamesPrefix + ModNames.BuffDisplay)]
 		public bool BuffDisplay;
 
-		[Label(_modNames + "ImprovedTorches")]
+		[Label(_modNamesPrefix + ModNames.ImprovedTorches)]
 		public bool ImprovedTorches;
 
-		[Label(_modNames + "ItemCheckBlacklist")]
+		[Label(_modNamesPrefix + ModNames.ItemCheckBlacklist)]
 		public bool ItemCheckBlacklist;
 
-		[Label(_modNames + "ThoriumMod")]
+		[Label(_modNamesPrefix + ModNames.ThoriumMod)]
 		public bool ThoriumMod;
 
-		[Label(_modNames + "UniversalCraft")]
+		[Label(_modNamesPrefix + ModNames.UniversalCraft)]
 		public bool UniversalCraft;
 
 		public override bool Equals(object obj)
@@ -97,22 +97,22 @@ public sealed class ModSupportConfig : ModConfig
 		}
 	}
 
-	[Label(_modNames + "ItReallyMustBe")]
+	[Label(_modNamesPrefix + ModNames.ItReallyMustBe)]
 	public sealed class ItReallyMustBeSupportConfig
 	{
-		[Label(_modNames + "BossesAsNPCs")]
+		[Label(_modNamesPrefix + ModNames.BossesAsNPCs)]
 		public bool BossesAsNPCs;
 
-		[Label(_modNames + "ItemCheckBlacklist")]
+		[Label(_modNamesPrefix + ModNames.ItemCheckBlacklist)]
 		public bool ItemCheckBlacklist;
 
-		[Label(_modNames + "ROR2HealthBars")]
+		[Label(_modNamesPrefix + ModNames.ROR2HealthBars)]
 		public bool ROR2HealthBars;
 
-		[Label(_modNames + "TerraTyping")]
+		[Label(_modNamesPrefix + ModNames.TerraTyping)]
 		public bool TerraTyping;
 
-		[Label(_modNames + "WWeaponScaling")]
+		[Label(_modNamesPrefix + ModNames.WWeaponScaling)]
 		public bool WWeaponScaling;
 
 		public override bool Equals(object obj)
@@ -131,13 +131,13 @@ public sealed class ModSupportConfig : ModConfig
 		}
 	}
 
-	[Label(_modNames + "Mask")]
+	[Label(_modNamesPrefix + ModNames.Mask)]
 	public sealed class MaskSupportConfig
 	{
-		[Label(_modNames + "AsymmetricEquips")]
+		[Label(_modNamesPrefix + ModNames.AsymmetricEquips)]
 		public bool AsymmetricEquips;
 
-		[Label(_modNames + "Census")]
+		[Label(_modNamesPrefix + ModNames.Census)]
 		public bool Census;
 
 		public override bool Equals(object obj)
@@ -153,31 +153,31 @@ public sealed class ModSupportConfig : ModConfig
 		}
 	}
 
-	[Label(_modNames + "PrimeRework")]
+	[Label(_modNamesPrefix + ModNames.PrimeRework)]
 	public sealed class PrimeReworkSupportConfig
 	{
-		[Label(_modNames + "Bangarang")]
+		[Label(_modNamesPrefix + ModNames.Bangarang)]
 		public bool Bangarang;
 
-		[Label(_modNames + "BossesAsNPCs")]
+		[Label(_modNamesPrefix + ModNames.BossesAsNPCs)]
 		public bool BossesAsNPCs;
 
-		[Label(_modNames + "ItemCheckBlacklist")]
+		[Label(_modNamesPrefix + ModNames.ItemCheckBlacklist)]
 		public bool ItemCheckBlacklist;
 
-		[Label(_modNames + "MagicStorage")]
+		[Label(_modNamesPrefix + ModNames.MagicStorage)]
 		public bool MagicStorage;
 
-		[Label(_modNames + "ROR2HealthBars")]
+		[Label(_modNamesPrefix + ModNames.ROR2HealthBars)]
 		public bool ROR2HealthBars;
 
-		[Label(_modNames + "TerraTyping")]
+		[Label(_modNamesPrefix + ModNames.TerraTyping)]
 		public bool TerraTyping;
 
-		[Label(_modNames + "ThoriumMod")]
+		[Label(_modNamesPrefix + ModNames.ThoriumMod)]
 		public bool ThoriumMod;
 
-		[Label(_modNames + "WWeaponScaling")]
+		[Label(_modNamesPrefix + ModNames.WWeaponScaling)]
 		public bool WWeaponScaling;
 
 		public override bool Equals(object obj)
@@ -199,13 +199,13 @@ public sealed class ModSupportConfig : ModConfig
 		}
 	}
 
-	[Label(_modNames + "SlugNPCs")]
+	[Label(_modNamesPrefix + ModNames.SlugNPCs)]
 	public sealed class SlugNPCsSupportConfig
 	{
-		[Label(_modNames + "Census")]
+		[Label(_modNamesPrefix + ModNames.Census)]
 		public bool Census;
 
-		[Label(_modNames + "DialogueTweak")]
+		[Label(_modNamesPrefix + ModNames.DialogueTweak)]
 		public bool DialogueTweak;
 
 		public override bool Equals(object obj)
@@ -221,42 +221,46 @@ public sealed class ModSupportConfig : ModConfig
 		}
 	}
 
-	[Label(_modNames + "ThoriumMod")]
+	[Label(_modNamesPrefix + ModNames.ThoriumMod)]
 	public sealed class ThoriumModSupportConfig
 	{
-		[Label(_modNames + "AsymmetricEquips")]
+		[Label(_modNamesPrefix + ModNames.AmuletOfManyMinions)]
+		public bool AmuletOfManyMinions;
+
+		[Label(_modNamesPrefix + ModNames.AsymmetricEquips)]
 		public bool AsymmetricEquips;
 
-		[Label(_modNames + "BuffDisplay")]
+		[Label(_modNamesPrefix + ModNames.BuffDisplay)]
 		public bool BuffDisplay;
 
-		[Label(_modNames + "DialogueTweak")]
+		[Label(_modNamesPrefix + ModNames.DialogueTweak)]
 		public bool DialogueTweak;
 
-		[Label(_modNames + "ImprovedTorches")]
+		[Label(_modNamesPrefix + ModNames.ImprovedTorches)]
 		public bool ImprovedTorches;
 
-		[Label(_modNames + "ItemCheckBlacklist")]
+		[Label(_modNamesPrefix + ModNames.ItemCheckBlacklist)]
 		public bool ItemCheckBlacklist;
 
-		[Label(_modNames + "MagicStorage")]
+		[Label(_modNamesPrefix + ModNames.MagicStorage)]
 		public bool MagicStorage;
 
-		[Label(_modNames + "OverpoweredGoldDust")]
+		[Label(_modNamesPrefix + ModNames.OverpoweredGoldDust)]
 		public bool OverpoweredGoldDust;
 
-		[Label(_modNames + "RescueFairies")]
+		[Label(_modNamesPrefix + ModNames.RescueFairies)]
 		public bool RescueFairies;
 
-		[Label(_modNames + "ROR2HealthBars")]
+		[Label(_modNamesPrefix + ModNames.ROR2HealthBars)]
 		public bool ROR2HealthBars;
 
-		[Label(_modNames + "UniversalCraft")]
+		[Label(_modNamesPrefix + ModNames.UniversalCraft)]
 		public bool UniversalCraft;
 
 		public override bool Equals(object obj)
 		{
 			return obj is ThoriumModSupportConfig other
+				&& AmuletOfManyMinions.Equals(other.AmuletOfManyMinions)
 				&& AsymmetricEquips.Equals(other.AsymmetricEquips)
 				&& BuffDisplay.Equals(other.BuffDisplay)
 				&& DialogueTweak.Equals(other.DialogueTweak)
@@ -271,17 +275,15 @@ public sealed class ModSupportConfig : ModConfig
 
 		public override int GetHashCode()
 		{
-			return new { AsymmetricEquips, BuffDisplay, DialogueTweak, ImprovedTorches, ItemCheckBlacklist, MagicStorage, OverpoweredGoldDust, RescueFairies, ROR2HealthBars, UniversalCraft }.GetHashCode();
+			return new { AmuletOfManyMinions, AsymmetricEquips, BuffDisplay, DialogueTweak, ImprovedTorches, ItemCheckBlacklist, MagicStorage, OverpoweredGoldDust, RescueFairies, ROR2HealthBars, UniversalCraft }.GetHashCode();
 		}
 	}
 
 	public override ConfigScope Mode => ConfigScope.ServerSide;
 
-	[Header(_localizationHeader + "Info")]
-
-	// All fields should be named like the corresponding mod's internal name.
-	
+	[Header(_localizationPrefix + "Info")]
 	public BalloonsExtendedSupportConfig BalloonsExtended;
+
 	public BangarangSupportConfig Bangarang;
 	public CalamityModSupportConfig CalamityMod;
 	public ItReallyMustBeSupportConfig ItReallyMustBe;

@@ -6,7 +6,7 @@ namespace RandomModCompat.Common.Callers;
 
 internal sealed class ROR2HealthBarsCaller : ModWithCalls
 {
-	protected internal override string ModName => "ROR2HealthBars";
+	protected internal override string ModName => ModNames.ROR2HealthBars;
 
 	internal void HPPool(params int[] npcIds)
 	{

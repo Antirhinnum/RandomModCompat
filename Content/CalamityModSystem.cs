@@ -12,7 +12,7 @@ namespace RandomModCompat.Content;
 [JITWhenModsEnabled(_modName)]
 internal sealed class CalamityModSystem : CrossModHandler
 {
-	private const string _modName = "CalamityMod";
+	private const string _modName = ModNames.CalamityMod;
 	public override string ModName => _modName;
 
 	/*

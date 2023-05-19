@@ -7,7 +7,7 @@ namespace RandomModCompat.Content;
 [JITWhenModsEnabled(_modName)]
 internal sealed class BalloonsExtendedSystem : CrossModHandler
 {
-	private const string _modName = "BalloonsExtended";
+	private const string _modName = ModNames.BalloonsExtended;
 	public override string ModName => _modName;
 
 	/*

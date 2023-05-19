@@ -14,8 +14,8 @@ namespace RandomModCompat.Content.ThoriumModSupport;
 [JITWhenModsEnabled(BaseMod)]
 internal sealed class ThoriumAsymmetricBalloonLayer : PlayerDrawLayer
 {
-	private const string BaseMod = "ThoriumMod";
-	private const string SupportMod = "AsymmetricEquips";
+	private const string BaseMod = ModNames.ThoriumMod;
+	private const string SupportMod = ModNames.AsymmetricEquips;
 	private static MethodInfo _thoriumBalloonLayerDraw;
 
 	public override bool IsLoadingEnabled(Mod mod)

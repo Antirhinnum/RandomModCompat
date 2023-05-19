@@ -19,7 +19,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 {
 	private const string _thoriumLocalization = "Mods.RandomModCompat.Thorium.";
 
-	private const string _modName = "ThoriumMod";
+	private const string _modName = ModNames.ThoriumMod;
 	public override string ModName => _modName;
 
 	/*

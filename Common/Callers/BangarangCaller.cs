@@ -10,7 +10,7 @@ internal sealed class BangarangCaller : ModWithCalls
 {
 	internal delegate bool BangarangUseCheck(Player player, Item item, int extraBoomerangs);
 
-	protected internal override string ModName => "Bangarang";
+	protected internal override string ModName => ModNames.Bangarang;
 
 	internal void RegisterBoomerang(int itemId, int[] projectileIds, int boomerangs = 1, BangarangUseCheck useCheck = null)
 	{

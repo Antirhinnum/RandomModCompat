@@ -8,7 +8,7 @@ namespace RandomModCompat.Content;
 [JITWhenModsEnabled(_modName)]
 internal sealed class BangarangSystem : CrossModHandler
 {
-	private const string _modName = "Bangarang";
+	private const string _modName = ModNames.Bangarang;
 	public override string ModName => _modName;
 
 	/*
