@@ -1,0 +1,192 @@
+﻿Thorium/AoMM Support:
+	Abyssal Whistle / Abyssal Bunny:
+		Simple grounded pet.
+		A meinastilim from *Made in Abyss*.
+		
+		I can't find any into about these things that would be useful for combat.
+		Just use the basic grounded AI, it works well enough.
+	
+	Green Firefly / Amnesiac:
+		Simple grounded pet.
+		The protagonist of *Hotaru no Nikki*, named Mion.
+		
+		Maybe something with shadows??? That sounds like a ton of effort for something that might not be very good, though.
+	
+	Ancient Cheese Block / Ancient Rat:
+		Simple grounded pet.
+		A rat. Reference to a very old rat enemy from the tConfig version of Thorium.
+		
+		Use basic grounded AI.
+	
+	Sweet Beet / Beet Cookie:
+		Simple grounded pet.
+		The Beet Cookie from *Cookie Run*.
+		
+		Look into *Cookie Run* to see what this does.
+	
+	Bio-Pod / Bio-Feeder:
+		Simple flying pet.
+		A Metroid from the *Metroid* series.
+		
+		Suck on enemy's heads. Low-hanging fruit, but...
+	
+	Chaotic Marble / Chaotic Pet:
+		Simple grounded pet.
+		Some demon thing? Wiki says it's the Pink Bean from *MapleStory*.
+	
+	Fish Egg / Clownfish:
+		Simple flying pet.
+		It's a clownfish in a bubble.
+		
+		Bubbles?
+	
+	Ancient Drachma / Curious Coinling:
+		Slime-like grounded pet.
+		A bag of coins.
+	
+	Exotic Myna Egg / Exotic Myna:
+		Bird pet.
+	
+	Experiment 3 / Experiment #3:
+		Simple grounded pet.
+		The Ultimate Chimera from *Mother 3*.
+		
+		Chomp?
+	
+	Fragmented Rune / Ferret:
+		Simple grounded pet.
+		A ferret.
+	
+	Blister Sack / Flying Blister:
+		Simple flying pet.
+		A blister with wings. Ew.
+		
+		Explode into pus. Ew.
+	
+	Simple Broom / Lil' Maid:
+		Simple grounded pet.
+		Rem and Ram feom *Re:Zero*.
+	
+	Delectable Nut / Lil' Mog:
+		Simple flying pet.
+		A Moogle from *Final Fantasy*.
+	
+	Guild's Staff / Lil' Necromancer:
+		Simple grounded pet.
+		Ainz Ooal Gown from *Overlord*.
+	
+	Model Gun / Lyrist:
+		Stardust Guardian-like pet.
+		The Orpheus persona from *Persona 3*.
+	
+	Fresh Pickle / Normal Dog:
+		Simple grounded pet.
+		Mr. Pickles from the seriest of the same name.
+	
+	Pear Tree Sapling / Patridge:
+		Bird pet.
+		References the "12 Days of Christmas" song.
+		
+		Flying minion.
+	
+	Pink Slime Egg / Pink Slime:
+		Simple flying pet.
+		A Pinky with wings and a face.
+	
+	Aromatic Biscuit / Skunk:
+		Simple grounded pet.
+		A skunk.
+	
+	Forgotten Letter / Lost Snowy Owl:
+		Simple flying pet.
+		The Snowy Owl enemy.
+		
+		Fires feathers, flying minion.
+	
+	Subterranean Bulb / Subterranean Angler:
+		Simple flying pet.
+		A black and blue angler fish in a bubble.
+	
+	Balloon Ball / Tanuki Girl:
+		Simple grounded pet.
+		Raphtalia from *The Rising of the Shield Hero*. Also references *Super Mario Bros. 3*.
+	
+	Tortle Scute / Tortle Sage:
+		Simple grounded pet.
+		An old turtle.
+		
+		Standard melee minion.
+	
+	Cloudy Chew Toy / Wyvern Pup:
+		Simple grounded pet.
+		A baby Wyvern. Cute...?
+		
+		Chomp?
+	
+	Suspicious Moisterizer Bottle / Living Hand:
+		Hovers above the player's head.
+		A hand. Changes poses based on the player's state.
+		TODO: See how it does this.
+	
+	Rotten Meat / Fly:
+		Simple flying pet.
+		A fly.
+	
+	Storm Cloud:
+		Simple flying pet.
+		A cloud. Rains on grass and makes flowers.
+		
+		Angry Nimbus-like attacks.
+	
+	Glass Shard:
+		Simple flying pet.
+		A mirror. Can disguise itself as a rare item if an enemy is nearby.
+		TODO: See how it does this.
+		
+		Disguises itself as rare weapons and attacks enemies.
+	
+	Diver Plushie / Princess Jellyfish:
+		Simple flying pet.
+		A mini version of Queen Jellyfish. Can latch onto the player's head.
+		
+		Mini Queen Jellyfish attacks.
+	
+	Blood Sausage / Lazy Bat:
+		Flail?
+		A mini version of Viscout, tied up. Dragged around by a rope.
+		
+		Swings around by rope.
+	
+	Energized Quad-Cube:
+		Simple flying pet.
+		Granite tetrominoes.
+		
+		Maybe make Tetris lines? Slow, but a ton of damage (like Exp. #3)
+	
+	Sword of Destiny:
+		Hovers over the player's head.
+		The sword of Damocles.
+		
+		Utility combat pet: Dangles over an enemy, deals a ton of damage when it falls. Falls randomly, more likely with % health missing.
+	
+	Alien Research Notes / Research Probe:
+		Simple flying pet.
+		A mini version of the Star Scouter. Can scan nearby critters.
+		
+		Mini Star Scouter attacks.
+	
+	Frozen Balloon:
+		Dragged around by a rope.
+		A Borean Myte on a string. Can be damaged.
+		
+		Mini Borean Strider attacks.
+	
+	Whispering Shell / Creature:
+		Hovers behind the player.
+		Not a creature.
+	
+	Doom Sayer's Penny:
+		Simple flying pets.
+		Mini versions of the Ragnarok. Hover around the player.
+		
+		Mini Ragnarok attacks.

@@ -23,6 +23,7 @@ internal static class ModNames
 		Mask = "Mask",
 		OverpoweredGoldDust = "OverpoweredGoldDust",
 		PrimeRework = "PrimeRework",
+		Redemption = "Mod of Redemption",
 		RescueFairies = "RescueFairies",
 		ROR2HealthBars = "ROR2HealthBars",
 		SlugNPCs = "SlugNPCs",
