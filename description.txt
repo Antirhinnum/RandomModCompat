@@ -25,6 +25,12 @@ Current Compatibility:
  + RoR 2 Health Bars
  + TerraTyping
  + W1K's Weapon Scaling
+ - Liber Creaturarum
+ + Asymmetric Equips
+ + Atmospheric Torches
+ + Thorium Mod
+ + Universal Crafter
+ + W1K's Weapon Scaling
  - Mask
  + Asymmetric Equips
  + Census

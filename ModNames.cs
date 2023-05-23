@@ -19,6 +19,7 @@ internal static class ModNames
 		ImprovedTorches = "ImprovedTorches",
 		ItemCheckBlacklist = "ItemCheckBlacklist",
 		ItReallyMustBe = "ItReallyMustBe",
+		Liber = "Liber",
 		MagicStorage = "MagicStorage",
 		Mask = "Mask",
 		OverpoweredGoldDust = "OverpoweredGoldDust",

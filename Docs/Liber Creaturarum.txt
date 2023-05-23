@@ -1,0 +1,47 @@
+﻿[b]Mod Link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2794289345
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
+The following items can now be worn asymmetrically:[list]
+[*]Gauntlet
+[*]Skull Ring
+[*]Viking Shield
+[*]Wrist Band
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2817496179]Atmospheric Torches:[/url][/h1]
+The following torches now flicker when placed:[list]
+[*]Bioluminescent Torch
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium Mod:[/url][/h1]
+The following enemies now ignore the player when using an Enemy Repellent:[list]
+[*]Chill Bat (Bat)
+[*]Sandy Bat (Bat)
+[*]Mud Fly (Insect)
+[*]Ancient Skeleton (Skeleton)
+[*]Giant Skeleton (Skeleton)
+[*]Skeleton Slinger	(Skeleton)
+[*]Skeleton Soldier	(Skeleton)
+[*]Jiang Shi (Zombie)
+[*]All Zombie Variants (Zombie)
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2917548365]Universal Crafter:[/url][/h1]
+The following stations are automatically added to the Universal Crafter after a condition:
+[table]
+	[tr]
+		[th]Station[/th]
+		[th]Condition[/th]
+	[/tr]
+	[tr]
+		[td]Tanning Rack[/td]
+		[td]Always available[/td]
+	[/tr]
+	[tr]
+		[td]Transmutation Table[/td]
+		[td]Always available[/td]
+	[/tr]
+[/table]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2571636086]W1K's Weapon Scaling[/url][/h1]
+All non-stackable weapons from this mod have have tiers.

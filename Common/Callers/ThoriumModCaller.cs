@@ -1,6 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using RandomModCompat.Core;
+using System;
+using System.Collections.Generic;
+using System.Reflection;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace RandomModCompat.Common.Callers;
@@ -225,4 +229,79 @@ internal sealed class ThoriumModCaller : ModWithCalls
 	}
 
 	#endregion Utility
+
+	#region Custom
+
+	// These should probably go in ExplicitSupport, but eh.
+
+	internal enum ThoriumRepellentType
+	{
+		Bat,
+		Bug,
+		Fish,
+		Skeleton,
+		Zombie
+	}
+
+
+	// Internal class :(
+	private const BindingFlags _flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static;
+	private static readonly Type _thoriumCacheHandler = ModLoader.GetMod(ModNames.ThoriumMod).Code.GetType("ThoriumMod.ThoriumCacheHandler");
+	private static readonly HashSet<int> _miscUndeadNPCs = (HashSet<int>)_thoriumCacheHandler.GetField("MiscUndeadNPCs", _flags).GetValue(null);
+	private static readonly HashSet<int> _miscSkeletonNPCs = (HashSet<int>)_thoriumCacheHandler.GetField("MiscVanillaSkeletonNPCs", _flags).GetValue(null);
+	private static readonly HashSet<int> _batNPCs = (HashSet<int>)_thoriumCacheHandler.GetField("BatNPCs", _flags).GetValue(null);
+	private static readonly HashSet<int> _insectNPCs = (HashSet<int>)_thoriumCacheHandler.GetField("HostileInsectNPCs", _flags).GetValue(null);
+	private static readonly HashSet<int> _fishNPCs = (HashSet<int>)_thoriumCacheHandler.GetField("HostileFishNPCs", _flags).GetValue(null);
+	private static readonly Dictionary<int, int> _mineralLauncherItemToProj = (Dictionary<int, int>)_thoriumCacheHandler.GetField("MineralLauncherItemToProj", _flags).GetValue(null);
+
+	/// <summary>
+	/// Marks an enemy as being repelled by one of Thorium's Enemy Repellents.
+	/// <br/> Repelled enemies are non-hostile towards the player.
+	/// <br/> Bosses cannot be repelled.
+	/// </summary>
+	/// <typeparam name="T">The NPC type.</typeparam>
+	/// <param name="type">Which repellent to use.</param>
+	internal void AddRepelledEnemy<T>(ThoriumRepellentType type)
+		where T : ModNPC
+	{
+		if (type == ThoriumRepellentType.Zombie)
+		{
+			NPCID.Sets.Zombies[ModContent.NPCType<T>()] = true;
+			return;
+		}
+
+		HashSet<int> set = type switch
+		{
+			ThoriumRepellentType.Bat => _batNPCs,
+			ThoriumRepellentType.Bug => _insectNPCs,
+			ThoriumRepellentType.Fish => _fishNPCs,
+			ThoriumRepellentType.Skeleton => _miscSkeletonNPCs,
+			_ => throw new NotImplementedException(),
+		};
+		set!.Add(ModContent.NPCType<T>());
+	}
+
+	/// <summary>
+	/// Marks an enemy as being undead, which makes the Palm Cross deal double damage to it.
+	/// <br/> Any enemy in the <see cref="NPCID.Sets.Zombies"/> or <see cref="NPCID.Sets.Skeletons"/> sets will already have this effect, as well as any enemy registered as a <see cref="ThoriumRepellentType.Skeleton"/> for <see cref="AddRepelledEnemy{T}(ThoriumRepellentType)"/>.
+	/// </summary>
+	/// <typeparam name="T">The NPC type.</typeparam>
+	internal void AddUndeadEnemy<T>()
+		where T : ModNPC
+	{
+		_miscUndeadNPCs.Add(ModContent.NPCType<T>());
+	}
+
+	/// <summary>
+	/// Registers an item and projectile for use with the Mineral Launcher.
+	/// <br/> <paramref name="projectile"/> should refer to an OreShot.
+	/// </summary>
+	/// <param name="item">The ore item ID.</param>
+	/// <param name="projectile">The projectile ID.</param>
+	internal void RegisterAsMineralLauncherProjectile(int item, int projectile)
+	{
+		_mineralLauncherItemToProj[item] = projectile;
+	}
+
+	#endregion
 }

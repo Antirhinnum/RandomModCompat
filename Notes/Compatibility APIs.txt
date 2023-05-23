@@ -114,7 +114,6 @@ Census - Town NPC Checklist:
 
 	Compat. Ideas:
 	+ Adding conditions.
-	~ That slug town pet mod needs support.
 
 Cheat Sheet:
 	+ Mod.Call Support
@@ -253,6 +252,14 @@ Item Check Blacklist Lib [Test]:
 	+ Auto-register any item with a research value of 0? Probably not.
 	+ Register any explicitly unobtainable item.
 
+Liber Creaturarum:
+	+ TODO LINKS
+	Adds a lot of creatures.
+
+	Compat. Ideas:
+	+ Adding gems to its recipe group and Gem Bag.
+	+ Gem relics (Thorium large gems?)
+
 Magic Storage:
 	+ Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347
@@ -282,6 +289,14 @@ Mod Achievements Library:
 	Compat. Ideas:
 	+ Achievements!
 
+Mod of Redemption:
+	+ 
+	Content mod.
+
+	Compat. Ideas:
+	+ Elemental typing.
+	+ Adding types to lists.
+
 More Clentaminating Things:
 	+ Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2912982684
@@ -289,7 +304,7 @@ More Clentaminating Things:
 	Call support allows registering torches, grasses, and grass seeds.
 
 	Compat. Ideas:
-	+ Support for custom grassed and the Seed Shovel.
+	+ Support for custom grasses and the Seed Shovel.
 
 NPC Kill Counter:
 	 + Mod.Call Support
@@ -461,7 +476,6 @@ The Clicker Class:
 	Compat. Ideas:
 	+ Clicker items.
 
-
 Thorium Mod:
 	+ Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416
@@ -476,6 +490,7 @@ Thorium Mod:
 	+ Mech bosses drop plating and cells -- new mechs should too.
 	+ Biome Key chests can be crafted with 10 chests and a biome key. (No API)
 	+ Paladin items can be crafted with Holy Knight's Alloy.
+	+ Adding enemies to Repellent lists.
 
 Unified Freeze Library:
 	+ Mod.Call Support

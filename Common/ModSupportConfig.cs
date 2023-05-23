@@ -131,6 +131,40 @@ public sealed class ModSupportConfig : ModConfig
 		}
 	}
 
+	[Label(_modNamesPrefix + ModNames.Liber)]
+	public sealed class LiberSupportConfig
+	{
+		[Label(_modNamesPrefix + ModNames.AsymmetricEquips)]
+		public bool AsymmetricEquips;
+
+		[Label(_modNamesPrefix + ModNames.ImprovedTorches)]
+		public bool ImprovedTorches;
+
+		[Label(_modNamesPrefix + ModNames.ThoriumMod)]
+		public bool ThoriumMod;
+
+		[Label(_modNamesPrefix + ModNames.UniversalCraft)]
+		public bool UniversalCraft;
+
+		[Label(_modNamesPrefix + ModNames.WWeaponScaling)]
+		public bool WWeaponScaling;
+
+		public override bool Equals(object obj)
+		{
+			return obj is LiberSupportConfig other
+				&& AsymmetricEquips.Equals(other.AsymmetricEquips)
+				&& ImprovedTorches.Equals(other.ImprovedTorches)
+				&& ThoriumMod.Equals(other.ThoriumMod)
+				&& UniversalCraft.Equals(other.UniversalCraft)
+				&& WWeaponScaling.Equals(other.WWeaponScaling);
+		}
+
+		public override int GetHashCode()
+		{
+			return new { AsymmetricEquips, ImprovedTorches, ThoriumMod, UniversalCraft, WWeaponScaling }.GetHashCode();
+		}
+	}
+
 	[Label(_modNamesPrefix + ModNames.Mask)]
 	public sealed class MaskSupportConfig
 	{
@@ -287,6 +321,7 @@ public sealed class ModSupportConfig : ModConfig
 	public BangarangSupportConfig Bangarang;
 	public CalamityModSupportConfig CalamityMod;
 	public ItReallyMustBeSupportConfig ItReallyMustBe;
+	public LiberSupportConfig Liber;
 	public MaskSupportConfig Mask;
 	public PrimeReworkSupportConfig PrimeRework;
 	public SlugNPCsSupportConfig SlugNPCs;

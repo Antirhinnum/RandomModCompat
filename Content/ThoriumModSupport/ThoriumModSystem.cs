@@ -53,6 +53,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 	 * - RoR 2 Health Bars
 	 * - Universal Crafter
 	 */
+	// TODO: Liber pedestal support
 
 	internal override void OnModLoad()
 	{
