@@ -8,6 +8,7 @@
 		{
 			AmuletOfManyMinions: "The Amulet of Many Minions: Combat Pets!"
 			AsymmetricEquips: "Asymmetric Equipment"
+			AutoReroll: "Auto Reroll"
 			BalloonsExtended: "Balloons Extended"
 			Bangarang: "Bangarang - A Boomerang Overhaul"
 			BossesAsNPCs: "Bosses as NPCs"
@@ -15,6 +16,7 @@
 			CalamityMod: "Calamity Mod"
 			Census: "Census - Town NPC Checklist"
 			Consolaria: "Consolaria"
+			DBZMODPORT: "Dragon Ball Terraria"
 			DialogueTweak: "Dialogue Panel Rework"
 			ImprovedTorches: "Atmospheric Torches"
 			ItemCheckBlacklist: "Item Check Blacklist Lib"
@@ -28,10 +30,16 @@
 			RescueFairies: "Rescue Fairies"
 			ROR2HealthBars: "RoR 2 Health Bars"
 			SlugNPCs: "Slug Town Pets"
+			SummonersAssociation: "Summoners Association"
 			TerraTyping: "TerraTyping"
 			ThoriumMod: "Thorium Mod"
 			UniversalCraft: "Universal Crafter"
 			WWeaponScaling: "W1K's Weapon Scaling"
+		}
+		
+		Notes:
+		{
+			UnstableChangeWarning: "This change is unstable, and may break on reload."
 		}
 	}
 	

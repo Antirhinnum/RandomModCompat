@@ -139,6 +139,25 @@ public sealed class ModSupportConfig : ModConfig
 		}
 	}
 
+	[Label(_modNamesPrefix + ModNames.DBZMODPORT)]
+	public sealed class DBZMODPORTSupportConfig
+	{
+		[Label(_modNamesPrefix + ModNames.AutoReroll)]
+		[Tooltip(_localizationPrefix + "Notes.UnstableChangeWarning")]
+		public bool AutoReroll;
+
+		public override bool Equals(object obj)
+		{
+			return obj is DBZMODPORTSupportConfig other
+				&& AutoReroll.Equals(other.AutoReroll);
+		}
+
+		public override int GetHashCode()
+		{
+			return new { AutoReroll }.GetHashCode();
+		}
+	}
+
 	[Label(_modNamesPrefix + ModNames.ItReallyMustBe)]
 	public sealed class ItReallyMustBeSupportConfig
 	{
@@ -363,6 +382,7 @@ public sealed class ModSupportConfig : ModConfig
 	public BangarangSupportConfig Bangarang;
 	public CalamityModSupportConfig CalamityMod;
 	public ConsolariaSupportConfig Consolaria;
+	public DBZMODPORTSupportConfig DBZMODPORT;
 	public ItReallyMustBeSupportConfig ItReallyMustBe;
 	public LiberSupportConfig Liber;
 	public MaskSupportConfig Mask;

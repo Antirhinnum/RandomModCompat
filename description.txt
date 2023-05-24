@@ -27,6 +27,8 @@ Current Compatibility:
  + Summoner's Association
  + TerraTyping
  + Thorium Mod
+ - Dragon Ball Terraria 1.0.9.9 Ported
+ + Auto Reforge
  - Dreadnautilus is a Boss
  + Bosses as NPCs
  + Item Check Blacklist Lib

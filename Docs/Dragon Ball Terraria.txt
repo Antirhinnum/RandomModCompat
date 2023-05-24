@@ -1,0 +1,6 @@
+[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2828604929
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2707400823]Auto Reforge:[/url][/h1]
+Ki weapons can now be properly auto-reforged. Without this fix, ki weapons would only show 1-2 possible prefixes.
+[b]This is an unstable change.[/b] It may break when this mod is reloaded, and the underlying bug may be fixed in a future Dragon Ball Terraria update. 
+For reference, this bug is guaranteed to be present on "Dragon Ball Terraria 1.0.9.9 Ported" version 0.3.3. This fix is automatically disabled if a version higher than 0.3.3 is used.

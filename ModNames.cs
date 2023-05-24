@@ -8,6 +8,7 @@ internal static class ModNames
 	internal const string
 		AmuletOfManyMinions = nameof(AmuletOfManyMinions),
 		AsymmetricEquips = nameof(AsymmetricEquips),
+		AutoReroll = nameof(AutoReroll),
 		BalloonsExtended = nameof(BalloonsExtended),
 		Bangarang = nameof(Bangarang),
 		BossesAsNPCs = nameof(BossesAsNPCs),
@@ -16,6 +17,7 @@ internal static class ModNames
 		Census = nameof(Census),
 		ColoredDamageTypes = nameof(ColoredDamageTypes),
 		Consolaria = nameof(Consolaria),
+		DBZMODPORT = nameof(DBZMODPORT),
 		DialogueTweak = nameof(DialogueTweak),
 		ImprovedTorches = nameof(ImprovedTorches),
 		ItemCheckBlacklist = nameof(ItemCheckBlacklist),
