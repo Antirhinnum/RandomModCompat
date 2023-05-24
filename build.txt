@@ -7,4 +7,4 @@ hideResources = true
 includeSource = false
 buildIgnore = LICENSE, README.md, *.pdn, gear.png, Docs/, Notes/, *.pdb
 includePDB = true
-weakReferences = BalloonsExtended, Bangarang, CalamityMod, ImprovedTorches, ItReallyMustBe, Liber, Mask, PrimeRework, Redemption, SlugNPCs, ThoriumMod
+weakReferences = BalloonsExtended, Bangarang, CalamityMod, Consolaria, ImprovedTorches, ItReallyMustBe, Liber, Mask, PrimeRework, Redemption, SlugNPCs, ThoriumMod

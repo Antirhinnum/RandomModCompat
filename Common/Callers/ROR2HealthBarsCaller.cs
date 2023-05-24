@@ -33,6 +33,11 @@ internal sealed class ROR2HealthBarsCaller : ModWithCalls
 		BossDesc(ModContent.NPCType<T>(), localizationKey);
 	}
 
+	internal void AddDesc(int npcId, string header, string bossKey)
+	{
+		BossDesc(npcId, header + "ROR2." + bossKey + ".Description");
+	}
+
 	internal void AddDesc<T>(string header, string bossKey) where T : ModNPC
 	{
 		BossDesc<T>(header + "ROR2." + bossKey + ".Description");

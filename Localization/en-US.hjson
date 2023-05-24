@@ -14,6 +14,7 @@
 			BuffDisplay: "Enhanced Buff Display"
 			CalamityMod: "Calamity Mod"
 			Census: "Census - Town NPC Checklist"
+			Consolaria: "Consolaria"
 			DialogueTweak: "Dialogue Panel Rework"
 			ImprovedTorches: "Atmospheric Torches"
 			ItemCheckBlacklist: "Item Check Blacklist Lib"
@@ -34,6 +35,24 @@
 		}
 	}
 	
+	Consolaria:
+	{
+		ROR2:
+		{
+			Lepus:
+			{
+				Description: "Wretched lagomorph"
+			}
+			Ocram:
+			{
+				Description: "Nostalgic terror"
+			}
+			Turkor:
+			{
+				Description: "Free bird"
+			}
+		}
+	}
 	ItReallyMustBe:
 	{
 		ROR2:

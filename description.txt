@@ -19,6 +19,14 @@ Current Compatibility:
  + Item Check Blacklist Lib
  + Thorium Mod
  + Universal Crafter
+ - Consolaria
+ + Asymmetric Equips
+ + Item Check Blacklist Lib
+ + Magic Storage
+ + RoR 2 Health Bars
+ + Summoner's Association
+ + TerraTyping
+ + Thorium Mod
  - Dreadnautilus is a Boss
  + Bosses as NPCs
  + Item Check Blacklist Lib

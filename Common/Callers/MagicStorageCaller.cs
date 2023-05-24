@@ -18,9 +18,14 @@ internal sealed class MagicStorageCaller : ModWithCalls
 		return (IItemDropRule)CalledMod.Call("Get Shadow Diamond Drop Rule", normalDrop, expertDrop);
 	}
 
+	internal void RegisterShadowDiamondDrop(int npcType, int normal, int expert = -1)
+	{
+		SetShadowDiamondDropRule(npcType, GetShadowDiamondDropRule(normal, expert));
+	}
+
 	internal void RegisterShadowDiamondDrop<T>(int normal, int expert = -1) where T : ModNPC
 	{
-		SetShadowDiamondDropRule(ModContent.NPCType<T>(), GetShadowDiamondDropRule(normal, expert));
+		RegisterShadowDiamondDrop(ModContent.NPCType<T>(), normal, expert);
 	}
 
 	internal void RegisterShadowDiamondDropNormalOnly<T>(int amount) where T : ModNPC

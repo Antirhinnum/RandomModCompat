@@ -1,0 +1,35 @@
+[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2864843929
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
+The following items can now be worn asymmetrically:[list]
+[*]Valentine Ring
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2921706690]Item Check Blacklist Lib:[/url][/h1]
+The following items are blacklisted on the Item Checklist:[list]
+[*]Holy Hand Grenade 2
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347]Magic Storage:[/url][/h1]
+Lepus, Ocram, and Turkor the Ungrateful now drop Shadow Diamonds.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2788731718]RoR 2 Health Bars:[/url][/h1]
+Lepus, Ocram, and Turkor the Ungrateful now have custom titles.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2561619075]Summoner's Association:[/url][/h1]
+The Eternity Staff and Turkey Stuff are now explicitly integrated into Summoner's Association.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2940607585]TerraTyping:[/url][/h1]
+All weapons, armors, and NPCs from this mod now have appropriate types.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium Mod:[/url][/h1]
+The following enemies now ignore the player when using an Enemy repellent:[list]
+[*]Albino Antlion (Insect)
+[*]Albino Charger (Insect)
+[*]Dragon Hornet (Insect)
+[*]Giant Albino Charger (Insect)
+[/list]
+
+The following enemies now take double damage from the Palm Cross:[list]
+[*]Vampire Miner
+[/list]

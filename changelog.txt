@@ -1,3 +1,5 @@
 [list]
 [*]Added "Atmospheric Torches" support to "Calamity Mod" and "Thorium Mod".
+[*]Added the following mod support to "Liber Creaturarum": Asymmetric Equips; Atmospheric Torches; Thorium Mod; Universal Crafter; W1K's Weapon Scaling.
+[*]Added the following mod support to "Consolaria": Asymmetric Equips; Item Check Blacklist Lib; Magic Storage; RoR 2 Health Bars; Summoner's Association; TerraTyping; Thorium Mod.
 [/list]

@@ -97,6 +97,48 @@ public sealed class ModSupportConfig : ModConfig
 		}
 	}
 
+	[Label(_modNamesPrefix + ModNames.Consolaria)]
+	public sealed class ConsolariaSupportConfig
+	{
+		[Label(_modNamesPrefix + ModNames.AsymmetricEquips)]
+		public bool AsymmetricEquips;
+
+		[Label(_modNamesPrefix + ModNames.ItemCheckBlacklist)]
+		public bool ItemCheckBlacklist;
+
+		[Label(_modNamesPrefix + ModNames.MagicStorage)]
+		public bool MagicStorage;
+
+		[Label(_modNamesPrefix + ModNames.ROR2HealthBars)]
+		public bool ROR2HealthBars;
+
+		[Label(_modNamesPrefix + ModNames.SummonersAssociation)]
+		public bool SummonersAssociation;
+
+		[Label(_modNamesPrefix + ModNames.TerraTyping)]
+		public bool TerraTyping;
+
+		[Label(_modNamesPrefix + ModNames.ThoriumMod)]
+		public bool ThoriumMod;
+
+		public override bool Equals(object obj)
+		{
+			return obj is ConsolariaSupportConfig other
+				&& AsymmetricEquips.Equals(other.AsymmetricEquips)
+				&& ItemCheckBlacklist.Equals(other.ItemCheckBlacklist)
+				&& MagicStorage.Equals(other.MagicStorage)
+				&& ROR2HealthBars.Equals(other.ROR2HealthBars)
+				&& SummonersAssociation.Equals(other.SummonersAssociation)
+				&& TerraTyping.Equals(other.TerraTyping)
+				&& ThoriumMod.Equals(other.ThoriumMod);
+		}
+
+		public override int GetHashCode()
+		{
+			return new { AsymmetricEquips, ItemCheckBlacklist, MagicStorage, ROR2HealthBars, SummonersAssociation, TerraTyping, ThoriumMod }.GetHashCode();
+		}
+	}
+
 	[Label(_modNamesPrefix + ModNames.ItReallyMustBe)]
 	public sealed class ItReallyMustBeSupportConfig
 	{
@@ -320,6 +362,7 @@ public sealed class ModSupportConfig : ModConfig
 
 	public BangarangSupportConfig Bangarang;
 	public CalamityModSupportConfig CalamityMod;
+	public ConsolariaSupportConfig Consolaria;
 	public ItReallyMustBeSupportConfig ItReallyMustBe;
 	public LiberSupportConfig Liber;
 	public MaskSupportConfig Mask;
