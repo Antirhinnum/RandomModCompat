@@ -159,6 +159,9 @@ The following NPCs will now turn into gold (or platinum) when Magical Gold Dust 
 	[/tr]
 [/table]
 
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2694959829]Fishing Reborn:[/url][/h1]
+Thorium's fishing loot is now integrated into Fishing Reborn's minigame.
+
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2921706690]Item Check Blacklist Lib:[/url][/h1]
 The following items are blacklisted on the Item Checklist:[list]
 [*]Angry Statue

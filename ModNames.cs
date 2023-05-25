@@ -19,6 +19,7 @@ internal static class ModNames
 		Consolaria = nameof(Consolaria),
 		DBZMODPORT = nameof(DBZMODPORT),
 		DialogueTweak = nameof(DialogueTweak),
+		FishingReborn = nameof(FishingReborn),
 		ImprovedTorches = nameof(ImprovedTorches),
 		ItemCheckBlacklist = nameof(ItemCheckBlacklist),
 		ItReallyMustBe = nameof(ItReallyMustBe),

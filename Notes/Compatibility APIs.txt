@@ -160,6 +160,15 @@ Enhanced Buff Display:
 	Compat. Ideas:
 	+ A mod that changes how buffs display would benefit from the suggested API.
 
+Fishing Reborn:
+	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2694959829
+	+ https://github.com/MutantWafflez/FishingReborn
+	Overhauls fishing.
+
+	Compat. Ideas:
+	+ Adding modded fish/treasure.
+	+ Adding modded catch pools.
+
 Galaxia:
 	+ Mod.Call Support
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2835073302

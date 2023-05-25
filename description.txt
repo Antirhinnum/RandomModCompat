@@ -61,6 +61,7 @@ Current Compatibility:
  + Atmospheric Torches
  + Dialogue Panel Rework
  + Enhanced Buff Display
+ + Fishing Reborn
  + Gold Dust Turns Everything Into Gold
  + Item Check Blacklist Lib
  + Magic Storage

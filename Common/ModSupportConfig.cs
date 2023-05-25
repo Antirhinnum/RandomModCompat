@@ -331,6 +331,9 @@ public sealed class ModSupportConfig : ModConfig
 		[Label(_modNamesPrefix + ModNames.DialogueTweak)]
 		public bool DialogueTweak;
 
+		[Label(_modNamesPrefix + ModNames.FishingReborn)]
+		public bool FishingReborn;
+
 		[Label(_modNamesPrefix + ModNames.ImprovedTorches)]
 		public bool ImprovedTorches;
 
@@ -359,6 +362,7 @@ public sealed class ModSupportConfig : ModConfig
 				&& AsymmetricEquips.Equals(other.AsymmetricEquips)
 				&& BuffDisplay.Equals(other.BuffDisplay)
 				&& DialogueTweak.Equals(other.DialogueTweak)
+				&& FishingReborn.Equals(other.FishingReborn)
 				&& ImprovedTorches.Equals(other.ImprovedTorches)
 				&& ItemCheckBlacklist.Equals(other.ItemCheckBlacklist)
 				&& MagicStorage.Equals(other.MagicStorage)
@@ -370,7 +374,7 @@ public sealed class ModSupportConfig : ModConfig
 
 		public override int GetHashCode()
 		{
-			return new { AmuletOfManyMinions, AsymmetricEquips, BuffDisplay, DialogueTweak, ImprovedTorches, ItemCheckBlacklist, MagicStorage, OverpoweredGoldDust, RescueFairies, ROR2HealthBars, UniversalCraft }.GetHashCode();
+			return new { AmuletOfManyMinions, AsymmetricEquips, BuffDisplay, DialogueTweak, FishingReborn, ImprovedTorches, ItemCheckBlacklist, MagicStorage, OverpoweredGoldDust, RescueFairies, ROR2HealthBars, UniversalCraft }.GetHashCode();
 		}
 	}
 

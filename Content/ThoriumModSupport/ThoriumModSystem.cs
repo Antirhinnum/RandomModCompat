@@ -43,15 +43,18 @@ internal sealed class ThoriumModSystem : CrossModHandler
 	 *
 	 * This file adds support for:
 	 * - Asymmetric Equips (partial)
-	 * - Enhanced Buff Display
-	 * - Dialogue Panel Rework
-	 * - Gold Dust Turns Everything Into Gold (partial)
 	 * - Atmospheric Torches
+	 * - Dialogue Panel Rework
+	 * - Enhanced Buff Display
+	 * - Gold Dust Turns Everything Into Gold (partial)
 	 * - Item Check Blacklist Lib
 	 * - Magic Storage
 	 * - Rescue Fairies (TODO: check for exceptions)
 	 * - RoR 2 Health Bars
 	 * - Universal Crafter
+	 * 
+	 * Additionally:
+	 * - ThoriumModFishingRebornSystem: Adds support for Fishing Reborn.
 	 */
 	// TODO: Liber pedestal support
 

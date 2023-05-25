@@ -29,6 +29,9 @@
     <Reference Include="DBZMODPORT">
       <HintPath>lib\DBZMODPORT.dll</HintPath>
     </Reference>
+    <Reference Include="FishingReborn">
+      <HintPath>lib\FishingReborn.dll</HintPath>
+    </Reference>
     <Reference Include="ImprovedTorches">
       <HintPath>lib\ImprovedTorches.dll</HintPath>
     </Reference>
