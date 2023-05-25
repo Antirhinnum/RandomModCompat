@@ -5,6 +5,7 @@ using RandomModCompat.Common;
 using RandomModCompat.Common.ExplicitSupport;
 using RandomModCompat.Core;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using ThoriumMod;
@@ -51,48 +52,50 @@ internal class ThoriumModFishingRebornSystem : CrossModHandler
 	{
 		FB.AddToPool<JungleCatchPool>(new(ModContent.ItemType<RivetingTadpole>(), 0.15f));
 		FB.AddCatchData(ModContent.ItemType<RivetingTadpole>(), new(70, FishMovementType.Dart));
-		FB.AddToPool<JungleCatchPool>(new(ModContent.ItemType<Heartstriker>(), 0.15f,
-			new ArbitraryCondition((_, _) => ThoriumConfigServer.Instance.donatorWeapons.toggleAmphibiousWhip)));
+
+		static bool HeartstrikerCondition(FishingAttempt attempt, Projectile proj) => ThoriumConfigServer.Instance.donatorWeapons.toggleAmphibiousWhip;
+		FB.AddToPool<JungleCatchPool>(new(ModContent.ItemType<Heartstriker>(), 0.15f, new ArbitraryCondition(HeartstrikerCondition)));
 		FB.AddCatchData(ModContent.ItemType<Heartstriker>(), new(70, FishMovementType.Mixed));
 
 		FB.AddToPool<CorruptionCatchPool>(new(ModContent.ItemType<RottenCod>(), 0.15f));
 		FB.AddCatchData(ModContent.ItemType<RottenCod>(), new(70, FishMovementType.Floater));
+
 		FB.AddToPool<CrimsonCatchPool>(new(ModContent.ItemType<BrainCoral>(), 0.15f));
 		FB.AddCatchData(ModContent.ItemType<BrainCoral>(), new(70, FishMovementType.Floater));
 
-		FB.AddToPool<OceanCatchPool>(new(ModContent.ItemType<LilGuppy>(), 0.65f,
-			new QuestFishCondition(ModContent.ItemType<LilGuppy>())));
+		FB.AddToPool<OceanCatchPool>(new(ModContent.ItemType<LilGuppy>(), 0.65f, new QuestFishCondition(ModContent.ItemType<LilGuppy>())));
 		FB.AddCatchData(ModContent.ItemType<LilGuppy>(), new(40, FishMovementType.Dart));
-		FB.AddToPool<OceanCatchPool>(new(ModContent.ItemType<HatFish>(), 0.05f,
-			new ArbitraryCondition((_, _) => Main.dayTime)));
+
+		FB.AddToPool<OceanCatchPool>(new(ModContent.ItemType<HatFish>(), 0.05f, new DayCondition()));
 		FB.AddCatchData(ModContent.ItemType<HatFish>(), new(100, FishMovementType.Floater));
-		FB.AddToPool<OceanCatchPool>(new(ModContent.ItemType<SubterraneanBulb>(), 0.05f,
-			new ArbitraryCondition((_, _) => ThoriumConfigServer.Instance.donatorOther.toggleSubterraneanBulb)));
+
+		static bool SubterraneanBulbCondition(FishingAttempt attempt, Projectile proj) => ThoriumConfigServer.Instance.donatorOther.toggleSubterraneanBulb;
+		FB.AddToPool<OceanCatchPool>(new(ModContent.ItemType<SubterraneanBulb>(), 0.05f, new ArbitraryCondition(SubterraneanBulbCondition)));
 		FB.AddCatchData(ModContent.ItemType<SubterraneanBulb>(), new(70, FishMovementType.Sinker));
 	}
 
 	private static void AddTreasures()
 	{
-		FB.AddTreasureData(new(
-			(_, _) => !Main.hardMode ?
-				ModContent.ItemType<ScarletCrate>() :
-				ModContent.ItemType<SinisterCrate>(),
-			0.25f,
-			(_, attempt) => attempt.inLava && attempt.CanFishInLava
-		));
+		static int ScarletCrateSelection(Player player, FishingAttempt attempt) => !Main.hardMode ? ModContent.ItemType<ScarletCrate>() : ModContent.ItemType<SinisterCrate>();
 
 		FB.AddTreasureData(new(
-			(_, _) => !Main.hardMode ?
-				ModContent.ItemType<StrangeCrate>() :
-				ModContent.ItemType<WondrousCrate>(),
+			ScarletCrateSelection,
+			0.25f,
+			FB.LavaCondition
+		));
+
+		static int StrangeCrateSelection(Player player, FishingAttempt attempt) => !Main.hardMode ? ModContent.ItemType<StrangeCrate>() : ModContent.ItemType<WondrousCrate>();
+
+		FB.AddTreasureData(new(
+			StrangeCrateSelection,
 			0.6f,
 			(_, _) => NPC.downedBoss1
 		));
 
+		static int AquaticDepthsCrateSelection(Player player, FishingAttempt attempt) => !Main.hardMode ? ModContent.ItemType<AquaticDepthsCrate>() : ModContent.ItemType<AbyssalCrate>();
+
 		FB.AddTreasureData(new(
-			(_, _) => !Main.hardMode ?
-				ModContent.ItemType<AquaticDepthsCrate>() :
-				ModContent.ItemType<AbyssalCrate>(),
+			AquaticDepthsCrateSelection,
 			0.6f,
 			(player, attempt) =>
 			{
@@ -102,10 +105,11 @@ internal class ThoriumModFishingRebornSystem : CrossModHandler
 			}
 		));
 
+		static bool GeodeGathererCondition(Player player, FishingAttempt attempt) => attempt.playerFishingConditions.PoleItemType == ModContent.ItemType<GeodeGatherer>();
 		FB.AddTreasureData(new(
 			(_, _) => ItemID.Geode,
 			0.5f,
-			(_, attempt) => attempt.playerFishingConditions.PoleItemType == ModContent.ItemType<GeodeGatherer>()
+			GeodeGathererCondition
 		));
 	}
 }

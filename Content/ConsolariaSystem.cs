@@ -1,6 +1,5 @@
 ﻿using Consolaria.Content.Buffs;
 using Consolaria.Content.Items.Accessories;
-using Consolaria.Content.Items.Consumables;
 using Consolaria.Content.Items.Weapons.Summon;
 using Consolaria.Content.NPCs;
 using Consolaria.Content.NPCs.Bosses.Ocram;
@@ -8,7 +7,6 @@ using Consolaria.Content.NPCs.Bosses.Turkor;
 using Consolaria.Content.Projectiles.Friendly;
 using RandomModCompat.Common.Callers;
 using RandomModCompat.Core;
-using System;
 using Terraria.ModLoader;
 
 namespace RandomModCompat.Content;

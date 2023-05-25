@@ -244,9 +244,9 @@ internal sealed class ThoriumModCaller : ModWithCalls
 		Zombie
 	}
 
-
 	// Internal class :(
 	private const BindingFlags _flags = ReflectionHelper.AllFlags;
+
 	private static readonly Type _thoriumCacheHandler = ModLoader.GetMod(ModNames.ThoriumMod).Code.GetType("ThoriumMod.ThoriumCacheHandler");
 	private static readonly HashSet<int> _miscUndeadNPCs = (HashSet<int>)_thoriumCacheHandler.GetField("MiscUndeadNPCs", _flags).GetValue(null);
 	private static readonly HashSet<int> _miscSkeletonNPCs = (HashSet<int>)_thoriumCacheHandler.GetField("MiscVanillaSkeletonNPCs", _flags).GetValue(null);
@@ -304,5 +304,5 @@ internal sealed class ThoriumModCaller : ModWithCalls
 		_mineralLauncherItemToProj[item] = projectile;
 	}
 
-	#endregion
+	#endregion Custom
 }

@@ -1,4 +1,5 @@
-﻿using FishingReborn.Common.Systems;
+﻿using CalamityMod.DataStructures;
+using FishingReborn.Common.Systems;
 using FishingReborn.Custom.Interfaces;
 using FishingReborn.Custom.Structs;
 using RandomModCompat.Utilities;
@@ -11,7 +12,11 @@ using Terraria.ModLoader;
 
 namespace RandomModCompat.Common.ExplicitSupport;
 
-[JITWhenModsEnabled(ModNames.FishingReborn)]
+// JITWhenModsAreEnabled doesn't work here.
+// Apparently, using a generic type constraint counts as extending from a mod. :)
+// Thus, "AddPool<T> where T : ICatchPool" breaks unless I have ExtendsFromMod.
+// It has to be applied to the class since that's the only thing the attribute can target.
+[ExtendsFromMod(ModNames.FishingReborn)]
 internal sealed class FishingRebornSupportSystem : ModSystem
 {
 	// All of FishingReborn's data fields are private :(
@@ -49,23 +54,31 @@ internal sealed class FishingRebornSupportSystem : ModSystem
 	internal static void AddToPool<T>(CatchWeight weight)
 		where T : ICatchPool, new()
 	{
-		ICatchPool pool = _possiblePools.FirstOrDefault(p => p.GetType() == typeof(T));
-		if (pool == null)
+		// Can't use LINQ here because of mysterious ExtendsFromMod issues. :) (I am losing it)
+		foreach (ICatchPool pool in _possiblePools)
 		{
-			pool = new T()
+			if (pool!.GetType() != typeof(T))
 			{
-				PotentialCatches = new()
-			};
-			_possiblePools.Add(pool);
+				continue;
+			}
+
+			pool!.PotentialCatches!.Add(weight);
+			return;
 		}
 
-		pool!.PotentialCatches.Add(weight);
+		// No pool of type T found, so add one.
+		_possiblePools.Add(new T()
+		{
+			PotentialCatches = new() { weight }
+		});
 	}
 
 	internal static void AddTreasureData(TreasureData data)
 	{
 		_possibleTreasure.Add(data);
 	}
+
+	internal static bool LavaCondition(Player player, FishingAttempt attempt) => attempt.inLava && attempt.CanFishInLava;
 }
 
 [ExtendsFromMod(ModNames.FishingReborn)]
@@ -79,4 +92,10 @@ internal sealed class ArbitraryCondition : ICatchCondition
 	}
 
 	bool ICatchCondition.IsConditionMet(FishingAttempt attempt, Projectile bobber) => _condition(attempt, bobber);
+}
+
+[ExtendsFromMod(ModNames.FishingReborn)]
+internal sealed class DayCondition : ICatchCondition
+{
+	bool ICatchCondition.IsConditionMet(FishingAttempt attempt, Projectile bobber) => Main.dayTime;
 }

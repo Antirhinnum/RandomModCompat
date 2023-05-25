@@ -52,7 +52,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 	 * - Rescue Fairies (TODO: check for exceptions)
 	 * - RoR 2 Health Bars
 	 * - Universal Crafter
-	 * 
+	 *
 	 * Additionally:
 	 * - ThoriumModFishingRebornSystem: Adds support for Fishing Reborn.
 	 */
