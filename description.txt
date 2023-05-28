@@ -65,6 +65,7 @@ Current Compatibility:
  + Gold Dust Turns Everything Into Gold
  + Item Check Blacklist Lib
  + Magic Storage
+ + Melee Effects+
  + Rescue Fairies
  + RoR 2 Health Bars
  + Universal Crafter

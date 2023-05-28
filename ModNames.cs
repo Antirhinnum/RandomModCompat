@@ -26,6 +26,7 @@ internal static class ModNames
 		Liber = nameof(Liber),
 		MagicStorage = nameof(MagicStorage),
 		Mask = nameof(Mask),
+		MeleeEffects = nameof(MeleeEffects),
 		OverpoweredGoldDust = nameof(OverpoweredGoldDust),
 		PrimeRework = nameof(PrimeRework),
 		Redemption = nameof(Redemption),

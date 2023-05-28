@@ -343,6 +343,9 @@ public sealed class ModSupportConfig : ModConfig
 		[Label(_modNamesPrefix + ModNames.MagicStorage)]
 		public bool MagicStorage;
 
+		[Label(_modNamesPrefix + ModNames.MeleeEffects)]
+		public bool MeleeEffects;
+
 		[Label(_modNamesPrefix + ModNames.OverpoweredGoldDust)]
 		public bool OverpoweredGoldDust;
 
@@ -365,6 +368,7 @@ public sealed class ModSupportConfig : ModConfig
 				&& FishingReborn.Equals(other.FishingReborn)
 				&& ImprovedTorches.Equals(other.ImprovedTorches)
 				&& ItemCheckBlacklist.Equals(other.ItemCheckBlacklist)
+				&& MeleeEffects.Equals(other.MeleeEffects)
 				&& MagicStorage.Equals(other.MagicStorage)
 				&& OverpoweredGoldDust.Equals(other.OverpoweredGoldDust)
 				&& RescueFairies.Equals(other.RescueFairies)
@@ -374,7 +378,7 @@ public sealed class ModSupportConfig : ModConfig
 
 		public override int GetHashCode()
 		{
-			return new { AmuletOfManyMinions, AsymmetricEquips, BuffDisplay, DialogueTweak, FishingReborn, ImprovedTorches, ItemCheckBlacklist, MagicStorage, OverpoweredGoldDust, RescueFairies, ROR2HealthBars, UniversalCraft }.GetHashCode();
+			return new { AmuletOfManyMinions, AsymmetricEquips, BuffDisplay, DialogueTweak, FishingReborn, ImprovedTorches, ItemCheckBlacklist, MagicStorage, MeleeEffects, OverpoweredGoldDust, RescueFairies, ROR2HealthBars, UniversalCraft }.GetHashCode();
 		}
 	}
 
