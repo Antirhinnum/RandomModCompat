@@ -1,6 +1,11 @@
 Assorted Mod Compatibility adds a lot of compatibility between several mods. Support added by this mod can be enabled/disabled by the user.
-This mod does pretty much nothing by itself.
-See the Discussions tab on the Workshop page for a detailed breakdown of compatibility, as well as links to all mods.
+
+Some examples of current compatibility:
+ - Many modded bosses now drop Shadow Diamonds if Magic Storage is enabled.
+ - Mech Bosses Rework's new mech bosses now draw Strange Plating if Thorium Mod is enabled.
+ - The sheath accessories from Thorium Mod can be worn asymmetrically with Asymmetric Equips.
+
+See the Discussions tab on the Workshop page for a detailed breakdown of compatibility, as well as links to all mods and a planning post.
 
 Modders:
 If you work on one of the mods this mod adds support for and want to integrate that support directly into your mod, please get in contact!
