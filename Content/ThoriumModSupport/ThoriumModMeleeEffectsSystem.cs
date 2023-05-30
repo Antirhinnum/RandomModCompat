@@ -65,8 +65,10 @@ internal sealed class ThoriumModMeleeEffectsSystem : ModSystem
 
 	public override void PostSetupContent()
 	{
+		static bool SlashCheck(Item item) => _slashGlobalItemSlashEffect.GetValue(item.GetGlobalItem<SlashGlobalItem>()) is true;
+
 		_affectedItems = ContentSamples.ItemsByType.Values
-			.Where(item => _slashGlobalItemSlashEffect.GetValue(item.GetGlobalItem<SlashGlobalItem>()) is true)
+			.Where(SlashCheck)
 			.Select(item => item.type)
 			.ToHashSet();
 	}
@@ -95,7 +97,7 @@ internal sealed class ThoriumModMeleeEffectsSystem : ModSystem
 			i => i.MatchLdarg(1),
 			i => i.MatchCallvirt(getHeldItem),
 			i => i.MatchLdfld<Item>(nameof(Item.noMelee)),
-			il => il.MatchBrtrue(out _)
+			i => i.MatchBrtrue(out _)
 			))
 		{
 			throw new Exception("Thorium Mod / Melee Effects + support did not succeed.");
