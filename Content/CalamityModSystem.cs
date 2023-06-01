@@ -1,5 +1,4 @@
 ﻿using CalamityMod;
-using RandomModCompat.Common;
 using RandomModCompat.Common.Callers;
 using RandomModCompat.Common.ExplicitSupport;
 using RandomModCompat.Core;
@@ -52,7 +51,7 @@ internal sealed class CalamityModSystem : CrossModHandler
 
 	private static void ImprovedTorchesSupport()
 	{
-		if (!ModContent.GetInstance<ModSupportConfig>().SupportEnabled(_modName, ImprovedTorchesSupportSystem.ModName))
+		if (!RandomModCompat.SupportEnabled(_modName, ImprovedTorchesSupportSystem.ModName))
 		{
 			return;
 		}

@@ -1,5 +1,4 @@
-﻿using RandomModCompat.Common;
-using RandomModCompat.Common.Callers;
+﻿using RandomModCompat.Common.Callers;
 using RandomModCompat.Core;
 using System.Collections.Generic;
 using Terraria;
@@ -23,7 +22,7 @@ internal sealed class ThoriumAsymmetricSheathPlayer : ModPlayer
 
 	public override bool IsLoadingEnabled(Mod mod)
 	{
-		return ModContent.GetInstance<ModSupportConfig>().SupportEnabled(BaseMod, SupportMod);
+		return RandomModCompat.SupportEnabled(BaseMod, SupportMod);
 	}
 
 	public override void Load()

@@ -3,6 +3,7 @@
 	_Config:
 	{
 		Info: "Please refer to this mod's Steam Workshop page for what each compatibility option does."
+		Name: "Mod Support Config"
 		
 		ModNames:
 		{

@@ -1,5 +1,4 @@
-﻿using RandomModCompat.Common;
-using Terraria.ID;
+﻿using Terraria.ID;
 using Terraria.ModLoader;
 using ThoriumMod.Core.Handlers.SharedBossLootHandler;
 
@@ -14,7 +13,7 @@ internal sealed class PrimeReworkThoriumPlatingDrop : ModSystem
 
 	public override bool IsLoadingEnabled(Mod mod)
 	{
-		return ModContent.GetInstance<ModSupportConfig>().SupportEnabled(BaseMod, SupportMod);
+		return RandomModCompat.SupportEnabled(BaseMod, SupportMod);
 	}
 
 	public override void SetStaticDefaults()

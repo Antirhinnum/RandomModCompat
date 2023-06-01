@@ -1,11 +1,9 @@
-﻿using CalamityMod.DataStructures;
-using FishingReborn.Common.Systems;
+﻿using FishingReborn.Common.Systems;
 using FishingReborn.Custom.Interfaces;
 using FishingReborn.Custom.Structs;
 using RandomModCompat.Utilities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;

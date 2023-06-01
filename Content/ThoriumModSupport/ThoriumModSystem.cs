@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using RandomModCompat.Common;
 using RandomModCompat.Common.Callers;
 using RandomModCompat.Common.ExplicitSupport;
 using RandomModCompat.Core;
@@ -161,7 +160,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 
 	private static void AtmosphericTorchesSupport()
 	{
-		if (!ModContent.GetInstance<ModSupportConfig>().SupportEnabled(_modName, ImprovedTorchesSupportSystem.ModName))
+		if (!RandomModCompat.SupportEnabled(_modName, ImprovedTorchesSupportSystem.ModName))
 		{
 			return;
 		}
@@ -295,7 +294,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 
 	private static void OverpoweredGoldDustSupport()
 	{
-		if (!ModContent.GetInstance<ModSupportConfig>().SupportEnabled(_modName, OverpoweredGoldDustSupportSystem.ModName))
+		if (!RandomModCompat.SupportEnabled(_modName, OverpoweredGoldDustSupportSystem.ModName))
 		{
 			return;
 		}
