@@ -18,7 +18,7 @@ internal static class SupportConfigBuilder
 	private const string _typeName = "RandomModCompat.Common." + _configName;
 	private const MethodAttributes _defaultConstructorAttributes = MethodAttributes.Public | MethodAttributes.HideBySig | MethodAttributes.RTSpecialName;
 	private const MethodAttributes _overriddenMethodAttributes = MethodAttributes.Public | MethodAttributes.Virtual | MethodAttributes.HideBySig;
-	private const string _localizationHeader = "$Mods.RandomModCompat._Config.";
+	private const string _localizationHeader = "$Mods.RandomModCompat.DynamicConfig.";
 	private const string _modNamesHeader = _localizationHeader + "ModNames.";
 	private static TypeBuilder _current = null;
 

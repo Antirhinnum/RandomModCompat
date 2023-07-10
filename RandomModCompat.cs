@@ -27,7 +27,7 @@ public sealed class RandomModCompat : Mod
 		{ ModNames.Mask, new[] { ModNames.AsymmetricEquips, ModNames.Census } },
 		{ ModNames.PrimeRework, new[] { ModNames.Bangarang, ModNames.BossesAsNPCs, ModNames.ItemCheckBlacklist, ModNames.MagicStorage, ModNames.ROR2HealthBars, ModNames.TerraTyping, ModNames.ThoriumMod, ModNames.WWeaponScaling } },
 		{ ModNames.SlugNPCs, new[] { ModNames.Census, ModNames.DialogueTweak } },
-		{ ModNames.ThoriumMod, new[] { ModNames.AsymmetricEquips, ModNames.BuffDisplay, ModNames.DialogueTweak, ModNames.FishingReborn, ModNames.ImprovedTorches, ModNames.ItemCheckBlacklist, ModNames.MagicStorage, ModNames.MeleeEffects, ModNames.OverpoweredGoldDust, ModNames.RescueFairies, ModNames.ROR2HealthBars, ModNames.UniversalCraft } }
+		{ ModNames.ThoriumMod, new[] { ModNames.AsymmetricEquips, ModNames.BuffDisplay, ModNames.DialogueTweak, ModNames.FishingReborn, ModNames.ImprovedTorches, ModNames.ItemCheckBlacklist, ModNames.levelplus, ModNames.MagicStorage, ModNames.MeleeEffects, ModNames.OverpoweredGoldDust, ModNames.RescueFairies, ModNames.ROR2HealthBars, ModNames.UniversalCraft } }
 	};
 
 	public DynamicAssembly DynamicAssembly { get; init; } = new(AssemblyName);
@@ -85,6 +85,11 @@ public sealed class RandomModCompat : Mod
 	/// <returns><see langword="true"/> if both mods are enabled and support is enabled, <see langword="false"/> otherwise.</returns>
 	public static bool SupportEnabled(string baseMod, string supportMod)
 	{
+		if (!_supportedMods.TryGetValue(baseMod, out string[] possibleSupportMods) || !possibleSupportMods.Contains(supportMod))
+		{
+			Instance.Logger.Warn($"HEY DUMBASS: SupportEnabled called with mods {baseMod}, {supportMod}, which aren't in the config.");
+		}
+
 		if (!ModLoader.HasMod(baseMod) || !ModLoader.HasMod(supportMod))
 		{
 			return false;

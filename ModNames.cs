@@ -23,6 +23,7 @@ internal static class ModNames
 		ImprovedTorches = nameof(ImprovedTorches),
 		ItemCheckBlacklist = nameof(ItemCheckBlacklist),
 		ItReallyMustBe = nameof(ItReallyMustBe),
+		levelplus = nameof(levelplus),
 		Liber = nameof(Liber),
 		MagicStorage = nameof(MagicStorage),
 		Mask = nameof(Mask),

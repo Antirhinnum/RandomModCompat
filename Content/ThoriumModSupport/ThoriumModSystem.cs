@@ -54,6 +54,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 	 *
 	 * Additionally:
 	 * - ThoriumModFishingRebornSystem: Adds support for Fishing Reborn.
+	 * - ThoriumModLevelPlusSystem: Adds support for Level+.
 	 */
 	// TODO: Liber pedestal support
 
