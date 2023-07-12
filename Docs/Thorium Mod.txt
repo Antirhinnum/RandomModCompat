@@ -200,6 +200,9 @@ The following items are blacklisted on the Item Checklist:[list]
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347]Magic Storage:[/url][/h1]
 All Thorium Mod bosses now drop Shadow Diamonds.
 
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2966457992]Melee Effects+:[/url][/h1]
+Thorium's Sheath accessories now work properly when Melee Effects+ is enabled.
+
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2943805073]Rescue Fairies:[/url][/h1]
 The following NPCs can now be tracked by Rescue Fairies:[list]
 [*]Copper Coin Bag

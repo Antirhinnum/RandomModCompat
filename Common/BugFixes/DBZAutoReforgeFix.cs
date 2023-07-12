@@ -32,7 +32,7 @@ internal sealed class DBZAutoReforgeFix : ModSystem
 
 	public override bool IsLoadingEnabled(Mod mod)
 	{
-		return ModContent.GetInstance<ModSupportConfig>().SupportEnabled(ModNames.DBZMODPORT, ModNames.AutoReroll)
+		return RandomModCompat.SupportEnabled(ModNames.DBZMODPORT, ModNames.AutoReroll)
 			&& ModLoader.TryGetMod(ModNames.DBZMODPORT, out Mod dbz) && dbz.Version <= new Version(0, 3, 3);
 		// There may or may not be a hotfix for this bug. v0.3.3 (v1.0.9.9) was the latest version this bug is guaranteed to happen on.
 	}

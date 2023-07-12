@@ -13,7 +13,7 @@ internal sealed class BossesAsNPCsCaller : ModWithCalls
 		DungeonGuardian,
 		DarkMage,
 		Ogre,
-		GoblinSummonerm,
+		GoblinSummoner,
 		Dreadnautilus,
 		Mothron,
 		EoW,

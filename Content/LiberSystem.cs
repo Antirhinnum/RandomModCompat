@@ -9,7 +9,6 @@ using Liber.Content.NPCs.PreHardMode.Animals;
 using Liber.Content.NPCs.PreHardMode.Beasts;
 using Liber.Content.NPCs.PreHardMode.Undead;
 using Liber.Content.Tiles;
-using RandomModCompat.Common;
 using RandomModCompat.Common.Callers;
 using RandomModCompat.Common.ExplicitSupport;
 using RandomModCompat.Core;
@@ -79,7 +78,7 @@ internal sealed class LiberSystem : CrossModHandler
 
 	private static void ImprovedTorchesSupport()
 	{
-		if (!ModContent.GetInstance<ModSupportConfig>().SupportEnabled(_modName, ModNames.ImprovedTorches))
+		if (!RandomModCompat.SupportEnabled(_modName, ModNames.ImprovedTorches))
 		{
 			return;
 		}

@@ -10,7 +10,6 @@ Mod Name				Source?		Steam Link															Notes
 
 AlchemistNPC Lite		Open		https://steamcommunity.com/sharedfiles/filedetails/?id=2599842771	Unstable, wait.
 Cerebral Mod			Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2897788140	
-Consolaria				Open		https://steamcommunity.com/sharedfiles/filedetails/?id=2864843929	Unstable, wait.
 DormantDawnMOD			Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2815777479	
 MoreZenithItems			Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2621278406	
 REMNANTS				Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2861542679	

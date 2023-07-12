@@ -11,8 +11,6 @@ namespace RandomModCompat.Common;
 /// </summary>
 internal sealed class Supportinator : ModSystem
 {
-	private static ModSupportConfig Config => ModContent.GetInstance<ModSupportConfig>();
-
 	public override bool IsLoadingEnabled(Mod mod)
 	{
 		return Debugger.IsAttached;
@@ -33,7 +31,7 @@ internal sealed class Supportinator : ModSystem
 		{
 			string modName = player.Mod.Name;
 			Mod.Logger.Debug($"Hit! Mod: \"{modName}\" | ModPlayer: \"{player.Name}\"");
-			if (!Config.SupportEnabled(modName, ModNames.FishingReborn))
+			if (!RandomModCompat.SupportEnabled(modName, ModNames.FishingReborn))
 			{
 				Mod.Logger.Debug("Missing FishingReborn support!");
 			}

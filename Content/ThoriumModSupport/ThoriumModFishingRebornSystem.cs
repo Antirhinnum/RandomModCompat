@@ -1,7 +1,6 @@
 ﻿using FishingReborn.Common.CustomCatchRules.Conditions;
 using FishingReborn.Common.CustomCatchRules.Pools;
 using FishingReborn.Custom.Enums;
-using RandomModCompat.Common;
 using RandomModCompat.Common.ExplicitSupport;
 using RandomModCompat.Core;
 using Terraria;
@@ -29,7 +28,7 @@ internal class ThoriumModFishingRebornSystem : CrossModHandler
 
 	internal override void PostSetupContent()
 	{
-		if (!ModContent.GetInstance<ModSupportConfig>().SupportEnabled(_modName, ModNames.FishingReborn))
+		if (!RandomModCompat.SupportEnabled(_modName, ModNames.FishingReborn))
 		{
 			return;
 		}

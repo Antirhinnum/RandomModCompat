@@ -1,8 +1,9 @@
 ﻿Mods.RandomModCompat:
 {
-	_Config:
+	DynamicConfig:
 	{
 		Info: "Please refer to this mod's Steam Workshop page for what each compatibility option does."
+		Name: "Mod Support Config"
 		
 		ModNames:
 		{
@@ -22,9 +23,11 @@
 			ImprovedTorches: "Atmospheric Torches"
 			ItemCheckBlacklist: "Item Check Blacklist Lib"
 			ItReallyMustBe: "Dreadnautilus is a Boss"
+			levelplus: "Level+"
 			Liber: "Liber Creaturarum"
 			MagicStorage: "Magic Storage"
 			Mask: "Mask"
+			MeleeEffects: "Melee Effects+"
 			OverpoweredGoldDust: "Gold Dust Turns Everything Into Gold"
 			PrimeRework: "Mech Bosses Rework"
 			Redemption: "Mod of Redemption"
@@ -41,6 +44,14 @@
 		Notes:
 		{
 			UnstableChangeWarning: "This change is unstable, and may break on reload."
+		}
+	}
+	
+	Configs:
+	{
+		LevelPlusCommon:
+		{
+			AddDamage: "  +{Amount}% {DamageType}"
 		}
 	}
 	

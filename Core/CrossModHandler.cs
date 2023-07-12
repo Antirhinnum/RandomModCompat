@@ -1,5 +1,4 @@
-﻿using RandomModCompat.Common;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using Terraria.ModLoader;
 
 namespace RandomModCompat.Core;
@@ -62,7 +61,7 @@ internal abstract class CrossModHandler : ModType
 	protected bool TryGetCaller<T>([NotNullWhen(true)] out T caller) where T : ModWithCalls
 	{
 		caller = ModContent.GetInstance<T>();
-		return caller.Active && ModContent.GetInstance<ModSupportConfig>().SupportEnabled(ModName, caller.ModName);
+		return caller.Active && RandomModCompat.SupportEnabled(ModName, caller.ModName);
 	}
 
 	/// <summary>
@@ -75,6 +74,6 @@ internal abstract class CrossModHandler : ModType
 	internal static bool TryGetCaller<T>(string baseMod, [NotNullWhen(true)] out T caller) where T : ModWithCalls
 	{
 		caller = ModContent.GetInstance<T>();
-		return caller.Active && ModContent.GetInstance<ModSupportConfig>().SupportEnabled(baseMod, caller.ModName);
+		return caller.Active && RandomModCompat.SupportEnabled(baseMod, caller.ModName);
 	}
 }

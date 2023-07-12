@@ -38,11 +38,17 @@
     <Reference Include="ItReallyMustBe">
       <HintPath>lib\ItReallyMustBe.dll</HintPath>
     </Reference>
+    <Reference Include="levelplus">
+      <HintPath>lib\levelplus.dll</HintPath>
+    </Reference>
     <Reference Include="Liber">
       <HintPath>lib\Liber.dll</HintPath>
     </Reference>
     <Reference Include="Mask">
       <HintPath>lib\Mask.dll</HintPath>
+    </Reference>
+    <Reference Include="MeleeEffects">
+      <HintPath>lib\MeleeEffects.dll</HintPath>
     </Reference>
     <Reference Include="PrimeRework">
       <HintPath>lib\PrimeRework.dll</HintPath>
