@@ -6,4 +6,4 @@ hideCode = true
 hideResources = true
 includeSource = false
 buildIgnore = LICENSE, README.md, *.pdn, gear.png, Docs/, Notes/, *.pdb
-weakReferences = AutoReroll, BalloonsExtended, Bangarang, CalamityMod, Consolaria, DBZMODPORT, FishingReborn, ImprovedTorches, ItReallyMustBe, levelplus, Liber, Mask, MeleeEffects, PrimeRework, Redemption, SlugNPCs, ThoriumMod
+weakReferences = AssortedCrazyThings, AutoReroll, BalloonsExtended, Bangarang, CalamityMod, Consolaria, DBZMODPORT, FishingReborn, ImprovedTorches, ItReallyMustBe, levelplus, Liber, Mask, MeleeEffects, PrimeRework, Redemption, SlugNPCs, ThoriumMod

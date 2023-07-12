@@ -8,6 +8,7 @@
 		ModNames:
 		{
 			AmuletOfManyMinions: "The Amulet of Many Minions: Combat Pets!"
+			AssortedCrazyThings: "Assorted Crazy Things"
 			AsymmetricEquips: "Asymmetric Equipment"
 			AutoReroll: "Auto Reroll"
 			BalloonsExtended: "Balloons Extended"
@@ -55,6 +56,16 @@
 		}
 	}
 	
+	AssortedCrazyThings:
+	{
+		ROR2:
+		{
+			HarvesterBoss:
+			{
+				Description: "Ossified avian"
+			}
+		}
+	}
 	Consolaria:
 	{
 		ROR2:
@@ -87,6 +98,7 @@
 	{
 		ROR2:
 		{
+			# All mechanical bosses have the same title, as they're all some mechanical imitation of another boss.
 			Caretaker:
 			{
 				Description: "Mechanical simulacrum"

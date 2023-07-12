@@ -17,6 +17,7 @@ public sealed class RandomModCompat : Mod
 
 	private static readonly Dictionary<string, string[]> _supportedMods = new()
 	{
+		{ ModNames.AssortedCrazyThings, new[] { ModNames.AsymmetricEquips, ModNames.Bangarang, ModNames.FishingReborn, ModNames.MagicStorage, ModNames.ROR2HealthBars } },
 		{ ModNames.BalloonsExtended, new[] { ModNames.AsymmetricEquips } },
 		{ ModNames.Bangarang, new[] { ModNames.TerraTyping, ModNames.WWeaponScaling } },
 		{ ModNames.CalamityMod, new[] { ModNames.AsymmetricEquips, ModNames.Bangarang, ModNames.BuffDisplay, ModNames.ImprovedTorches, ModNames.ItemCheckBlacklist, ModNames.ThoriumMod, ModNames.UniversalCraft } },

@@ -33,5 +33,6 @@ internal sealed class ThoriumModLevelPlusSystem : CrossModHandler
 		LevelplusSupportSystem.AddDamageAndCritEffects(LevelplusSupportSystem.Stat.Intelligence, _healerDamage, () => Config.HealerDamagePerPoint, () => Config.PointsPerHealerCrit);
 
 		// TODO: Inspiration is capped at 60.
+		// TODO: Bonus healing? Things other than just damage.
 	}
 }

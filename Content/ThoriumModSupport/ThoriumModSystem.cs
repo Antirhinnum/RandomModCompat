@@ -144,6 +144,8 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		caller.AddBalloon<ThoriumMod.Items.SummonItems.Phylactery>();
 		caller.AddBalloon<ThoriumMod.Items.ThrownItems.OlympicTorch>();
 
+		AsymmetricEquipsWrappedBalloonLayer.RegisterBalloonDrawLayer<ThoriumMod.PlayerLayers.BalloonLayer>();
+
 		// Sheaths
 		caller.AddSpecialItem(ModContent.ItemType<ThoriumMod.Items.Donate.GardenersSheath>(), AsymmetricEquipsCaller.PlayerSide.Left);
 		caller.AddSpecialItem(ModContent.ItemType<ThoriumMod.Items.MeleeItems.LeatherSheath>(), AsymmetricEquipsCaller.PlayerSide.Left);

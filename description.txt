@@ -11,6 +11,11 @@ Modders:
 If you work on one of the mods this mod adds support for and want to integrate that support directly into your mod, please get in contact!
 
 Current Compatibility:
+ - Assorted Crazy Things
+ + Asymmetric Equips
+ + Bangarang
+ + Magic Storage
+ + RoR 2 Health Bars
  - Balloons Extended
  + Asymmetric Equips
  - Bangarang
@@ -69,6 +74,7 @@ Current Compatibility:
  + Fishing Reborn
  + Gold Dust Turns Everything Into Gold
  + Item Check Blacklist Lib
+ + Level+
  + Magic Storage
  + Melee Effects+
  + Rescue Fairies

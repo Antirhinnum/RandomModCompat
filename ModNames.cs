@@ -7,6 +7,7 @@ internal static class ModNames
 {
 	internal const string
 		AmuletOfManyMinions = nameof(AmuletOfManyMinions),
+		AssortedCrazyThings = nameof(AssortedCrazyThings),
 		AsymmetricEquips = nameof(AsymmetricEquips),
 		AutoReroll = nameof(AutoReroll),
 		BalloonsExtended = nameof(BalloonsExtended),
