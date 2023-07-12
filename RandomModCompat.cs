@@ -82,17 +82,21 @@ public sealed class RandomModCompat : Mod
 	/// </summary>
 	/// <param name="baseMod">The base mod, the one that adds the content.</param>
 	/// <param name="supportMod">The support mod, the one that adds the systems.</param>
-	/// <returns><see langword="true"/> if both mods are enabled and support is enabled, <see langword="false"/> otherwise.</returns>
-	public static bool SupportEnabled(string baseMod, string supportMod)
+	/// <param name="ignoreEnabledMod">If <see langword="true"/>, then this method will return <see langword="true"/> even if one of the checked mods is disabled.</param>
+	/// <returns><see langword="true"/> if both mods are enabled (unless <paramref name="ignoreEnabledMod"/> is <see langword="true"/>) and support is enabled, <see langword="false"/> otherwise.</returns>
+	public static bool SupportEnabled(string baseMod, string supportMod, bool ignoreEnabledMod = false)
 	{
-		if (!_supportedMods.TryGetValue(baseMod, out string[] possibleSupportMods) || !possibleSupportMods.Contains(supportMod))
+		if (!ignoreEnabledMod)
 		{
-			Instance.Logger.Warn($"HEY DUMBASS: SupportEnabled called with mods {baseMod}, {supportMod}, which aren't in the config.");
-		}
+			if (!_supportedMods.TryGetValue(baseMod, out string[] possibleSupportMods) || !possibleSupportMods.Contains(supportMod))
+			{
+				Instance.Logger.Warn($"HEY DUMBASS: SupportEnabled called with mods {baseMod}, {supportMod}, which aren't in the config.");
+			}
 
-		if (!ModLoader.HasMod(baseMod) || !ModLoader.HasMod(supportMod))
-		{
-			return false;
+			if (!ModLoader.HasMod(baseMod) || !ModLoader.HasMod(supportMod))
+			{
+				return false;
+			}
 		}
 
 		if (!_supportFlagByModNames.TryGetValue(baseMod, out Dictionary<string, FieldInfo> supportedMods))
