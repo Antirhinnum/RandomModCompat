@@ -29,6 +29,10 @@ Current Compatibility:
  + Item Check Blacklist Lib
  + Thorium Mod
  + Universal Crafter
+ - The Clicker Class
+ + Asymmetric Equips
+ + Fishing Reborn
+ + Level+
  - Consolaria
  + Asymmetric Equips
  + Item Check Blacklist Lib

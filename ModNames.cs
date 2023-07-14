@@ -16,6 +16,7 @@ internal static class ModNames
 		BuffDisplay = nameof(BuffDisplay),
 		CalamityMod = nameof(CalamityMod),
 		Census = nameof(Census),
+		ClickerClass = nameof(ClickerClass),
 		ColoredDamageTypes = nameof(ColoredDamageTypes),
 		Consolaria = nameof(Consolaria),
 		DBZMODPORT = nameof(DBZMODPORT),

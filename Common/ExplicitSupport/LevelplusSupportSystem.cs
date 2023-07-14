@@ -84,7 +84,7 @@ internal sealed class LevelplusSupportSystem : ModPlayer
 	{
 		player ??= Main.LocalPlayer;
 		ModPlayer modPlayer = player.GetModPlayer(_levelPlusPlayerInstance);
-		return (ushort)_statToGetter[stat].Invoke(modPlayer, new object[] { });
+		return (ushort)_statToGetter[stat].Invoke(modPlayer, Array.Empty<object>());
 	}
 
 	#endregion LevelPlusModPlayer Reflection
@@ -199,9 +199,25 @@ internal sealed class LevelplusSupportSystem : ModPlayer
 			(player, statValue) => player.GetDamage(damageClass) *= 1f + (damagePerPoint() * statValue),
 			statValue => Language.GetTextValueWith("Mods.RandomModCompat.Configs.LevelPlusCommon.AddDamage",
 				new { Amount = (int)(statValue * (damagePerPoint() * 100)), DamageType = damageClass.DisplayName }));
-		//AddEffect(stat,
-		//	(player, statValue) => player.GetCritChance(damageClass) += statValue / pointsPerCrit(),
-		//	statValue => Language.GetTextValueWith("Mods.RandomModCompat.Configs.LevelPlusCommon.AddCrit",
-		//		new { Amount = (int)(statValue * (damagePerPoint() * 100)), DamageType = damageClass.DisplayName }));
+		AddEffect(stat,
+			(player, statValue) => player.GetCritChance(damageClass) += statValue / pointsPerCrit(),
+			statValue => Language.GetTextValueWith("Mods.RandomModCompat.Configs.LevelPlusCommon.AddCrit",
+				new { Amount = statValue / pointsPerCrit(), DamageTypeNoDamage = StripDamageFromClassName(damageClass) }));
+	}
+
+
+	// tML requires that the word "damage" be included in damage class display names, so there isn't a localized version of the just the class name.
+	private static string StripDamageFromClassName(DamageClass damageClass)
+	{
+		if (Language.ActiveCulture == GameCulture.FromCultureName(GameCulture.CultureName.English))
+		{
+			// Remove the word "damage".
+			return damageClass.DisplayName.Replace("damage", null).Trim();
+		}
+		else
+		{
+			// No idea how to handle this.
+			return damageClass.DisplayName;
+		}
 	}
 }

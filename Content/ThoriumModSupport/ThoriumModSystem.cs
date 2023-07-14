@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using RandomModCompat.Common.Callers;
+using RandomModCompat.Common.Configs;
 using RandomModCompat.Common.ExplicitSupport;
 using RandomModCompat.Core;
 using System;
@@ -10,6 +11,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 using ThoriumMod;
+using tModPorter;
 
 namespace RandomModCompat.Content.ThoriumModSupport;
 
@@ -47,6 +49,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 	 * - Enhanced Buff Display
 	 * - Gold Dust Turns Everything Into Gold (partial)
 	 * - Item Check Blacklist Lib
+	 * - Level+
 	 * - Magic Storage
 	 * - Rescue Fairies (TODO: check for exceptions)
 	 * - RoR 2 Health Bars
@@ -54,7 +57,6 @@ internal sealed class ThoriumModSystem : CrossModHandler
 	 *
 	 * Additionally:
 	 * - ThoriumModFishingRebornSystem: Adds support for Fishing Reborn.
-	 * - ThoriumModLevelPlusSystem: Adds support for Level+.
 	 */
 	// TODO: Liber pedestal support
 
@@ -80,6 +82,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		BuffDisplaySupport();
 		DialogueTweakSupport();
 		ItemCheckBlacklistSupport();
+		LevelplusSupport();
 		MagicStorageSupport();
 		OverpoweredGoldDustSupport();
 		RescueFairiesSupport();
@@ -251,6 +254,29 @@ internal sealed class ThoriumModSystem : CrossModHandler
 			ModContent.ItemType<ThoriumMod.Items.ZRemoved.LichRequirement2>(),
 			ModContent.ItemType<ThoriumMod.Items.ZRemoved.LichRequirement3>()
 			);
+	}
+
+	private void LevelplusSupport()
+	{
+		if (!RandomModCompat.SupportEnabled(_modName, ModNames.levelplus))
+		{
+			return;
+		}
+
+		if (!CrossMod.TryFind("BardDamage", out DamageClass bardDamage) || !CrossMod.TryFind("HealerDamage", out DamageClass healerDamage))
+		{
+			Mod.Logger.Warn("Cannot find Thorium's damage types for Level+ compatibility!");
+			return;
+		}
+
+		LevelPlusValuesConfig config = LevelPlusValuesConfig.Instance;
+
+		// Damage and crit
+		LevelplusSupportSystem.AddDamageAndCritEffects(LevelplusSupportSystem.Stat.Charisma, bardDamage, () => config.BardDamagePerPoint, () => config.PointsPerBardCrit);
+		LevelplusSupportSystem.AddDamageAndCritEffects(LevelplusSupportSystem.Stat.Intelligence, healerDamage, () => config.HealerDamagePerPoint, () => config.PointsPerHealerCrit);
+
+		// TODO: Inspiration is capped at 60.
+		// TODO: Bonus healing? Things other than just damage.
 	}
 
 	private void MagicStorageSupport()

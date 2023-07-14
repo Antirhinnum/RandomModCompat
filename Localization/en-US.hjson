@@ -17,6 +17,7 @@
 			BuffDisplay: "Enhanced Buff Display"
 			CalamityMod: "Calamity Mod"
 			Census: "Census - Town NPC Checklist"
+			ClickerClass: "The Clicker Class"
 			Consolaria: "Consolaria"
 			DBZMODPORT: "Dragon Ball Terraria"
 			DialogueTweak: "Dialogue Panel Rework"
@@ -53,6 +54,7 @@
 		LevelPlusCommon:
 		{
 			AddDamage: "  +{Amount}% {DamageType}"
+			AddCrit: "  +{Amount}% {DamageTypeNoDamage} crit chance"
 		}
 	}
 	

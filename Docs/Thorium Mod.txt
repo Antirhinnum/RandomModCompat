@@ -198,7 +198,7 @@ The following items are blacklisted on the Item Checklist:[list]
 [/list]
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2600460955]Level+:[/url][/h1]
-Thorium's damage classes can now receive bonuses on level-up.
+Radiant and symphonic damage can now be boosted by INT and CHA respectively.
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347]Magic Storage:[/url][/h1]
 All Thorium Mod bosses now drop Shadow Diamonds.

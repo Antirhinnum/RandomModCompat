@@ -21,6 +21,7 @@ public sealed class RandomModCompat : Mod
 		{ ModNames.BalloonsExtended, new[] { ModNames.AsymmetricEquips } },
 		{ ModNames.Bangarang, new[] { ModNames.TerraTyping, ModNames.WWeaponScaling } },
 		{ ModNames.CalamityMod, new[] { ModNames.AsymmetricEquips, ModNames.Bangarang, ModNames.BuffDisplay, ModNames.ImprovedTorches, ModNames.ItemCheckBlacklist, ModNames.ThoriumMod, ModNames.UniversalCraft } },
+		{ ModNames.ClickerClass, new[] { ModNames.AsymmetricEquips, ModNames.FishingReborn, ModNames.levelplus } },
 		{ ModNames.Consolaria, new[] { ModNames.AsymmetricEquips, ModNames.ItemCheckBlacklist, ModNames.MagicStorage, ModNames.ROR2HealthBars, ModNames.SummonersAssociation, ModNames.TerraTyping, ModNames.ThoriumMod } },
 		{ ModNames.DBZMODPORT, new[] { ModNames.AutoReroll } },
 		{ ModNames.ItReallyMustBe, new[] { ModNames.BossesAsNPCs, ModNames.ItemCheckBlacklist, ModNames.ROR2HealthBars, ModNames.TerraTyping, ModNames.WWeaponScaling } },
