@@ -23,7 +23,7 @@ public sealed class RandomModCompat : Mod
 		{ ModNames.CalamityMod, new[] { ModNames.AsymmetricEquips, ModNames.Bangarang, ModNames.BuffDisplay, ModNames.ImprovedTorches, ModNames.ItemCheckBlacklist, ModNames.ThoriumMod, ModNames.UniversalCraft } },
 		{ ModNames.ClickerClass, new[] { ModNames.AsymmetricEquips, ModNames.FishingReborn, ModNames.levelplus } },
 		{ ModNames.Consolaria, new[] { ModNames.AsymmetricEquips, ModNames.ItemCheckBlacklist, ModNames.MagicStorage, ModNames.ROR2HealthBars, ModNames.SummonersAssociation, ModNames.TerraTyping, ModNames.ThoriumMod } },
-		{ ModNames.DBZMODPORT, new[] { ModNames.AutoReroll } },
+		{ ModNames.DBZMODPORT, new[] { ModNames.AsymmetricEquips, ModNames.AutoReroll, ModNames.levelplus, ModNames.UniversalCraft } },
 		{ ModNames.ItReallyMustBe, new[] { ModNames.BossesAsNPCs, ModNames.ItemCheckBlacklist, ModNames.ROR2HealthBars, ModNames.TerraTyping, ModNames.WWeaponScaling } },
 		{ ModNames.Liber, new[] { ModNames.AsymmetricEquips, ModNames.ImprovedTorches, ModNames.ThoriumMod, ModNames.UniversalCraft, ModNames.WWeaponScaling } },
 		{ ModNames.Mask, new[] { ModNames.AsymmetricEquips, ModNames.Census } },

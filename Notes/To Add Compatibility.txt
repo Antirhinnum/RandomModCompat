@@ -17,10 +17,9 @@ Ruin					Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=28339304
 Tokens					Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2789445751	Modded recipes.
 Useful NPCs				Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2753295679	Census.
 Wacky NPCs				Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2833053079	Census? DialogueTweak?
+Conquest                Closed      https://steamcommunity.com/sharedfiles/filedetails/?id=3005280994   Talent tree (Level+-like), check for others
 
 
 Other:
 Pylons Prevent Evil		Closed?		https://steamcommunity.com/sharedfiles/filedetails/?id=2820025575	Check in-game.
 Useful NPCs				Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2956897719	Check.
-
-AssortedCrazyThings

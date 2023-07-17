@@ -42,7 +42,10 @@ Current Compatibility:
  + TerraTyping
  + Thorium Mod
  - Dragon Ball Terraria 1.0.9.9 Ported
+ + Asymmetric Equips
  + Auto Reforge
+ + Level+
+ + Universal Crafter
  - Dreadnautilus is a Boss
  + Bosses as NPCs
  + Item Check Blacklist Lib

@@ -10,8 +10,28 @@ public sealed class LevelPlusValuesConfig : ModConfig
 
 	public override ConfigScope Mode => ConfigScope.ServerSide;
 
+	[Label("Dragon Ball Terraria: Ki Damage (MYS)")]
+	[Tooltip("How much Ki Damage the player gets per point")]
+	[Slider]
+	[Range(0.00f, 0.10f)]
+	[Increment(0.01f)]
+	[DefaultValue(0.01f)]
+	public float KiDamagePerPoint;
+
+	[Label("Dragon Ball Terraria: Ki Crit (MYS)")]
+	[Tooltip("How many points it takes to gain 1% Ki Crit")]
+	[Range(1, 30)]
+	[DefaultValue(15)]
+	public int PointsPerKiCrit;
+
+	[Label("Dragon Ball Terraria: Ki Regen (CON)")]
+	[Tooltip("How many points it takes to gain 1 Ki Regen")]
+	[Range(1, 50)]
+	[DefaultValue(30)]
+	public int PointsPerKiRegen;
+
 	[Label("The Clicker Class: Clicker Damage (DEX)")]
-	[Tooltip("How much Clicker Damage the player gets per point")]
+	[Tooltip("How much Click Damage the player gets per point")]
 	[Slider]
 	[Range(0.00f, 0.10f)]
 	[Increment(0.01f)]
@@ -19,7 +39,7 @@ public sealed class LevelPlusValuesConfig : ModConfig
 	public float ClickerDamagePerPoint;
 
 	[Label("The Clicker Class: Clicker Crit (DEX)")]
-	[Tooltip("How many points it takes to gain 1% Clicker Crit")]
+	[Tooltip("How many points it takes to gain 1% Click Crit")]
 	[Range(1, 30)]
 	[DefaultValue(15)]
 	public int PointsPerClickerCrit;

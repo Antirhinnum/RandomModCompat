@@ -55,6 +55,7 @@
 		{
 			AddDamage: "  +{Amount}% {DamageType}"
 			AddCrit: "  +{Amount}% {DamageTypeNoDamage} crit chance"
+			ResourceRegen: "  +{Amount} {Resource} regen"
 		}
 	}
 	

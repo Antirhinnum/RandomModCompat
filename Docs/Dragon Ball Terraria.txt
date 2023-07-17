@@ -1,6 +1,39 @@
 [b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2828604929
 
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
+The following items can now be worn asymmetrically:[list]
+[*]Battle Kit
+[*]Blue Scouter
+[*]Green Potara
+[*]Green Scouter
+[*]Purple Scouter
+[*]Red Scouter
+[*]Worn Gloves
+[*]Yellow Scouter
+[/list]
+
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2707400823]Auto Reforge:[/url][/h1]
 Ki weapons can now be properly auto-reforged. Without this fix, ki weapons would only show 1-2 possible prefixes.
 [b]This is an unstable change.[/b] It may break when this mod is reloaded, and the underlying bug may be fixed in a future Dragon Ball Terraria update. 
 For reference, this bug is guaranteed to be present on "Dragon Ball Terraria 1.0.9.9 Ported" version 0.3.3. This fix is automatically disabled if a version higher than 0.3.3 is used.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2600460955]Level+:[/url][/h1]
+Ki damage can now be boosted by MYS.
+Ki regeneration can now be boosted by CON.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2917548365]Universal Crafter:[/url][/h1]
+The following stations are automatically added to the Universal Crafter after a condition:
+[table]
+	[tr]
+		[th]Station[/th]
+		[th]Condition[/th]
+	[/tr]
+	[tr]
+		[td]Kai Table[/td]
+		[td]Post-Plantera.[/td]
+	[/tr]
+	[tr]
+		[td]Z Table[/td]
+		[td]Always available.[/td]
+	[/tr]
+[/table]
