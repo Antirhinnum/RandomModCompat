@@ -5,6 +5,7 @@
 		Info: "Please refer to this mod's Steam Workshop page for what each compatibility option does."
 		Name: "Mod Support Config"
 		
+		# Would be nice to grab these at runtime, but there's no way to do that if the player doesn't have a mod enabled/installed.
 		ModNames:
 		{
 			AmuletOfManyMinions: "The Amulet of Many Minions: Combat Pets!"
@@ -51,11 +52,73 @@
 	
 	Configs:
 	{
-		LevelPlusCommon:
+		Main:
 		{
-			AddDamage: "  +{Amount}% {DamageType}"
-			AddCrit: "  +{Amount}% {DamageTypeNoDamage} crit chance"
-			ResourceRegen: "  +{Amount} {Resource} regen"
+			Name: "Misc. Config"
+			
+			SupportinatorEnabled:
+			{
+				Label: "Enable Debug Support Checks"
+				Tooltip:
+					'''
+					If enabled, then this mod will run through all loaded mods and log potential content to add support for.
+					Forcibly enabled if the mod is running in debug mode.
+					'''
+			}
+		}
+		
+		LevelPlus:
+		{
+			Name: "Level+ Values Config"
+			
+			# DBZMODPORT
+			KiDamagePerPoint:
+			{
+				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.DBZMODPORT}: Ki Damage (MYS)"
+				Tooltip: "How much Ki Damage the player gets per point."
+			}
+			PointsPerKiCrit:
+			{
+				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.DBZMODPORT}: Ki Crit (MYS)"
+				Tooltip: "How many points it takes to gain 1% Ki Crit"
+			}
+			PointsPerKiRegen:
+			{
+				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.DBZMODPORT}: Ki Regen (CON)"
+				Tooltip: "How many points it takes to gain 1 Ki Regen"
+			}
+			# ClickerClass
+			ClickDamagePerPoint:
+			{
+				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.ClickerClass}: Click Damage (DEX)"
+				Tooltip: "How much Click Damage the player gets per point."
+			}
+			PointsPerClickCrit:
+			{
+				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.ClickerClass}: Click Crit (DEX)"
+				Tooltip: "How many points it takes to gain 1% Click Crit"
+			}
+			# ThoriumMod
+			BardDamagePerPoint:
+			{
+				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.ThoriumMod}: Symphonic Damage (CHA)"
+				Tooltip: "How much Symphonic Damage the player gets per point."
+			}
+			PointsPerBardCrit:
+			{
+				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.ThoriumMod}: Symphonic Crit (CHA)"
+				Tooltip: "How many points it takes to gain 1% Symphonic Crit"
+			}
+			HealerDamagePerPoint:
+			{
+				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.ThoriumMod}: Radiant Damage (INT)"
+				Tooltip: "How much Click Damage the player gets per point."
+			}
+			PointsPerHealerCrit:
+			{
+				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.ThoriumMod}: Click Crit (INT)"
+				Tooltip: "How many points it takes to gain 1% Radiant Crit"
+			}
 		}
 	}
 	
@@ -96,6 +159,12 @@
 				Description: "Sanguine mollusk"
 			}
 		}
+	}
+	LevelPlus:
+	{
+		AddDamage: "  +{Amount}% {DamageType}"
+		AddCrit: "  +{Amount}% {DamageTypeNoDamage} crit chance"
+		ResourceRegen: "  +{Amount} {Resource} regen"
 	}
 	PrimeRework:
 	{

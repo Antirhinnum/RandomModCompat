@@ -71,19 +71,19 @@ internal sealed class DBZMODPORTSystem : CrossModHandler
 		static void AddDamage(Player player, ushort statValue) => player.GetModPlayer<MyPlayer>().KiDamage += LevelPlusValuesConfig.Instance.KiDamagePerPoint * statValue;
 		LevelplusSupportSystem.AddEffect(LevelplusSupportSystem.Stat.Mysticism,
 			AddDamage,
-			statValue => Language.GetTextValueWith("Mods.RandomModCompat.Configs.LevelPlusCommon.AddDamage",
+			statValue => Language.GetTextValueWith("Mods.RandomModCompat.LevelPlus.AddDamage",
 			new { Amount = (int)(statValue * (LevelPlusValuesConfig.Instance.KiDamagePerPoint * 100)), DamageType = "ki damage" }));
 
 		static void AddCrit(Player player, ushort statValue) => player.GetModPlayer<MyPlayer>().kiCrit += statValue / LevelPlusValuesConfig.Instance.PointsPerKiCrit;
 		LevelplusSupportSystem.AddEffect(LevelplusSupportSystem.Stat.Mysticism,
 			AddCrit,
-			statValue => Language.GetTextValueWith("Mods.RandomModCompat.Configs.LevelPlusCommon.AddCrit",
+			statValue => Language.GetTextValueWith("Mods.RandomModCompat.LevelPlus.AddCrit",
 				new { Amount = statValue / LevelPlusValuesConfig.Instance.PointsPerKiCrit, DamageTypeNoDamage = "ki" }));
 
 		static void AddRegen(Player player, ushort statValue) => player.GetModPlayer<MyPlayer>().kiRegen += statValue / LevelPlusValuesConfig.Instance.PointsPerKiRegen;
 		LevelplusSupportSystem.AddEffect(LevelplusSupportSystem.Stat.Constitution,
 			AddRegen,
-			statValue => Language.GetTextValueWith("Mods.RandomModCompat.Configs.LevelPlusCommon.ResourceRegen",
+			statValue => Language.GetTextValueWith("Mods.RandomModCompat.LevelPlus.ResourceRegen",
 			new { Amount = statValue / LevelPlusValuesConfig.Instance.PointsPerKiRegen, Resource = "ki" }));
 
 		// TODO: Max ki? Speed? KB?

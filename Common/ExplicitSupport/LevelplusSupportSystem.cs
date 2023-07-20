@@ -197,11 +197,11 @@ internal sealed class LevelplusSupportSystem : ModPlayer
 
 		AddEffect(stat,
 			(player, statValue) => player.GetDamage(damageClass) *= 1f + (damagePerPoint() * statValue),
-			statValue => Language.GetTextValueWith("Mods.RandomModCompat.Configs.LevelPlusCommon.AddDamage",
+			statValue => Language.GetTextValueWith("Mods.RandomModCompat.LevelPlus.AddDamage",
 				new { Amount = (int)(statValue * (damagePerPoint() * 100)), DamageType = damageClass.DisplayName }));
 		AddEffect(stat,
 			(player, statValue) => player.GetCritChance(damageClass) += statValue / pointsPerCrit(),
-			statValue => Language.GetTextValueWith("Mods.RandomModCompat.Configs.LevelPlusCommon.AddCrit",
+			statValue => Language.GetTextValueWith("Mods.RandomModCompat.LevelPlus.AddCrit",
 				new { Amount = statValue / pointsPerCrit(), DamageTypeNoDamage = StripDamageFromClassName(damageClass) }));
 	}
 

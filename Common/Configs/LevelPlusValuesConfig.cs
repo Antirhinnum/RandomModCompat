@@ -3,71 +3,74 @@ using Terraria.ModLoader.Config;
 
 namespace RandomModCompat.Common.Configs;
 
+[Label(_localizationPrefix + "Name")]
 public sealed class LevelPlusValuesConfig : ModConfig
 {
+	private const string _localizationPrefix = "$Mods.RandomModCompat.Configs.LevelPlus.";
+
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CA2211:Non-constant fields should not be visible", Justification = "Must be a public static field to be assigned to.")]
 	public static LevelPlusValuesConfig Instance;
 
 	public override ConfigScope Mode => ConfigScope.ServerSide;
 
-	[Label("Dragon Ball Terraria: Ki Damage (MYS)")]
-	[Tooltip("How much Ki Damage the player gets per point")]
+	[Label(_localizationPrefix + nameof(KiDamagePerPoint) + ".Label")]
+	[Tooltip(_localizationPrefix + nameof(KiDamagePerPoint) + ".Tooltip")]
 	[Slider]
 	[Range(0.00f, 0.10f)]
 	[Increment(0.01f)]
 	[DefaultValue(0.01f)]
 	public float KiDamagePerPoint;
 
-	[Label("Dragon Ball Terraria: Ki Crit (MYS)")]
-	[Tooltip("How many points it takes to gain 1% Ki Crit")]
+	[Label(_localizationPrefix + nameof(PointsPerKiCrit) + ".Label")]
+	[Tooltip(_localizationPrefix + nameof(PointsPerKiCrit) + ".Tooltip")]
 	[Range(1, 30)]
 	[DefaultValue(15)]
 	public int PointsPerKiCrit;
 
-	[Label("Dragon Ball Terraria: Ki Regen (CON)")]
-	[Tooltip("How many points it takes to gain 1 Ki Regen")]
+	[Label(_localizationPrefix + nameof(PointsPerKiRegen) + ".Label")]
+	[Tooltip(_localizationPrefix + nameof(PointsPerKiRegen) + ".Tooltip")]
 	[Range(1, 50)]
 	[DefaultValue(30)]
 	public int PointsPerKiRegen;
 
-	[Label("The Clicker Class: Clicker Damage (DEX)")]
-	[Tooltip("How much Click Damage the player gets per point")]
+	[Label(_localizationPrefix + nameof(ClickDamagePerPoint) + ".Label")]
+	[Tooltip(_localizationPrefix + nameof(ClickDamagePerPoint) + ".Tooltip")]
 	[Slider]
 	[Range(0.00f, 0.10f)]
 	[Increment(0.01f)]
 	[DefaultValue(0.01f)]
-	public float ClickerDamagePerPoint;
+	public float ClickDamagePerPoint;
 
-	[Label("The Clicker Class: Clicker Crit (DEX)")]
-	[Tooltip("How many points it takes to gain 1% Click Crit")]
+	[Label(_localizationPrefix + nameof(PointsPerClickCrit) + ".Label")]
+	[Tooltip(_localizationPrefix + nameof(PointsPerClickCrit) + ".Tooltip")]
 	[Range(1, 30)]
 	[DefaultValue(15)]
-	public int PointsPerClickerCrit;
+	public int PointsPerClickCrit;
 
-	[Label("Thorium Mod: Symphonic Damage (CHA)")]
-	[Tooltip("How much Symphonic Damage the player gets per point")]
+	[Label(_localizationPrefix + nameof(BardDamagePerPoint) + ".Label")]
+	[Tooltip(_localizationPrefix + nameof(BardDamagePerPoint) + ".Tooltip")]
 	[Slider]
 	[Range(0.00f, 0.10f)]
 	[Increment(0.01f)]
 	[DefaultValue(0.01f)]
 	public float BardDamagePerPoint;
 
-	[Label("Thorium Mod: Symphonic Crit (CHA)")]
-	[Tooltip("How many points it takes to gain 1% Symphonic Crit")]
+	[Label(_localizationPrefix + nameof(PointsPerBardCrit) + ".Label")]
+	[Tooltip(_localizationPrefix + nameof(PointsPerBardCrit) + ".Tooltip")]
 	[Range(1, 30)]
 	[DefaultValue(15)]
 	public int PointsPerBardCrit;
 
-	[Label("Thorium Mod: Radiant Damage (INT)")]
-	[Tooltip("How much Radiant Damage the player gets per point")]
+	[Label(_localizationPrefix + nameof(HealerDamagePerPoint) + ".Label")]
+	[Tooltip(_localizationPrefix + nameof(HealerDamagePerPoint) + ".Tooltip")]
 	[Slider]
 	[Range(0.00f, 0.10f)]
 	[Increment(0.01f)]
 	[DefaultValue(0.01f)]
 	public float HealerDamagePerPoint;
 
-	[Label("Thorium Mod: Radiant Crit (INT)")]
-	[Tooltip("How many points it takes to gain 1% Radiant Crit")]
+	[Label(_localizationPrefix + nameof(PointsPerHealerCrit) + ".Label")]
+	[Tooltip(_localizationPrefix + nameof(PointsPerHealerCrit) + ".Tooltip")]
 	[Range(1, 30)]
 	[DefaultValue(15)]
 	public int PointsPerHealerCrit;

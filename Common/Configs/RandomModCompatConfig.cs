@@ -3,12 +3,15 @@ using Terraria.ModLoader.Config;
 
 namespace RandomModCompat.Common.Configs;
 
+[Label(_localizationPrefix + "Name")]
 public sealed class RandomModCompatConfig : ModConfig
 {
+	private const string _localizationPrefix = "$Mods.RandomModCompat.Configs.Main.";
+
 	public override ConfigScope Mode => ConfigScope.ServerSide;
 
-	[Label("Enable Debug Support Checks")]
-	[Tooltip("If enabled, then this mod will run through all loaded mods and log potential content to add support for.\nForcibly enabled if the mod is running in debug mode.")]
+	[Label(_localizationPrefix + nameof(SupportinatorEnabled) + ".Label")]
+	[Tooltip(_localizationPrefix + nameof(SupportinatorEnabled) + ".Tooltip")]
 	[DefaultValue(false)]
 	public bool SupportinatorEnabled;
 }

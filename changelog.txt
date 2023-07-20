@@ -1,8 +1,6 @@
 [list]
-[*]Support for Calamity Mod: Atmospheric Torches.
-[*]Support for Consolaria: Asymmetric Equips; Item Check Blacklist Lib; Magic Storage; RoR 2 Health Bars; Summoner's Association; TerraTyping; Thorium Mod.
-[*]Support for Liber Creaturarum: Asymmetric Equips; Atmospheric Torches; Thorium Mod; Universal Crafter; W1K's Weapon Scaling.
-[*]Support for Thorium Mod: Atmospheric Torches; Fishing Reborn.
-[*]Fix Dragon Ball Terraria / Auto Reforge incompatibility.
-[*]Fix Thorium Mod / Melee Effects+ incompatibility.
+[*]Support between Assorted Crazy Things and the following mod(s): Asymmetric Equips; Bangarang; Fishing Reborn; Magic Storage; RoR 2 Health Bars.
+[*]Support between Dragon Ball Terraria and the following mods: Asymmetric Equips; Level+; Universal Crafter.
+[*]Support between The Clicker Class and the following mod(s): Asymmetric Equips; Fishing Reborn; Level+.
+[*]Support between Thorium Mod and the following mod(s): Level+.
 [/list]
