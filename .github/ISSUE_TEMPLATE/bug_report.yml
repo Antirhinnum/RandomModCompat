@@ -1,0 +1,41 @@
+name: Bug Report
+description: Something is causing crashes, freezes, or strange behavior.
+labels: ["Bug"]
+body:
+- type: textarea
+  attributes:
+    label: Log File
+    description: |
+      Please attach your `client.log` or `server.log` file here.
+- type: textarea
+  attributes:
+    label: Description
+    description: |
+      A clear and concise description of what the bug is.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Reproduction
+    description: |
+      How did you encounter this bug?
+- type: textarea
+  attributes:
+    label: Reproduction Rate
+    description: |
+      How often can you reproduce this bug?
+- type: textarea
+  attributes:
+    label: Expected Behavior
+    description: |
+      What *should* happen?
+- type: textarea
+  attributes:
+    label: Actual Behavior
+    description: |
+      What *actually* happens?
+- type: textarea
+  attributes:
+    label: Additional Context
+    description: |
+      Add any other context about the problem here.

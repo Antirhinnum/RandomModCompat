@@ -9,6 +9,7 @@ See the Discussions tab on the Workshop page for a detailed breakdown of compati
 
 Modders:
 If you work on one of the mods this mod adds support for and want to integrate that support directly into your mod, please get in contact!
+Source available on GitHub (this mod's homepage). PRs for new support or localization are always welcome!
 
 Current Compatibility:
  - Assorted Crazy Things

@@ -6,4 +6,6 @@ Some examples of current compatibility:[list][*]Many modded bosses now drop Shad
 
 See the [url=https://steamcommunity.com/sharedfiles/filedetails/discussions/2976409348]Discussions tab[/url] for a detailed breakdown of compatibility, as well as links to all mods and a planning post.
 
+Source available on GitHub: https://github.com/Antirhinnum/RandomModCompat
+PRs for new support or localization are always welcome!
 Modders: If you work on one of the mods this mod adds support for and want to integrate that support directly into your mod, please get in contact!
