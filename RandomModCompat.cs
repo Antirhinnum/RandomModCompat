@@ -61,8 +61,6 @@ public sealed class RandomModCompat : Mod
 
 	private static void AddAndCreateSupportConfig(Action<Mod> orig, Mod mod)
 	{
-		orig(mod);
-
 		if (mod is RandomModCompat randomModCompat)
 		{
 			Type configType = SupportConfigBuilder.Create(randomModCompat.DynamicAssembly.ModuleBuilder, _supportedMods);
@@ -77,6 +75,8 @@ public sealed class RandomModCompat : Mod
 			_config = Activator.CreateInstance(configType) as ModConfig;
 			mod.AddConfig(configType.Name, _config);
 		}
+
+		orig(mod);
 	}
 
 	/// <summary>

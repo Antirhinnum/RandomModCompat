@@ -116,7 +116,7 @@
 			}
 			PointsPerHealerCrit:
 			{
-				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.ThoriumMod}: Click Crit (INT)"
+				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.ThoriumMod}: Radiant Crit (INT)"
 				Tooltip: "How many points it takes to gain 1% Radiant Crit"
 			}
 		}
