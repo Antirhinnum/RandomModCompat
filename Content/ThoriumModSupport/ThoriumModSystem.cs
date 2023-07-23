@@ -11,7 +11,6 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 using ThoriumMod;
-using tModPorter;
 
 namespace RandomModCompat.Content.ThoriumModSupport;
 

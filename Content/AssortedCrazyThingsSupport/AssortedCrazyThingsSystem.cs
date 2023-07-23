@@ -14,12 +14,12 @@ namespace RandomModCompat.Content.AssortedCrazyThingsSupport;
 [JITWhenModsEnabled(_modName)]
 internal sealed class AssortedCrazyThingsSystem : CrossModHandler
 {
-    private const string _localizationHeader = $"Mods.RandomModCompat.{_modName}.";
+	private const string _localizationHeader = $"Mods.RandomModCompat.{_modName}.";
 
-    private const string _modName = ModNames.AssortedCrazyThings;
-    public override string ModName => _modName;
+	private const string _modName = ModNames.AssortedCrazyThings;
+	public override string ModName => _modName;
 
-    /*
+	/*
 	 * Assorted Crazy Things adds support for the following mods:
 	 * - Amulet of Many Minions
 	 * - Boss Checklist
@@ -30,96 +30,96 @@ internal sealed class AssortedCrazyThingsSystem : CrossModHandler
 	 * - Bangarang
 	 * - Magic Storage
 	 * - RoR 2 Health Bars
-	 * 
+	 *
 	 * Additionally:
 	 * - AssortedCrazyThingsFishingRebornSystem: Adds support for Fishing Reborn.
 	 */
-    // TODO: Bosses as NPCs
+	// TODO: Bosses as NPCs
 
-    internal override void PostSetupContent()
-    {
-        AsymmetricEquipsSupport();
-        BangarangSupport();
-        MagicStorageSupport();
-        ROR2HealthBarsSupport();
-    }
+	internal override void PostSetupContent()
+	{
+		AsymmetricEquipsSupport();
+		BangarangSupport();
+		MagicStorageSupport();
+		ROR2HealthBarsSupport();
+	}
 
-    private void AsymmetricEquipsSupport()
-    {
-        if (!TryGetCaller(out AsymmetricEquipsCaller caller))
-        {
-            return;
-        }
+	private void AsymmetricEquipsSupport()
+	{
+		if (!TryGetCaller(out AsymmetricEquipsCaller caller))
+		{
+			return;
+		}
 
-        if (ModContent.GetInstance<ContentConfig>().Accessories)
-        {
-            caller.AddHiddenEquip<BottledDreams>(EquipType.Waist);
+		if (ModContent.GetInstance<ContentConfig>().Accessories)
+		{
+			caller.AddHiddenEquip<BottledDreams>(EquipType.Waist);
 
-            caller.AddBalloon<MassiveBundleOfBalloons>();
-            caller.AddBalloon<StarInABalloon>();
-            caller.AddBalloon<StarWispBalloon>();
-            caller.AddBalloon<WispInABalloon>();
+			caller.AddBalloon<MassiveBundleOfBalloons>();
+			caller.AddBalloon<StarInABalloon>();
+			caller.AddBalloon<StarWispBalloon>();
+			caller.AddBalloon<WispInABalloon>();
 
-            caller.AddBalloon<CrazyBundleOfAssortedBalloons>();
-            AsymmetricEquipsWrappedBalloonLayer.RegisterBalloonDrawLayer<CrazyBundleOfAssortedBalloonsLayer>();
-        }
+			caller.AddBalloon<CrazyBundleOfAssortedBalloons>();
+			AsymmetricEquipsWrappedBalloonLayer.RegisterBalloonDrawLayer<CrazyBundleOfAssortedBalloonsLayer>();
+		}
 
-        if (ModContent.GetInstance<ContentConfig>().VanityAccessories)
-        {
-            caller.AddBalloon<Cobballoon>();
-            caller.AddBalloon<EyelloonRetinazer>();
-            caller.AddBalloon<GreenEyelloon>();
-            caller.AddBalloon<GreenEyelloonFractured>();
-            caller.AddBalloon<GreenEyelloonMetal>();
-            caller.AddBalloon<GreenEyelloonMetalFractured>();
-            caller.AddBalloon<PurpleEyelloon>();
-            caller.AddBalloon<PurpleEyelloonFractured>();
-            caller.AddBalloon<PurpleEyelloonMetal>();
-            caller.AddBalloon<PurpleEyelloonMetalFractured>();
-            caller.AddBalloon<RedEyelloon>();
-            caller.AddBalloon<RedEyelloonFractured>();
-            caller.AddBalloon<RedEyelloonMetal>();
-            caller.AddBalloon<RedEyelloonMetalFractured>();
-            caller.AddBalloon<SpazmatismEyelloon>();
-        }
-    }
+		if (ModContent.GetInstance<ContentConfig>().VanityAccessories)
+		{
+			caller.AddBalloon<Cobballoon>();
+			caller.AddBalloon<EyelloonRetinazer>();
+			caller.AddBalloon<GreenEyelloon>();
+			caller.AddBalloon<GreenEyelloonFractured>();
+			caller.AddBalloon<GreenEyelloonMetal>();
+			caller.AddBalloon<GreenEyelloonMetalFractured>();
+			caller.AddBalloon<PurpleEyelloon>();
+			caller.AddBalloon<PurpleEyelloonFractured>();
+			caller.AddBalloon<PurpleEyelloonMetal>();
+			caller.AddBalloon<PurpleEyelloonMetalFractured>();
+			caller.AddBalloon<RedEyelloon>();
+			caller.AddBalloon<RedEyelloonFractured>();
+			caller.AddBalloon<RedEyelloonMetal>();
+			caller.AddBalloon<RedEyelloonMetalFractured>();
+			caller.AddBalloon<SpazmatismEyelloon>();
+		}
+	}
 
-    private void BangarangSupport()
-    {
-        if (!TryGetCaller(out BangarangCaller caller))
-        {
-            return;
-        }
+	private void BangarangSupport()
+	{
+		if (!TryGetCaller(out BangarangCaller caller))
+		{
+			return;
+		}
 
-        if (ModContent.GetInstance<ContentConfig>().Weapons)
-        {
-            caller.RegisterSimpleBoomerang<GuideVoodoorang>();
-        }
-    }
+		if (ModContent.GetInstance<ContentConfig>().Weapons)
+		{
+			caller.RegisterSimpleBoomerang<GuideVoodoorang>();
+		}
+	}
 
-    private void MagicStorageSupport()
-    {
-        if (!TryGetCaller(out MagicStorageCaller caller))
-        {
-            return;
-        }
+	private void MagicStorageSupport()
+	{
+		if (!TryGetCaller(out MagicStorageCaller caller))
+		{
+			return;
+		}
 
-        if (ModContent.GetInstance<ContentConfig>().Bosses)
-        {
-            caller.RegisterShadowDiamondDrop<HarvesterBoss>(1);
-        }
-    }
+		if (ModContent.GetInstance<ContentConfig>().Bosses)
+		{
+			caller.RegisterShadowDiamondDrop<HarvesterBoss>(1);
+		}
+	}
 
-    private void ROR2HealthBarsSupport()
-    {
-        if (!TryGetCaller(out ROR2HealthBarsCaller caller))
-        {
-            return;
-        }
+	private void ROR2HealthBarsSupport()
+	{
+		if (!TryGetCaller(out ROR2HealthBarsCaller caller))
+		{
+			return;
+		}
 
-        if (ModContent.GetInstance<ContentConfig>().Bosses)
-        {
-            caller.AddDesc<HarvesterBoss>(_localizationHeader, "HarvesterBoss");
-        }
-    }
+		if (ModContent.GetInstance<ContentConfig>().Bosses)
+		{
+			caller.AddDesc<HarvesterBoss>(_localizationHeader, "HarvesterBoss");
+		}
+	}
 }

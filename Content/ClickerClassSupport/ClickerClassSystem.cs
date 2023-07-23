@@ -4,7 +4,6 @@ using RandomModCompat.Common.Callers;
 using RandomModCompat.Common.Configs;
 using RandomModCompat.Common.ExplicitSupport;
 using RandomModCompat.Core;
-using System;
 using Terraria.ModLoader;
 
 namespace RandomModCompat.Content.ClickerClassSupport;
@@ -21,14 +20,14 @@ internal sealed class ClickerClassSystem : CrossModHandler
 	 * - Recipe Browser
 	 * - Thorium Mod
 	 * - WikiThis
-	 * 
+	 *
 	 * Additionally, the following mods either have intrinsic Thorium support or an existing compatibility mod:
 	 * - Bosses as NPCs
-	 * 
+	 *
 	 * This file adds support for:
 	 * - Asymmetric Equips
 	 * - Level+
-	 * 
+	 *
 	 * Additionally:
 	 * - ClickerClassFishingRebornSystem: Adds support for Fishing Reborn.
 	 */

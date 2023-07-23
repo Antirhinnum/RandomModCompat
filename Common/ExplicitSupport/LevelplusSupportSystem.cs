@@ -205,7 +205,6 @@ internal sealed class LevelplusSupportSystem : ModPlayer
 				new { Amount = statValue / pointsPerCrit(), DamageTypeNoDamage = StripDamageFromClassName(damageClass) }));
 	}
 
-
 	// tML requires that the word "damage" be included in damage class display names, so there isn't a localized version of the just the class name.
 	private static string StripDamageFromClassName(DamageClass damageClass)
 	{

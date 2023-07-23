@@ -1,12 +1,10 @@
 ﻿using RandomModCompat.Common.Configs;
-using RandomModCompat.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using Terraria;
-using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -71,7 +69,7 @@ internal sealed class Supportinator : ModSystem
 		GenericChecker<ModItem>("asymmetric equips", ItemMightBeAsymmetricEquip, ModNames.AsymmetricEquips);
 		GenericChecker<ModItem>("boomerangs", i => ItemMightBeBoomerang(i.Item), ModNames.Bangarang);
 		GenericChecker<ModNPC>("bosses", n => IsBoss(n.NPC), ModNames.MagicStorage, ModNames.ROR2HealthBars);
-		GenericChecker<ModTile>("crafting stations",t => Main.recipe.Any(r => r.HasTile(t)), ModNames.UniversalCraft);
+		GenericChecker<ModTile>("crafting stations", t => Main.recipe.Any(r => r.HasTile(t)), ModNames.UniversalCraft);
 		GenericChecker<DamageClass>("damage classes", null, ModNames.ColoredDamageTypes, ModNames.levelplus);
 		GenericChecker<ModPlayer>("fishing methods", p => LoaderUtils.HasOverride(p.GetType(), typeof(ModPlayer).GetMethod(nameof(ModPlayer.CatchFish))), ModNames.FishingReborn);
 		GenericChecker<ModItem>("flails", i => i.Item.shoot != ProjectileID.None && ContentSamples.ProjectilesByType[i.Item.shoot].aiStyle == ProjAIStyleID.Flail, ModNames.ThoriumMod);
@@ -81,7 +79,6 @@ internal sealed class Supportinator : ModSystem
 		GenericChecker<ModTile>("torches", t => TileID.Sets.Torch[t.Type], ModNames.ImprovedTorches);
 		GenericChecker<ModNPC>("town NPCs", n => n.NPC.isLikeATownNPC && !n.TownNPCStayingHomeless, ModNames.Census, ModNames.DialogueTweak);
 		GenericChecker<ModItem>("vanilla boss drops", i => ItemDropsFromNPC(id => id < NPCID.Count && IsBoss(ContentSamples.NpcsByNetId[id])).Contains(i.Type), ModNames.BossesAsNPCs);
-
 	}
 
 	private void GenericChecker<T>(string checkDescription, Predicate<T> condition = null, params string[] supportMods) where T : ModType
