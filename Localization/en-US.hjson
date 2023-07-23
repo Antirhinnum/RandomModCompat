@@ -74,12 +74,12 @@
 			# DBZMODPORT
 			KiDamagePerPoint:
 			{
-				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.DBZMODPORT}: Ki Damage (MYS)"
+				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.DBZMODPORT}: Ki Damage (STR)"
 				Tooltip: "How much Ki Damage the player gets per point."
 			}
 			PointsPerKiCrit:
 			{
-				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.DBZMODPORT}: Ki Crit (MYS)"
+				Label: "{$Mods.RandomModCompat.DynamicConfig.ModNames.DBZMODPORT}: Ki Crit (STR)"
 				Tooltip: "How many points it takes to gain 1% Ki Crit"
 			}
 			PointsPerKiRegen:

@@ -69,13 +69,13 @@ internal sealed class DBZMODPORTSystem : CrossModHandler
 		// In the meantime...
 
 		static void AddDamage(Player player, ushort statValue) => player.GetModPlayer<MyPlayer>().KiDamage += LevelPlusValuesConfig.Instance.KiDamagePerPoint * statValue;
-		LevelplusSupportSystem.AddEffect(LevelplusSupportSystem.Stat.Mysticism,
+		LevelplusSupportSystem.AddEffect(LevelplusSupportSystem.Stat.Strength,
 			AddDamage,
 			statValue => Language.GetTextValueWith("Mods.RandomModCompat.LevelPlus.AddDamage",
 			new { Amount = (int)(statValue * (LevelPlusValuesConfig.Instance.KiDamagePerPoint * 100)), DamageType = "ki damage" }));
 
 		static void AddCrit(Player player, ushort statValue) => player.GetModPlayer<MyPlayer>().kiCrit += statValue / LevelPlusValuesConfig.Instance.PointsPerKiCrit;
-		LevelplusSupportSystem.AddEffect(LevelplusSupportSystem.Stat.Mysticism,
+		LevelplusSupportSystem.AddEffect(LevelplusSupportSystem.Stat.Strength,
 			AddCrit,
 			statValue => Language.GetTextValueWith("Mods.RandomModCompat.LevelPlus.AddCrit",
 				new { Amount = statValue / LevelPlusValuesConfig.Instance.PointsPerKiCrit, DamageTypeNoDamage = "ki" }));

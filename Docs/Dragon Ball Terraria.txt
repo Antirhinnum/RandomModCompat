@@ -18,7 +18,7 @@ Ki weapons can now be properly auto-reforged. Without this fix, ki weapons would
 For reference, this bug is guaranteed to be present on "Dragon Ball Terraria 1.0.9.9 Ported" version 0.3.3. This fix is automatically disabled if a version higher than 0.3.3 is used.
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2600460955]Level+:[/url][/h1]
-Ki damage can now be boosted by MYS.
+Ki damage can now be boosted by STR.
 Ki regeneration can now be boosted by CON.
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2917548365]Universal Crafter:[/url][/h1]
