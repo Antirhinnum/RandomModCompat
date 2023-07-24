@@ -3,6 +3,7 @@ using MeleeEffects.Projectiles;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using MonoMod.RuntimeDetour.HookGen;
+using RandomModCompat.Common.Configs;
 using RandomModCompat.Utilities;
 using System;
 using System.Collections.Generic;
@@ -49,7 +50,18 @@ internal sealed class ThoriumModMeleeEffectsSystem : ModSystem
 
 	public override bool IsLoadingEnabled(Mod mod)
 	{
-		return RandomModCompat.SupportEnabled(ModNames.ThoriumMod, ModNames.MeleeEffects);
+		if (!RandomModCompat.SupportEnabled(ModNames.ThoriumMod, ModNames.MeleeEffects))
+		{
+			return false;
+		}
+
+		if (ModContent.GetInstance<RandomModCompatConfig>().DisableIL)
+		{
+			mod.Logger.Info("Thorium Mod / Melee Effects+ bug fix disabled because IL edits are disabled.");
+			return false;
+		}
+
+		return base.IsLoadingEnabled(mod);
 	}
 
 	public override void Load()

@@ -257,7 +257,7 @@ internal sealed class ThoriumModSystem : CrossModHandler
 
 	private void LevelplusSupport()
 	{
-		if (!RandomModCompat.SupportEnabled(_modName, ModNames.levelplus))
+		if (!TryGetCaller(out LevelplusCaller caller))
 		{
 			return;
 		}
@@ -271,8 +271,8 @@ internal sealed class ThoriumModSystem : CrossModHandler
 		LevelPlusValuesConfig config = LevelPlusValuesConfig.Instance;
 
 		// Damage and crit
-		LevelplusSupportSystem.AddDamageAndCritEffects(LevelplusSupportSystem.Stat.Charisma, bardDamage, () => config.BardDamagePerPoint, () => config.PointsPerBardCrit);
-		LevelplusSupportSystem.AddDamageAndCritEffects(LevelplusSupportSystem.Stat.Intelligence, healerDamage, () => config.HealerDamagePerPoint, () => config.PointsPerHealerCrit);
+		caller.AddDamageAndCritEffects(LevelplusSupportSystem.Stat.Charisma, bardDamage, () => config.BardDamagePerPoint, () => config.PointsPerBardCrit);
+		caller.AddDamageAndCritEffects(LevelplusSupportSystem.Stat.Intelligence, healerDamage, () => config.HealerDamagePerPoint, () => config.PointsPerHealerCrit);
 
 		// TODO: Inspiration is capped at 60.
 		// TODO: Bonus healing? Things other than just damage.

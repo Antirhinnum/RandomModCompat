@@ -57,7 +57,7 @@ internal sealed class ClickerClassSystem : CrossModHandler
 
 	private void LevelplusSupport()
 	{
-		if (!RandomModCompat.SupportEnabled(_modName, ModNames.levelplus))
+		if (!TryGetCaller(out LevelplusCaller caller))
 		{
 			return;
 		}
@@ -69,7 +69,7 @@ internal sealed class ClickerClassSystem : CrossModHandler
 		}
 
 		LevelPlusValuesConfig config = LevelPlusValuesConfig.Instance;
-		LevelplusSupportSystem.AddDamageAndCritEffects(LevelplusSupportSystem.Stat.Dexterity, clickerDamage, () => config.ClickDamagePerPoint, () => config.PointsPerClickCrit);
+		caller.AddDamageAndCritEffects(LevelplusSupportSystem.Stat.Dexterity, clickerDamage, () => config.ClickDamagePerPoint, () => config.PointsPerClickCrit);
 
 		// TODO: More stats.
 	}

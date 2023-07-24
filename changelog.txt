@@ -1,6 +1,4 @@
 [list]
-[*]Support between Assorted Crazy Things and the following mod(s): Asymmetric Equips; Bangarang; Fishing Reborn; Magic Storage; RoR 2 Health Bars.
-[*]Support between Dragon Ball Terraria and the following mods: Asymmetric Equips; Level+; Universal Crafter.
-[*]Support between The Clicker Class and the following mod(s): Asymmetric Equips; Fishing Reborn; Level+.
-[*]Support between Thorium Mod and the following mod(s): Level+.
+[*]Added config option to disable all IL edits.
+[*]Made Level+ IL edits a bit safer.
 [/list]

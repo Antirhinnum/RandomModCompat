@@ -3,12 +3,12 @@ using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using MonoMod.RuntimeDetour.HookGen;
 using MonoMod.Utils;
+using RandomModCompat.Common.Configs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Terraria;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI;
 
@@ -83,8 +83,15 @@ internal sealed class LevelplusSupportSystem : ModPlayer
 	private static ushort GetStatValue(Stat stat, Player player = null)
 	{
 		player ??= Main.LocalPlayer;
-		ModPlayer modPlayer = player.GetModPlayer(_levelPlusPlayerInstance);
-		return (ushort)_statToGetter[stat].Invoke(modPlayer, Array.Empty<object>());
+
+		if (player.TryGetModPlayer(_levelPlusPlayerInstance, out ModPlayer mPlayer))
+		{
+			return (ushort)_statToGetter[stat].Invoke(mPlayer, Array.Empty<object>());
+		}
+		else
+		{
+			return 0;
+		}
 	}
 
 	#endregion LevelPlusModPlayer Reflection
@@ -98,9 +105,18 @@ internal sealed class LevelplusSupportSystem : ModPlayer
 		bool modLoaded = ModLoader.TryGetMod(ModNames.levelplus, out Mod levelPlus);
 		if (levelPlus?.Version >= new Version(1, 2, 0))
 		{
-			Mod.Logger.Warn("Level+ support cannot be loaded on v1.2.0 or higher! Pester this mod's dev to update support for Level+ v1.2.0!");
+			mod.Logger.Warn("Level+ support cannot be loaded on v1.2.0 or higher! Pester this mod's dev to update support for Level+ v1.2.0!");
+			return false;
 		}
-		return modLoaded;
+
+		// This support system requires IL edits.
+		if (ModContent.GetInstance<RandomModCompatConfig>().DisableIL)
+		{
+			mod.Logger.Info("Level+ support disabled because IL edits are disabled.");
+			return false;
+		}
+
+		return modLoaded && base.IsLoadingEnabled(mod);
 	}
 
 	public override void Load()
@@ -188,35 +204,5 @@ internal sealed class LevelplusSupportSystem : ModPlayer
 	internal static void AddEffect(Stat stat, StatBonus.ApplyBonus effect, StatBonus.GetDescription description)
 	{
 		_bonuses.Add(new(stat, effect, description));
-	}
-
-	internal static void AddDamageAndCritEffects(Stat stat, DamageClass damageClass, Func<float> damagePerPoint = null, Func<int> pointsPerCrit = null)
-	{
-		damagePerPoint ??= () => 0.01f;
-		pointsPerCrit ??= () => 15;
-
-		AddEffect(stat,
-			(player, statValue) => player.GetDamage(damageClass) *= 1f + (damagePerPoint() * statValue),
-			statValue => Language.GetTextValueWith("Mods.RandomModCompat.LevelPlus.AddDamage",
-				new { Amount = (int)(statValue * (damagePerPoint() * 100)), DamageType = damageClass.DisplayName }));
-		AddEffect(stat,
-			(player, statValue) => player.GetCritChance(damageClass) += statValue / pointsPerCrit(),
-			statValue => Language.GetTextValueWith("Mods.RandomModCompat.LevelPlus.AddCrit",
-				new { Amount = statValue / pointsPerCrit(), DamageTypeNoDamage = StripDamageFromClassName(damageClass) }));
-	}
-
-	// tML requires that the word "damage" be included in damage class display names, so there isn't a localized version of the just the class name.
-	private static string StripDamageFromClassName(DamageClass damageClass)
-	{
-		if (Language.ActiveCulture == GameCulture.FromCultureName(GameCulture.CultureName.English))
-		{
-			// Remove the word "damage".
-			return damageClass.DisplayName.Replace("damage", null).Trim();
-		}
-		else
-		{
-			// No idea how to handle this.
-			return damageClass.DisplayName;
-		}
 	}
 }

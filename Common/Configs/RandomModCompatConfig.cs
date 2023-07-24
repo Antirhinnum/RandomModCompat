@@ -10,6 +10,12 @@ public sealed class RandomModCompatConfig : ModConfig
 
 	public override ConfigScope Mode => ConfigScope.ServerSide;
 
+	[Label(_localizationPrefix + nameof(DisableIL) + ".Label")]
+	[Tooltip(_localizationPrefix + nameof(DisableIL) + ".Tooltip")]
+	[DefaultValue(false)]
+	[ReloadRequired]
+	public bool DisableIL;
+
 	[Label(_localizationPrefix + nameof(SupportinatorEnabled) + ".Label")]
 	[Tooltip(_localizationPrefix + nameof(SupportinatorEnabled) + ".Tooltip")]
 	[DefaultValue(false)]

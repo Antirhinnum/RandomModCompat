@@ -57,9 +57,9 @@ internal sealed class DBZMODPORTSystem : CrossModHandler
 		AddScouter<ScouterT6>();
 	}
 
-	private static void LevelplusSupport()
+	private void LevelplusSupport()
 	{
-		if (!RandomModCompat.SupportEnabled(_modName, ModNames.levelplus))
+		if (!TryGetCaller(out LevelplusCaller caller))
 		{
 			return;
 		}
@@ -68,20 +68,41 @@ internal sealed class DBZMODPORTSystem : CrossModHandler
 		// Hopefully they fix this in the next update.
 		// In the meantime...
 
-		static void AddDamage(Player player, ushort statValue) => player.GetModPlayer<MyPlayer>().KiDamage += LevelPlusValuesConfig.Instance.KiDamagePerPoint * statValue;
-		LevelplusSupportSystem.AddEffect(LevelplusSupportSystem.Stat.Strength,
+		static void AddDamage(Player player, ushort statValue)
+		{
+			if (player.TryGetModPlayer(out MyPlayer mPlayer))
+			{
+				mPlayer.KiDamage += LevelPlusValuesConfig.Instance.KiDamagePerPoint * statValue;
+			}
+		}
+
+		caller.AddEffect(LevelplusSupportSystem.Stat.Strength,
 			AddDamage,
 			statValue => Language.GetTextValueWith("Mods.RandomModCompat.LevelPlus.AddDamage",
 			new { Amount = (int)(statValue * (LevelPlusValuesConfig.Instance.KiDamagePerPoint * 100)), DamageType = "ki damage" }));
 
-		static void AddCrit(Player player, ushort statValue) => player.GetModPlayer<MyPlayer>().kiCrit += statValue / LevelPlusValuesConfig.Instance.PointsPerKiCrit;
-		LevelplusSupportSystem.AddEffect(LevelplusSupportSystem.Stat.Strength,
+		static void AddCrit(Player player, ushort statValue)
+		{
+			if (player.TryGetModPlayer(out MyPlayer mPlayer))
+			{
+				mPlayer.kiCrit += statValue / LevelPlusValuesConfig.Instance.PointsPerKiCrit;
+			}
+		}
+
+		caller.AddEffect(LevelplusSupportSystem.Stat.Strength,
 			AddCrit,
 			statValue => Language.GetTextValueWith("Mods.RandomModCompat.LevelPlus.AddCrit",
 				new { Amount = statValue / LevelPlusValuesConfig.Instance.PointsPerKiCrit, DamageTypeNoDamage = "ki" }));
 
-		static void AddRegen(Player player, ushort statValue) => player.GetModPlayer<MyPlayer>().kiRegen += statValue / LevelPlusValuesConfig.Instance.PointsPerKiRegen;
-		LevelplusSupportSystem.AddEffect(LevelplusSupportSystem.Stat.Constitution,
+		static void AddRegen(Player player, ushort statValue)
+		{
+			if (player.TryGetModPlayer(out MyPlayer mPlayer))
+			{
+				mPlayer.kiRegen += statValue / LevelPlusValuesConfig.Instance.PointsPerKiRegen;
+			}
+		}
+
+		caller.AddEffect(LevelplusSupportSystem.Stat.Constitution,
 			AddRegen,
 			statValue => Language.GetTextValueWith("Mods.RandomModCompat.LevelPlus.ResourceRegen",
 			new { Amount = statValue / LevelPlusValuesConfig.Instance.PointsPerKiRegen, Resource = "ki" }));

@@ -6,6 +6,7 @@ Some examples of current compatibility:
  - The sheath accessories from Thorium Mod can be worn asymmetrically with Asymmetric Equips.
 
 See the Discussions tab on the Workshop page for a detailed breakdown of compatibility, as well as links to all mods and a planning post.
+** If you're having mysterious issues with Auto Reforge, Dragon Ball Terraria, Level+, Melee Effects+, or Thorium Mod, see the Steam Workshop page! **
 
 Modders:
 If you work on one of the mods this mod adds support for and want to integrate that support directly into your mod, please get in contact!

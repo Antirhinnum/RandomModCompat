@@ -11,7 +11,7 @@
 			AmuletOfManyMinions: "The Amulet of Many Minions: Combat Pets!"
 			AssortedCrazyThings: "Assorted Crazy Things"
 			AsymmetricEquips: "Asymmetric Equipment"
-			AutoReroll: "Auto Reroll"
+			AutoReroll: "Auto Reforge"
 			BalloonsExtended: "Balloons Extended"
 			Bangarang: "Bangarang - A Boomerang Overhaul"
 			BossesAsNPCs: "Bosses as NPCs"
@@ -55,6 +55,23 @@
 		Main:
 		{
 			Name: "Misc. Config"
+			
+			DisableIL:
+			{
+				Label: "Disable IL Edits"
+				Tooltip:
+					'''
+					If enabled, then all compatibility and bug fixes that need IL edits will be disabled.
+					Enable this if you start getting weird bugs or freezes in multiplayer or after a reload.
+					Most IL bugs only happen when mods are reloaded, so before enabling this option, see if your issue
+					still happens if you restart your game / server and enter your world without reloading mods.
+					
+					Enabling this setting will forcibly disable the following support:
+					 - Dragon Ball Terraria / Auto Reforge fix
+					 - Thorium Mod / Melee Effects+ fix
+					 - All Level+ support
+					'''
+			}
 			
 			SupportinatorEnabled:
 			{

@@ -2,6 +2,7 @@
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using MonoMod.RuntimeDetour.HookGen;
+using RandomModCompat.Common.Configs;
 using System;
 using System.Reflection;
 using Terraria.ModLoader;
@@ -32,8 +33,18 @@ internal sealed class DBZAutoReforgeFix : ModSystem
 
 	public override bool IsLoadingEnabled(Mod mod)
 	{
-		return RandomModCompat.SupportEnabled(ModNames.DBZMODPORT, ModNames.AutoReroll)
-			&& ModLoader.TryGetMod(ModNames.DBZMODPORT, out Mod dbz) && dbz.Version <= new Version(0, 3, 3);
+		if (!RandomModCompat.SupportEnabled(ModNames.DBZMODPORT, ModNames.AutoReroll))
+		{
+			return false;
+		}
+
+		if (ModContent.GetInstance<RandomModCompatConfig>().DisableIL)
+		{
+			mod.Logger.Info("Dragon Ball Terraria / Auto Reforge bug fix disabled because IL edits are disabled.");
+			return false;
+		}
+
+		return ModLoader.TryGetMod(ModNames.DBZMODPORT, out Mod dbz) && dbz.Version <= new Version(0, 3, 3) && base.IsLoadingEnabled(mod);
 		// There may or may not be a hotfix for this bug. v0.3.3 (v1.0.9.9) was the latest version this bug is guaranteed to happen on.
 	}
 

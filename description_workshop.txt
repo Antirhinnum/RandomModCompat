@@ -6,6 +6,12 @@ Some examples of current compatibility:[list][*]Many modded bosses now drop Shad
 
 See the [url=https://steamcommunity.com/sharedfiles/filedetails/discussions/2976409348]Discussions tab[/url] for a detailed breakdown of compatibility, as well as links to all mods and a planning post.
 
+[b]If you're experiencing bugs:[/b]
+Go into this mod's "Misc. Config" and check "Disable IL Edits", then restart the game.
+If the issue still happens, report it! A modlist and error log
+If it doesn't, then you're facing an issue with this mod's IL edits. You can keep "Disable IL Edits" on, but doing so disables some support.
+To circumvent this issue, [b]don't reload mods after starting the game[/b]. This will (hopefully) be fixed when the mod ports to 1.4.4, but it's out of my control for now.
+
 Source available on GitHub: https://github.com/Antirhinnum/RandomModCompat
 PRs for new support or localization are always welcome!
 Modders: If you work on one of the mods this mod adds support for and want to integrate that support directly into your mod, please get in contact!

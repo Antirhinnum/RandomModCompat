@@ -22,7 +22,7 @@ internal abstract class ModWithCalls : ModType
 	/// <summary>
 	/// <see langword="true"/> if this caller can be used, <see langword="false"/> otherwise.
 	/// </summary>
-	internal bool Active => ModLoader.HasMod(ModName);
+	internal bool Active => ModLoader.HasMod(ModName) && SupportEnabled();
 
 	public override sealed void Load()
 	{
@@ -32,5 +32,15 @@ internal abstract class ModWithCalls : ModType
 	protected override sealed void Register()
 	{
 		ModTypeLookup<ModWithCalls>.Register(this);
+	}
+
+	/// <summary>
+	/// Allows conditionally blocking support.
+	/// <br/> Returns <see langword="true"/> by default.
+	/// </summary>
+	/// <returns><see langword="true"/> if support is allowed, <see langword="false"/> otherwise.</returns>
+	protected virtual bool SupportEnabled()
+	{
+		return true;
 	}
 }
