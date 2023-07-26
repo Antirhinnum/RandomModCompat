@@ -28,7 +28,7 @@ internal static class SupportConfigBuilder
 	/// <param name="moduleBuilder">The module that this config is defined in.</param>
 	/// <param name="supportedMods">The mods this config should support.</param>
 	/// <returns>The type of the new config. This type is a subclass of <see cref="ModConfig"/></returns>
-	internal static Type Create(ModuleBuilder moduleBuilder, Dictionary<string, string[]> supportedMods)
+	internal static Type Create(ModuleBuilder moduleBuilder, IDictionary<string, ICollection<String>> supportedMods)
 	{
 		// Also AutoLayout and Ansi, but those are default.
 		const TypeAttributes ConfigAttributes = TypeAttributes.Public | TypeAttributes.Sealed;
@@ -80,11 +80,11 @@ internal static class SupportConfigBuilder
 	/// </summary>
 	/// <param name="supportedMods">A map of each base mod to the mods it supports.</param>
 	/// <returns>The nested types, plus their constructors.</returns>
-	private static Dictionary<TypeBuilder, ConstructorBuilder> CreateNestedTypes(Dictionary<string, string[]> supportedMods)
+	private static Dictionary<TypeBuilder, ConstructorBuilder> CreateNestedTypes(IDictionary<string, ICollection<string>> supportedMods)
 	{
 		Dictionary<TypeBuilder, ConstructorBuilder> builders = new(supportedMods.Count);
 
-		foreach ((string baseMod, string[] supportMods) in supportedMods)
+		foreach ((string baseMod, ICollection<string> supportMods) in supportedMods)
 		{
 			(TypeBuilder builder, ConstructorBuilder constructor) = CreateNestedType(baseMod, supportMods);
 			builders.Add(builder, constructor);
@@ -99,7 +99,7 @@ internal static class SupportConfigBuilder
 	/// <param name="baseMod">The mod to create the type for.</param>
 	/// <param name="supportMods">The supported mods.</param>
 	/// <returns>The created type.</returns>
-	private static (TypeBuilder, ConstructorBuilder) CreateNestedType(string baseMod, string[] supportMods)
+	private static (TypeBuilder, ConstructorBuilder) CreateNestedType(string baseMod, ICollection<string> supportMods)
 	{
 		string typeName = baseMod + "SupportConfig";
 		const TypeAttributes NestedConfigAttributes = TypeAttributes.NestedPublic | TypeAttributes.Sealed | TypeAttributes.BeforeFieldInit;
@@ -110,7 +110,7 @@ internal static class SupportConfigBuilder
 
 		// Fields
 		Type boolType = typeof(bool);
-		List<FieldBuilder> fields = new(supportMods.Length);
+		List<FieldBuilder> fields = new(supportMods.Count);
 		foreach (string supportMod in supportMods)
 		{
 			FieldBuilder field = builder.DefineField(supportMod, boolType, FieldAttributes.Public);

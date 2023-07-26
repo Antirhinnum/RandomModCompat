@@ -1,7 +1,29 @@
-﻿Checklist:
+﻿Adding a New Mod:
+ - Add the internal name to ModNames.
+ - Add the display name to the localization file.
+ - If types from the mod will be referenced, add the internal name to build.txt.
 
-[ ] Add to the config & ModNames.
-[ ] Add new mod names to the localization file.
-[ ] Add new support mod to description.txt.
-[ ] Implement the support.
-[ ] Add details about the support to the appropriate doc.
+
+Adding a New API:
+ - Make a new ModAPI in Common/APIs. Naming scheme is "{ModName}API".
+ - All created types should be nested within the API type, in a partial class named "{ModName}API.Types".
+ - If a system is needed to implement the API, it should go in a partial class named "{ModName}API.System".
+
+
+Adding New Support:
+ - Make a new CrossModModule<T> in Content/Modules. Naming scheme is "{BaseMod}{SupportMod}Module".
+ - <T> should be the API of SupportMod, overridden CrossModName should be ModNames.{BaseMod}.
+ - Add a basic listing of the support to description.txt. Base mods starts with "-", support mods with "+". The list is in alphabetical order.
+ - Adds a more detailed description of the support to an appropriate document in Docs/. Make a new doc if needed.
+
+
+Adding a New Doc:
+ - Name should be the display name of the mod or something similar.
+ - Header Format:
+
+[b]Mod Link:[/b] {Link to mod's Steam Workshop page}
+
+ - Format for each supported mod, alphabetical order:
+
+[h1][url={Link to supported mod's Steam Workshop page}]{Supported Mod display name}:[/url][/h1]
+{Desc. of support}

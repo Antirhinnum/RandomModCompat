@@ -23,3 +23,12 @@ Conquest                Closed      https://steamcommunity.com/sharedfiles/filed
 Other:
 Pylons Prevent Evil		Closed?		https://steamcommunity.com/sharedfiles/filedetails/?id=2820025575	Check in-game.
 Useful NPCs				Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=2956897719	Check.
+
+
+	// TODO: Consolaria / Bosses as NPCs?
+	// TODO: Consolaria / MoR typing
+	// TODO: Consolaria / AoMM support
+	// TODO: Liber / AoMM for the Jackalope
+	// TODO: Liber / MoR typing
+	// TODO: Liber / TerraTyping
+	// TODO: Thorium / Liber pedestal support
