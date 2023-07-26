@@ -12,61 +12,55 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AssortedCrazyThings">
-      <HintPath>lib\AssortedCrazyThings.dll</HintPath>
-    </Reference>
-    <Reference Include="AutoReroll">
-      <HintPath>lib\AutoReroll.dll</HintPath>
+      <HintPath>..\ModAssemblies\AssortedCrazyThings_v1.4.3.dll</HintPath>
     </Reference>
     <Reference Include="BalloonsExtended">
-      <HintPath>lib\BalloonsExtended.dll</HintPath>
+      <HintPath>..\ModAssemblies\BalloonsExtended_v1.5.dll</HintPath>
     </Reference>
     <Reference Include="Bangarang">
-      <HintPath>lib\Bangarang.dll</HintPath>
+      <HintPath>..\ModAssemblies\Bangarang_v1.1.2.dll</HintPath>
     </Reference>
     <Reference Include="CalamityMod">
-      <HintPath>lib\CalamityMod.dll</HintPath>
+      <HintPath>..\ModAssemblies\CalamityMod_v2.0.2.3.dll</HintPath>
     </Reference>
     <Reference Include="ClickerClass">
-      <HintPath>lib\ClickerClass.dll</HintPath>
+      <HintPath>..\ModAssemblies\ClickerClass_v1.3.3.2.dll</HintPath>
     </Reference>
     <Reference Include="Consolaria">
-      <HintPath>lib\Consolaria.dll</HintPath>
+      <HintPath>..\ModAssemblies\Consolaria_v2.0.0.6.dll</HintPath>
     </Reference>
     <Reference Include="DBZMODPORT">
-      <HintPath>lib\DBZMODPORT.dll</HintPath>
+      <HintPath>..\ModAssemblies\DBZMODPORT_v0.3.3.dll</HintPath>
     </Reference>
     <Reference Include="FishingReborn">
-      <HintPath>lib\FishingReborn.dll</HintPath>
+      <HintPath>..\ModAssemblies\FishingReborn_v1.0.1.3.dll</HintPath>
     </Reference>
     <Reference Include="ImprovedTorches">
-      <HintPath>lib\ImprovedTorches.dll</HintPath>
+      <HintPath>..\ModAssemblies\ImprovedTorches_v1.3.1.dll</HintPath>
     </Reference>
     <Reference Include="ItReallyMustBe">
-      <HintPath>lib\ItReallyMustBe.dll</HintPath>
+      <HintPath>..\ModAssemblies\ItReallyMustBe_v1.40.dll</HintPath>
     </Reference>
     <Reference Include="levelplus">
-      <HintPath>lib\levelplus.dll</HintPath>
+      <HintPath>..\ModAssemblies\levelplus_v1.1.4.dll</HintPath>
     </Reference>
     <Reference Include="Liber">
-      <HintPath>lib\Liber.dll</HintPath>
+      <HintPath>..\ModAssemblies\Liber_v0.4.1.dll</HintPath>
     </Reference>
     <Reference Include="Mask">
-      <HintPath>lib\Mask.dll</HintPath>
+      <HintPath>..\ModAssemblies\Mask_v0.14.dll</HintPath>
     </Reference>
     <Reference Include="MeleeEffects">
-      <HintPath>lib\MeleeEffects.dll</HintPath>
+      <HintPath>..\ModAssemblies\MeleeEffects_v1.0.5.1.dll</HintPath>
     </Reference>
     <Reference Include="PrimeRework">
-      <HintPath>lib\PrimeRework.dll</HintPath>
-    </Reference>
-    <Reference Include="Redemption">
-      <HintPath>lib\Redemption.dll</HintPath>
+      <HintPath>..\ModAssemblies\PrimeRework_v3.3.dll</HintPath>
     </Reference>
     <Reference Include="SlugNPCs">
-      <HintPath>lib\SlugNPCs.dll</HintPath>
+      <HintPath>..\ModAssemblies\SlugNPCs_v0.1.dll</HintPath>
     </Reference>
     <Reference Include="ThoriumMod">
-      <HintPath>lib\ThoriumMod.dll</HintPath>
+      <HintPath>..\ModAssemblies\ThoriumMod_v1.7.0.3.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
