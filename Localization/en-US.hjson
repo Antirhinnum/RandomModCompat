@@ -184,6 +184,10 @@
 		AddCrit: "  +{Amount}% {DamageTypeNoDamage} crit chance"
 		ResourceRegen: "  +{Amount} {Resource} regen"
 	}
+	Liber:
+	{
+		GemPedestalItem: "{0} Relic"
+	}
 	PrimeRework:
 	{
 		ROR2:
