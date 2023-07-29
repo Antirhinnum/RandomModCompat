@@ -1,0 +1,22 @@
+﻿[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2747380524
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955]Bangarang:[/url][/h1]
+The following boomerangs now function properly with Bangarang's accessories:[list][*]Femurang
+[*]Frost Frizbee
+[*]Nine Lives*
+[*]Selenian Blades[/list]
+
+* [i]Nine Lives works in general, but adding more than one extra boomerang isn't guaranteed to work.[/i]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2689434541]Bosses as NPCs:[/url][/h1]
+[list][*]The Eye of Cthulhu now sells the Eye Sored, Eye Rifle, The Eyestalk, Eyeball Staff, and Eyeball Hook.
+[*]The Lunatic Cultist now sells the Lunatic Spear of Fire, Lunatic Bow of Ice, Lunatic Tome of Ancient Light, Lunatic Staff of Lightning, and Mysterious Cultist Hood.[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347]Magic Storage:[/url][/h1]
+The Ancient Husk, Overloaded Scandrone, and Ultimate Pain now drop Shadow Diamonds on first defeats.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2788731718]RoR 2 Health Bars:[/url][/h1]
+The Ancient Husk, Overloaded Scandrone, and Ultimate Pain now have custom titles.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium Mod:[/url][/h1]
+The Vaporiser now gain a damage buff when wearing Thorium's Conduit armor set.

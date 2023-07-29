@@ -1,0 +1,28 @@
+﻿[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2836679312
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equipment:[/url][/h1]
+The following items can now be worn asymmetrically:[list]
+[*]Amber Idol
+[*]Amethyst Idol
+[*]Diamond Idol
+[*]Emerald Idol
+[*]Mourning Torch
+[*]Prismatic Idol
+[*]Ruby Idol
+[*]Rune of Horus
+[*]Sapphire Idol
+[*]Sun Priest's Torch
+[*]Topaz Idol
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955]Bangarang:[/url][/h1]
+The Prototype Secrecy now functions properly with Bangarang's accessories.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2689434541]Bosses as NPCs:[/url][/h1]
+The Martian Saucer now sells the Martian Beamer.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2694959829]Fishing Reborn:[/url][/h1]
+The Wyvern Moray is now integrated into Fishing Reborn's minigame.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium Mod:[/url][/h1]
+The Martian Beamer now gain a damage buff when wearing Thorium's Conduit armor set.

@@ -87,7 +87,8 @@ internal sealed class Supportinator : ModSystem
 		foreach (Mod mod in ModLoader.Mods)
 		{
 			string modName = mod.Name;
-			if (supportMods.All(m => RandomModCompat.SupportEnabled(modName, m, ignoreEnabledMod: true)))
+			// Bangarang should't need Bangarang support.
+			if (supportMods.Where(s => s != modName).All(m => RandomModCompat.SupportEnabled(modName, m, ignoreEnabledMod: true)))
 			{
 				continue;
 			}
@@ -108,7 +109,7 @@ internal sealed class Supportinator : ModSystem
 			{
 				foreach (string supportMod in supportMods)
 				{
-					if (!RandomModCompat.SupportEnabled(modName, supportMod, ignoreEnabledMod: true))
+					if (modName != supportMod && !RandomModCompat.SupportEnabled(modName, supportMod, ignoreEnabledMod: true))
 					{
 						Mod.Logger.Debug($"\t\tMissing {supportMod} support!");
 					}

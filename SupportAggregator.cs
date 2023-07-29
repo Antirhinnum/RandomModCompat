@@ -32,7 +32,9 @@ public static class SupportAggregator
 		{ ModNames.ClickerClass, new[] { ModNames.ColoredDamageTypes, ModNames.BossesAsNPCs, ModNames.RecipeBrowser, ModNames.ThoriumMod, ModNames.Wikithis } },
 		{ ModNames.Consolaria, new[] { ModNames.BossChecklist, ModNames.Fargowiltas } },
 		{ ModNames.ItReallyMustBe, new[] { ModNames.BossChecklist} },
+		{ ModNames.OrchidMod, new[] { ModNames.BossChecklist, ModNames.Census, ModNames.ThoriumMod } },
 		{ ModNames.PrimeRework, new[] { ModNames.BossChecklist, ModNames.CalamityMod, ModNames.FargowiltasSouls } },
+		{ ModNames.StormDiversMod, new[] { ModNames.BossChecklist, ModNames.BossesAsNPCs, ModNames.ThoriumMod } },
 		{ ModNames.ThoriumMod, new[] { ModNames.Bangarang, ModNames.BetterTaxes, ModNames.BossChecklist, ModNames.BossesAsNPCs, ModNames.CalamityMod, ModNames.Census, ModNames.ColoredDamageTypes, ModNames.Fargowiltas, ModNames.HEROsMod, ModNames.RecipeBrowser, ModNames.SummonersAssociation, /*ModNames.YABHB,*/  ModNames.Wikithis, ModNames.WWeaponScaling } }
 	};
 

@@ -53,11 +53,23 @@
     <Reference Include="MeleeEffects">
       <HintPath>..\ModAssemblies\MeleeEffects_v1.0.5.1.dll</HintPath>
     </Reference>
+    <Reference Include="OrchidMod">
+      <HintPath>..\ModAssemblies\OrchidMod_v1.4.0.8.dll</HintPath>
+    </Reference>
     <Reference Include="PrimeRework">
       <HintPath>..\ModAssemblies\PrimeRework_v3.3.dll</HintPath>
     </Reference>
     <Reference Include="SlugNPCs">
       <HintPath>..\ModAssemblies\SlugNPCs_v0.1.dll</HintPath>
+    </Reference>
+    <Reference Include="StormDiversMod">
+      <HintPath>..\ModAssemblies\StormDiversMod_v2.3.6.1.dll</HintPath>
+    </Reference>
+    <Reference Include="TheConfectionRebirth">
+      <HintPath>..\ModAssemblies\TheConfectionRebirth_v0.18.5.dll</HintPath>
+    </Reference>
+    <Reference Include="TheDepths">
+      <HintPath>..\ModAssemblies\TheDepths_v0.5.2.dll</HintPath>
     </Reference>
     <Reference Include="ThoriumMod">
       <HintPath>..\ModAssemblies\ThoriumMod_v1.7.0.3.dll</HintPath>

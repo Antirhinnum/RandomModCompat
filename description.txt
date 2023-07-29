@@ -3,7 +3,7 @@ Assorted Mod Compatibility adds a lot of compatibility between several mods. Sup
 Some examples of current compatibility:
  - Many modded bosses now drop Shadow Diamonds if Magic Storage is enabled.
  - Mech Bosses Rework's new mech bosses now draw Strange Plating if Thorium Mod is enabled.
- - The sheath accessories from Thorium Mod can be worn asymmetrically with Asymmetric Equips.
+ - The sheath accessories from Thorium Mod can be worn asymmetrically with Asymmetric Equipment.
 
 See the Discussions tab on the Workshop page for a detailed breakdown of compatibility, as well as links to all mods and a planning post.
 ** If you're having mysterious issues with Auto Reforge, Dragon Ball Terraria, Level+, Melee Effects+, or Thorium Mod, see the Steam Workshop page! **
@@ -14,17 +14,19 @@ Source available on GitHub (this mod's homepage). PRs for new support or localiz
 
 Current Compatibility:
  - Assorted Crazy Things
- + Asymmetric Equips
+ + Asymmetric Equipment
  + Bangarang
  + Magic Storage
  + RoR 2 Health Bars
  - Balloons Extended
- + Asymmetric Equips
+ + Asymmetric Equipment
  - Bangarang
+ + Bosses as NPCs
  + TerraTyping
+ + Thorium Mod
  + W1K's Weapon Scaling
  - Calamity Mod
- + Asymmetric Equips
+ + Asymmetric Equipment
  + Atmospheric Torches
  + Bangarang
  + Enhanced Buff Display
@@ -32,19 +34,32 @@ Current Compatibility:
  + Thorium Mod
  + Universal Crafter
  - The Clicker Class
- + Asymmetric Equips
+ + Asymmetric Equipment
  + Fishing Reborn
  + Level+
+ - Confection REBAKED (Hallow Alternative)
+ + Atmospheric Torches
+ + Bangarang
+ + Bosses as NPCs
+ + Enhanced Buff Display
+ + Fishing Reborn
+ + Universal Crafter
  - Consolaria
- + Asymmetric Equips
+ + Asymmetric Equipment
  + Item Check Blacklist Lib
  + Magic Storage
  + RoR 2 Health Bars
  + Summoner's Association
  + TerraTyping
  + Thorium Mod
+ - The Depths (Hell Alternative)
+ + Asymmetric Equipment
+ + Atmospheric Torches
+ + Bangarang
+ + Liber Creaturarum
+ + Universal Crafter
  - Dragon Ball Terraria 1.0.9.9 Ported
- + Asymmetric Equips
+ + Asymmetric Equipment
  + Auto Reforge
  + Level+
  + Universal Crafter
@@ -55,13 +70,13 @@ Current Compatibility:
  + TerraTyping
  + W1K's Weapon Scaling
  - Liber Creaturarum
- + Asymmetric Equips
+ + Asymmetric Equipment
  + Atmospheric Torches
  + Thorium Mod
  + Universal Crafter
  + W1K's Weapon Scaling
  - Mask
- + Asymmetric Equips
+ + Asymmetric Equipment
  + Census
  - Mech Boss Rework
  + Bangarang
@@ -72,11 +87,23 @@ Current Compatibility:
  + TerraTyping
  + Thorium Mod
  + W1K's Weapon Scaling
+ - Orchid Mod
+ + Asymmetric Equipment
+ + Bangarang
+ + Bosses as NPCs
+ + Fishing Reborn
+ + Thorium Mod
  - Slug Town NPCs
  + Census
  + Dialogue Panel Rework
+ - Storm's Additions Mod:
+ + Bangarang
+ + Bosses as NPCs
+ + Magic Storage
+ + RoR 2 Health Bars
+ + Thorium Mod
  - Thorium Mod
- + Asymmetric Equips
+ + Asymmetric Equipment
  + Atmospheric Torches
  + Dialogue Panel Rework
  + Enhanced Buff Display
@@ -84,6 +111,7 @@ Current Compatibility:
  + Gold Dust Turns Everything Into Gold
  + Item Check Blacklist Lib
  + Level+
+ + Liber Creaturarum
  + Magic Storage
  + Melee Effects+
  + Rescue Fairies

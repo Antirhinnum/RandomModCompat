@@ -31,4 +31,6 @@ Useful NPCs				Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=29
 	// TODO: Liber / AoMM for the Jackalope
 	// TODO: Liber / MoR typing
 	// TODO: Liber / TerraTyping
-	// TODO: Thorium / Liber pedestal support
+
+ - Bosses as NPCs / Asymmetric Equips (slime gloves)
+ - Magic Storage / Universal Crafter (access)

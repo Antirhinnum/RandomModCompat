@@ -1,6 +1,6 @@
 [b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416
 
-[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equipment:[/url][/h1]
 The following items can now be worn asymmetrically:[list]
 [*]Amber Ring
 [*]Amethyst Ring
@@ -199,6 +199,9 @@ The following items are blacklisted on the Item Checklist:[list]
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2600460955]Level+:[/url][/h1]
 Radiant and symphonic damage can now be boosted by INT and CHA respectively.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2794289345]Liber Creaturarum:[/url][/h1]
+Relics for Aquamarine and Opal now exist.
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347]Magic Storage:[/url][/h1]
 All Thorium Mod bosses now drop Shadow Diamonds.

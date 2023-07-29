@@ -1,7 +1,14 @@
 [b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955
 
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2689434541]Bosses as NPCs:[/url][/h1]
+[list][*]The Empress of Light now sells the Chromatic Crux.
+[*]The Martian Saucer now sells the Rangaboom.[/list]
+
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2940607585]TerraTyping:[/url][/h1]
 All boomerangs added by this mod, plus the Spectral Amulet and Glaive Lord's Gift, now have appropriate types.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium Mod:[/url][/h1]
+The Rangaboom now gain a damage buff when wearing Thorium's Conduit armor set.
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2571636086]W1K's Weapon Scaling[/url][/h1]
 All boomerangs added by this mod now have appropriate tiers.

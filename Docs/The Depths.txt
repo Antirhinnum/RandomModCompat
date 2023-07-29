@@ -1,0 +1,36 @@
+﻿[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2882567428
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equipment:[/url][/h1]
+The following items can now be worn asymmetrically:[list]
+[*]Aqua Glove
+[*]Stone Rose
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2817496179]Atmospheric Torches:[/url][/h1]
+The following torches now flicker when placed:[list]
+[*]Black Torch
+[*]Geo Torch
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955]Bangarang:[/url][/h1]
+The Shaderang now functions properly with Bangarang's accessories.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2794289345]Liber Creaturarum:[/url][/h1]
+An Onyx Relic now exist.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2917548365]Universal Crafter:[/url][/h1]
+The following stations are automatically added to the Universal Crafter after a condition:
+[table]
+	[tr]
+		[th]Station[/th]
+		[th]Condition[/th]
+	[/tr]
+	[tr]
+		[td]Core Builder[/td]
+		[td]Post-evil boss[/td]
+	[/tr]
+	[tr]
+		[td]Gemforge[/td]
+		[td]Post-evil boss[/td]
+	[/tr]
+[/table]

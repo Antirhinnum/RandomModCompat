@@ -1,6 +1,6 @@
 [b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2828604929
 
-[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equips:[/url][/h1]
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equipment:[/url][/h1]
 The following items can now be worn asymmetrically:[list]
 [*]Battle Kit
 [*]Blue Scouter

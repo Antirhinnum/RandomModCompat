@@ -1,4 +1,5 @@
-﻿using RandomModCompat.Core;
+﻿using FishingReborn.Custom.Interfaces;
+using RandomModCompat.Core;
 using System;
 using Terraria;
 using Terraria.DataStructures;
@@ -20,6 +21,12 @@ internal sealed partial class FishingRebornAPI : ModAPI
 	#endregion Utility
 
 	#region Custom
+
+	/// <param name="catchPool">Should be an <see cref="ICatchPool"/>.</param>
+	internal void AddPool(object catchPool)
+	{
+		FishingRebornSupportSystem.TryAddPool_Internal(catchPool);
+	}
 
 	internal void AddToPool(string poolName, int itemId, float catchWeight, params object[] conditions)
 	{

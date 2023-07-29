@@ -32,14 +32,18 @@
 			MagicStorage: "Magic Storage"
 			Mask: "Mask"
 			MeleeEffects: "Melee Effects+"
+			OrchidMod: "Orchid Mod"
 			OverpoweredGoldDust: "Gold Dust Turns Everything Into Gold"
 			PrimeRework: "Mech Bosses Rework"
 			Redemption: "Mod of Redemption"
 			RescueFairies: "Rescue Fairies"
 			ROR2HealthBars: "RoR 2 Health Bars"
 			SlugNPCs: "Slug Town Pets"
+			StormDiversMod: "Storm's Additions Mod"
 			SummonersAssociation: "Summoners Association"
 			TerraTyping: "TerraTyping"
+			TheConfectionRebirth: "Confection REBAKED (Hallow Alternative)"
+			TheDepths: "The Depths (Hell Alternative)"
 			ThoriumMod: "Thorium Mod"
 			UniversalCraft: "Universal Crafter"
 			WWeaponScaling: "W1K's Weapon Scaling"
@@ -200,6 +204,24 @@
 			Terminator:
 			{
 				Description: "Mechanical simulacrum"
+			}
+		}
+	}
+	StormDiversMod:
+	{
+		ROR2:
+		{
+			AridBoss:
+			{
+				Description: "Immortal prisoner"
+			}
+			StormBoss:
+			{
+				Description: "Failed experiment"
+			}
+			ThePainBoss:
+			{
+				Description: "The pain"
 			}
 		}
 	}

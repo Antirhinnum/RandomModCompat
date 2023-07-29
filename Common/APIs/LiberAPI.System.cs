@@ -25,6 +25,7 @@ internal sealed partial class LiberAPI
 	internal sealed class GemPedestal : ModType
 	{
 		[Autoload(false)]
+		[JITWhenModsEnabled(ModNames.Liber)]
 		private sealed class GemPedestalItem : ModItem
 		{
 			private const string _name = "Mods.RandomModCompat.Liber.GemPedestalItem";

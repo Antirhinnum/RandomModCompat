@@ -1,0 +1,34 @@
+﻿[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2601885797
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2817496179]Atmospheric Torches:[/url][/h1]
+The following torches now flicker when placed:[list]
+[*]Confection Torch
+[*]Sherbet Torch
+[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955]Bangarang:[/url][/h1]
+The following boomerangs now function properly with Bangarang's accessories:[list][*]Baker's Dozen
+[*]Bear Claw[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2689434541]Bosses as NPCs:[/url][/h1]
+[list][*]All four Mechanical Boss NPCs now sell Neapolinite Bars.
+[*]The Wall of Flesh now sells the Grand Slammer.[/list]
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2863092349]Enhanced Buff Display:[/url][/h1]
+All four buffs granted by the Neapolinite armor set are now stacked.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2694959829]Fishing Reborn:[/url][/h1]
+The Fairy Tooth and both Confection crates are now integrated into Fishing Reborn's minigame.
+
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2917548365]Universal Crafter:[/url][/h1]
+The following stations are automatically added to the Universal Crafter after a condition:
+[table]
+	[tr]
+		[th]Station[/th]
+		[th]Condition[/th]
+	[/tr]
+	[tr]
+		[td]Heaven Forge[/td]
+		[td]Hardmode[/td]
+	[/tr]
+[/table]
