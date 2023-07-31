@@ -224,6 +224,9 @@ Additionally, all normal Mimics and Biome Mimics can also be tracked.
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2788731718]RoR 2 Health Bars:[/url][/h1]
 All Thorium Mod bosses now have custom titles.
 
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2882567428]The Depths (Hell Alternative):[/url][/h1]
+Small patches of Opal and Aquamarine Shalestone can now appear in The Depths.
+
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2917548365]Universal Crafter:[/url][/h1]
 The following stations are automatically added to the Universal Crafter after a condition:
 [table]

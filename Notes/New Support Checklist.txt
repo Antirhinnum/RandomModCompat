@@ -14,6 +14,7 @@ Adding New Support:
  - Make a new CrossModModule<T> in Content/Modules. Naming scheme is "{BaseMod}{SupportMod}Module".
  - <T> should be the API of SupportMod, overridden CrossModName should be ModNames.{BaseMod}.
  - Add a basic listing of the support to description.txt. Base mods starts with "-", support mods with "+". The list is in alphabetical order.
+ - Add a basic listing of the support to changelog.txt, then update the Next Update changelog on Steam.
  - Adds a more detailed description of the support to an appropriate document in Docs/. Make a new doc if needed.
 
 

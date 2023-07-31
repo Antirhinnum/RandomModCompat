@@ -34,3 +34,7 @@ Useful NPCs				Closed		https://steamcommunity.com/sharedfiles/filedetails/?id=29
 
  - Bosses as NPCs / Asymmetric Equips (slime gloves)
  - Magic Storage / Universal Crafter (access)
+
+ - Thorium API: Support for gem tiles (Geode & Vampire Pickaxes)
+ - Thorium API: Support for sand tiles (Coral Pickaxe)
+ - Thorium API: Mineral Launcher (need to handle custom shrapnel somehow)

@@ -116,4 +116,5 @@ Current Compatibility:
  + Melee Effects+
  + Rescue Fairies
  + RoR 2 Health Bars
+ + The Depths (Hell Alternative)
  + Universal Crafter
