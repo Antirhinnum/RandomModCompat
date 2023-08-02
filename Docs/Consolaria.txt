@@ -8,6 +8,8 @@ The following items can now be worn asymmetrically:[list]
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2921706690]Item Check Blacklist Lib:[/url][/h1]
 The following items are blacklisted on the Item Checklist:[list]
 [*]Holy Hand Grenade 2
+[*]Spectral Arrow
+[*]Vulcan Bolt
 [/list]
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347]Magic Storage:[/url][/h1]

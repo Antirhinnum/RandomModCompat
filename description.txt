@@ -92,6 +92,7 @@ Current Compatibility:
  + Bangarang
  + Bosses as NPCs
  + Fishing Reborn
+ + Item Check Blacklist Lib
  + Thorium Mod
  - Slug Town NPCs
  + Census

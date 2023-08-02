@@ -87,6 +87,16 @@
 					Forcibly enabled if the mod is running in debug mode.
 					'''
 			}
+
+			OutputModpack:
+			{
+				Label: "Log Supported Modlist"
+				Tooltip:
+					'''
+					If enabled, a list of all mods this mod can possible support will be output into the logs in the format of enabled.json.
+					This will not include dependencies!
+					'''
+			}
 		}
 		
 		LevelPlus:

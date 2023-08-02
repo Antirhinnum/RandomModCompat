@@ -24,5 +24,26 @@ The Martian Saucer now sells the Martian Beamer.
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2694959829]Fishing Reborn:[/url][/h1]
 The Wyvern Moray is now integrated into Fishing Reborn's minigame.
 
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2921706690]Item Check Blacklist Lib:[/url][/h1]
+The following items are blacklisted on the Item Checklist:[list]
+[*]Air Vial
+[*]Alchemist Test Accessory
+[*]Coper Key
+[*]Dark Vial
+[*]Fire Vial
+[*]Gambler Test Accessory
+[*]Gambler Test Card
+[*]Gold Fan
+[*]Guardian Test Accessory (both)
+[*]Herald of Frost
+[*]Light Vial
+[*]Nature Vial
+[*]Playing Card : RESET
+[*]Searing Onslaught
+[*]Square Minecart
+[*]Water Vial
+[*]Wooden Tekko
+[/list]
+
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416]Thorium Mod:[/url][/h1]
 The Martian Beamer now gain a damage buff when wearing Thorium's Conduit armor set.

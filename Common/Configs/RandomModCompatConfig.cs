@@ -20,4 +20,9 @@ public sealed class RandomModCompatConfig : ModConfig
 	[Tooltip(_localizationPrefix + nameof(SupportinatorEnabled) + ".Tooltip")]
 	[DefaultValue(false)]
 	public bool SupportinatorEnabled;
+
+	[Label(_localizationPrefix + nameof(OutputModpack) + ".Label")]
+	[Tooltip(_localizationPrefix + nameof(OutputModpack) + ".Tooltip")]
+	[DefaultValue(false)]
+	public bool OutputModpack;
 }

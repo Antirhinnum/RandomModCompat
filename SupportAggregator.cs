@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Config;
 using Terraria.ModLoader.Core;
@@ -150,6 +151,30 @@ public static class SupportAggregator
 		}
 
 		return Convert.ToBoolean(field.GetValue(_baseModToField[baseMod].GetValue(_config)));
+	}
+
+	internal static string CreateTestingEnabledList()
+	{
+		IEnumerable<string> mods = AddedSupport.SelectMany(pair => pair.Value)
+			.Concat(AddedSupport.Keys)
+			.Append(nameof(RandomModCompat)) // Include this mod in the list
+			.Distinct();
+
+		StringBuilder builder = new();
+		builder.Append("[\r\n");
+		foreach (string mod in mods)
+		{
+			builder.Append("  \"");
+			builder.Append(mod);
+			builder.Append('"');
+			if (mod != nameof(RandomModCompat)) // Guaranteed to be the last element
+			{
+				builder.Append(',');
+			}
+			builder.Append("\r\n");
+		}
+		builder.Append(']');
+		return builder.ToString();
 	}
 
 	#region Super Early Hook

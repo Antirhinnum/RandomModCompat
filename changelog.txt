@@ -1,8 +1,10 @@
 [list]
 [*]Added support between Bangarang and the following mods: Bosses as NPCs; Thorium Mod.
-[*]Added support between Orchid Mod and the following mods: Asymmetric Equips; Bangarang; Bosses as NPCs; Fishing Reborn; Thorium Mod.
+[*]Added support between Orchid Mod and the following mods: Asymmetric Equips; Bangarang; Bosses as NPCs; Fishing Reborn; Item Check Blacklist Lib; Thorium Mod.
 [*]Added support between Storm's Additions Mod and the following mods: Bangarang; Bosses as NPCs; Magic Storage; RoR 2 Health Bars; Thorium Mod.
 [*]Added support between Confection REBAKED (Hallow Alternative) and the following mods: Bangarang; Enhanced Buff Display; Bosses as NPCs; Fishing Reborn; Atmospheric Torches; Universal Crafter.
 [*]Added support between The Depths (Hell Alternative) and the following mods: Asymmetric Equips; Bangarang; Atmospheric Torches; Liber Creaturarum; Universal Crafter.
 [*]Added support between Thorium Mod and the following mods: Liber Creaturarum; The Depths (Hell Alternative).
+[*]Updated support between Consolaria and the following mods: Item Check Blacklist Lib.
+[*]Updated support between Thorium Mod and the following mods: Item Check Blacklist Lib.
 [/list]

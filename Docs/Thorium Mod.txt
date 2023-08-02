@@ -197,6 +197,8 @@ The following items are blacklisted on the Item Checklist:[list]
 [*]Viscount Requirement
 [/list]
 
+Additionally, any removed items are also blacklisted.
+
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2600460955]Level+:[/url][/h1]
 Radiant and symphonic damage can now be boosted by INT and CHA respectively.
 

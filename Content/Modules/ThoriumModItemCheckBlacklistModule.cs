@@ -1,5 +1,6 @@
 ﻿using RandomModCompat.Common.APIs;
 using RandomModCompat.Core;
+using System.Linq;
 using Terraria.ModLoader;
 using ThoriumMod.Items.Misc;
 using ThoriumMod.Items.Tracker;
@@ -52,5 +53,9 @@ internal sealed class ThoriumModItemCheckBlacklistModule : CrossModModule<ItemCh
 			ModContent.ItemType<LichRequirement2>(),
 			ModContent.ItemType<LichRequirement3>()
 			);
+		API.Add(CrossMod.GetContent<RemovedItem>().Select(Selector).ToArray());
 	}
+
+	// JIT issues
+	private static int Selector(RemovedItem i) => i.Type;
 }
