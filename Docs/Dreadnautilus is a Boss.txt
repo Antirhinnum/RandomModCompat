@@ -1,6 +1,7 @@
 [b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2762501456
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2689434541]Bosses as NPCs:[/url][/h1]
+[b]1.4.3 only: Intrinsic in 1.4.4.[/b]
 The following items are now sold by the Dreadnautilus town NPC:[list]
 [*]Blood Bait (if enabled in the mod's config)
 [*]Dread Pistol

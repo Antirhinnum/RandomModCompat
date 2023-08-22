@@ -9,6 +9,7 @@ The following boomerangs now function properly with Bangarang's accessories:[lis
 * [i]Nine Lives works in general, but adding more than one extra boomerang isn't guaranteed to work.[/i]
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2689434541]Bosses as NPCs:[/url][/h1]
+[b]1.4.3 only: Intrinsic in 1.4.4.[/b]
 [list][*]The Eye of Cthulhu now sells the Eye Sored, Eye Rifle, The Eyestalk, Eyeball Staff, and Eyeball Hook.
 [*]The Lunatic Cultist now sells the Lunatic Spear of Fire, Lunatic Bow of Ice, Lunatic Tome of Ancient Light, Lunatic Staff of Lightning, and Mysterious Cultist Hood.[/list]
 

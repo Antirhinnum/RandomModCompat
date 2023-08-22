@@ -62,6 +62,7 @@ The following torches now flicker when placed:[list]
 [/list]
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563815443]Dialogue Panel Rework:[/url][/h1]
+[b]1.4.3 only: Intrinsic in 1.4.4.[/b]
 The following NPCs mave modified button icons:[list]
 [*]Cobbler
 [*]Confused Zombie
@@ -206,6 +207,7 @@ Radiant and symphonic damage can now be boosted by INT and CHA respectively.
 Relics for Aquamarine and Opal now exist.
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347]Magic Storage:[/url][/h1]
+[b]1.4.3 only: Intrinsic in 1.4.4.[/b]
 All Thorium Mod bosses now drop Shadow Diamonds.
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2966457992]Melee Effects+:[/url][/h1]

@@ -19,6 +19,7 @@ The following items can now be worn asymmetrically:[list]
 The Prototype Secrecy now functions properly with Bangarang's accessories.
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2689434541]Bosses as NPCs:[/url][/h1]
+[b]1.4.3 only: Intrinsic in 1.4.4.[/b]
 The Martian Saucer now sells the Martian Beamer.
 
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2694959829]Fishing Reborn:[/url][/h1]
