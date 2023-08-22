@@ -82,4 +82,35 @@ internal sealed partial class BossesAsNPCsAPI
 		WithDiv,
 		WithDivAndMulti
 	}
+
+#if !TML_2022_09
+	internal enum ConditionType
+	{
+		TownNPCsCrossModSupport,
+		SellExtraItems,
+		GoblinSellInvasionItems,
+		PirateSellInvasionItems,
+		IsNotNpcShimmered,
+		Expert,
+		Master,
+		DaytimeEoLDefated,
+		DownedBetsy,
+		DownedDungeonGuardian,
+		DownedDarkMage,
+		DownedOgre,
+		DownedGoblinWarlock,
+		DownedMothron,
+		DownedDreadnautilus,
+		DownedEaterOfWorlds,
+		DownedBrainOfCthulhu,
+		DownedWallOfFlesh,
+		RescuedWizard,
+		UnlockOWMusicOrDrunkWorld,
+		CorruptionOrHardmode,
+		CrimsonOrHardmode,
+		UndergroundCavernsOrHardmode,
+		HallowOrCorruptionOrCrimson,
+		InIceAndHallowOrCorruptionOrCrimson
+	}
+#endif
 }

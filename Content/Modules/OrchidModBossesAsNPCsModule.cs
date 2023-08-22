@@ -1,4 +1,6 @@
-﻿using OrchidMod.Shaman.Weapons.Hardmode;
+﻿// Support added in 1.4.4
+#if TML_2022_09
+using OrchidMod.Shaman.Weapons.Hardmode;
 using RandomModCompat.Common.APIs;
 using RandomModCompat.Core;
 
@@ -12,4 +14,5 @@ internal sealed class OrchidModBossesAsNPCsModule : CrossModModule<BossesAsNPCsA
 	{
 		API.AddToShop<MartianBeamer>(BossesAsNPCsAPI.SellingTownNPC.MartianSaucer, 0.25f);
 	}
-}
+} 
+#endif

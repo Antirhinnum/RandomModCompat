@@ -68,7 +68,11 @@ internal sealed partial class AsymmetricEquipsAPI
 				// - drawInfo.Position
 				// After changing these, we can just call the original draw method.
 
+#if TML_2022_09
 				(sbyte origBalloon, int origCBalloon, Vector2 origPosition) = (drawPlayer.balloon, drawPlayer.cBalloon, drawInfo.Position);
+#else
+				(int origBalloon, int origCBalloon, Vector2 origPosition) = (drawPlayer.balloon, drawPlayer.cBalloon, drawInfo.Position);
+#endif
 
 				drawPlayer.balloon = (sbyte)frontBalloon;
 				drawPlayer.cBalloon = cFrontBalloon;

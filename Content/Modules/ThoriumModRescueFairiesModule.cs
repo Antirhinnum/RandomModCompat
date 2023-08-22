@@ -2,8 +2,6 @@
 using RandomModCompat.Core;
 using Terraria;
 using ThoriumMod.NPCs;
-using ThoriumMod.NPCs.Buried;
-using ThoriumMod.NPCs.Granite;
 
 namespace RandomModCompat.Content.Modules;
 
@@ -19,7 +17,13 @@ internal sealed class ThoriumModRescueFairiesModule : CrossModModule<RescueFairi
 		// Pot mimics are not added.
 		API.AddTrackingCondition(CoinBagCondition);
 		API.AddTrackingCondition<LifeCrystalMimic>();
-		API.AddTrackingCondition<BuriedSpawn>();
-		API.AddTrackingCondition<GraniteSpawn>();
+
+#if TML_2022_09
+		API.AddTrackingCondition<ThoriumMod.NPCs.Buried.BuriedSpawn>();
+		API.AddTrackingCondition<ThoriumMod.NPCs.Granite.GraniteSpawn>();
+#else
+		API.AddTrackingCondition<ThoriumMod.NPCs.BossBuriedChampion.BizarreRockFormation>();
+		API.AddTrackingCondition<ThoriumMod.NPCs.BossGraniteEnergyStorm.UnstableEnergyAnomaly>();
+#endif
 	}
 }

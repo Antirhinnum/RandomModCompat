@@ -10,14 +10,17 @@ internal sealed class BangarangWWeaponScalingModule : CrossModModule<WWeaponScal
 
 	protected internal override void PostSetupContent()
 	{
+#if TML_2022_09
+		API.AddScaling<Bananarang>(WWeaponScalingAPI.Tier.Molten);
+		API.AddScaling<LightDisc>(WWeaponScalingAPI.Tier.Hallowed);
+#endif
+
 		API.AddScaling<ShadeChakram>(WWeaponScalingAPI.Tier.Evil);
 		API.AddScaling<Synapse>(WWeaponScalingAPI.Tier.Evil);
 		API.AddScaling<Beemerang>(WWeaponScalingAPI.Tier.Jungle);
 		API.AddScaling<Bonerang>(WWeaponScalingAPI.Tier.Dungeon);
-		API.AddScaling<Bananarang>(WWeaponScalingAPI.Tier.Molten);
 		API.AddScaling<SawedOffShotrang>(WWeaponScalingAPI.Tier.Molten);
 		API.AddScaling<YinAndRang>(WWeaponScalingAPI.Tier.Adamantite);
-		API.AddScaling<LightDisc>(WWeaponScalingAPI.Tier.Hallowed);
 		API.AddScaling<TheChloroplast>(WWeaponScalingAPI.Tier.Chlorophyte);
 		API.AddScaling<Teslarang>(WWeaponScalingAPI.Tier.PostPlantera);
 		API.AddScaling<ChromaticCrux>(WWeaponScalingAPI.Tier.PostGolem);

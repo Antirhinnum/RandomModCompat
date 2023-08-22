@@ -1,4 +1,6 @@
-﻿using ItReallyMustBe;
+﻿// Support added in 1.4.4.
+#if TML_2022_09
+using ItReallyMustBe;
 using ItReallyMustBe.Items;
 using RandomModCompat.Common.APIs;
 using RandomModCompat.Core;
@@ -22,4 +24,5 @@ internal sealed class ItReallyMustBeBossesAsNPCsModule : CrossModModule<BossesAs
 		API.AddToShop<DreadnautilusRelic>(BossesAsNPCsAPI.SellingTownNPC.Dreadnautilus, 1f, 5f, API.ShouldSellMasterMode);
 		API.AddToShop<BloodyCarKey>(BossesAsNPCsAPI.SellingTownNPC.Dreadnautilus, 1f, 5f, API.ShouldSellMasterMode);
 	}
-}
+} 
+#endif

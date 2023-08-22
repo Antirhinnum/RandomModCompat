@@ -29,6 +29,7 @@ internal sealed class AssortedCrazyThingsAsymmetricEquipsModule : CrossModModule
 
 		if (ModContent.GetInstance<ContentConfig>().VanityAccessories)
 		{
+#if TML_2022_09
 			API.AddBalloon<Cobballoon>();
 			API.AddBalloon<EyelloonRetinazer>();
 			API.AddBalloon<GreenEyelloon>();
@@ -43,7 +44,11 @@ internal sealed class AssortedCrazyThingsAsymmetricEquipsModule : CrossModModule
 			API.AddBalloon<RedEyelloonFractured>();
 			API.AddBalloon<RedEyelloonMetal>();
 			API.AddBalloon<RedEyelloonMetalFractured>();
-			API.AddBalloon<SpazmatismEyelloon>();
+			API.AddBalloon<SpazmatismEyelloon>(); 
+#else
+			API.AddBalloon<SillyBalloonKit>();
+#endif
+			//TODO: TEST
 		}
 	}
 }

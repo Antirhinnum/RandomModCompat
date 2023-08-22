@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿// Thorium Mod has it sown Dialogue Panel Rework support in 1.4.4.
+#if TML_2022_09
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using RandomModCompat.Common.APIs;
 using RandomModCompat.Core;
@@ -15,7 +17,6 @@ using ThoriumMod.NPCs;
 
 namespace RandomModCompat.Content.Modules;
 
-// TODO: Remove in 1.4.4.
 internal sealed class ThoriumModDialogueTweakModule : CrossModModule<DialogueTweakAPI>
 {
 	public override string CrossModName => ModNames.ThoriumMod;
@@ -35,3 +36,4 @@ internal sealed class ThoriumModDialogueTweakModule : CrossModModule<DialogueTwe
 		API.ReplaceExtraButtonIcon(new List<int> { ModContent.NPCType<WeaponMaster>() }, ModContent.GetInstance<ExileHelmet>().Texture);
 	}
 }
+#endif

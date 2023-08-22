@@ -7,10 +7,7 @@ using ThoriumMod.Items.BasicAccessories;
 using ThoriumMod.Items.Depths;
 using ThoriumMod.Items.Donate;
 using ThoriumMod.Items.EarlyMagic;
-using ThoriumMod.Items.EnergyStorm;
-using ThoriumMod.Items.FallenBeholder;
 using ThoriumMod.Items.HealerItems;
-using ThoriumMod.Items.Lich;
 using ThoriumMod.Items.MeleeItems;
 using ThoriumMod.Items.Misc;
 using ThoriumMod.Items.NPCItems;
@@ -18,6 +15,18 @@ using ThoriumMod.Items.SummonItems;
 using ThoriumMod.Items.ThrownItems;
 using ThoriumMod.Items.Vanity;
 using ThoriumMod.PlayerLayers;
+
+#if TML_2022_09
+using ThoriumMod.Items.EnergyStorm;
+using ThoriumMod.Items.FallenBeholder;
+using ThoriumMod.Items.Lich;
+#else
+
+using ThoriumMod.Items.BossFallenBeholder;
+using ThoriumMod.Items.BossGraniteEnergyStorm;
+using ThoriumMod.Items.BossLich;
+
+#endif
 
 namespace RandomModCompat.Content.Modules;
 
@@ -50,21 +59,30 @@ internal sealed class ThoriumModAsymmetricEquipsModule : CrossModModule<Asymmetr
 		API.AddHiddenEquip<MetabolicPills>(EquipType.Waist);
 		API.AddHiddenEquip<PlagueLordFlask>(EquipType.Waist);
 		API.AddHiddenEquip<ManaBauble>(EquipType.Waist);
-		API.AddHiddenEquip<ApothecaryLife>(EquipType.Waist);
-		API.AddHiddenEquip<ApothecaryMana>(EquipType.Waist);
-		API.AddHiddenEquip<CrystalArcanum>(EquipType.Waist);
 		API.AddHiddenEquip<CrystalHoney>(EquipType.Waist);
 		API.AddHiddenEquip<DarkGlaze>(EquipType.Waist);
-		API.AddHiddenEquip<LifeQuartzGem>(EquipType.Waist);
 		API.AddHiddenEquip<TheLostCross>(EquipType.Waist);
 		API.AddHiddenEquip<RingofUnity>(EquipType.HandsOn);
-		API.AddHiddenEquip<NightShadePetal>(EquipType.Face);
 		API.AddHiddenEquip<PotionChaser>(EquipType.Waist);
 		API.AddHiddenEquip<NecroticSkull>(EquipType.Waist);
 		API.AddHiddenEquip<SoulStone>(EquipType.Waist);
 		API.AddHiddenEquip<Canteen>(EquipType.Waist);
 		API.AddHiddenEquip<DeadEyePatch>(EquipType.Face);
 		API.AddHiddenEquip<MermaidCanteen>(EquipType.Waist);
+
+#if TML_2022_09
+		API.AddHiddenEquip<ApothecaryLife>(EquipType.Waist);
+		API.AddHiddenEquip<ApothecaryMana>(EquipType.Waist);
+		API.AddHiddenEquip<CrystalArcanum>(EquipType.Waist);
+		API.AddHiddenEquip<LifeQuartzGem>(EquipType.Waist);
+		API.AddHiddenEquip<NightShadePetal>(EquipType.Face);
+#else
+		API.AddHiddenEquip<ApothecarysCyanVial>(EquipType.Waist);
+		API.AddHiddenEquip<ApothecarysScarletVial>(EquipType.Waist);
+		API.AddHiddenEquip<CrystalArcanite>(EquipType.Waist);
+		API.AddHiddenEquip<LifeGem>(EquipType.Waist);
+		API.AddHiddenEquip<NightShadeFlower>(EquipType.Face);
+#endif
 
 		// Hairpin, needs hair override.
 		API.AddSmallHead<NoteHairpin>();
@@ -80,9 +98,14 @@ internal sealed class ThoriumModAsymmetricEquipsModule : CrossModModule<Asymmetr
 		API.AddBalloon<EyeoftheStorm>();
 		API.AddBalloon<MirroroftheBeholder>();
 		API.AddBalloon<DarkHeart>();
-		API.AddBalloon<SpiritFlame>();
 		API.AddBalloon<Phylactery>();
 		API.AddBalloon<OlympicTorch>();
+
+#if TML_2022_09
+		API.AddBalloon<SpiritFlame>();
+#else
+		API.AddBalloon<InnerFlame>();
+#endif
 
 		API.RegisterBalloonDrawLayer<BalloonLayer>();
 

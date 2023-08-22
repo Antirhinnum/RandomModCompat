@@ -21,7 +21,6 @@ internal sealed class ThoriumModItemCheckBlacklistModule : CrossModModule<ItemCh
 			ModContent.ItemType<ArcaneSpike>(),
 			ModContent.ItemType<ArtificersExtractor>(),
 			ModContent.ItemType<BasicPickaxe>(),
-			ModContent.ItemType<DyingRealityWhisper>(),
 			ModContent.ItemType<DreamPotion>(),
 			ModContent.ItemType<TesterEmpowerment>(),
 			ModContent.ItemType<GodMode>(),
@@ -38,7 +37,6 @@ internal sealed class ThoriumModItemCheckBlacklistModule : CrossModModule<ItemCh
 			ModContent.ItemType<TesterText>(),
 			ModContent.ItemType<TheBareGauntlet>(),
 			ModContent.ItemType<TheGauntlet>(),
-			ModContent.ItemType<PenguinWandTrue>(),
 			ModContent.ItemType<TesterTile>(),
 			ModContent.ItemType<StoneBlue>(),
 			ModContent.ItemType<StoneGreen>(),
@@ -47,6 +45,14 @@ internal sealed class ThoriumModItemCheckBlacklistModule : CrossModModule<ItemCh
 			ModContent.ItemType<StoneRed>(),
 			ModContent.ItemType<StoneYellow>(),
 			ModContent.ItemType<ViscountRequirement>(),
+
+#if TML_2022_09
+			ModContent.ItemType<DyingRealityWhisper>(),
+			ModContent.ItemType<PenguinWandTrue>(),
+#else
+			ModContent.ItemType<DestinyWeaver>(),
+			ModContent.ItemType<TheTruePenguinWand>(),
+#endif
 
 			// ... Plus some others.
 			ModContent.ItemType<LichRequirement>(),

@@ -1,4 +1,6 @@
-﻿using RandomModCompat.Common.APIs;
+﻿// Support added in 1.4.4
+#if TML_2022_09
+using RandomModCompat.Common.APIs;
 using RandomModCompat.Core;
 using StormDiversMod.Items.Weapons;
 using Terraria.ModLoader;
@@ -24,4 +26,5 @@ internal sealed class StormDiversModBossesAsNPCsModule : CrossModModule<BossesAs
 		API.AddToShop<CultistSpear>(BossesAsNPCsAPI.SellingTownNPC.LunaticCultist, 0.25f);
 		API.AddToShop<CultistStaff>(BossesAsNPCsAPI.SellingTownNPC.LunaticCultist, 0.25f);
 	}
-}
+} 
+#endif

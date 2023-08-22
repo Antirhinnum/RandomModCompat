@@ -1,7 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using Mono.Cecil.Cil;
+﻿using Mono.Cecil.Cil;
 using MonoMod.Cil;
-using MonoMod.RuntimeDetour.HookGen;
+using MonoMod.RuntimeDetour;
 using MonoMod.Utils;
 using RandomModCompat.Common.Configs;
 using System;
@@ -10,7 +9,6 @@ using System.Linq;
 using System.Reflection;
 using Terraria;
 using Terraria.ModLoader;
-using Terraria.UI;
 
 namespace RandomModCompat.Common.APIs;
 
@@ -21,22 +19,12 @@ internal sealed partial class LevelplusAPI
 	{
 		#region StatButton Reflection
 
-		// Internal class :(
-		private delegate void orig_StatButtonUpdate(UIElement self, GameTime gameTime);
-
-		private delegate void hook_StatButtonUpdate(orig_StatButtonUpdate orig, UIElement self, GameTime gameTime);
-
-		private static event ILContext.Manipulator StatButtonUpdate
-		{
-			add
-			{
-				HookEndpointManager.Modify<hook_StatButtonUpdate>(_statButtonUpdate, value);
-			}
-			remove
-			{
-				HookEndpointManager.Unmodify<hook_StatButtonUpdate>(_statButtonUpdate, value);
-			}
-		}
+#if TML_2022_09
+		private const string _modPlayerName = "levelplusModPlayer";
+#else
+		private const string _modPlayerName = "LevelPlusModPlayer";
+		private static ILHook _statButtonUpdateHook;
+#endif
 
 		private static Type _statButton;
 		private static MethodBase _statButtonUpdate;
@@ -91,30 +79,46 @@ internal sealed partial class LevelplusAPI
 
 		public override void Load()
 		{
-			_levelPlusModPlayer = ModLoader.GetMod(ModNames.levelplus).Code.GetType("levelplus.levelplusModPlayer");
+			_levelPlusModPlayer = ModLoader.GetMod(ModNames.levelplus).Code.GetType(ModNames.levelplus + "." + _modPlayerName);
 			_statToGetter = new Dictionary<Stat, MethodInfo>()
-		{
-			{ Stat.Constitution, _levelPlusModPlayer.GetProperty("constitution").GetGetMethod() },
-			{ Stat.Strength, _levelPlusModPlayer.GetProperty("strength").GetGetMethod() },
-			{ Stat.Intelligence, _levelPlusModPlayer.GetProperty("intelligence").GetGetMethod() },
-			{ Stat.Charisma, _levelPlusModPlayer.GetProperty("charisma").GetGetMethod() },
-			{ Stat.Dexterity, _levelPlusModPlayer.GetProperty("dexterity").GetGetMethod() },
-			{ Stat.Mobility, _levelPlusModPlayer.GetProperty("mobility").GetGetMethod() },
-			{ Stat.Excavation, _levelPlusModPlayer.GetProperty("excavation").GetGetMethod() },
-			{ Stat.Animalia, _levelPlusModPlayer.GetProperty("animalia").GetGetMethod() },
-			{ Stat.Luck, _levelPlusModPlayer.GetProperty("luck").GetGetMethod() },
-			{ Stat.Mysticism, _levelPlusModPlayer.GetProperty("mysticism").GetGetMethod() }
-		};
-			_statButton = ModLoader.GetMod(ModNames.levelplus).Code.GetType("levelplus.UI.StatButton");
+			{
+				{ Stat.Constitution, _levelPlusModPlayer.GetProperty("constitution").GetGetMethod() },
+				{ Stat.Strength, _levelPlusModPlayer.GetProperty("strength").GetGetMethod() },
+				{ Stat.Intelligence, _levelPlusModPlayer.GetProperty("intelligence").GetGetMethod() },
+				{ Stat.Charisma, _levelPlusModPlayer.GetProperty("charisma").GetGetMethod() },
+				{ Stat.Dexterity, _levelPlusModPlayer.GetProperty("dexterity").GetGetMethod() },
+				{ Stat.Mobility, _levelPlusModPlayer.GetProperty("mobility").GetGetMethod() },
+				{ Stat.Excavation, _levelPlusModPlayer.GetProperty("excavation").GetGetMethod() },
+				{ Stat.Animalia, _levelPlusModPlayer.GetProperty("animalia").GetGetMethod() },
+				{ Stat.Luck, _levelPlusModPlayer.GetProperty("luck").GetGetMethod() },
+				{ Stat.Mysticism, _levelPlusModPlayer.GetProperty("mysticism").GetGetMethod() }
+			};
+			_statButton = ModLoader.GetMod(ModNames.levelplus).Code.GetType(ModNames.levelplus + ".UI.StatButton");
 			_statButtonUpdate = _statButton.GetMethod("Update", Utilities.ReflectionHelper.AllFlags);
 			_statButtonGetType = _statButton.GetProperty("type", Utilities.ReflectionHelper.AllFlags).GetGetMethod();
 
-			StatButtonUpdate += AddTooltips;
+#if TML_2022_09
+			HookEndpointManager.Modify(_statButtonUpdate, AddTooltips);
 		}
+
+		public override void Unload()
+		{
+			HookEndpointManager.Unmodify(_statButtonUpdate, AddTooltips);
+		}
+#else
+			_statButtonUpdateHook = new(_statButtonUpdate, AddTooltips);
+		}
+
+		public override void Unload()
+		{
+			_statButtonUpdateHook?.Undo();
+		}
+
+#endif
 
 		public override void SetStaticDefaults()
 		{
-			if (!ModContent.TryFind(ModNames.levelplus, "levelplusModPlayer", out _levelPlusPlayerInstance))
+			if (!ModContent.TryFind(ModNames.levelplus, _modPlayerName, out _levelPlusPlayerInstance))
 			{
 				throw new Exception("Cannot find ModPlayer, cannot load Level+ compatibility.");
 			}

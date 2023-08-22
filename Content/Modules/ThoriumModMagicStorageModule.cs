@@ -1,4 +1,7 @@
-﻿using RandomModCompat.Common.APIs;
+﻿// Thorium has its own support for Magic Storage in 1.4.4.
+#if TML_2022_09
+
+using RandomModCompat.Common.APIs;
 using RandomModCompat.Core;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ModLoader;
@@ -17,7 +20,6 @@ using ThoriumMod.NPCs.Thunder;
 
 namespace RandomModCompat.Content.Modules;
 
-// TODO: Remove in 1.4.4.
 internal sealed class ThoriumModMagicStorageModule : CrossModModule<MagicStorageAPI>
 {
 	public override string CrossModName => ModNames.ThoriumMod;
@@ -59,3 +61,5 @@ internal sealed class ThoriumModMagicStorageModule : CrossModModule<MagicStorage
 		API.RegisterShadowDiamondDrop<RealityBreaker>(3);
 	}
 }
+
+#endif

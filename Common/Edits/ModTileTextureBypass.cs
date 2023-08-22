@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
+using MonoMod.RuntimeDetour;
 using MonoMod.RuntimeDetour.HookGen;
+using MonoMod.Utils;
 using RandomModCompat.Common.Configs;
 using System.Reflection;
 using Terraria.GameContent;
@@ -15,7 +17,15 @@ namespace RandomModCompat.Common.Edits;
 internal sealed class ModTileTextureBypass : ModSystem
 {
 	internal static bool Failed { get; private set; } = false;
-	private static readonly MethodInfo _modTileSetupContent = typeof(ModTile).GetMethod(nameof(ModTile.SetupContent));
+
+	#region Hook
+
+#if !TML_2022_09
+	private static ILHook _modTileSetupContentHook;
+#endif
+
+	private static readonly MethodInfo _modTileSetupContent = typeof(ModTile).GetMethod(nameof(ModTile.SetupContent)); 
+	#endregion
 
 	public override bool IsLoadingEnabled(Mod mod)
 	{
@@ -28,6 +38,7 @@ internal sealed class ModTileTextureBypass : ModSystem
 		return base.IsLoadingEnabled(mod);
 	}
 
+#if TML_2022_09
 	public override void Load()
 	{
 		HookEndpointManager.Modify(_modTileSetupContent, BypassTextureLoading);
@@ -36,7 +47,18 @@ internal sealed class ModTileTextureBypass : ModSystem
 	public override void Unload()
 	{
 		HookEndpointManager.Unmodify(_modTileSetupContent, BypassTextureLoading);
+	} 
+#else
+	public override void Load()
+	{
+		_modTileSetupContentHook = new(_modTileSetupContent, BypassTextureLoading);
 	}
+
+	public override void Unload()
+	{
+		_modTileSetupContentHook?.Undo();
+	}
+#endif
 
 	private void BypassTextureLoading(ILContext il)
 	{

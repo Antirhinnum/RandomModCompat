@@ -1,7 +1,9 @@
-﻿using DBZMODPORT;
+﻿// Fixed in the 1.4.4 port.
+#if TML_2022_09
+using DBZMODPORT;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
-using MonoMod.RuntimeDetour.HookGen;
+using MonoMod.RuntimeDetour;
 using RandomModCompat.Common.Configs;
 using RandomModCompat.Core;
 using System;
@@ -14,21 +16,6 @@ namespace RandomModCompat.Content.BugFixes;
 [JITWhenModsEnabled(ModNames.DBZMODPORT, ModNames.AutoReroll)]
 internal sealed class DBZAutoReforgeFix : ModSystem, IAddSupport
 {
-	public delegate int orig_ChoosePrefix(KiItem self, UnifiedRandom rand);
-
-	public delegate int hook_ChoosePrefix(orig_ChoosePrefix orig, KiItem self, UnifiedRandom rand);
-
-	public static event ILContext.Manipulator KiItemChoosePrefix
-	{
-		add
-		{
-			HookEndpointManager.Modify<hook_ChoosePrefix>(_kiItemChoosePrefix, value);
-		}
-		remove
-		{
-			HookEndpointManager.Unmodify<hook_ChoosePrefix>(_kiItemChoosePrefix, value);
-		}
-	}
 
 	private static readonly MethodBase _kiItemChoosePrefix = typeof(KiItem).GetMethod(nameof(KiItem.ChoosePrefix));
 
@@ -54,12 +41,12 @@ internal sealed class DBZAutoReforgeFix : ModSystem, IAddSupport
 
 	public override void Load()
 	{
-		KiItemChoosePrefix += DBZAutoReforgeFix_KiItemChoosePrefix;
+		HookEndpointManager.Modify(_kiItemChoosePrefix, DBZAutoReforgeFix_KiItemChoosePrefix);
 	}
 
 	public override void Unload()
 	{
-		KiItemChoosePrefix -= DBZAutoReforgeFix_KiItemChoosePrefix;
+		HookEndpointManager.Unmodify(_kiItemChoosePrefix, DBZAutoReforgeFix_KiItemChoosePrefix);
 	}
 
 	/// <summary>
@@ -100,3 +87,4 @@ internal sealed class DBZAutoReforgeFix : ModSystem, IAddSupport
 		c.Next.Operand = typeof(WeightedRandom<int>).GetConstructor(new Type[] { typeof(UnifiedRandom) });
 	}
 }
+#endif

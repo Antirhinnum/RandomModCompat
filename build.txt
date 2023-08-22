@@ -6,4 +6,4 @@ hideCode = true
 hideResources = false
 includeSource = true
 buildIgnore = LICENSE, README.md, *.pdn, gear.png, Docs/, Notes/, *.pdb
-weakReferences = AssortedCrazyThings, BalloonsExtended, Bangarang, CalamityMod, ClickerClass, Consolaria, DBZMODPORT, FishingReborn, ImprovedTorches, ItReallyMustBe, levelplus, Liber, Mask, MeleeEffects, OrchidMod, PrimeRework, SlugNPCs, StormDiversMod, TheConfectionRebirth, TheDepths, ThoriumMod
+weakReferences = AssortedCrazyThings, BalloonsExtended, Bangarang, CalamityMod, ClickerClass, Consolaria, DBZMODPORT, FishingReborn, ImprovedTorches, ItReallyMustBe, LevelPlus, Liber, Mask, MeleeEffects, OrchidMod, PrimeRework, SlugNPCs, StormDiversMod, TheConfectionRebirth, TheDepths, ThoriumMod

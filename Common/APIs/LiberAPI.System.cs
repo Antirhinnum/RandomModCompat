@@ -64,10 +64,16 @@ internal sealed partial class LiberAPI
 				});
 			}
 
+#if !TML_2022_09
+			public override LocalizedText DisplayName => Language.GetText(_name);
+#endif
+
 			public override void SetStaticDefaults()
 			{
+#if TML_2022_09
 				DisplayName.SetDefault(_name);
 				SacrificeTotal = 1;
+#endif
 				LanguageManager.Instance.OnLanguageChanged += UpdateItemName;
 			}
 

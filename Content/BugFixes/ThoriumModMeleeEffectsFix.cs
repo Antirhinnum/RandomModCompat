@@ -2,7 +2,7 @@
 using MeleeEffects.Projectiles;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
-using MonoMod.RuntimeDetour.HookGen;
+using MonoMod.RuntimeDetour;
 using RandomModCompat.Common.Configs;
 using RandomModCompat.Core;
 using RandomModCompat.Utilities;
@@ -26,21 +26,9 @@ internal sealed class ThoriumModMeleeEffectsFix : ModSystem, IAddSupport
 {
 	#region Hook
 
-	private delegate void orig_HandleStrikeCooldown(SheathData self, Player player, ref int timer);
-
-	private delegate void hook_HandleStrikeCooldown(orig_HandleStrikeCooldown orig, SheathData self, Player player, ref int timer);
-
-	private static event ILContext.Manipulator SheathDataHandleStrikeCooldown
-	{
-		add
-		{
-			HookEndpointManager.Modify<hook_HandleStrikeCooldown>(_handleStrikeCooldown, value);
-		}
-		remove
-		{
-			HookEndpointManager.Unmodify<hook_HandleStrikeCooldown>(_handleStrikeCooldown, value);
-		}
-	}
+#if !TML_2022_09
+	private static ILHook _handleStrikeCooldownHook;
+#endif
 
 	private static readonly MethodBase _handleStrikeCooldown = typeof(SheathData).GetMethod("HandleStrikeCooldown", ReflectionHelper.AllFlags);
 
@@ -68,15 +56,29 @@ internal sealed class ThoriumModMeleeEffectsFix : ModSystem, IAddSupport
 		return base.IsLoadingEnabled(mod);
 	}
 
+#if TML_2022_09
 	public override void Load()
 	{
-		SheathDataHandleStrikeCooldown += AddWhitelist;
+		HookEndpointManager.Modify(_handleStrikeCooldown, AddWhitelist);
 	}
 
 	public override void Unload()
 	{
-		SheathDataHandleStrikeCooldown -= AddWhitelist;
+		HookEndpointManager.Unmodify(_handleStrikeCooldown, AddWhitelist);
 	}
+#else
+
+	public override void Load()
+	{
+		_handleStrikeCooldownHook = new(_handleStrikeCooldown, AddWhitelist);
+	}
+
+	public override void Unload()
+	{
+		_handleStrikeCooldownHook?.Undo();
+	}
+
+#endif
 
 	public override void PostSetupContent()
 	{
@@ -157,6 +159,8 @@ internal sealed class ThoriumModMeleeEffectsPlayer : ModPlayer
 		_meleeEffectsProjectileTypes = null;
 	}
 
+#if TML_2022_09
+
 	public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
 	{
 		if (_meleeEffectsProjectileTypes.Contains(proj.type))
@@ -172,4 +176,16 @@ internal sealed class ThoriumModMeleeEffectsPlayer : ModPlayer
 			Player.GetThoriumPlayer().sheathTracker.Strike(modifyHit: false, Player, target, ref damage, ref crit);
 		}
 	}
+
+#else
+
+	public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
+	{
+		if (_meleeEffectsProjectileTypes.Contains(proj.type))
+		{
+			Player.GetThoriumPlayer().sheathTracker.Strike(target, hit, damageDone);
+		}
+	}
+
+#endif
 }

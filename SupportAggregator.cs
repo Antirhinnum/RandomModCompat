@@ -1,5 +1,4 @@
-﻿using MonoMod.RuntimeDetour.HookGen;
-using RandomModCompat.Common;
+﻿using RandomModCompat.Common;
 using RandomModCompat.Core;
 using RandomModCompat.Utilities;
 using System;
@@ -185,7 +184,11 @@ public static class SupportAggregator
 		MethodBase autoloadConfig = typeof(Mod).GetMethod(AutoloadConfig, ReflectionHelper.AllFlags)
 			?? throw new MethodAccessException("Cannot find Mod::AutoloadConfig(), cannot create this mod's config.");
 
+#if TML_2022_09
 		HookEndpointManager.Add(autoloadConfig, AutoloadConfigHook);
+#else
+		MonoModHooks.Add(autoloadConfig, AutoloadConfigHook);
+#endif
 	}
 
 	private static void AutoloadConfigHook(Action<Mod> orig, Mod mod)

@@ -19,6 +19,7 @@ internal sealed class ThoriumAsymmetricSheathPlayer : ModPlayer
 	/// </summary>
 	internal Item currentSheath;
 
+#if TML_2022_09
 	public override void Load()
 	{
 		On.Terraria.Player.UpdateVisibleAccessory += TrackVisibleSheath;
@@ -30,6 +31,20 @@ internal sealed class ThoriumAsymmetricSheathPlayer : ModPlayer
 	}
 
 	private void TrackVisibleSheath(On.Terraria.Player.orig_UpdateVisibleAccessory orig, Player self, int itemSlot, Item item, bool modded)
+#else
+
+	public override void Load()
+	{
+		On_Player.UpdateVisibleAccessory += TrackVisibleSheath;
+	}
+
+	public override void Unload()
+	{
+		On_Player.UpdateVisibleAccessory -= TrackVisibleSheath;
+	}
+
+	private void TrackVisibleSheath(On_Player.orig_UpdateVisibleAccessory orig, Player self, int itemSlot, Item item, bool modded)
+#endif
 	{
 		orig(self, itemSlot, item, modded);
 

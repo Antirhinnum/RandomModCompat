@@ -48,11 +48,17 @@ internal sealed class ThoriumModOverpoweredGoldDustModule : CrossModModule<Overp
 		// Slimes
 		API.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.Clot>(), NPCID.GoldenSlime);
 		API.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.GildedSlime>(), NPCID.GoldenSlime);
-		API.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.GildedSlimeMini>(), NPCID.GoldenSlime);
 		API.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.GraniteFusedSlime>(), NPCID.GoldenSlime);
 		API.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.LivingHemorrhage>(), NPCID.GoldenSlime);
 		API.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.SpaceSlime>(), NPCID.GoldenSlime);
 		API.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.BloodMoon.BloodDrop>(), NPCID.GoldenSlime);
+
+
+#if TML_2022_09
+		API.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.GildedSlimeMini>(), NPCID.GoldenSlime); 
+#else
+		API.RegisterNPC(ModContent.NPCType<ThoriumMod.NPCs.GildedSlimeling>(), NPCID.GoldenSlime);
+#endif
 
 		// Misc. NPCs
 		API.RegisterNPC<ThoriumMod.NPCs.CoinBagCopper, ThoriumMod.NPCs.CoinBagGold>();

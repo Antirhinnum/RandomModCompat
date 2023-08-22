@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using RandomModCompat.Utilities;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ID;
@@ -44,16 +43,26 @@ internal sealed partial class TheDepthsAPI
 			Main.tileMergeDirt[Type] = true;
 			Main.tileBlockLight[Type] = true;
 			Main.tileLighted[Type] = false;
-			ItemDrop = _gemItemId;
 			DustType = ModContent.DustType<ShaleDust>();
 			HitSound = SoundID.Tink;
 			MinPick = 65;
+
+#if TML_2022_09
+			ItemDrop = _gemItemId;
+#else
+			RegisterItemDrop(_gemItemId);
+#endif
 
 			//LocalizedText originalText = Lang._mapLegendCache[MapHelper.TileToLookup(_gemTileId, 0)];
 			ModTile originalTile = TileLoader.GetTile(_gemTileId);
 			MapTile mapTile = MapTile.Create((ushort)_gemTileId, byte.MaxValue, 0);
 			Color color = MapHelper.GetMapTileXnaColor(ref mapTile);
+
+#if TML_2022_09
 			AddMapEntry(color, LocalizationLoader.GetOrCreateTranslation(originalTile.Mod, "MapObject." + originalTile.Name));
+#else
+			AddMapEntry(color, Language.GetOrRegister(originalTile.Mod.GetLocalizationKey("MapObject." + originalTile.Name)));
+#endif
 
 			// Tile merging is handled in TheDepthsAPISystem.
 		}

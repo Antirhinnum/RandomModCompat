@@ -30,7 +30,11 @@ internal static class ModNames
 		ImprovedTorches = nameof(ImprovedTorches),
 		ItemCheckBlacklist = nameof(ItemCheckBlacklist),
 		ItReallyMustBe = nameof(ItReallyMustBe),
-		levelplus = nameof(levelplus),
+#if TML_2022_09
+		levelplus = nameof(levelplus), 
+#else
+		levelplus = "LevelPlus", // Gotta love mod renames :)
+#endif
 		Liber = nameof(Liber),
 		MagicStorage = nameof(MagicStorage),
 		Mask = nameof(Mask),

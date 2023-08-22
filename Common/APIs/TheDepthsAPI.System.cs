@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
+using MonoMod.RuntimeDetour;
 using MonoMod.RuntimeDetour.HookGen;
 using RandomModCompat.Common.Configs;
 using RandomModCompat.Common.Edits;
@@ -13,7 +14,6 @@ using System.Reflection;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using TheDepths;
 using TheDepths.Tiles;
 
 namespace RandomModCompat.Common.APIs;
@@ -85,9 +85,17 @@ internal sealed partial class TheDepthsAPI
 		// JIT issues
 		private static bool LoadGemsMethod()
 		{
-			_gemsMethod = typeof(TheDepthsWorldGen).GetMethods(ReflectionHelper.AllFlags).FirstOrDefault(m => m.Name.Contains("Gems"));
+#if TML_2022_09
+			_gemsMethod = typeof(TheDepths.TheDepthsWorldGen).GetMethods(ReflectionHelper.AllFlags).FirstOrDefault(m => m.Name.Contains("Gems"));
+#else
+			_gemsMethod = typeof(TheDepths.Worldgen.TheDepthsWorldGen).GetMethods(ReflectionHelper.AllFlags).FirstOrDefault(m => m.Name.Contains("Gems"));
+#endif
 			return _gemsMethod != null;
 		}
+
+#if !TML_2022_09
+		private static ILHook _gemsMethodHook;
+#endif
 
 		public override void Load()
 		{
@@ -105,16 +113,25 @@ internal sealed partial class TheDepthsAPI
 			});
 			_originalShaleTileCount = _mergingShaleTiles.Count;
 
-			//MethodInfo gemsMethod = typeof(TheDepthsWorldGen).GetMethods(ReflectionHelper.AllFlags).FirstOrDefault(m => m.Name.Contains("Gems"));
-			//if (gemsMethod)
-			HookEndpointManager.Modify(_gemsMethod, AddNewGems);
+			if (_gemsMethod != null)
+			{
+#if TML_2022_09
+				HookEndpointManager.Modify(_gemsMethod, AddNewGems);
+#else
+				_gemsMethodHook = new(_gemsMethod, AddNewGems);
+#endif
+			}
 		}
 
 		public override void Unload()
 		{
 			if (_gemsMethod != null)
 			{
+#if TML_2022_09
 				HookEndpointManager.Unmodify(_gemsMethod, AddNewGems);
+#else
+				_gemsMethodHook?.Undo();
+#endif
 			}
 
 			_tileTypeToAsset?.Clear();
@@ -180,8 +197,14 @@ internal sealed partial class TheDepthsAPI
 			if (!c.TryGotoNext(MoveType.Before,
 				i => i.MatchLdloc(out typeIndex),
 				i => i.MatchLdcI4(0),
+				// TileRunner uses floats on 1.4.3 and doubles on 1.4.4.
+#if TML_2022_09
 				i => i.MatchLdcR4(0f),
-				i => i.MatchLdcR4(0f),
+				i => i.MatchLdcR4(0f), 
+#else
+				i => i.MatchLdcR8(0f),
+				i => i.MatchLdcR8(0f),
+#endif
 				i => i.MatchLdcI4(0),
 				i => i.MatchLdcI4(1),
 				i => i.MatchLdcI4(-1),

@@ -14,6 +14,11 @@ internal sealed class StormDiversModROR2HealthBarsModule : CrossModModule<ROR2He
 	{
 		API.AddDesc<AridBoss>(_localizationHeader, "AridBoss");
 		API.AddDesc<StormBoss>(_localizationHeader, "StormBoss");
+
+#if TML_2022_09
 		API.AddDesc<ThePainBoss>(_localizationHeader, "ThePainBoss");
+#else
+		API.AddDesc<TheUltimateBoss>(_localizationHeader, "ThePainBoss");
+#endif
 	}
 }

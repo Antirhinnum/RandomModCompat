@@ -1,4 +1,6 @@
-﻿using AssortedCrazyThings;
+﻿// Assorted Crazy Things added its own Magic Storage support in 1.4.4.4.
+#if TML_2022_09
+using AssortedCrazyThings;
 using AssortedCrazyThings.NPCs.Harvester;
 using RandomModCompat.Common.APIs;
 using RandomModCompat.Core;
@@ -18,3 +20,4 @@ internal sealed class AssortedCrazyThingsMagicStorageModule : CrossModModule<Mag
 		}
 	}
 }
+#endif

@@ -23,7 +23,7 @@ internal sealed class TheConfectionRebirthFishingRebornModule : CrossModModule<F
 
 		bool ICatchPool.IsPoolActive(FishingAttempt attempt, Projectile bobber)
 		{
-			return Main.player[bobber.owner].InModBiome<ConfectionBiomeSurface>() && !attempt.inLava && !attempt.inHoney;
+			return InConfectionSurface(Main.player[bobber.owner]) && !attempt.inLava && !attempt.inHoney;
 		}
 	}
 
@@ -39,12 +39,21 @@ internal sealed class TheConfectionRebirthFishingRebornModule : CrossModModule<F
 		API.AddCatchData(gummyStaffType, 80, FishingRebornAPI.FishType.Dart);
 
 		static int ConfectionCrateSelection(Player player, FishingAttempt attempt) => !Main.hardMode ? ModContent.ItemType<BananaSplitCrate>() : ModContent.ItemType<ConfectionCrate>();
-		static bool InConfectionCondition(Player player, FishingAttempt attempt) => player.InModBiome<ConfectionBiomeSurface>() && !attempt.inLava && !attempt.inHoney;
+		static bool InConfectionCondition(Player player, FishingAttempt attempt) => InConfectionSurface(player) && !attempt.inLava && !attempt.inHoney;
 
 		API.AddTreasureData(
 			ConfectionCrateSelection,
 			0.25f,
 			InConfectionCondition
 		);
+	}
+
+	private static bool InConfectionSurface(Player player)
+	{
+#if TML_2022_09
+		return player.InModBiome<ConfectionBiomeSurface>();
+#else
+		return player.InModBiome<ConfectionBiome>();
+#endif
 	}
 }

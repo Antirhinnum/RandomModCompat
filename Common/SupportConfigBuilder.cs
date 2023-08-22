@@ -18,7 +18,7 @@ internal static class SupportConfigBuilder
 	private const string _typeName = "RandomModCompat.Common." + _configName;
 	private const MethodAttributes _defaultConstructorAttributes = MethodAttributes.Public | MethodAttributes.HideBySig | MethodAttributes.RTSpecialName;
 	private const MethodAttributes _overriddenMethodAttributes = MethodAttributes.Public | MethodAttributes.Virtual | MethodAttributes.HideBySig;
-	private const string _localizationHeader = "$Mods.RandomModCompat.DynamicConfig.";
+	private const string _localizationHeader = "$Mods.RandomModCompat.Configs.ModSupportConfig.";
 	private const string _modNamesHeader = _localizationHeader + "ModNames.";
 	private static TypeBuilder _current = null;
 
@@ -28,7 +28,7 @@ internal static class SupportConfigBuilder
 	/// <param name="moduleBuilder">The module that this config is defined in.</param>
 	/// <param name="supportedMods">The mods this config should support.</param>
 	/// <returns>The type of the new config. This type is a subclass of <see cref="ModConfig"/></returns>
-	internal static Type Create(ModuleBuilder moduleBuilder, IDictionary<string, ICollection<String>> supportedMods)
+	internal static Type Create(ModuleBuilder moduleBuilder, IDictionary<string, ICollection<string>> supportedMods)
 	{
 		// Also AutoLayout and Ansi, but those are default.
 		const TypeAttributes ConfigAttributes = TypeAttributes.Public | TypeAttributes.Sealed;
@@ -36,7 +36,11 @@ internal static class SupportConfigBuilder
 		_current = moduleBuilder.DefineType(_typeName, ConfigAttributes, modConfigType);
 
 		// Create the type.
-		AddLabel(_current, _localizationHeader + "Name");
+		// On 1.4.3 or lower, add the config's name.
+		// On 1.4.4 or higher, this is automatically found.
+#if TML_2022_09
+		AddLabel(_current, _localizationHeader + "Name"); 
+#endif
 		OverrideMode();
 		Dictionary<TypeBuilder, ConstructorBuilder> nestedTypes = CreateNestedTypes(supportedMods);
 		FieldBuilder[] fields = AddFieldsToConfig(nestedTypes.Keys, supportedMods.Keys);
@@ -219,6 +223,10 @@ internal static class SupportConfigBuilder
 			FieldBuilder field = _current.DefineField(name, builder, FieldAttributes.Public);
 			field.SetCustomAttribute(new(reloadRequiredCon, Array.Empty<object>()));
 
+#if !TML_2022_09
+			AddLabel(field, _modNamesHeader + name);
+#endif
+
 			if (firstField)
 			{
 				firstField = false;
@@ -263,7 +271,12 @@ internal static class SupportConfigBuilder
 		#endregion .ctor IL
 	}
 
-	private static readonly ConstructorInfo _labelConstructor = typeof(LabelAttribute).GetConstructor(new Type[] { typeof(string) });
+#if TML_2022_09
+	private static readonly ConstructorInfo _labelConstructor = typeof(LabelAttribute).GetConstructor(new Type[] { typeof(string) }); 
+#else
+	private static readonly ConstructorInfo _labelConstructor = typeof(LabelKeyAttribute).GetConstructor(new Type[] { typeof(string) });
+	private static readonly ConstructorInfo _tooltipConstructor = typeof(TooltipKeyAttribute).GetConstructor(new Type[] { typeof(string) });
+#endif
 	private static readonly ConstructorInfo _defaultValueConstructor = typeof(DefaultValueAttribute).GetConstructor(new Type[] { typeof(bool) });
 
 	/// <summary>
@@ -274,6 +287,9 @@ internal static class SupportConfigBuilder
 	private static void AddLabel(TypeBuilder builder, string localizationKey)
 	{
 		builder.SetCustomAttribute(new(_labelConstructor, new object[] { localizationKey }));
+#if !TML_2022_09
+		builder.SetCustomAttribute(new(_tooltipConstructor, new object[] { _localizationHeader + "EmptyTooltip" }));
+#endif
 	}
 
 	// No interface :(
@@ -285,6 +301,9 @@ internal static class SupportConfigBuilder
 	private static void AddLabel(FieldBuilder builder, string localizationKey)
 	{
 		builder.SetCustomAttribute(new(_labelConstructor, new object[] { localizationKey }));
+#if !TML_2022_09
+		builder.SetCustomAttribute(new(_tooltipConstructor, new object[] { _localizationHeader + "EmptyTooltip" }));
+#endif
 	}
 
 	/// <summary>

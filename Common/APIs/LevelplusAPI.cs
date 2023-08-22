@@ -42,6 +42,7 @@ internal sealed partial class LevelplusAPI : ModAPI
 
 	private static string StripDamageFromClassName(DamageClass damageClass)
 	{
+#if TML_2022_09
 		if (Language.ActiveCulture == GameCulture.FromCultureName(GameCulture.CultureName.English))
 		{
 			// Remove the word "damage".
@@ -52,5 +53,8 @@ internal sealed partial class LevelplusAPI : ModAPI
 			// No idea how to handle this.
 			return damageClass.DisplayName;
 		}
+#else
+		return damageClass.DisplayName.ToString().Replace("damage", null).Trim();
+#endif
 	}
 }
