@@ -34,7 +34,7 @@ public abstract class CrossModModule : ModType, IAddSupport
 
 	public override sealed bool IsLoadingEnabled(Mod mod)
 	{
-		return ModLoader.HasMod(CrossModName);
+		return ModLoader.HasMod(CrossModName) && ShouldLoadSupport();
 	}
 
 	protected override void ValidateType()
@@ -53,6 +53,15 @@ public abstract class CrossModModule : ModType, IAddSupport
 	/// Assigns <see cref="GeneralAPI"/>. Called before <see cref="OnModLoad"/>.
 	/// </summary>
 	internal abstract void LoadAPI();
+
+	/// <summary>
+	/// Similar to <see cref="IsLoadingEnabled(Mod)"/>. If this is running, then <see cref="CrossMod"/> is enabled.
+	/// </summary>
+	/// <returns>Whether or not this module should load.</returns>
+	protected internal virtual bool ShouldLoadSupport()
+	{
+		return true;
+	}
 
 	/// <inheritdoc cref="ModSystem.OnModLoad"/>
 	protected internal virtual void OnModLoad()
