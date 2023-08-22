@@ -3,6 +3,7 @@ using MeleeEffects.Projectiles;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using MonoMod.RuntimeDetour;
+using MonoMod.RuntimeDetour.HookGen;
 using RandomModCompat.Common.Configs;
 using RandomModCompat.Core;
 using RandomModCompat.Utilities;

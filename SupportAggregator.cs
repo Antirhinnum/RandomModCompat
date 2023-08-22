@@ -1,4 +1,5 @@
-﻿using RandomModCompat.Common;
+﻿using MonoMod.RuntimeDetour.HookGen;
+using RandomModCompat.Common;
 using RandomModCompat.Core;
 using RandomModCompat.Utilities;
 using System;
