@@ -36,16 +36,22 @@ internal sealed partial class LiberAPI
 			public override string Name => $"GemRelic{_gemInternalName}";
 			protected override bool CloneNewInstances => true;
 
+#if !TML_2022_09
+			public override LocalizedText DisplayName => Language.GetText(_name).WithFormatArgs(Lang.GetItemName(_gemType));
+#endif
+
 			public GemPedestalItem(int gemType, string gemInternalName)
 			{
 				_gemType = gemType;
 				_gemInternalName = gemInternalName;
 			}
 
+#if TML_2022_09
 			public override void Unload()
 			{
 				LanguageManager.Instance.OnLanguageChanged -= UpdateItemName;
 			}
+#endif
 
 			public override void AutoStaticDefaults()
 			{
@@ -64,18 +70,14 @@ internal sealed partial class LiberAPI
 				});
 			}
 
-#if !TML_2022_09
-			public override LocalizedText DisplayName => Language.GetText(_name);
-#endif
-
+#if TML_2022_09
 			public override void SetStaticDefaults()
 			{
-#if TML_2022_09
 				DisplayName.SetDefault(_name);
 				SacrificeTotal = 1;
-#endif
 				LanguageManager.Instance.OnLanguageChanged += UpdateItemName;
 			}
+#endif
 
 			public override void SetDefaults()
 			{
@@ -85,7 +87,10 @@ internal sealed partial class LiberAPI
 				Item.maxStack = 99;
 				Item.rare = ItemRarityID.Green;
 				Item.value = Item.sellPrice(1, 50);
+
+#if TML_2022_09
 				UpdateItemName(LanguageManager.Instance);
+#endif
 			}
 
 			public override void AddRecipes()
@@ -98,10 +103,12 @@ internal sealed partial class LiberAPI
 					.Register();
 			}
 
+#if TML_2022_09
 			private void UpdateItemName(LanguageManager languageManager)
 			{
-				Item.SetNameOverride(Language.GetTextValue(_name, Lang.GetItemNameValue(_gemType)));
+				Item.SetNameOverride(languageManager.GetTextValue(_name, Lang.GetItemNameValue(_gemType)));
 			}
+#endif
 		}
 
 		[Autoload(false)]

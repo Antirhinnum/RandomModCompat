@@ -17,6 +17,7 @@ Mods: {
 					BossesAsNPCs: Bosses as NPCs
 					BuffDisplay: Enhanced Buff Display
 					CalamityMod: Calamity Mod
+					CatalystMod: Catalyst Mod
 					Census: Census - Town NPC Checklist
 					ClickerClass: The Clicker Class
 					ColoredDamageTypes: Colored Damage Types
@@ -143,6 +144,7 @@ Mods: {
 		}
 
 		AssortedCrazyThings.ROR2.HarvesterBoss.Description: Ossified avian
+		CatalystMod.FlashlightLensName: "{0} Flashlight Lens"
 
 		Consolaria: {
 			ROR2: {

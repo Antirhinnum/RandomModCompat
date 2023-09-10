@@ -61,6 +61,9 @@ The following torches now flicker when placed:[list]
 [*]Magenta Torch
 [/list]
 
+[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2838015851]Catalyst Mod:[/url][/h1]
+Added flashlight lenses for Aquamarine and Opal.
+
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563815443]Dialogue Panel Rework:[/url][/h1]
 [b]1.4.3 only: Intrinsic in 1.4.4.[/b]
 The following NPCs mave modified button icons:[list]

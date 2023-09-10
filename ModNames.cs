@@ -17,6 +17,7 @@ internal static class ModNames
 		BossChecklist = nameof(BossChecklist),
 		BuffDisplay = nameof(BuffDisplay),
 		CalamityMod = nameof(CalamityMod),
+		CatalystMod = nameof(CatalystMod),
 		Census = nameof(Census),
 		ClickerClass = nameof(ClickerClass),
 		ColoredDamageTypes = nameof(ColoredDamageTypes),

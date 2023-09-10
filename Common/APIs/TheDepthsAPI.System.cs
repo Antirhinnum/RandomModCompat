@@ -79,7 +79,7 @@ internal sealed partial class TheDepthsAPI
 				return false;
 			}
 
-			return ModLoader.HasMod(ModNames.TheDepths);
+			return base.IsLoadingEnabled(mod);
 		}
 
 		// JIT issues

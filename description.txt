@@ -106,6 +106,7 @@ Current Compatibility:
  - Thorium Mod
  + Asymmetric Equipment
  + Atmospheric Torches
+ + Catalyst Mod
  + Dialogue Panel Rework
  + Enhanced Buff Display
  + Fishing Reborn
