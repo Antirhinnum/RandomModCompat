@@ -121,8 +121,8 @@
 		<Reference Include="Mask" Label="Not Ported">
 			<HintPath>..\ModAssemblies\Mask_v0.14.dll</HintPath>
 		</Reference>
-		<Reference Include="MeleeEffects" Label="Not Ported">
-			<HintPath>..\ModAssemblies\MeleeEffects_v1.0.5.1.dll</HintPath>
+		<Reference Include="MeleeEffects">
+			<HintPath>..\ModAssemblies\MeleeEffects_v1.4.4.1.dll</HintPath>
 		</Reference>
 		<Reference Include="OrchidMod" Label="Not Ported">
 			<HintPath>..\ModAssemblies\OrchidMod_v1.4.0.8.dll</HintPath>

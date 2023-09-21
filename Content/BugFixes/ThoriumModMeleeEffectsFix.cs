@@ -1,9 +1,5 @@
 ﻿using MeleeEffects.GlobalItems;
 using MeleeEffects.Projectiles;
-using Mono.Cecil.Cil;
-using MonoMod.Cil;
-using MonoMod.RuntimeDetour;
-using MonoMod.RuntimeDetour.HookGen;
 using RandomModCompat.Common.Configs;
 using RandomModCompat.Core;
 using RandomModCompat.Utilities;
@@ -17,23 +13,27 @@ using Terraria.ModLoader;
 using ThoriumMod.Core.Sheaths;
 using ThoriumMod.Utilities;
 
+#if TML_2022_09
+using Mono.Cecil.Cil;
+using MonoMod.Cil;
+using MonoMod.RuntimeDetour;
+using MonoMod.RuntimeDetour.HookGen;
+#endif
+
 namespace RandomModCompat.Content.BugFixes;
 
 // Thorium's Sheath accessories have an internal timer that counts how long the player has been holding a sword without using it.
 // That timer doesn't tick if Item::noMelee is true, and Melee Effects+ sets Item::noMelee to true to handle its effects.
 // This system adds a whitelist to that timer for any items Melee Effects+ has changed.
+// In 1.4.4, the sheath system has a handy IsValid(Item) method that can be hooked into.
 [JITWhenModsEnabled(ModNames.ThoriumMod, ModNames.MeleeEffects)]
 internal sealed class ThoriumModMeleeEffectsFix : ModSystem, IAddSupport
 {
-	#region Hook
-
-#if !TML_2022_09
-	private static ILHook _handleStrikeCooldownHook;
-#endif
-
+#if TML_2022_09
 	private static readonly MethodBase _handleStrikeCooldown = typeof(SheathData).GetMethod("HandleStrikeCooldown", ReflectionHelper.AllFlags);
-
-	#endregion Hook
+#else
+	private static readonly MethodBase _validItem = typeof(SheathData).GetMethod("ValidItem", ReflectionHelper.AllFlags);
+#endif
 
 	private static readonly FieldInfo _slashGlobalItemSlashEffect = typeof(SlashGlobalItem).GetField("slasheffect", ReflectionHelper.AllFlags);
 	private static HashSet<int> _affectedItems;
@@ -66,29 +66,6 @@ internal sealed class ThoriumModMeleeEffectsFix : ModSystem, IAddSupport
 	public override void Unload()
 	{
 		HookEndpointManager.Unmodify(_handleStrikeCooldown, AddWhitelist);
-	}
-#else
-
-	public override void Load()
-	{
-		_handleStrikeCooldownHook = new(_handleStrikeCooldown, AddWhitelist);
-	}
-
-	public override void Unload()
-	{
-		_handleStrikeCooldownHook?.Undo();
-	}
-
-#endif
-
-	public override void PostSetupContent()
-	{
-		static bool SlashCheck(Item item) => _slashGlobalItemSlashEffect.GetValue(item.GetGlobalItem<SlashGlobalItem>()) is true;
-
-		_affectedItems = ContentSamples.ItemsByType.Values
-			.Where(SlashCheck)
-			.Select(item => item.type)
-			.ToHashSet();
 	}
 
 	private static void AddWhitelist(ILContext il)
@@ -129,6 +106,29 @@ internal sealed class ThoriumModMeleeEffectsFix : ModSystem, IAddSupport
 	private static bool ShouldItemNotTickSheathCounter(Item item)
 	{
 		return item.noMelee && !_affectedItems.Contains(item.type);
+	}
+#else
+
+	public override void Load()
+	{
+		MonoModHooks.Add(_validItem, MarkWhitelistedItemsAsValid);
+	}
+
+	private static bool MarkWhitelistedItemsAsValid(Func<Item, bool> orig, Item item)
+	{
+		return orig(item) || _affectedItems.Contains(item.type);
+	}
+
+#endif
+
+	public override void PostSetupContent()
+	{
+		static bool SlashCheck(Item item) => item.TryGetGlobalItem(out SlashGlobalItem slashItem) && _slashGlobalItemSlashEffect.GetValue(slashItem) is true;
+
+		_affectedItems = ContentSamples.ItemsByType.Values
+			.Where(SlashCheck)
+			.Select(item => item.type)
+			.ToHashSet();
 	}
 }
 
@@ -179,6 +179,14 @@ internal sealed class ThoriumModMeleeEffectsPlayer : ModPlayer
 	}
 
 #else
+
+	public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref NPC.HitModifiers modifiers)
+	{
+		if (_meleeEffectsProjectileTypes.Contains(proj.type))
+		{
+			Player.GetThoriumPlayer().sheathTracker.ModifyDamage(target, ref modifiers);
+		}
+	}
 
 	public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
 	{

@@ -1,3 +1,4 @@
 [list]
-[*]Added support between Thorium Mod and the following mods: Catalyst Mod.
+[*]Added support between Thorium Mod and the following mod(s): Catalyst Mod.
+[*]Fixed support between Thorium Mod and the following mod(s): Melee Effects+.
 [/list]
