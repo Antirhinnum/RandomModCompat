@@ -50,9 +50,11 @@ internal sealed class Supportinator : ModSystem
 			return item.shoot != ProjectileID.None && ContentSamples.ProjectilesByType[item.shoot].aiStyle == ProjAIStyleID.Boomerang;
 		}
 
-		static IEnumerable<int> ItemDropsFromNPC(Func<int, bool> condition)
+		static IEnumerable<int> ItemDropsFromNPC(Func<int, bool> condition, bool includeNegative = true)
 		{
-			IEnumerable<int> npcIds = Enumerable.Range(NPCID.NegativeIDCount + 1, NPCLoader.NPCCount - NPCID.NegativeIDCount - 1) // All NPC IDs
+			int start = includeNegative ? NPCID.NegativeIDCount + 1 : NPCID.None;
+			int count = NPCLoader.NPCCount - start - 1;
+			IEnumerable<int> npcIds = Enumerable.Range(start, count) // All NPC IDs
 				.Where(condition.Invoke); // Filtered
 
 			IEnumerable<IItemDropRule> rules = npcIds.SelectMany(id => Main.ItemDropsDB.GetRulesForNPCID(id, includeGlobalDrops: false));
@@ -74,7 +76,7 @@ internal sealed class Supportinator : ModSystem
 		GenericChecker<ModPlayer>("fishing methods", p => LoaderUtils.HasOverride(p.GetType(), typeof(ModPlayer).GetMethod(nameof(ModPlayer.CatchFish))), ModNames.FishingReborn);
 		GenericChecker<ModItem>("flails", i => i.Item.shoot != ProjectileID.None && ContentSamples.ProjectilesByType[i.Item.shoot].aiStyle == ProjAIStyleID.Flail, ModNames.ThoriumMod);
 		GenericChecker<ModItem>("golden critters", i => Main.recipe.Where(r => r.createItem.type == ItemID.GoldenDelight).Any(r => r.requiredItem.Any(ri => ri.type == i.Type)), ModNames.OverpoweredGoldDust);
-		GenericChecker<ModItem>("martian items", i => ItemDropsFromNPC(id => NPC.GetNPCInvasionGroup(id) == InvasionID.MartianMadness).Contains(i.Type), ModNames.ThoriumMod);
+		GenericChecker<ModItem>("martian items", i => ItemDropsFromNPC(id => NPC.GetNPCInvasionGroup(id) == InvasionID.MartianMadness, includeNegative: false).Contains(i.Type), ModNames.ThoriumMod);
 		GenericChecker<ModProjectile>("partial minions", p => p.Projectile.minionSlots > 0f && p.Projectile.minionSlots != 1f, ModNames.SummonersAssociation);
 		GenericChecker<ModTile>("torches", t => TileID.Sets.Torch[t.Type], ModNames.ImprovedTorches);
 		GenericChecker<ModNPC>("town NPCs", n => n.NPC.isLikeATownNPC && !n.TownNPCStayingHomeless, ModNames.Census, ModNames.DialogueTweak);
