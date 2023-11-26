@@ -1,0 +1,4 @@
+[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2600460955
+
+[h1]General:[/h1]
+Dexterity now boosts throwing damage and crit. chance.

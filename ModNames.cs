@@ -1,4 +1,6 @@
-﻿namespace RandomModCompat;
+﻿using Terraria.ModLoader;
+
+namespace RandomModCompat;
 
 /// <summary>
 /// Constants for every supported mod name.
@@ -56,5 +58,10 @@ internal static class ModNames
 		ThoriumMod = nameof(ThoriumMod),
 		UniversalCraft = nameof(UniversalCraft),
 		Wikithis = nameof(Wikithis),
-		WWeaponScaling = nameof(WWeaponScaling);
+		WWeaponScaling = nameof(WWeaponScaling),
+		
+		// Vanilla support, usually throwing support.
+		// "ModLoader" is the name of tModLoader's internal mod, which is always loaded.
+		Terraria = nameof(ModLoader),
+		Vanilla = Terraria;
 }
