@@ -1,10 +1,5 @@
 [b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2864843929
 
-[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equipment:[/url][/h1]
-The following items can now be worn asymmetrically:[list]
-[*]Valentine Ring
-[/list]
-
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2921706690]Item Check Blacklist Lib:[/url][/h1]
 The following items are blacklisted on the Item Checklist:[list]
 [*]Holy Hand Grenade 2

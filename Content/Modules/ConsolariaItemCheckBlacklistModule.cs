@@ -15,6 +15,5 @@ internal sealed class ConsolariaItemCheckBlacklistModule : CrossModModule<ItemCh
 
 		// TODO: Remove in 1.4.4.
 		API.Add<SpectralArrow>();
-		API.Add<HolyHandgrenade2>();
 	}
 }

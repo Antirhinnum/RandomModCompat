@@ -1,12 +1,12 @@
 ﻿using RandomModCompat.Common.APIs;
 using RandomModCompat.Core;
-using SlugNPCs.NPCs;
+using SlugNPCsEX.NPCs;
 
 namespace RandomModCompat.Content.Modules;
 
-internal sealed class SlugNPCsCensusModule : CrossModModule<CensusAPI>
+internal sealed class SlugNPCsEXCensusModule : CrossModModule<CensusAPI>
 {
-	public override string CrossModName => ModNames.SlugNPCs;
+	public override string CrossModName => ModNames.SlugNPCsEX;
 
 	protected internal override void PostSetupContent()
 	{

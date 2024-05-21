@@ -1,16 +1,5 @@
 [b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2824688072
 
-[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equipment:[/url][/h1]
-The following accessories can now be worn asymmetrically:[list]
-[*]Bloodstained Glove
-[*]Depths Charm
-[*]Electrician's Glove
-[*]Elemental Gauntlet
-[*]Filthy Glove
-[*]Glove of Precision
-[*]Glove of Recklessness
-[/list]
-
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2817496179]Atmospheric Torches:[/url][/h1]
 The following torches now flicker when placed:[list]
 [*]Abyss Torch

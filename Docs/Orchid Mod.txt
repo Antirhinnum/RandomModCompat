@@ -1,20 +1,5 @@
 ﻿[b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2836679312
 
-[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equipment:[/url][/h1]
-The following items can now be worn asymmetrically:[list]
-[*]Amber Idol
-[*]Amethyst Idol
-[*]Diamond Idol
-[*]Emerald Idol
-[*]Mourning Torch
-[*]Prismatic Idol
-[*]Ruby Idol
-[*]Rune of Horus
-[*]Sapphire Idol
-[*]Sun Priest's Torch
-[*]Topaz Idol
-[/list]
-
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955]Bangarang:[/url][/h1]
 The Prototype Secrecy now functions properly with Bangarang's accessories.
 

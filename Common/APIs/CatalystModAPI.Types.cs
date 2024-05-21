@@ -79,7 +79,7 @@ internal sealed partial class CatalystModAPI
 			Item.maxStack = 1;
 			Item.consumable = false;
 			Item.knockBack = 1.5f;
-			Item.value = CalamityGlobalItem.Rarity1BuyPrice;
+			Item.value = CalamityGlobalItem.RarityBlueBuyPrice;
 			Item.rare = ItemRarityID.Blue;
 
 #if TML_2022_09

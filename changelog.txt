@@ -1,5 +1,5 @@
 [list]
-[*]Added support between Thorium Mod and the following mod(s): Catalyst Mod.
-[*]The Level+ Dexterity stat now boosts throwing damage and crit. chance.
-[*]Fixed support between Thorium Mod and the following mod(s): Melee Effects+.
+[*]Fixed load-time errors from The Depths and Calamity Mod updates.
+[*]Fixed load-time error if The Depths compatibility failed.
+[*]Removed all support for Asymmetric Equipment, as that mod now natively supports it.
 [/list]

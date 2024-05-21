@@ -1,9 +1,4 @@
 [b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2728994926
 
-[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equipment:[/url][/h1]
-The following items can now be worn asymmetrically:[list]
-[*]TV Mask
-[/list]
-
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2687866031]Census:[/url][/h1]
 Census now shows the move-in condition for the Mask Merchant.

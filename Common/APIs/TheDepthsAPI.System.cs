@@ -2,7 +2,6 @@
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using MonoMod.RuntimeDetour;
-using MonoMod.RuntimeDetour.HookGen;
 using RandomModCompat.Common.Configs;
 using RandomModCompat.Common.Edits;
 using RandomModCompat.Utilities;
@@ -63,19 +62,19 @@ internal sealed partial class TheDepthsAPI
 
 			if (ModContent.GetInstance<RandomModCompatConfig>().DisableIL)
 			{
-				Mod.Logger.Info("Not loading The Depths shale gems because IL edits are disabled.");
+				mod.Logger.Info("Not loading The Depths shale gems because IL edits are disabled.");
 				return false;
 			}
 
 			if (ModTileTextureBypass.Failed)
 			{
-				Mod.Logger.Info("Not loading The Depths shale gems because ModTile texture bypassing failed.");
+				mod.Logger.Info("Not loading The Depths shale gems because ModTile texture bypassing failed.");
 				return false;
 			}
 
 			if (!LoadGemsMethod())
 			{
-				Mod.Logger.Info("Not loading The Depths shale gems because the generation method could not be found.");
+				mod.Logger.Info("Not loading The Depths shale gems because the generation method could not be found.");
 				return false;
 			}
 
@@ -200,7 +199,7 @@ internal sealed partial class TheDepthsAPI
 				// TileRunner uses floats on 1.4.3 and doubles on 1.4.4.
 #if TML_2022_09
 				i => i.MatchLdcR4(0f),
-				i => i.MatchLdcR4(0f), 
+				i => i.MatchLdcR4(0f),
 #else
 				i => i.MatchLdcR8(0f),
 				i => i.MatchLdcR8(0f),
@@ -315,10 +314,10 @@ internal sealed partial class TheDepthsAPI
 			mod.AddContent(instance);
 			_mergingShaleTiles.Add(instance.Type);
 			_customFrequencies.Add(frequency);
-			Main.QueueMainThreadAction(() => GenerateTextureForTile(instance.Type, gemTileId, gemBaseTileId, internalName));
+			Main.QueueMainThreadAction(() => GenerateTextureForTile(mod, instance.Type, gemTileId, gemBaseTileId, internalName));
 		}
 
-		private static void GenerateTextureForTile(int tileType, int gemTileId, int gemBaseTileId, string gemInternalName)
+		private static void GenerateTextureForTile(Mod mod, int tileType, int gemTileId, int gemBaseTileId, string gemInternalName)
 		{
 			static Texture2D GetTileTexture(int id)
 			{
@@ -329,7 +328,7 @@ internal sealed partial class TheDepthsAPI
 			_shaleTexture ??= GetTileTexture(ModContent.TileType<Shalestone>());
 			Texture2D gems = TextureHelper.GetOverlaidTexture(GetTileTexture(gemBaseTileId), GetTileTexture(gemTileId));
 			Texture2D shaleGems = TextureHelper.OverlayTextures(_shaleTexture, gems);
-			_tileTypeToAsset[tileType] = TextureHelper.CreateAssetFromTexture(shaleGems, $"RandomModCompat/Assets/TheDepths/Shalestone{gemInternalName}", ModContent.GetInstance<TheDepthsAPISystem>().Mod);
+			_tileTypeToAsset[tileType] = TextureHelper.CreateAssetFromTexture(shaleGems, $"RandomModCompat/Assets/TheDepths/Shalestone{gemInternalName}", mod);
 		}
 
 		internal static Asset<Texture2D> GetTexture(ushort type)

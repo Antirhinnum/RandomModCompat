@@ -31,7 +31,7 @@ internal sealed class CalamityModThoriumModModule : CrossModModule<ThoriumModAPI
 		API.AddFlailProjectileID<YateveoBloomProj>();
 
 		// Martian
-		API.AddMartianItemID<NullificationRifle>();
+		API.AddMartianItemID<NullificationPistol>();
 		API.AddMartianItemID<Wingman>();
 		API.AddMartianItemID<ShockGrenade>();
 

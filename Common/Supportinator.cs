@@ -30,21 +30,6 @@ internal sealed class Supportinator : ModSystem
 			return npc.boss || NPCID.Sets.DangerThatPreventsOtherDangers[npc.type] || NPCID.Sets.ShouldBeCountedAsBoss[npc.type] || npc.type is NPCID.EaterofWorldsHead or NPCID.EaterofWorldsBody or NPCID.EaterofWorldsTail;
 		}
 
-		static bool ItemMightBeAsymmetricEquip(ModItem item)
-		{
-			HashSet<EquipType> possiblyAsymmetricEquips = new()
-			{
-				EquipType.HandsOn,
-				EquipType.HandsOff,
-				EquipType.Waist,
-				EquipType.Face,
-				EquipType.Balloon,
-			};
-
-			return item.GetType().GetCustomAttribute<AutoloadEquip>() is AutoloadEquip equips
-				&& equips.equipTypes.Any(possiblyAsymmetricEquips.Contains);
-		}
-
 		static bool ItemMightBeBoomerang(Item item)
 		{
 			return item.shoot != ProjectileID.None && ContentSamples.ProjectilesByType[item.shoot].aiStyle == ProjAIStyleID.Boomerang;
@@ -68,12 +53,11 @@ internal sealed class Supportinator : ModSystem
 			return list.Select(info => info.itemId).Distinct();
 		}
 
-		GenericChecker<ModItem>("asymmetric equips", ItemMightBeAsymmetricEquip, ModNames.AsymmetricEquips);
 		GenericChecker<ModItem>("boomerangs", i => ItemMightBeBoomerang(i.Item), ModNames.Bangarang);
 		GenericChecker<ModNPC>("bosses", n => IsBoss(n.NPC), ModNames.MagicStorage, ModNames.ROR2HealthBars);
 		GenericChecker<ModTile>("crafting stations", t => Main.recipe.Any(r => r.HasTile(t)), ModNames.UniversalCraft);
 		GenericChecker<DamageClass>("damage classes", null, ModNames.ColoredDamageTypes, ModNames.levelplus);
-		GenericChecker<ModPlayer>("fishing methods", p => LoaderUtils.HasOverride(p.GetType(), typeof(ModPlayer).GetMethod(nameof(ModPlayer.CatchFish))), ModNames.FishingReborn);
+		GenericChecker<ModPlayer>("fishing methods", p => LoaderUtils.HasOverride(p, p2 => p2.CatchFish), ModNames.FishingReborn);
 		GenericChecker<ModItem>("flails", i => i.Item.shoot != ProjectileID.None && ContentSamples.ProjectilesByType[i.Item.shoot].aiStyle == ProjAIStyleID.Flail, ModNames.ThoriumMod);
 		GenericChecker<ModItem>("golden critters", i => Main.recipe.Where(r => r.createItem.type == ItemID.GoldenDelight).Any(r => r.requiredItem.Any(ri => ri.type == i.Type)), ModNames.OverpoweredGoldDust);
 		GenericChecker<ModItem>("martian items", i => ItemDropsFromNPC(id => NPC.GetNPCInvasionGroup(id) == InvasionID.MartianMadness, includeNegative: false).Contains(i.Type), ModNames.ThoriumMod);

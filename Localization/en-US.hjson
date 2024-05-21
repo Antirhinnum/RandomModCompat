@@ -10,7 +10,6 @@ Mods: {
 				ModNames: {
 					AmuletOfManyMinions: The Amulet of Many Minions: Combat Pets!
 					AssortedCrazyThings: Assorted Crazy Things
-					AsymmetricEquips: Asymmetric Equipment
 					AutoReroll: Auto Reforge
 					BalloonsExtended: Balloons Extended
 					Bangarang: Bangarang - A Boomerang Overhaul
@@ -50,6 +49,7 @@ Mods: {
 					WWeaponScaling: W1K's Weapon Scaling
 					LevelPlus: Level+
 					ModLoader: Vanilla / tModLoader
+					SlugNPCsEX: Slug NPCs
 				}
 			}
 
@@ -199,6 +199,12 @@ Mods: {
 				SlagFury.Description: First flame
 				DreamEater.Description: Dying reality
 			}
+		}
+
+		Items: {
+			GemRelicOnyx.Tooltip: ""
+			GemRelicAquamarine.Tooltip: ""
+			GemRelicOpal.Tooltip: ""
 		}
 	}
 }

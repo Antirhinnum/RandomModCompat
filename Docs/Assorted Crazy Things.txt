@@ -1,35 +1,5 @@
 ﻿[b]Mod Link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2795859323
 
-[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equipment:[/url][/h1]
-The following accessories can now be worn asymmetrically:[list]
-[*]Bottled Dreams
-[*]Crazy Bundle of Assorted Balloons
-[*]Massive Bundle of Balloons
-[*]Star in a Balloon
-[*]Star Wisp Balloon
-[*]Wisp in a Balloon[/list]
-
-[b]1.4.3 only: Items don't exist in 1.4.4.[/b]:[list]
-[*]Cobballoon
-[*]Retinazer Eye-lloon
-[*]Green Eye-lloon
-[*]Green Toothy Eye-lloon
-[*]Green Metal Eye-lloon
-[*]Green Metal Toothy Eye-lloon
-[*]Purple Eye-lloon
-[*]Purple Toothy Eye-lloon
-[*]Purple Metal Eye-lloon
-[*]Purple Metal Toothy Eye-lloon
-[*]Red Eye-lloon
-[*]Red Toothy Eye-lloon
-[*]Red Metal Eye-lloon
-[*]Red Metal Toothy Eye-lloon
-[*]Spazmatism Eye-lloon
-[/list]
-[b]1.4.4 only: Items don't exist in 1.4.3.[/b]:[list]
-[*]Silly Balloon Kit
-[/list]
-
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2887419955]Bangarang:[/url][/h1]
 The following boomerangs now function properly with Bangarang's accessories:[list]
 [*]Guide Voodoorang

@@ -1,59 +1,5 @@
 [b]Mod link:[/b] https://steamcommunity.com/sharedfiles/filedetails/?id=2909886416
 
-[h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240]Asymmetric Equipment:[/url][/h1]
-The following items can now be worn asymmetrically:[list]
-[*]Amber Ring
-[*]Amethyst Ring
-[*]Apothecary's Cyan Vial
-[*]Apothecary's Scarlet Vial
-[*]Aquamarine Ring
-[*]Auto Tuner
-[*]Canteen
-[*]Crystal Arcanite
-[*]Crystal Honey
-[*]Dark Glaze
-[*]Dark Heart
-[*]Deadman's Patch
-[*]Devil's Subwoofer
-[*]Diamond Ring
-[*]Emerald Ring
-[*]Eye of the Storm
-[*]Gardener's Sheath
-[*]Heart of the Jungle
-[*]Hungering Blossom
-[*]Incandescent Spark
-[*]Inner Flame
-[*]Leather Sheath
-[*]Leeching Sheath
-[*]Life Gem
-[*]Mana Bauble
-[*]Mermaid's Canteen
-[*]Metabolic Pills
-[*]Mirror of the Beholder
-[*]Necrotic Skull
-[*]Nightshade Flower
-[*]Note Hairpin
-[*]Olympic Torch
-[*]Opal Ring
-[*]Phylactery
-[*]Plague Lord's Flask
-[*]Potion Chaser
-[*]Ring of Unity
-[*]Ruby Ring
-[*]Sapphire Ring
-[*]Soul Stone
-[*]Subwoofer
-[*]Support Sash
-[*]Terrarium Surround Sound
-[*]The Lost Cross
-[*]The Ring
-[*]Titan Slayer Sheath
-[*]Topaz Ring
-[*]Up-Down Balloon
-[*]Vampire Gland
-[*]Writhing Sheath
-[/list]
-
 [h1][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2817496179]Atmospheric Torches:[/url][/h1]
 The following torches now flicker when placed:[list]
 [*]Black Torch

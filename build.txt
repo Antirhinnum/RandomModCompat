@@ -1,9 +1,9 @@
 displayName = Assorted Mod Compatibility
 author = Snek
-version = 1.3.1
+version = 1.3.2
 homepage = https://github.com/Antirhinnum/RandomModCompat
 hideCode = true
 hideResources = false
 includeSource = true
 buildIgnore = LICENSE, README.md, *.pdn, gear.png, Docs/, Notes/, *.pdb
-weakReferences = AssortedCrazyThings, BalloonsExtended, Bangarang, CalamityMod, CatalystMod, ClickerClass, Consolaria, DBZMODPORT, FishingReborn, ImprovedTorches, ItReallyMustBe, LevelPlus, Liber, Mask, MeleeEffects, OrchidMod, PrimeRework, SlugNPCs, StormDiversMod, TheConfectionRebirth, TheDepths, ThoriumMod
+weakReferences = AssortedCrazyThings, BalloonsExtended, Bangarang, CalamityMod, CatalystMod, ClickerClass, Consolaria, DBZMODPORT, FishingReborn, ImprovedTorches, ItReallyMustBe, LevelPlus, Liber, Mask, MeleeEffects, OrchidMod, PrimeRework, SlugNPCsEX, StormDiversMod, TheConfectionRebirth, TheDepths, ThoriumMod

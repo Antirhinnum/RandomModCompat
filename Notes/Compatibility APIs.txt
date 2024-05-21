@@ -45,16 +45,6 @@ Amulet of Many Minions:
 	+ Add squires (Note: No Call API for this).
 	+ Make AoMM-compatible minions (?)
 
-Asymmetric Equips:
-	+ Mod.Call Support
-	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2878558240
-	+ https://github.com/Antirhinnum/AsymmetricEquips/tree/1.4.3
-	Makes equipment show asymmetrically.
-	Call support allows making modded equipment asymmetric and getting into about added content.
-
-	Compat. Ideas:
-	+ Asymmetric equips!
-
 Atmospheric Torches:
 	+ https://steamcommunity.com/sharedfiles/filedetails/?id=2817496179
 	Makes torches flicker.

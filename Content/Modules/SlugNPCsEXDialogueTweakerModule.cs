@@ -1,14 +1,14 @@
 ﻿using RandomModCompat.Common.APIs;
 using RandomModCompat.Core;
-using SlugNPCs.NPCs;
+using SlugNPCsEX.NPCs;
 using System.Collections.Generic;
 using Terraria.ModLoader;
 
 namespace RandomModCompat.Content.Modules;
 
-internal sealed class SlugNPCsDialogueTweakerModule : CrossModModule<DialogueTweakAPI>
+internal sealed class SlugNPCsEXDialogueTweakerModule : CrossModModule<DialogueTweakAPI>
 {
-	public override string CrossModName => ModNames.SlugNPCs;
+	public override string CrossModName => ModNames.SlugNPCsEX;
 
 	protected internal override void PostSetupContent()
 	{

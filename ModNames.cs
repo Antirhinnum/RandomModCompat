@@ -10,7 +10,6 @@ internal static class ModNames
 	internal const string
 		AmuletOfManyMinions = nameof(AmuletOfManyMinions),
 		AssortedCrazyThings = nameof(AssortedCrazyThings),
-		AsymmetricEquips = nameof(AsymmetricEquips),
 		AutoReroll = nameof(AutoReroll),
 		BalloonsExtended = nameof(BalloonsExtended),
 		Bangarang = nameof(Bangarang),
@@ -49,7 +48,7 @@ internal static class ModNames
 		Redemption = nameof(Redemption),
 		RescueFairies = nameof(RescueFairies),
 		ROR2HealthBars = nameof(ROR2HealthBars),
-		SlugNPCs = nameof(SlugNPCs),
+		SlugNPCsEX = nameof(SlugNPCsEX),
 		StormDiversMod = nameof(StormDiversMod),
 		SummonersAssociation = nameof(SummonersAssociation),
 		TerraTyping = nameof(TerraTyping),

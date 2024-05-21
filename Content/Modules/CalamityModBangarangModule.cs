@@ -46,7 +46,7 @@ internal sealed class CalamityModBangarangModule : CrossModModule<BangarangAPI>
 		API.RegisterSimpleBoomerang<MoltenAmputator>(-1);
 		API.RegisterSimpleBoomerang<NanoblackReaper>(-1);
 		API.RegisterSimpleBoomerang<SubductionSlicer>(-1);
-		API.RegisterSimpleBoomerang<TerraDisk>(-1);
+		API.RegisterSimpleBoomerang<SamsaraSlicer>(-1);
 		API.RegisterSimpleBoomerang<ToxicantTwister>(-1);
 		API.RegisterSimpleBoomerang<Valediction>(-1);
 

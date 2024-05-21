@@ -17,7 +17,6 @@ internal sealed class ThoriumModItemCheckBlacklistModule : CrossModModule<ItemCh
 		// List from wiki: https://thoriummod.wiki.gg/wiki/List_of_items#Unobtainable_items
 		API.Add(
 			ModContent.ItemType<AngryStatue>(),
-			ModContent.ItemType<WeirdMud>(),
 			ModContent.ItemType<ArcaneSpike>(),
 			ModContent.ItemType<ArtificersExtractor>(),
 			ModContent.ItemType<BasicPickaxe>(),
@@ -49,6 +48,7 @@ internal sealed class ThoriumModItemCheckBlacklistModule : CrossModModule<ItemCh
 #if TML_2022_09
 			ModContent.ItemType<DyingRealityWhisper>(),
 			ModContent.ItemType<PenguinWandTrue>(),
+			ModContent.ItemType<WeirdMud>(),
 #else
 			ModContent.ItemType<DestinyWeaver>(),
 			ModContent.ItemType<TheTruePenguinWand>(),

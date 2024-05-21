@@ -1,15 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\tModLoader.targets" />
 	<PropertyGroup>
 		<AssemblyName>RandomModCompat</AssemblyName>
-		<TargetFramework>net6.0</TargetFramework>
-		<PlatformTarget>AnyCPU</PlatformTarget>
 		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
-	</ItemGroup>
 	<ItemGroup Condition=" '$(DefineConstants.Contains(TML_2022_09))' == 'true'" Label="1.4.3.6 Dependencies">
 		<Reference Include="AssortedCrazyThings">
 			<HintPath>..\ModAssemblies\AssortedCrazyThings_v1.4.3.dll</HintPath>
@@ -80,70 +75,70 @@
 	</ItemGroup>
 	<ItemGroup Condition=" '$(DefineConstants.Contains(TML_2022_09))' != 'true'" Label="1.4.4.x Dependencies">
 		<Reference Include="AssortedCrazyThings">
-			<HintPath>..\ModAssemblies\AssortedCrazyThings_v1.4.4.4.dll</HintPath>
+			<HintPath>..\ModAssemblies\AssortedCrazyThings_v1.4.6.3.dll</HintPath>
 		</Reference>
-		<Reference Include="BalloonsExtended" Label="Not Ported">
-			<HintPath>..\ModAssemblies\BalloonsExtended_v1.5.dll</HintPath>
+		<Reference Include="BalloonsExtended">
+			<HintPath>..\ModAssemblies\BalloonsExtended_v1.6.3.dll</HintPath>
 		</Reference>
-		<Reference Include="Bangarang" Label="Not Ported">
-			<HintPath>..\ModAssemblies\Bangarang_v2.0.0.dll</HintPath>
+		<Reference Include="Bangarang">
+			<HintPath>..\ModAssemblies\Bangarang_v2.0.2.dll</HintPath>
 		</Reference>
 		<Reference Include="CalamityMod">
-			<HintPath>..\ModAssemblies\CalamityMod_v2.0.3.2.dll</HintPath>
+			<HintPath>..\ModAssemblies\CalamityMod_v2.0.4.2.dll</HintPath>
 		</Reference>
 		<Reference Include="CatalystMod">
-			<HintPath>..\ModAssemblies\CatalystMod_v1.1.2.dll</HintPath>
+			<HintPath>..\ModAssemblies\CatalystMod_v1.1.2.3.dll</HintPath>
 		</Reference>
 		<Reference Include="ClickerClass">
-			<HintPath>..\ModAssemblies\ClickerClass_v1.4.dll</HintPath>
+			<HintPath>..\ModAssemblies\ClickerClass_v1.4.1.dll</HintPath>
 		</Reference>
 		<Reference Include="Consolaria">
-			<HintPath>..\ModAssemblies\Consolaria_v2.1.0.8.dll</HintPath>
+			<HintPath>..\ModAssemblies\Consolaria_v2.1.0.13.dll</HintPath>
 		</Reference>
 		<Reference Include="DBZMODPORT">
-			<HintPath>..\ModAssemblies\DBZMODPORT_v0.4.1.dll</HintPath>
+			<HintPath>..\ModAssemblies\DBZMODPORT_v0.4.3.dll</HintPath>
 		</Reference>
 		<Reference Include="FishingReborn" Label="Not Ported">
 			<HintPath>..\ModAssemblies\FishingReborn_v1.0.1.3.dll</HintPath>
 		</Reference>
 		<Reference Include="ImprovedTorches">
-			<HintPath>..\ModAssemblies\ImprovedTorches_v1.4.dll</HintPath>
+			<HintPath>..\ModAssemblies\ImprovedTorches_v1.4.2.dll</HintPath>
 		</Reference>
 		<Reference Include="ItReallyMustBe" Label="Not Ported">
 			<HintPath>..\ModAssemblies\ItReallyMustBe_v1.40.dll</HintPath>
 		</Reference>
 		<Reference Include="LevelPlus">
-			<HintPath>..\ModAssemblies\LevelPlus_v1.1.5.dll</HintPath>
+			<HintPath>..\ModAssemblies\LevelPlus_v1.1.11.dll</HintPath>
 		</Reference>
-		<Reference Include="Liber" Label="Not Ported">
-			<HintPath>..\ModAssemblies\Liber_v0.4.1.dll</HintPath>
+		<Reference Include="Liber">
+			<HintPath>..\ModAssemblies\Liber_v0.5.dll</HintPath>
 		</Reference>
 		<Reference Include="Mask" Label="Not Ported">
 			<HintPath>..\ModAssemblies\Mask_v0.14.dll</HintPath>
 		</Reference>
 		<Reference Include="MeleeEffects">
-			<HintPath>..\ModAssemblies\MeleeEffects_v1.4.4.1.dll</HintPath>
+			<HintPath>..\ModAssemblies\MeleeEffects_v1.4.4.2.dll</HintPath>
 		</Reference>
 		<Reference Include="OrchidMod" Label="Not Ported">
 			<HintPath>..\ModAssemblies\OrchidMod_v1.4.0.8.dll</HintPath>
 		</Reference>
 		<Reference Include="PrimeRework">
-			<HintPath>..\ModAssemblies\PrimeRework_v3.9.dll</HintPath>
+			<HintPath>..\ModAssemblies\PrimeRework_v4.9.6.dll</HintPath>
 		</Reference>
-		<Reference Include="SlugNPCs" Label="Not Ported">
-			<HintPath>..\ModAssemblies\SlugNPCs_v0.1.dll</HintPath>
+		<Reference Include="SlugNPCsEX">
+			<HintPath>..\ModAssemblies\SlugNPCsEX_v2.0.2.dll</HintPath>
 		</Reference>
 		<Reference Include="StormDiversMod">
-			<HintPath>..\ModAssemblies\StormDiversMod_v2.4.2.3.dll</HintPath>
+			<HintPath>..\ModAssemblies\StormDiversMod_v2.5.1.11.dll</HintPath>
 		</Reference>
 		<Reference Include="TheConfectionRebirth">
-			<HintPath>..\ModAssemblies\TheConfectionRebirth_v0.19.2.dll</HintPath>
+			<HintPath>..\ModAssemblies\TheConfectionRebirth_v0.21.1.dll</HintPath>
 		</Reference>
 		<Reference Include="TheDepths">
-			<HintPath>..\ModAssemblies\TheDepths_v0.6.3.dll</HintPath>
+			<HintPath>..\ModAssemblies\TheDepths_v1.0.dll</HintPath>
 		</Reference>
 		<Reference Include="ThoriumMod">
-			<HintPath>..\ModAssemblies\ThoriumMod_v1.7.1.2.dll</HintPath>
+			<HintPath>..\ModAssemblies\ThoriumMod_v1.7.1.6.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 </Project>

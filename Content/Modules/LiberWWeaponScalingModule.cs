@@ -23,6 +23,6 @@ internal sealed class LiberWWeaponScalingModule : CrossModModule<WWeaponScalingA
 		API.AddScaling<BastardSword>(WWeaponScalingAPI.Tier.Gold);
 		API.AddScaling<RustedCutlass>(WWeaponScalingAPI.Tier.Iron);
 		API.AddScaling<VikingSword>(WWeaponScalingAPI.Tier.Gold);
-		API.AddScaling<Transendence>(WWeaponScalingAPI.Tier.Iron);
+		API.AddScaling<Transcendence>(WWeaponScalingAPI.Tier.Iron);
 	}
 }
