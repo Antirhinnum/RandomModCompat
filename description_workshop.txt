@@ -6,7 +6,7 @@ Some examples of current compatibility:[list][*]Many modded bosses now drop Shad
 See the [url=https://steamcommunity.com/sharedfiles/filedetails/discussions/2976409348]Discussions tab[/url] for a detailed breakdown of compatibility, as well as links to all mods and a planning post.
 
 Thanks to the following users for localizing this mod![list]
-[*]GamMa0892 (Simplified Chinese)
+[*]GamMa (Simplified Chinese)
 [/list]
 
 [b]If you're experiencing bugs:[/b]
