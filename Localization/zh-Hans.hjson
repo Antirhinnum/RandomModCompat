@@ -1,0 +1,211 @@
+
+Mods: {
+	RandomModCompat: {
+		Configs: {
+			ModSupportConfig: {
+				DisplayName: Mod Support Config
+				Info: Please refer to this mod's Steam Workshop page for what each compatibility option does.
+				EmptyTooltip: ""
+
+				# Would be nice to grab these at runtime, but there's no way to do that if the player doesn't have a mod enabled/installed.
+				ModNames: {
+					AmuletOfManyMinions: The Amulet of Many Minions: Combat Pets!
+					AssortedCrazyThings: Assorted Crazy Things
+					AutoReroll: Auto Reforge
+					BalloonsExtended: Balloons Extended
+					Bangarang: Bangarang - A Boomerang Overhaul
+					BossesAsNPCs: Bosses as NPCs
+					BuffDisplay: Enhanced Buff Display
+					CalamityMod: Calamity Mod
+					CatalystMod: Catalyst Mod
+					Census: Census - Town NPC Checklist
+					ClickerClass: The Clicker Class
+					ColoredDamageTypes: Colored Damage Types
+					Consolaria: Consolaria
+					DBZMODPORT: Dragon Ball Terraria
+					DialogueTweak: Dialogue Panel Rework
+					FishingReborn: Fishing Reborn
+					ImprovedTorches: Atmospheric Torches
+					ItemCheckBlacklist: Item Check Blacklist Lib
+					ItReallyMustBe: Dreadnautilus is a Boss
+					levelplus: Level+
+					Liber: Liber Creaturarum
+					MagicStorage: Magic Storage
+					Mask: Mask
+					MeleeEffects: Melee Effects+
+					OrchidMod: Orchid Mod
+					OverpoweredGoldDust: Gold Dust Turns Everything Into Gold
+					PrimeRework: Mech Bosses Rework
+					Redemption: Mod of Redemption
+					RescueFairies: Rescue Fairies
+					ROR2HealthBars: RoR 2 Health Bars
+					SlugNPCs: Slug Town Pets
+					StormDiversMod: Storm's Additions Mod
+					SummonersAssociation: Summoners Association
+					TerraTyping: TerraTyping
+					TheConfectionRebirth: Confection REBAKED (Hallow Alternative)
+					TheDepths: The Depths (Hell Alternative)
+					ThoriumMod: Thorium Mod
+					UniversalCraft: Universal Crafter
+					WWeaponScaling: W1K's Weapon Scaling
+					LevelPlus: Level+
+					ModLoader: Vanilla / tModLoader
+					SlugNPCsEX: Slug NPCs
+				}
+			}
+
+			RandomModCompatConfig: {
+				DisplayName: Misc. Config
+
+				DisableIL: {
+					Label: Disable IL Edits
+					Tooltip:
+						'''
+						If enabled, then all compatibility and bug fixes that need IL edits will be disabled.
+						Enable this if you start getting weird bugs or freezes in multiplayer or after a reload.
+						Most IL bugs only happen when mods are reloaded, so before enabling this option, see if your issue
+						still happens if you restart your game / server and enter your world without reloading mods.
+
+						Enabling this setting will forcibly disable the following support:
+						 - Dragon Ball Terraria / Auto Reforge fix
+						 - Thorium Mod / Melee Effects+ fix
+						 - All Level+ support
+						'''
+				}
+
+				SupportinatorEnabled: {
+					Label: Enable Debug Support Checks
+					Tooltip:
+						'''
+						If enabled, then this mod will run through all loaded mods and log potential content to add support for.
+						Forcibly enabled if the mod is running in debug mode.
+						'''
+				}
+
+				OutputModpack: {
+					Label: Log Supported Modlist
+					Tooltip:
+						'''
+						If enabled, a list of all mods this mod can possible support will be output into the logs in the format of enabled.json.
+						This will not include dependencies!
+						'''
+				}
+			}
+
+			LevelPlusValuesConfig: {
+				DisplayName: Level+ Values Config
+
+				# DBZMODPORT
+				KiDamagePerPoint: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.DBZMODPORT}: Ki Damage (STR)"
+					Tooltip: How much Ki Damage the player gets per point.
+				}
+
+				PointsPerKiCrit: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.DBZMODPORT}: Ki Crit (STR)"
+					Tooltip: How many points it takes to gain 1% Ki Crit
+				}
+
+				PointsPerKiRegen: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.DBZMODPORT}: Ki Regen (CON)"
+					Tooltip: How many points it takes to gain 1 Ki Regen
+				}
+
+				# ClickerClass
+				ClickDamagePerPoint: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ClickerClass}: Click Damage (DEX)"
+					Tooltip: How much Click Damage the player gets per point.
+				}
+
+				PointsPerClickCrit: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ClickerClass}: Click Crit (DEX)"
+					Tooltip: How many points it takes to gain 1% Click Crit
+				}
+
+				# ThoriumMod
+				BardDamagePerPoint: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ThoriumMod}: Symphonic Damage (CHA)"
+					Tooltip: How much Symphonic Damage the player gets per point.
+				}
+
+				PointsPerBardCrit: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ThoriumMod}: Symphonic Crit (CHA)"
+					Tooltip: How many points it takes to gain 1% Symphonic Crit
+				}
+
+				HealerDamagePerPoint: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ThoriumMod}: Radiant Damage (INT)"
+					Tooltip: How much Click Damage the player gets per point.
+				}
+
+				PointsPerHealerCrit: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ThoriumMod}: Radiant Crit (INT)"
+					Tooltip: How many points it takes to gain 1% Radiant Crit
+				}
+			}
+		}
+
+		AssortedCrazyThings.ROR2.HarvesterBoss.Description: Ossified avian
+		CatalystMod.FlashlightLensName: "{0} Flashlight Lens"
+
+		Consolaria: {
+			ROR2: {
+				Lepus.Description: Wretched lagomorph
+				Ocram.Description: Nostalgic terror
+				Turkor.Description: Free bird
+			}
+		}
+
+		ItReallyMustBe.ROR2.Dreadnautilus.Description: Sanguine mollusk
+
+		LevelPlus: {
+			AddDamage: "  +{Amount}% {DamageType}"
+			AddCrit: "  +{Amount}% {DamageTypeNoDamage} crit chance"
+			ResourceRegen: "  +{Amount} {Resource} regen"
+		}
+
+		Liber.GemPedestalItem: "{0} Relic"
+
+		PrimeRework: {
+			CaretakerDefeatedCondition: ""
+
+			ROR2: {
+				Caretaker.Description: Mechanical simulacrum
+				Terminator.Description: Mechanical simulacrum
+			}
+		}
+
+		StormDiversMod: {
+			ROR2: {
+				AridBoss.Description: Immortal prisoner
+				StormBoss.Description: Failed experiment
+				ThePainBoss.Description: The pain
+			}
+		}
+
+		Thorium: {
+			ROR2: {
+				GrandThunderBird.Description: Forgotten protector
+				QueenJelly.Description: Aquatic matriarch
+				Viscount.Description: Lord of the caverns
+				GraniteEnergyStorm.Description: Eye of the storm
+				BuriedChampion.Description: A hero no more
+				StarScouter.Description: Interplanetary harbinger
+				BoreanStrider.Description: Eight-legged menace
+				FallenBeholder.Description: Glimpse of the void
+				Lich.Description: Death's disciple
+				ForgottenOne.Description: Ancient prisoner
+				Aquais.Description: Endless tide
+				Omnicide.Description: Life defiler
+				SlagFury.Description: First flame
+				DreamEater.Description: Dying reality
+			}
+		}
+
+		Items: {
+			GemRelicOnyx.Tooltip: ""
+			GemRelicAquamarine.Tooltip: ""
+			GemRelicOpal.Tooltip: ""
+		}
+	}
+}
