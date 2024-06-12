@@ -7,6 +7,9 @@ Some examples of current compatibility:
 See the Discussions tab on the Workshop page for a detailed breakdown of compatibility, as well as links to all mods and a planning post.
 ** If you're having mysterious issues with Auto Reforge, Dragon Ball Terraria, Level+, Melee Effects+, or Thorium Mod, see the Steam Workshop page! **
 
+Thanks to the following users for localizing this mod!
+ - GamMa0892 (Simplified Chinese)
+
 Modders:
 If you work on one of the mods this mod adds support for and want to integrate that support directly into your mod, please get in contact!
 Source available on GitHub (this mod's homepage). PRs for new support or localization are always welcome!

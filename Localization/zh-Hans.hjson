@@ -1,4 +1,3 @@
-
 Mods: {
 	RandomModCompat: {
 		Configs: {
@@ -125,12 +124,12 @@ Mods: {
 				# ThoriumMod
 				BardDamagePerPoint: {
 					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ThoriumMod}: 音波伤害 (CHA)"
-					Tooltip:每 1 CHA 提高多少音波伤害。
+					Tooltip: 每 1 CHA 提高多少音波伤害。
 				}
 
 				PointsPerBardCrit: {
 					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ThoriumMod}: 音波暴击率 (CHA)"
-					Tooltip:多少 CHA 能提高 1% 音波暴击率。
+					Tooltip: 多少 CHA 能提高 1% 音波暴击率。
 				}
 
 				HealerDamagePerPoint: {
