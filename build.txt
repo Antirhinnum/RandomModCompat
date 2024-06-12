@@ -1,6 +1,6 @@
 displayName = Assorted Mod Compatibility
 author = Snek
-version = 1.3.2
+version = 1.3.3
 homepage = https://github.com/Antirhinnum/RandomModCompat
 hideCode = true
 hideResources = false

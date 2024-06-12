@@ -1,5 +1,3 @@
 [list]
-[*]Fixed load-time errors from The Depths and Calamity Mod updates.
-[*]Fixed load-time error if The Depths compatibility failed.
-[*]Removed all support for Asymmetric Equipment, as that mod now natively supports it.
+[*]Added Simplified Chinese localization, created by GamMa0892.
 [/list]

@@ -1,0 +1,210 @@
+Mods: {
+	RandomModCompat: {
+		Configs: {
+			ModSupportConfig: {
+				DisplayName: Mod相容性配置
+				Info: 请参阅此Mod的Steam工作坊页面来了解每个相容性选项的作用。
+				EmptyTooltip: ""
+
+				# Would be nice to grab these at runtime, but there's no way to do that if the player doesn't have a mod enabled/installed.
+				ModNames: {
+					AmuletOfManyMinions: The Amulet of Many Minions: Combat Pets! (仆从护身符)
+					AssortedCrazyThings: Assorted Crazy Things (各种疯狂的东西)
+					AutoReroll: Auto Reforge (自动重铸)
+					BalloonsExtended: Balloons Extended (更多气球)
+					Bangarang: Bangarang - A Boomerang Overhaul (回旋镖大修)
+					BossesAsNPCs: Bosses as NPCs (Boss NPC)
+					BuffDisplay: Enhanced Buff Display (隐藏Buff图标)
+					CalamityMod: Calamity Mod (灾厄)
+					CatalystMod: Catalyst Mod (灾劫)
+					Census: Census - Town NPC Checklist (城镇NPC列表)
+					ClickerClass: The Clicker Class (点击师职业)
+					ColoredDamageTypes: Colored Damage Types (自订伤害类型颜色)
+					Consolaria: Consolaria (旧版内容复刻)
+					DBZMODPORT: Dragon Ball Terraria (龙珠Mod)
+					DialogueTweak: Dialogue Panel Rework (更好的NPC對話面板)
+					FishingReborn: Fishing Reborn (星露谷式钓鱼)
+					ImprovedTorches: Atmospheric Torches (摇曳的火炬)
+					ItemCheckBlacklist: Item Check Blacklist Lib (项目检视黑名单)
+					ItReallyMustBe: Dreadnautilus is a Boss (恐惧鹦鹉螺改为Boss)
+					levelplus: Level+ (升级+)
+					Liber: Liber Creaturarum (物种之书)
+					MagicStorage: Magic Storage (魔法储存)
+					Mask: Mask (面具Mod)
+					MeleeEffects: Melee Effects+ (近战效果+)
+					OrchidMod: Orchid Mod (兰花)
+					OverpoweredGoldDust: Gold Dust Turns Everything Into Gold (能把一切变黄金的金粉)
+					PrimeRework: Mech Bosses Rework (机械三王重制)
+					Redemption: Mod of Redemption (救赎)
+					RescueFairies: Rescue Fairies (救人仙灵)
+					ROR2HealthBars: RoR 2 Health Bars ((雨中冒险2的HP条))
+					SlugNPCs: Slug Town Pets (蛞蝓城镇宠物)
+					StormDiversMod: Storm's Additions Mod (Storm的生活质量Mod)
+					SummonersAssociation: Summoners Association (召唤师协会)
+					TerraTyping: TerraTyping (宝可梦属性)
+					TheConfectionRebirth: Confection REBAKED (Hallow Alternative) (糖果生物群落)
+					TheDepths: (深渊生物群落)
+					ThoriumMod: Thorium Mod (瑟银)
+					UniversalCraft: Universal Crafter (通用工作台)
+					WWeaponScaling: W1K's Weapon Scaling (W1K的武器缩放)
+					LevelPlus: Level+ (升级+)
+					ModLoader: Vanilla / tModLoader (原版/tMod)
+					SlugNPCsEX: Slug NPCs (蛞蝓NPC)
+				}
+			}
+
+			RandomModCompatConfig: {
+				DisplayName: 杂项配置
+
+				DisableIL: {
+					Label: 禁用IL编辑
+					Tooltip:
+						'''
+						启用该选项后，所有需要进行IL编辑的相容性和错误修复都将被禁用。
+						如果您在多人游戏或重新加载Mod后开始遇到奇怪的错误或卡死，请启用此选项。
+						大多数IL错误仅在重新加载Mod时发生，因此在启用该选项之前，
+						可以尝试重启游戏/服务器并在没有重新加载Mod的情况下进入游戏世界，看看是否仍会发生问题。
+
+						启用此选项会强制禁用以下功能：
+						 - 龙珠Mod / 自动重铸 修复
+						 - 瑟银Mod / 近战效果+ 修复
+						 - 所有升级+相关支持
+						'''
+				}
+
+				SupportinatorEnabled: {
+					Label: 启用Debug支持检查
+					Tooltip:
+						'''
+						如果启用，此Mod将运行所有以加载的Mod并记录可能添加支持的内容。
+						如果在Debug模式下运行则强制启用。
+						'''
+				}
+
+				OutputModpack: {
+					Label: 纪录支持的Mod列表
+					Tooltip:
+						'''
+						如果启用，此Mod能够支持的所有Mod列表将以enabled.json的格式输出到日志中。
+						不包括依赖项！
+						'''
+				}
+			}
+
+			LevelPlusValuesConfig: {
+				DisplayName: 升级+数值配置
+
+				# DBZMODPORT
+				KiDamagePerPoint: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.DBZMODPORT}: 气功伤害(STR)"
+					Tooltip: 每 1 STR 提高多少气功伤害。
+				}
+
+				PointsPerKiCrit: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.DBZMODPORT}: 气功暴击率(STR)"
+					Tooltip: 多少 STR 能提高 1% 气功暴击率。
+				}
+
+				PointsPerKiRegen: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.DBZMODPORT}: 气功回复(CON)"
+					Tooltip: 多少 CON 能提高 1 气力回复
+				}
+
+				# ClickerClass
+				ClickDamagePerPoint: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ClickerClass}: 点击伤害 (DEX)"
+					Tooltip: 每 1 DEX 提高多少点击伤害。
+				}
+
+				PointsPerClickCrit: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ClickerClass}: 点击暴击率 (DEX)"
+					Tooltip: 多少 DEX 能提高 1% 气功暴击率。
+				}
+
+				# ThoriumMod
+				BardDamagePerPoint: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ThoriumMod}: 音波伤害 (CHA)"
+					Tooltip: 每 1 CHA 提高多少音波伤害。
+				}
+
+				PointsPerBardCrit: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ThoriumMod}: 音波暴击率 (CHA)"
+					Tooltip: 多少 CHA 能提高 1% 音波暴击率。
+				}
+
+				HealerDamagePerPoint: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ThoriumMod}: 光辉伤害 (INT)"
+					Tooltip: 每 1 INT 提高多少光辉伤害。
+				}
+
+				PointsPerHealerCrit: {
+					Label: "{$Mods.RandomModCompat.Configs.ModSupportConfig.ModNames.ThoriumMod}: 光辉暴击率 (INT)"
+					Tooltip: 多少 INT 能提高 1% 光辉暴击率。
+				}
+			}
+		}
+
+		AssortedCrazyThings.ROR2.HarvesterBoss.Description: 顽骨猛禽
+		CatalystMod.FlashlightLensName: "{0}手电筒透镜"
+
+		Consolaria: {
+			ROR2: {
+				Lepus.Description: 可悲的兔形目
+				Ocram.Description: 怀旧的恐惧
+				Turkor.Description: 自由的鸟
+			}
+		}
+
+		ItReallyMustBe.ROR2.Dreadnautilus.Description: 血红软体动物
+
+		LevelPlus: {
+			AddDamage: "  +{Amount}% {DamageType}"
+			AddCrit: "  +{Amount}% {DamageTypeNoDamage}暴击机率"
+			ResourceRegen: "  +{Amount} {Resource}回复"
+		}
+
+		Liber.GemPedestalItem: "{0}圣物"
+
+		PrimeRework: {
+			CaretakerDefeatedCondition: ""
+
+			ROR2: {
+				Caretaker.Description: 机械模仿品
+				Terminator.Description: 机械模仿品
+			}
+		}
+
+		StormDiversMod: {
+			ROR2: {
+				AridBoss.Description: 不朽囚牢
+				StormBoss.Description: 失败的实验
+				ThePainBoss.Description: 苦痛
+			}
+		}
+
+		Thorium: {
+			ROR2: {
+				GrandThunderBird.Description: 被遗忘的守护者
+				QueenJelly.Description: 水生女族长
+				Viscount.Description: 洞穴领主
+				GraniteEnergyStorm.Description: 风暴之眼
+				BuriedChampion.Description: 英雄不再
+				StarScouter.Description: 星际先驱
+				BoreanStrider.Description: 八足威胁
+				FallenBeholder.Description: 虚空一瞥
+				Lich.Description: 死亡信徒
+				ForgottenOne.Description: 远古囚徒
+				Aquais.Description: 无尽浪潮
+				Omnicide.Description: 生命亵渎
+				SlagFury.Description: 初始之炎
+				DreamEater.Description: 现世将亡
+			}
+		}
+
+		Items: {
+			GemRelicOnyx.Tooltip: ""
+			GemRelicAquamarine.Tooltip: ""
+			GemRelicOpal.Tooltip: ""
+		}
+	}
+}
