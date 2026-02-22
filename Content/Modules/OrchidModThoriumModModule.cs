@@ -1,4 +1,4 @@
-﻿using OrchidMod.Shaman.Weapons.Hardmode;
+﻿//using OrchidMod.Shaman.Weapons.Hardmode;
 using RandomModCompat.Common.APIs;
 using RandomModCompat.Core;
 
@@ -10,6 +10,6 @@ internal sealed class OrchidModThoriumModModule : CrossModModule<ThoriumModAPI>
 
 	protected internal override void PostSetupContent()
 	{
-		API.AddMartianItemID<MartianBeamer>();
+		//API.AddMartianItemID<MartianBeamer>();
 	}
 }

@@ -1,3 +1,4 @@
 [list]
-[*]Updated localization files.
+[*]Fixed bugs brought about by some mods updating.
+[*]Some support has been dropped, but nothing major.
 [/list]

@@ -97,7 +97,7 @@ internal sealed partial class LiberAPI
 			{
 				CreateRecipe(10)
 					.AddIngredient(_gemType, 15)
-					.AddRecipeGroup(LiberRecipes.anySilver, 10)
+					.AddRecipeGroup(LiberRecipes.anySilverBar, 10)
 					.AddIngredient(ItemID.FallenStar, 5)
 					.AddTile<TransmutationTable>()
 					.Register();

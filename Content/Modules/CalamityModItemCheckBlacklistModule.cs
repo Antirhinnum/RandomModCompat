@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items;
+﻿//using CalamityMod.Items;
 using RandomModCompat.Common.APIs;
 using RandomModCompat.Core;
 
@@ -10,6 +10,6 @@ internal sealed class CalamityModItemCheckBlacklistModule : CrossModModule<ItemC
 
 	protected internal override void PostSetupContent()
 	{
-		API.Add<SulphurousSeaWorldSideChanger>();
+		//API.Add<SulphurousSeaWorldSideChanger>();
 	}
 }

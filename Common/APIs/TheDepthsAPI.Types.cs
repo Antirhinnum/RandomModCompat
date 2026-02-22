@@ -53,15 +53,25 @@ internal sealed partial class TheDepthsAPI
 			RegisterItemDrop(_gemItemId);
 #endif
 
-			//LocalizedText originalText = Lang._mapLegendCache[MapHelper.TileToLookup(_gemTileId, 0)];
 			ModTile originalTile = TileLoader.GetTile(_gemTileId);
-			MapTile mapTile = MapTile.Create((ushort)_gemTileId, byte.MaxValue, 0);
-			Color color = MapHelper.GetMapTileXnaColor(ref mapTile);
+			LocalizedText name = Language.GetOrRegister(originalTile.Mod.GetLocalizationKey("MapObject." + originalTile.Name));
+			Color color;
+			try
+			{
+				//LocalizedText originalText = Lang._mapLegendCache[MapHelper.TileToLookup(_gemTileId, 0)];
+				MapTile mapTile = MapTile.Create(MapHelper.tileLookup[_gemTileId], byte.MaxValue, 0);
+				color = MapHelper.GetMapTileXnaColor(ref mapTile);
+			}
+			catch
+			{
+				Mod.Logger.ErrorFormat("Experienced an error while adding map entry for {0}, will be colored pink on the map.");
+				color = Color.Pink;
+			}
 
 #if TML_2022_09
-			AddMapEntry(color, LocalizationLoader.GetOrCreateTranslation(originalTile.Mod, "MapObject." + originalTile.Name));
+			AddMapEntry(color, name);
 #else
-			AddMapEntry(color, Language.GetOrRegister(originalTile.Mod.GetLocalizationKey("MapObject." + originalTile.Name)));
+			AddMapEntry(color, name);
 #endif
 
 			// Tile merging is handled in TheDepthsAPISystem.

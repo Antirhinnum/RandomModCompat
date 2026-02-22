@@ -1,4 +1,4 @@
-﻿using OrchidMod.Content.Items.Melee;
+﻿//using OrchidMod.Content.Items.Melee;
 using RandomModCompat.Common.APIs;
 using RandomModCompat.Core;
 
@@ -10,6 +10,6 @@ internal sealed class OrchidModBangarangModule : CrossModModule<BangarangAPI>
 
 	protected internal override void PostSetupContent()
 	{
-		API.RegisterSimpleBoomerang<PrototypeSecrecy>(2);
+		//API.RegisterSimpleBoomerang<PrototypeSecrecy>(2);
 	}
 }

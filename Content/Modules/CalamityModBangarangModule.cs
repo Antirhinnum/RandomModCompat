@@ -22,18 +22,18 @@ internal sealed class CalamityModBangarangModule : CrossModModule<BangarangAPI>
 		API.RegisterSimpleBoomerang<GalaxySmasher>(-1);
 		API.RegisterSimpleBoomerang<SeekingScorcher>(-1);
 		API.RegisterSimpleBoomerang<StellarContempt>(-1);
-		API.RegisterSimpleBoomerang<TriactisTruePaladinianMageHammerofMightMelee>(-1);
+		//API.RegisterSimpleBoomerang<TriactisTruePaladinianMageHammerofMightMelee>(-1);
 
 		// Rogue
 		API.RegisterSimpleBoomerang<BlazingStar>(3);
 		API.RegisterSimpleBoomerang<Brimblade>(-1);
 		API.RegisterSimpleBoomerang<Celestus>(-1);
 		API.RegisterSimpleBoomerang<DynamicPursuer>(-1);
-		API.RegisterSimpleBoomerang<ElementalDisk>(-1);
+		//API.RegisterSimpleBoomerang<ElementalDisk>(-1);
 		API.RegisterSimpleBoomerang<EnchantedAxe>(-1);
 		API.RegisterSimpleBoomerang<EpidemicShredder>(-1);
 		API.RegisterSimpleBoomerang<Equanimity>(-1);
-		API.RegisterSimpleBoomerang<Eradicator>(-1);
+		//API.RegisterSimpleBoomerang<Eradicator>(-1);
 		API.RegisterSimpleBoomerang<FishboneBoomerang>(1);
 		API.RegisterSimpleBoomerang<FrostcrushValari>(-1);
 		API.RegisterSimpleBoomerang<GhoulishGouger>(-1);
@@ -51,7 +51,7 @@ internal sealed class CalamityModBangarangModule : CrossModModule<BangarangAPI>
 		API.RegisterSimpleBoomerang<Valediction>(-1);
 
 		// Draedon
-		API.RegisterSimpleBoomerang<TrackingDisk>(-1);
+		//API.RegisterSimpleBoomerang<TrackingDisk>(-1);
 
 		// Complex
 		static bool SandDollarCheck(Player p, Item i, int n) => p.Calamity().StealthStrikeAvailable() || p.ownedProjectileCounts[i.shoot] < 2 + n;
